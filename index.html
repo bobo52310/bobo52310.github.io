@@ -1,0 +1,657 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Bobo的技術時光屋</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Bobo Chen">
+    
+
+    
+    <meta name="description" content="這是描述">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bobo的技術時光屋">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Bobo的技術時光屋">
+<meta property="og:description" content="這是描述">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Bobo的技術時光屋">
+<meta name="twitter:description" content="這是描述">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Bobo的技術時光屋" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Bobo的技術時光屋" title="Bobo的技術時光屋"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
+				<h2 class="blog-motto">Study Notes of PHP、Laravel、Rails &amp; Web development.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main">
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/09/Sublime-Text-默默吃爆你硬碟的神秘目錄/" title="Sublime Text 默默吃爆你硬碟的神秘目錄" itemprop="url">Sublime Text 默默吃爆你硬碟的神秘目錄</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-09-20T15:28:33.000Z" itemprop="datePublished"> 發表於 2015-09-20</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <center><img src="/images/2015/st3_backup_fat_folder.png" alt=""></center>
+
+<blockquote>
+<p>Sublime Text 3 主程式目錄大小才 10MB…，但是你可以想像嗎，隨著使用時間的增長，這個目錄竟然會長到 1GB 多!</p>
+</blockquote>
+<h2 id="神秘爆肥目錄在哪？">神秘爆肥目錄在哪？</h2><p>對此感到十分好奇的我，決定來研究一下找出原因!</p>
+<p>我到底是餵它什麼好料!? 竟然可以這樣越用越肥… (汗</p>
+<p>當下直覺懷疑是「 Log 檔」或是「索引資料」所造成，於是去檢查相關目錄，</p>
+<p>其實也還好，容量雖然不小，但也頂多幾十 MB 而已~</p>
+<p>但無意間發現一個…</p>
+<h2 id="可疑的「Backup」目錄">可疑的「Backup」目錄</h2><p>查了一下…竟然有 1GB 多! 就是它在肥的啦!</p>
+<p>路徑在：<code>Application Support/Sublime Text 3/Backup</code></p>
+<p>原來這個目錄是 <code>Package Control</code> 的備份檔，</p>
+<p>每次 upgrade package 時都會將套件進行備份! 難怪會那麼肥~~</p>
+<h2 id="改善方法：">改善方法：</h2><ol>
+<li>刪除掉舊的備份檔。</li>
+<li><p>並修改設定 (<code>Preferences.sublime-settings</code>) 將檢查更新的頻率由預設的 1 小時檢查一次，修改成 8 小時檢查一次就好囉。</p>
+<pre><code><span class="string">"auto_upgrade_frequency"</span>: <span class="number">8</span>, 
+</code></pre></li>
+</ol>
+<blockquote>
+<p>降低檢查的頻率還有個好處，有些套件每次更新完 Sublime 都需要重新啟動，會導致像 <code>live reload</code> 那些都需要重新設定…||  會嚴重影響工作流程…<br>之前就遇過某個套件一天更新的好幾次的…</p>
+</blockquote>
+<h2 id="參考資料：">參考資料：</h2><ol>
+<li><a href="http://superuser.com/questions/870148/sublime-text-2-keeps-growing-due-to-backup-folder" target="_blank" rel="external">http://superuser.com/questions/870148/sublime-text-2-keeps-growing-due-to-backup-folder</a></li>
+<li><a href="https://sublimetext.com/forum/viewtopic.php?f=3&amp;t=7627" target="_blank" rel="external">https://sublimetext.com/forum/viewtopic.php?f=3&amp;t=7627</a></li>
+</ol>
+<p>Bobo內心旁白：「人肥必有因，工具不也是…請關心您的工具，替它安排個健康檢查或是瘦身計畫!?」 </p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Sublime-Text/">Sublime Text</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/09/Sublime-Text-默默吃爆你硬碟的神秘目錄/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/08/Sketch3-行雲流水的-UI-design-工具，根本就是設計界的-Sublime-Text-嘛/" title="Sketch3 行雲流水的 UI design 工具，有 Sublime Text 輕快的體驗!" itemprop="url">Sketch3 行雲流水的 UI design 工具，有 Sublime Text 輕快的體驗!</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-08-30T15:47:44.000Z" itemprop="datePublished"> 發表於 2015-08-30</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p><center><img src="/images/2015/sketch3.jpg" alt=""></center></p>
+<h2 id="前言：">前言：</h2><p>以前使用 Windows 的時候，一直有耳聞搞設計的都熱愛用 Mac，而自己使用了 Mac 一陣子卻感覺不出來差異，直到最近遇到了 Sketch3！這套設計界的神兵利器，讓我眼睛為之一亮！</p>
+<p>這顆「黃鑽石」可以說是設計界的 Sublime Text，都是很輕量、又支援超多外掛，用起來就是一整個行雲流水呀~</p>
+<p>尤其在 web design 與圖形設計方面，平常使用幾乎可以取代 photoshop、illustrator。</p>
+<h2 id="Sketch3_亮點整理如下：">Sketch3 亮點整理如下：</h2><ol>
+<li>超輕量，讓你愛上的瞬開的體驗</li>
+<li>外掛超多，各種神奇的套件都有</li>
+<li>操作容易上手，行雲流水的境界</li>
+<li>可自訂 symbols、text styles 方便 reuse</li>
+<li>各種尺寸的圖片輸出</li>
+<li>支援向量圖檔編輯</li>
+<li>可快速切換像素預覽</li>
+<li>常見的 web design 應用：</li>
+<li>mock up</li>
+<li>開發 RWD 超方便，可快速切換在不同解析度下做預覽</li>
+<li>還可以輸出 Asset、CSS</li>
+<li>自建 template</li>
+<li>搭配 Bootstrap 3 UI Kit 快速建立 mock up <a href="http://leveluptuts.com/tutorials/sketch-3-tutorials/13-bootstrap-3-ui-kit" target="_blank" rel="external">教學</a></li>
+<li>下載 Bootstrap 3 Vector UI圖示  <a href="http://bootstrapuikit.com/" target="_blank" rel="external">http://bootstrapuikit.com/</a></li>
+<li>可將 arborad 輸出到 zeplin</li>
+<li>有支援 Google 官方 Material Design</li>
+</ol>
+<h2 id="推薦的_plugin">推薦的 plugin</h2><ol>
+<li>sketch toolbox // 套件管理工具，<strong>必裝！</strong>之後其他套件都透過它來安裝</li>
+<li>Content Generator // 自動填充假文、假圖，方便 mock up 佔位內容</li>
+<li>Dynamic Button  // button 會隨內文寬度調整</li>
+<li>sketch measure // 量測尺寸</li>
+<li>AEFlowchart  // 畫流程圖</li>
+<li>Skala Preview // 丟到手機上預覽</li>
+<li>Sketch Notebook // 來標註設計稿說明有哪些圖，以及它們的名稱是什麼，讓RD開發起來更有效率。</li>
+<li><a href="https://github.com/bomberstudios/sketch-commands" target="_blank" rel="external">Sketch Commands</a> // 許多常用的 workflow task 也可將素材輸出</li>
+<li><a href="https://github.com/fnky/sketch-dockpreview" target="_blank" rel="external">Sketch Dockpreview</a> // preview your current artboard in the Dock</li>
+<li><a href="https://github.com/getflourish/Sketch-Set-Line-Height-Plugin" target="_blank" rel="external">sketch set line height</a>  // 行高</li>
+<li><a href="https://github.com/rodi01/RenameIt" target="_blank" rel="external">Renameit</a> // 重新命名</li>
+<li><a href="https://github.com/nathco/Clear-Styles" target="_blank" rel="external">Clear-styles</a> // 清除樣式</li>
+<li><a href="https://github.com/nathco/Swap-Fill-Border" target="_blank" rel="external">Swap-Fill-Border</a> // 填滿邊框交換</li>
+<li><a href="https://github.com/zeplin/zeplin-sketch-plugin" target="_blank" rel="external">zeplin-sketch-plugin</a> // zeplin</li>
+</ol>
+<h2 id="名詞解釋">名詞解釋</h2><p> 簡單的作個名詞解釋方便快速上手，詳見參考資源：</p>
+<ol>
+<li>Page：像是沒有邊界的畫布，一個檔裡可分很多 Page，而 Page 裡可以放很多 Artboard。<br>Arboard：像是有尺寸的畫布 (就是 AI 的畫布)，本身有內建各種尺寸可選擇(eg. iOS、Android、RWD)。而內容元素只有在 arboard  1. 範圍內是可視的。</li>
+<li>Symbol：針對一個 group 設定成模組，方便之後 reuse。</li>
+</ol>
+<h2 id="常用快捷鍵：">常用快捷鍵：</h2><ol>
+<li>R 畫矩形</li>
+<li>O 畫圓形</li>
+<li>L  畫線</li>
+<li>T 插入文字</li>
+<li>cmd + g 群組化</li>
+<li>cmd + d 複製並貼上</li>
+<li>cmd + 加、減 放大縮小</li>
+<li>點選元件 + option 快速檢視與其他元件的距</li>
+<li>UI將物件拖拉到桌面即可產生 png 圖</li>
+</ol>
+<h2 id="參考資源：">參考資源：</h2><ol>
+<li><a href="http://leveluptuts.com" target="_blank" rel="external">http://leveluptuts.com</a> 詳細影片教學</li>
+<li><a href="http://sketchcn.com" target="_blank" rel="external">http://sketchcn.com</a> sketch 簡體中文網</li>
+<li><a href="http://sketchshortcuts.com/" target="_blank" rel="external">http://sketchshortcuts.com/</a> sketch 快捷鍵一覽表</li>
+<li><a href="https://medium.com/sketch-app/sketch-keyboard-shortcuts-42c06583ae83" target="_blank" rel="external">Sketch Keyboard Shortcuts</a></li>
+<li><a href="http://blog.visioncan.com/2014/moved-to-sketch/" target="_blank" rel="external">來用 Sketch 畫你的 UI 吧</a></li>
+<li><a href="https://github.com/sketchplugins/plugin-directory" target="_blank" rel="external">Plugins 清單彙整</a> 算是半官方 github</li>
+</ol>
+<p>Bobo內心旁白：「再見了 Adobe 家族！胖胖的軟體真的不是我的菜…」</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/UI/">UI</a><a href="/tags/Web-Design/">Web Design</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/08/Sketch3-行雲流水的-UI-design-工具，根本就是設計界的-Sublime-Text-嘛/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/07/Mac-顯示輸入過的無線網路密碼/" title="[Mac] 顯示輸入過的無線網路密碼" itemprop="url">[Mac] 顯示輸入過的無線網路密碼</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-07-26T03:14:53.000Z" itemprop="datePublished"> 發表於 2015-07-26</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="起因">起因</h2><p>近期有不少社群活動都辦在「<a href="http://www.innosquare.economic.ntpc.net.tw/site/" target="_blank" rel="external">新北創力坊</a>」，地點位在捷運「台北橋站」的捷運共構大樓，出捷運站就到了！交通實在有夠便利。</p>
+<p>有次帶新朋友去那裡需要使用無線網路，但找不到 wifi 密碼，問了一輪大家都不知道密碼… 因為大家在第一次輸入時就按記憶密碼，沒有人記得也是正常的 @__@</p>
+<p>那麼是否辦法將已輸入的密碼顯示呢？</p>
+<p>記得以前在 Windows 可以使用偷看密碼的工具，而 Mac 其實不用那麼麻煩，直接有內建的方法可以查看喔！<br><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--></p>
+<h2 id="顯示輸入過的_wifi_密碼">顯示輸入過的 wifi 密碼</h2><p>以下來介紹該如何顯示輸入過的無線網路密碼：</p>
+<ol>
+<li>由於 Mac 會幫我們管理所有儲存過的密碼，我們可使用 <code>Spotlight</code> 呼叫「鑰匙圈存取」來檢視：<br><code>點選右上角「放大鏡」(或是按快捷鍵 control + space)，並輸入「key」</code><center><img src="/images/2015/mac_1.png" alt=""></center></li>
+<li>列出曾經連線過的無線基地台名稱：<br><code>點選新北創力坊的 wifi 名稱：innosquare</code><center><img src="/images/2015/mac_2.png" alt=""></center></li>
+<li>勾選「顯示密碼」，並輸入系統登入密碼：<center><img src="/images/2015/mac_3.png" alt=""></center></li>
+<li>密碼就顯示出來囉！完成！<br><code>新北創力坊 wifi 密碼：newtaipei</code></li>
+</ol>
+<p>Bobo內心旁白：「有人的地方，就有江湖，有密碼的地方，就有忘記密碼的需求…Mac 實在是真貼心~ 」。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Mac/">Mac</a><a href="/tags/電腦筆記/">電腦筆記</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/07/Mac-顯示輸入過的無線網路密碼/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+
+  <nav id="page-nav" class="clearfix">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
+  </nav>
+
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">標簽</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Laravel/" title="Laravel">Laravel<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/電腦筆記/" title="電腦筆記">電腦筆記<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Web-Design/" title="Web Design">Web Design<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/開發工具/" title="開發工具">開發工具<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Netbeans/" title="Netbeans">Netbeans<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Feedly/" title="Feedly">Feedly<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情鏈接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://jaceju.net" target="_blank" title="一个面向程序员交流分享的新一代社区">網站製作學習誌</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://oomusou.io/" target="_blank" title="點燈坊">點燈坊</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.dj1020.net/" target="_blank" title="閃亮亮大師之路">閃亮亮大師之路</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Bobo Chen. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Bobo Chen">Bobo Chen</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+var disqus_shortname = 'bobo52310blogger';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+ </html>
