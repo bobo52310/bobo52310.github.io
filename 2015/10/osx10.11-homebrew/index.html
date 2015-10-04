@@ -4,39 +4,48 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>使用 Feedly 訂閱 Ptt 的 RSS，讓手機少裝一些 App | Bobo的技術時光屋</title>
+    <title>升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題 | Bobo的技術時光屋</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Bobo Chen">
     
 
     
-    <meta name="description" content="你手機有裝 Ptt 軟體嗎？用手機上 Ptt 一定要額外安裝 App 嗎？之前為了在手機上瀏覽 Ptt 的文章，和大多數人一樣都額外安裝了一些 App用了一陣子後發現有幾個問題：
+    <meta name="description" content="先說一下升級後明顯有感覺的部分：
+中文字體變好看! (使用新的中文字體-蘋方)
+畫面切換更流暢 (支援 Metal 繪圖 API)
+備忘錄變得更好用
+畫面最上方的狀態列可以隱藏
+Mission Control 不會將同類型程式群組化
+幾乎是無痛升級：Sublime Text, Atom, Sketch, VirtualBox, SourceTree, Sequel Pro… 都正常
 
-多半時間僅是瀏覽文章，而發文、推文等功能相對少用(就…潛水呀@_@)
-相對地這些 App 使用頻率低，還會佔用系統資源。
-需要去習慣這些 App 的瀏覽操作。
-相較於 BBS，大家多半還是比較習慣 Web 的操作。">
+升級後受影響">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用 Feedly 訂閱 Ptt 的 RSS，讓手機少裝一些 App">
-<meta property="og:url" content="http://bobochen.com/2015/05/使用-Feedly-訂閱-Ptt-的-RSS，讓手機少裝一些-App/index.html">
+<meta property="og:title" content="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題">
+<meta property="og:url" content="http://bobochen.com/2015/10/osx10.11-homebrew/index.html">
 <meta property="og:site_name" content="Bobo的技術時光屋">
-<meta property="og:description" content="你手機有裝 Ptt 軟體嗎？用手機上 Ptt 一定要額外安裝 App 嗎？之前為了在手機上瀏覽 Ptt 的文章，和大多數人一樣都額外安裝了一些 App用了一陣子後發現有幾個問題：
+<meta property="og:description" content="先說一下升級後明顯有感覺的部分：
+中文字體變好看! (使用新的中文字體-蘋方)
+畫面切換更流暢 (支援 Metal 繪圖 API)
+備忘錄變得更好用
+畫面最上方的狀態列可以隱藏
+Mission Control 不會將同類型程式群組化
+幾乎是無痛升級：Sublime Text, Atom, Sketch, VirtualBox, SourceTree, Sequel Pro… 都正常
 
-多半時間僅是瀏覽文章，而發文、推文等功能相對少用(就…潛水呀@_@)
-相對地這些 App 使用頻率低，還會佔用系統資源。
-需要去習慣這些 App 的瀏覽操作。
-相較於 BBS，大家多半還是比較習慣 Web 的操作。">
-<meta property="og:image" content="http://bobochen.com/images/2015/ptt_rss.png">
-<meta property="og:updated_time" content="2015-09-26T13:00:33.000Z">
+升級後受影響">
+<meta property="og:image" content="http://bobochen.com/images/2015/os-x-el-capitan.jpg">
+<meta property="og:updated_time" content="2015-10-04T10:23:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用 Feedly 訂閱 Ptt 的 RSS，讓手機少裝一些 App">
-<meta name="twitter:description" content="你手機有裝 Ptt 軟體嗎？用手機上 Ptt 一定要額外安裝 App 嗎？之前為了在手機上瀏覽 Ptt 的文章，和大多數人一樣都額外安裝了一些 App用了一陣子後發現有幾個問題：
+<meta name="twitter:title" content="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題">
+<meta name="twitter:description" content="先說一下升級後明顯有感覺的部分：
+中文字體變好看! (使用新的中文字體-蘋方)
+畫面切換更流暢 (支援 Metal 繪圖 API)
+備忘錄變得更好用
+畫面最上方的狀態列可以隱藏
+Mission Control 不會將同類型程式群組化
+幾乎是無痛升級：Sublime Text, Atom, Sketch, VirtualBox, SourceTree, Sequel Pro… 都正常
 
-多半時間僅是瀏覽文章，而發文、推文等功能相對少用(就…潛水呀@_@)
-相對地這些 App 使用頻率低，還會佔用系統資源。
-需要去習慣這些 App 的瀏覽操作。
-相較於 BBS，大家多半還是比較習慣 Web 的操作。">
+升級後受影響">
 
     
     <link rel="alternative" href="/atom.xml" title="Bobo的技術時光屋" type="application/atom+xml">
@@ -96,14 +105,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/05/使用-Feedly-訂閱-Ptt-的-RSS，讓手機少裝一些-App/" title="使用 Feedly 訂閱 Ptt 的 RSS，讓手機少裝一些 App" itemprop="url">使用 Feedly 訂閱 Ptt 的 RSS，讓手機少裝一些 App</a>
+      <a href="/2015/10/osx10.11-homebrew/" title="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題" itemprop="url">升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2015-05-18T15:34:50.000Z" itemprop="datePublished"> 發表於 2015-05-18</time>
+    <time datetime="2015-10-04T10:23:35.000Z" itemprop="datePublished"> 發表於 2015-10-04</time>
     
   </p>
 </header>
@@ -112,23 +121,50 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目錄</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#你手機有裝_Ptt_軟體嗎？"><span class="toc-number">1.</span> <span class="toc-text">你手機有裝 Ptt 軟體嗎？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不用裝_Ptt_軟體的方法"><span class="toc-number">2.</span> <span class="toc-text">不用裝 Ptt 軟體的方法</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#先說一下升級後明顯有感覺的部分："><span class="toc-number">1.</span> <span class="toc-text">先說一下升級後明顯有感覺的部分：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升級後受影響的_Web_Developer_吃飯工具："><span class="toc-number">2.</span> <span class="toc-text">升級後受影響的 Web Developer 吃飯工具：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Homebrew_problems_on_OS_X_10-11"><span class="toc-number">3.</span> <span class="toc-text">Homebrew problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#原因"><span class="toc-number">3.1.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解法"><span class="toc-number">3.2.</span> <span class="toc-text">解法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#已存在_/usr/local_目錄時:"><span class="toc-number">3.2.1.</span> <span class="toc-text">已存在 /usr/local 目錄時:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不存在_/usr/local_目錄時:"><span class="toc-number">3.2.2.</span> <span class="toc-text">不存在 /usr/local 目錄時:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vagrant_problems_on_OS_X_10-11"><span class="toc-number">4.</span> <span class="toc-text">Vagrant problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解法-1"><span class="toc-number">4.1.</span> <span class="toc-text">解法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料："><span class="toc-number">5.</span> <span class="toc-text">參考資料：</span></a></li></ol>
 		
 		</div>
 		
-		<center><img src="/images/2015/ptt_rss.png" alt=""></center>
-
-<h2 id="你手機有裝_Ptt_軟體嗎？">你手機有裝 Ptt 軟體嗎？</h2><p>用手機上 Ptt 一定要額外安裝 App 嗎？<br>之前為了在手機上瀏覽 Ptt 的文章，和大多數人一樣都額外安裝了一些 App<br>用了一陣子後發現有幾個問題：</p>
-<ol>
-<li>多半時間僅是瀏覽文章，而發文、推文等功能相對少用(就…潛水呀@_@)</li>
-<li>相對地這些 App 使用頻率低，還會佔用系統資源。</li>
-<li>需要去習慣這些 App 的瀏覽操作。</li>
-<li>相較於 BBS，大家多半還是比較習慣 Web 的操作。</li>
+		<p><center><img src="/images/2015/os-x-el-capitan.jpg" alt=""></center></p>
+<h2 id="先說一下升級後明顯有感覺的部分：">先說一下升級後明顯有感覺的部分：</h2><ul>
+<li>中文字體變好看! (使用新的中文字體-蘋方)</li>
+<li>畫面切換更流暢 (支援 <code>Metal</code> 繪圖 API)</li>
+<li>備忘錄變得更好用</li>
+<li>畫面最上方的狀態列可以隱藏</li>
+<li><code>Mission Control</code> 不會將同類型程式群組化</li>
+<li>幾乎是無痛升級：<code>Sublime Text</code>, <code>Atom</code>, <code>Sketch</code>, <code>VirtualBox</code>, <code>SourceTree</code>, <code>Sequel Pro</code>… 都正常</li>
+</ul>
+<h2 id="升級後受影響的_Web_Developer_吃飯工具：">升級後受影響的 Web Developer 吃飯工具：</h2><ol>
+<li>Homebrew </li>
+<li>Vagrant </li>
+<li>PhpStorm (重新安裝 <code>JRE</code> 即可)</li>
+<li>XtraFinder (暫時無解)</li>
+<li>Asepsis (暫時無解)</li>
 </ol>
-<h2 id="不用裝_Ptt_軟體的方法">不用裝 Ptt 軟體的方法</h2><p>某天在捷運上滑手機時，突然想到 Ptt 應該有提供 RSS feed 吧？<br>上網查一下發現～ 果然有！而且還是官方提供的！<br>既然有那麼事情就簡單了，直接搭配 Feedly 這套好用的 RSS 訂閱器，把 Ptt 各版的 RSS 文章匯入就可啦！</p>
-<p>如此，不論是 BBS 或是一般網站來源，都可以在 Feedly 這裡有一致性的瀏覽體驗！超讚！<br>批踢踢的 RSS 格式如下：<code>http://rss.ptt.cc/板名.xml</code></p>
-<p>例如電影版就是 <code>http://rss.ptt.cc/movie.xml</code><br>PHP 版就是 <code>http://rss.ptt.cc/php.xml</code></p>
-<p>只要知道版名，就可以使用 RSS 訂閱你的最愛看板囉！<br>甚至還可以搭配 IFTTT 服務來追蹤 ptt 特定板塊~ 而有不少應用(發現新大陸中)。</p>
+<blockquote>
+<p><code>Homebrew</code>、<code>Vagrant</code> 以下附上解法。</p>
+</blockquote>
+<h2 id="Homebrew_problems_on_OS_X_10-11">Homebrew problems on OS X 10.11</h2><p>升級 MAC OS X 10.11 (EI Capitan) 後，執行 <code>brew update</code> 時發生錯誤：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ brew <span class="operator"><span class="keyword">update</span></span><br><span class="line"><span class="keyword">Error</span>: The /usr/<span class="keyword">local</span> <span class="keyword">directory</span> <span class="keyword">is</span> <span class="keyword">not</span> writable.</span><br><span class="line">Even <span class="keyword">if</span> this <span class="keyword">directory</span> was writable <span class="keyword">when</span> you installed Homebrew, other</span><br><span class="line">software may <span class="keyword">change</span> permissions <span class="keyword">on</span> this <span class="keyword">directory</span>. <span class="keyword">Some</span> <span class="keyword">versions</span> <span class="keyword">of</span> the</span><br><span class="line"><span class="string">"InstantOn"</span> component <span class="keyword">of</span> Airfoil <span class="keyword">are</span> known <span class="keyword">to</span> <span class="keyword">do</span> this.</span><br><span class="line"></span><br><span class="line">You should probably <span class="keyword">change</span> the ownership <span class="keyword">and</span> permissions <span class="keyword">of</span> /usr/<span class="keyword">local</span></span><br><span class="line">back <span class="keyword">to</span> your <span class="keyword">user</span> <span class="keyword">account</span>.</span><br><span class="line">  sudo chown -R $(whoami):<span class="keyword">admin</span> /usr/<span class="keyword">local</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="原因">原因</h3><p>由於 Mac OS X 10.11 引入了「System Integrity Protection (SIP)」而導致 <code>/usr</code>、<code>/System</code> 以及 <code>/bin</code> 等目錄被保護無法寫入(即使用 root 權限也不行)，因此造成 Homebrew 發生無寫入權限錯誤。</p>
+<h3 id="解法">解法</h3><h4 id="已存在_/usr/local_目錄時:">已存在 <code>/usr/local</code> 目錄時:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></span><br></pre></td></tr></table></figure>
+<h4 id="不存在_/usr/local_目錄時:">不存在 <code>/usr/local</code> 目錄時:</h4><p>解法是關閉 SIP，方法如下：</p>
+<ul>
+<li>重開機按 <code>cmd+r</code> 進入<code>恢復模式</code> -&gt; 工具程式 -&gt; 安全設定-&gt;<br>取消勾選 「System Integrity Protection」</li>
+<li>回到 OS X 桌面，開啟 Terminal 並執行：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/<span class="built_in">local</span> &amp;&amp; sudo chflags norestricted /usr/<span class="built_in">local</span> &amp;&amp; sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></span><br></pre></td></tr></table></figure>
+<h2 id="Vagrant_problems_on_OS_X_10-11">Vagrant problems on OS X 10.11</h2><p>看到 Jeffrey Way 在 <a href="https://twitter.com/jeffrey_way/status/649769735396151296" target="_blank" rel="external">Twitter 上面</a>喊：</p>
+<blockquote>
+<p>This Vagrant quirk is the only thing I ran into with my El Capitan update.</p>
+</blockquote>
+<h3 id="解法-1">解法</h3><p><a href="https://laracasts.com/discuss/channels/tips/fix-for-vagranthomestead-el-capitan" target="_blank" rel="external">Fix for Vagrant/Homestead - El Capitan</a></p>
+<h2 id="參考資料：">參考資料：</h2><ul>
+<li><a href="https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/El_Capitan_and_Homebrew.md" target="_blank" rel="external">El Capitan and Homebrew</a></li>
+<li><a href="https://laracasts.com/discuss/channels/tips/fix-for-vagranthomestead-el-capitan" target="_blank" rel="external">Fix for Vagrant/Homestead - El Capitan</a></li>
+<li><a href="https://www.ptt.cc/bbs/MAC/M.1439029980.A.BB1.html" target="_blank" rel="external">PTT 文章：如何矯正半殘的superuser</a></li>
+</ul>
+<p>Bobo內心旁白：「升級一定有風險，升級前應詳閱公開說明書~ 特別是這次有令人又愛又恨 SIP…」</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -137,7 +173,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/App/">App</a><a href="/tags/Feedly/">Feedly</a><a href="/tags/Ptt/">Ptt</a><a href="/tags/RSS/">RSS</a>
+  <span></span> <a href="/tags/OSX/">OSX</a><a href="/tags/homebrew/">homebrew</a><a href="/tags/vagrant/">vagrant</a>
   </div>
 
 </div>
@@ -146,7 +182,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://bobochen.com/2015/05/使用-Feedly-訂閱-Ptt-的-RSS，讓手機少裝一些-App/" data-title="使用 Feedly 訂閱 Ptt 的 RSS，讓手機少裝一些 App | Bobo的技術時光屋" data-tsina="null" class="share clearfix">
+	  <div data-url="http://bobochen.com/2015/10/osx10.11-homebrew/" data-title="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題 | Bobo的技術時光屋" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -159,19 +195,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/06/Laravel-5-1-即將登場，LTS-版本且將支援-PSR-7/" title="Laravel 5.1 即將登場，LTS 版本且將支援 PSR-7">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Laravel 5.1 即將登場，LTS 版本且將支援 PSR-7</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2015/04/Demo-Syntax-Highlighter/"  title="Demo Syntax Highlighter">
+<a href="/2015/09/從 Blogger 搬家到 Hexo 的第一篇/"  title="從 Blogger 搬家到 Hexo 的第一篇">
  <strong>下一篇：</strong><br/> 
- <span>Demo Syntax Highlighter
+ <span>從 Blogger 搬家到 Hexo 的第一篇
 </span>
 </a>
 </div>
@@ -192,7 +220,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目錄</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#你手機有裝_Ptt_軟體嗎？"><span class="toc-number">1.</span> <span class="toc-text">你手機有裝 Ptt 軟體嗎？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#不用裝_Ptt_軟體的方法"><span class="toc-number">2.</span> <span class="toc-text">不用裝 Ptt 軟體的方法</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#先說一下升級後明顯有感覺的部分："><span class="toc-number">1.</span> <span class="toc-text">先說一下升級後明顯有感覺的部分：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升級後受影響的_Web_Developer_吃飯工具："><span class="toc-number">2.</span> <span class="toc-text">升級後受影響的 Web Developer 吃飯工具：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Homebrew_problems_on_OS_X_10-11"><span class="toc-number">3.</span> <span class="toc-text">Homebrew problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#原因"><span class="toc-number">3.1.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解法"><span class="toc-number">3.2.</span> <span class="toc-text">解法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#已存在_/usr/local_目錄時:"><span class="toc-number">3.2.1.</span> <span class="toc-text">已存在 /usr/local 目錄時:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不存在_/usr/local_目錄時:"><span class="toc-number">3.2.2.</span> <span class="toc-text">不存在 /usr/local 目錄時:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vagrant_problems_on_OS_X_10-11"><span class="toc-number">4.</span> <span class="toc-text">Vagrant problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解法-1"><span class="toc-number">4.1.</span> <span class="toc-text">解法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料："><span class="toc-number">5.</span> <span class="toc-text">參考資料：</span></a></li></ol>
  
   </div>
 

@@ -81,6 +81,69 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/04/Node-js-框架比較-Express-vs-Koa-vs-Hapi/" title="Node.js 框架比較: Express vs. Koa vs. Hapi" itemprop="url">Node.js 框架比較: Express vs. Koa vs. Hapi</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-04-02T16:05:47.000Z" itemprop="datePublished"> 發表於 2015-04-03</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <center><img src="/images/2015/VCOE6N7.jpg" alt=""></center>
+
+<p>原文：<a href="https://www.airpair.com/node.js/posts/nodejs-framework-comparison-express-koa-hapi" target="_blank" rel="external">Node.js Framework Comparison: Express vs. Koa vs. Hapi</a></p>
+<p>目前在 Node.js 上面最熱門的 3 套 Framework ，這篇文章從框架的背景與實作一個 Server 和最常用的 Routes 等面向來討論各種框架的特色與優缺點。</p>
+<p>評比結果：還是由最出名的老大哥 Express 在各方面表現亮眼，不管是現有社群資源、框架成熟度都是大推，而 koa 則是後起之秀，最先擁抱 ES6 和 Web component 的思維，也頗值得關注。</p>
+<p>心得：先摸熟 Express ，然後等 ES6 熟悉之後再來摸 koa，或是藉由 koa 來熟悉 ES6 似乎也不錯XD~</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/node-js/">node.js</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/04/Node-js-框架比較-Express-vs-Koa-vs-Hapi/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/03/RWD、AWD-幾種常見的排版線上切換比較/" title="RWD、AWD 幾種常見的排版線上切換比較" itemprop="url">RWD、AWD 幾種常見的排版線上切換比較</a>
   </h1>
   <p class="article-author">By
@@ -202,85 +265,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/02/Laravel-套件-Sqli：讓-Artisan-提供-SQL-互動介面/" title="Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面" itemprop="url">Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2015-02-21T04:23:58.000Z" itemprop="datePublished"> 發表於 2015-02-21</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <center><img src="/images/2015/sqli_05.png" alt=""></center>
-
-
-<h2 id="簡介_Sqli">簡介 Sqli</h2><p>sqli 是一個有趣的 Laravel 4 套件(by Antonio Ribeiro)，可以擴充 Artisan 功能，使其可以執行 SQL 查詢語句。<br>類似像 tinker 那樣可以互動介面來與你的 Laravel 應用程式互動(包含操作 Eloquent)</p>
-<h2 id="安裝方式：">安裝方式：</h2><ol>
-<li><p>使用 composer 安裝，只要在命令列環境下輸入<br> <code>$ composer require &quot;pragmarx/sqli&quot; &quot;0.*&quot;</code></p>
-</li>
-<li><p>service provider to your app/config/app.php:<br> <code>&#39;PragmaRX\SqlI\Vendor\Laravel\ServiceProvider&#39;,</code></p>
-</li>
-</ol>
-<h2 id="使用方式">使用方式</h2><ol>
-<li>進入 SQL 互動畫面<br><code>$ php artisan sqli</code></li>
-<li>輸入 SQL 查詢字串<br><code>$ postgresql:laravel&gt; select email from users;</code></li>
-</ol>
-<p>即可得到 SQL 查詢結果</p>
-<pre><code><span class="code">+----+</span>------------------------------+
-<span class="header">| id | email                        |
-+----+------------------------------+</span>
-|  1 | arnold@schwarzenegger.com    |
-<span class="header">|  2 | danny@devito.com             |
-+----+------------------------------+</span>
-</code></pre><p>GitHub：<a href="https://github.com/antonioribeiro/sqli" target="_blank" rel="external">antonioribeiro/sqli</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Laravel/">Laravel</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/02/Laravel-套件-Sqli：讓-Artisan-提供-SQL-互動介面/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/4/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/">Next<span></span></a>
@@ -345,11 +329,23 @@
 			
 		
 			
-				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+				<li><a href="/tags/OSX/" title="OSX">OSX<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/homebrew/" title="homebrew">homebrew<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/vagrant/" title="vagrant">vagrant<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
 			
 		
 			
@@ -366,18 +362,6 @@
 		
 			
 				<li><a href="/tags/Netbeans/" title="Netbeans">Netbeans<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
 			
 		
 		</ul>

@@ -81,6 +81,130 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/04/Demo-Syntax-Highlighter/" title="Demo Syntax Highlighter" itemprop="url">Demo Syntax Highlighter</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-04-12T07:06:21.000Z" itemprop="datePublished"> 發表於 2015-04-12</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <center><img src="/images/2015/SyntaxHighlighter.png" alt=""></center>
+
+<h2 id="前言">前言</h2><p>在 blog 顯示程式碼，除了先把 code 貼到 codepen、gist、pastebin 等第三方服務再使用嵌入程式碼的方始顯示，也可直接在編輯畫面使用 Syntax Highlighter 來高亮程式碼區塊，以下 Demo 幾種不同語言的程式碼。</p>
+<pre><code>bash <span class="keyword">Syntax</span> Highlight
+
+<span class="keyword">ls</span> -lh
+<span class="keyword">cat</span> 1.txt
+</code></pre><p>PHP Syntax Highlight</p>
+<pre><code>&lt;?<span class="tag">php</span>
+<span class="tag">echo</span> "<span class="tag">Hello</span> <span class="tag">bobo</span>~"
+<span class="rule"><span class="attribute">Route</span>:<span class="value">:<span class="function">get</span>(<span class="string">'/'</span>, <span class="string">'WelcomeController@index'</span>)</span></span>;
+
+<span class="rule"><span class="attribute">Route</span>:<span class="value">:<span class="function">get</span>(<span class="string">'home'</span>, <span class="string">'HomeController@index'</span>)</span></span>;
+
+<span class="rule"><span class="attribute">Route</span>:<span class="value">:<span class="function">controllers</span>([
+    <span class="string">'auth'</span> =&gt; <span class="string">'Auth\AuthController'</span>,
+    <span class="string">'password'</span> =&gt; <span class="string">'Auth\PasswordController'</span>,
+])</span></span>;
+</code></pre><p>JavaScript Syntax Highlight</p>
+<pre><code><span class="pi">'use strict'</span>;
+$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
+    <span class="comment">// Sidebar Menu</span>
+    <span class="keyword">var</span> accordionWidth = $(<span class="string">'#accordion'</span>).width();
+    $(<span class="string">'#accordion'</span>).sticky({
+        <span class="string">'topSpacing'</span>: <span class="number">60</span>
+    }).width(accordionWidth);
+
+    <span class="comment">// Editor</span>
+    $(<span class="string">'.html'</span>).summernote();
+
+    <span class="comment">// Cancel</span>
+    $(<span class="string">'.cancel'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>{
+        e.preventDefault();
+        <span class="keyword">if</span> (confirm(<span class="string">'Are you sure to leave this page?'</span>)) {
+            <span class="built_in">window</span>.history.back();
+        }
+    });
+});
+</code></pre><h2 id="使用方法">使用方法</h2><p>使用3個反單引號開頭，接著輸入程式對應縮寫(ex. php)，就可以開始輸入程式碼，並使用3個反單引號作為結尾。</p>
+<p>呈現效果</p>
+<pre><code>```php
+<span class="php"><span class="preprocessor">&lt;?php</span>
+<span class="keyword">echo</span> <span class="string">"Hello bobo~"</span></span>
+</code></pre><p>還可以使用 diff 語法，利用 +, - 來代表新增、刪除行的顯示方式。</p>
+<pre><code>-<span class="built_in">echo</span> <span class="string">"Hello bobo~"</span>
++<span class="built_in">echo</span> <span class="string">"Hello World~"</span>
+</code></pre><p>SyntaxHighlighter 可標記以下的程式語言</p>
+<pre><code>&gt;語言  對應縮寫    對應檔案
+ActionScript3   as3, actionscript3  shBrushAS3.js
+Bash/<span class="keyword">shell</span>  bash, <span class="keyword">shell</span> shBrushBash.js
+ColdFusion  <span class="keyword">cf</span>, coldfusion  shBrushColdFusion.js
+C#  <span class="keyword">c</span>-sharp, csharp shBrushCSharp.js
+C++ cpp, <span class="keyword">c</span>  shBrushCpp.js
+CSS css shBrushCss.js
+Delphi  delphi, pas, pascal shBrushDelphi.js
+Diff    diff, patch shBrushDiff.js
+Erlang  erl, erlang shBrushErlang.js
+Groovy  groovy  shBrushGroovy.js
+JavaScript  js, jscript, javascript shBrushJScript.js
+Java    java    shBrushJava.js
+JavaFX  jfx, javafx shBrushJavaFX.js
+Perl    <span class="keyword">perl</span>, pl    shBrushPerl.js
+PHP php shBrushPhp.js
+Plain Text  plain, text shBrushPlain.js
+PowerShell  <span class="keyword">ps</span>, powershell  shBrushPowerShell.js
+Python  <span class="keyword">py</span>, <span class="keyword">python</span>  shBrushPython.js
+Ruby    rails, ror, <span class="keyword">ruby</span>    shBrushRuby.js
+Scala   scala   shBrushScala.js
+SQL sql shBrushSql.js
+Visual Basic    vb, vbnet   shBrushVb.js
+XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
+</code></pre><p><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/" target="_blank" rel="external">官網詳列支援標記的語言</a><br>也支援多種樣式，本站使用的是 <a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/themes/rdark.html" target="_blank" rel="external">RDark theme</a></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/04/Demo-Syntax-Highlighter/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/04/LaraDiner-拉拉快餐車-本週四晚上開始試營運囉/" title="LaraDiner(拉拉快餐車) 本週四晚上開始試營運囉!" itemprop="url">LaraDiner(拉拉快餐車) 本週四晚上開始試營運囉!</a>
   </h1>
   <p class="article-author">By
@@ -194,69 +318,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/04/Node-js-框架比較-Express-vs-Koa-vs-Hapi/" title="Node.js 框架比較: Express vs. Koa vs. Hapi" itemprop="url">Node.js 框架比較: Express vs. Koa vs. Hapi</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2015-04-02T16:05:47.000Z" itemprop="datePublished"> 發表於 2015-04-03</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <center><img src="/images/2015/VCOE6N7.jpg" alt=""></center>
-
-<p>原文：<a href="https://www.airpair.com/node.js/posts/nodejs-framework-comparison-express-koa-hapi" target="_blank" rel="external">Node.js Framework Comparison: Express vs. Koa vs. Hapi</a></p>
-<p>目前在 Node.js 上面最熱門的 3 套 Framework ，這篇文章從框架的背景與實作一個 Server 和最常用的 Routes 等面向來討論各種框架的特色與優缺點。</p>
-<p>評比結果：還是由最出名的老大哥 Express 在各方面表現亮眼，不管是現有社群資源、框架成熟度都是大推，而 koa 則是後起之秀，最先擁抱 ES6 和 Web component 的思維，也頗值得關注。</p>
-<p>心得：先摸熟 Express ，然後等 ES6 熟悉之後再來摸 koa，或是藉由 koa 來熟悉 ES6 似乎也不錯XD~</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/node-js/">node.js</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/04/Node-js-框架比較-Express-vs-Koa-vs-Hapi/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/3/"><span></span>Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/5/">Next<span></span></a>
@@ -321,11 +382,23 @@
 			
 		
 			
-				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+				<li><a href="/tags/OSX/" title="OSX">OSX<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/homebrew/" title="homebrew">homebrew<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/vagrant/" title="vagrant">vagrant<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
 			
 		
 			
@@ -342,18 +415,6 @@
 		
 			
 				<li><a href="/tags/Netbeans/" title="Netbeans">Netbeans<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
 			
 		
 		</ul>

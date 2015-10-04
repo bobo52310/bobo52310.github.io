@@ -81,6 +81,85 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/02/Laravel-套件-Sqli：讓-Artisan-提供-SQL-互動介面/" title="Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面" itemprop="url">Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-02-21T04:23:58.000Z" itemprop="datePublished"> 發表於 2015-02-21</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <center><img src="/images/2015/sqli_05.png" alt=""></center>
+
+
+<h2 id="簡介_Sqli">簡介 Sqli</h2><p>sqli 是一個有趣的 Laravel 4 套件(by Antonio Ribeiro)，可以擴充 Artisan 功能，使其可以執行 SQL 查詢語句。<br>類似像 tinker 那樣可以互動介面來與你的 Laravel 應用程式互動(包含操作 Eloquent)</p>
+<h2 id="安裝方式：">安裝方式：</h2><ol>
+<li><p>使用 composer 安裝，只要在命令列環境下輸入<br> <code>$ composer require &quot;pragmarx/sqli&quot; &quot;0.*&quot;</code></p>
+</li>
+<li><p>service provider to your app/config/app.php:<br> <code>&#39;PragmaRX\SqlI\Vendor\Laravel\ServiceProvider&#39;,</code></p>
+</li>
+</ol>
+<h2 id="使用方式">使用方式</h2><ol>
+<li>進入 SQL 互動畫面<br><code>$ php artisan sqli</code></li>
+<li>輸入 SQL 查詢字串<br><code>$ postgresql:laravel&gt; select email from users;</code></li>
+</ol>
+<p>即可得到 SQL 查詢結果</p>
+<pre><code><span class="code">+----+</span>------------------------------+
+<span class="header">| id | email                        |
++----+------------------------------+</span>
+|  1 | arnold@schwarzenegger.com    |
+<span class="header">|  2 | danny@devito.com             |
++----+------------------------------+</span>
+</code></pre><p>GitHub：<a href="https://github.com/antonioribeiro/sqli" target="_blank" rel="external">antonioribeiro/sqli</a></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Laravel/">Laravel</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/02/Laravel-套件-Sqli：讓-Artisan-提供-SQL-互動介面/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/02/Laravel-Models-驗證套件-laravelbook-ardent/" title="Laravel Models 驗證套件: laravelbook/ardent" itemprop="url">Laravel Models 驗證套件: laravelbook/ardent</a>
   </h1>
   <p class="article-author">By
@@ -209,66 +288,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2014/12/關於網站開發團隊資訊的-humans-txt-檔案/" title="關於網站開發團隊資訊的 humans.txt 檔案" itemprop="url">關於網站開發團隊資訊的 humans.txt 檔案</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2014-12-06T05:30:53.000Z" itemprop="datePublished"> 發表於 2014-12-06</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <center><img src="/images/2014/01-what-is-humans-txt.png" alt=""></center>
-
-<p>相較於 robots.txt 檔案，關於網站開發團隊資訊的 humans.txt 相對少人知道，</p>
-<p>好奇查了幾個網站：</p>
-<p>GitHub：把團隊成員名單列出，還附上他們各自的 GitHub</p>
-<p><a href="https://github.com/humans.txt" target="_blank" rel="external">https://github.com/humans.txt</a> </p>
-<p>而 Google 則是附上應徵的網址XD</p>
-<p><a href="https://www.google.com.tw/humans.txt" target="_blank" rel="external">https://www.google.com.tw/humans.txt</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2014/12/關於網站開發團隊資訊的-humans-txt-檔案/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/5/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/7/">Next<span></span></a>
@@ -333,11 +352,23 @@
 			
 		
 			
-				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+				<li><a href="/tags/OSX/" title="OSX">OSX<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/homebrew/" title="homebrew">homebrew<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/vagrant/" title="vagrant">vagrant<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
 			
 		
 			
@@ -354,18 +385,6 @@
 		
 			
 				<li><a href="/tags/Netbeans/" title="Netbeans">Netbeans<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
 			
 		
 		</ul>

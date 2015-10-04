@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Study Notes of PHP、Laravel、Rails & Web development.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://bobochen.com/"/>
-  <updated>2015-10-04T08:17:37.000Z</updated>
+  <updated>2015-10-04T10:23:35.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -13,6 +13,67 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題]]></title>
+    <link href="http://bobochen.com/2015/10/osx10.11-homebrew/"/>
+    <id>http://bobochen.com/2015/10/osx10.11-homebrew/</id>
+    <published>2015-10-04T10:23:35.000Z</published>
+    <updated>2015-10-04T10:23:35.000Z</updated>
+    <content type="html"><![CDATA[<p><center><img src="/images/2015/os-x-el-capitan.jpg" alt=""></center></p>
+<h2 id="先說一下升級後明顯有感覺的部分：">先說一下升級後明顯有感覺的部分：</h2><ul>
+<li>中文字體變好看! (使用新的中文字體-蘋方)</li>
+<li>畫面切換更流暢 (支援 <code>Metal</code> 繪圖 API)</li>
+<li>備忘錄變得更好用</li>
+<li>畫面最上方的狀態列可以隱藏</li>
+<li><code>Mission Control</code> 不會將同類型程式群組化</li>
+<li>幾乎是無痛升級：<code>Sublime Text</code>, <code>Atom</code>, <code>Sketch</code>, <code>VirtualBox</code>, <code>SourceTree</code>, <code>Sequel Pro</code>… 都正常</li>
+</ul>
+<h2 id="升級後受影響的_Web_Developer_吃飯工具：">升級後受影響的 Web Developer 吃飯工具：</h2><ol>
+<li>Homebrew </li>
+<li>Vagrant </li>
+<li>PhpStorm (重新安裝 <code>JRE</code> 即可)</li>
+<li>XtraFinder (暫時無解)</li>
+<li>Asepsis (暫時無解)</li>
+</ol>
+<blockquote>
+<p><code>Homebrew</code>、<code>Vagrant</code> 以下附上解法。</p>
+</blockquote>
+<h2 id="Homebrew_problems_on_OS_X_10-11">Homebrew problems on OS X 10.11</h2><p>升級 MAC OS X 10.11 (EI Capitan) 後，執行 <code>brew update</code> 時發生錯誤：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ brew <span class="operator"><span class="keyword">update</span></span><br><span class="line"><span class="keyword">Error</span>: The /usr/<span class="keyword">local</span> <span class="keyword">directory</span> <span class="keyword">is</span> <span class="keyword">not</span> writable.</span><br><span class="line">Even <span class="keyword">if</span> this <span class="keyword">directory</span> was writable <span class="keyword">when</span> you installed Homebrew, other</span><br><span class="line">software may <span class="keyword">change</span> permissions <span class="keyword">on</span> this <span class="keyword">directory</span>. <span class="keyword">Some</span> <span class="keyword">versions</span> <span class="keyword">of</span> the</span><br><span class="line"><span class="string">"InstantOn"</span> component <span class="keyword">of</span> Airfoil <span class="keyword">are</span> known <span class="keyword">to</span> <span class="keyword">do</span> this.</span><br><span class="line"></span><br><span class="line">You should probably <span class="keyword">change</span> the ownership <span class="keyword">and</span> permissions <span class="keyword">of</span> /usr/<span class="keyword">local</span></span><br><span class="line">back <span class="keyword">to</span> your <span class="keyword">user</span> <span class="keyword">account</span>.</span><br><span class="line">  sudo chown -R $(whoami):<span class="keyword">admin</span> /usr/<span class="keyword">local</span></span></span><br></pre></td></tr></table></figure>
+<h3 id="原因">原因</h3><p>由於 Mac OS X 10.11 引入了「System Integrity Protection (SIP)」而導致 <code>/usr</code>、<code>/System</code> 以及 <code>/bin</code> 等目錄被保護無法寫入(即使用 root 權限也不行)，因此造成 Homebrew 發生無寫入權限錯誤。</p>
+<h3 id="解法">解法</h3><h4 id="已存在_/usr/local_目錄時:">已存在 <code>/usr/local</code> 目錄時:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></span><br></pre></td></tr></table></figure>
+<h4 id="不存在_/usr/local_目錄時:">不存在 <code>/usr/local</code> 目錄時:</h4><p>解法是關閉 SIP，方法如下：</p>
+<ul>
+<li>重開機按 <code>cmd+r</code> 進入<code>恢復模式</code> -&gt; 工具程式 -&gt; 安全設定-&gt;<br>取消勾選 「System Integrity Protection」</li>
+<li>回到 OS X 桌面，開啟 Terminal 並執行：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/<span class="built_in">local</span> &amp;&amp; sudo chflags norestricted /usr/<span class="built_in">local</span> &amp;&amp; sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></span><br></pre></td></tr></table></figure>
+<h2 id="Vagrant_problems_on_OS_X_10-11">Vagrant problems on OS X 10.11</h2><p>看到 Jeffrey Way 在 <a href="https://twitter.com/jeffrey_way/status/649769735396151296" target="_blank" rel="external">Twitter 上面</a>喊：</p>
+<blockquote>
+<p>This Vagrant quirk is the only thing I ran into with my El Capitan update.</p>
+</blockquote>
+<h3 id="解法-1">解法</h3><p><a href="https://laracasts.com/discuss/channels/tips/fix-for-vagranthomestead-el-capitan" target="_blank" rel="external">Fix for Vagrant/Homestead - El Capitan</a></p>
+<h2 id="參考資料：">參考資料：</h2><ul>
+<li><a href="https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/El_Capitan_and_Homebrew.md" target="_blank" rel="external">El Capitan and Homebrew</a></li>
+<li><a href="https://laracasts.com/discuss/channels/tips/fix-for-vagranthomestead-el-capitan" target="_blank" rel="external">Fix for Vagrant/Homestead - El Capitan</a></li>
+<li><a href="https://www.ptt.cc/bbs/MAC/M.1439029980.A.BB1.html" target="_blank" rel="external">PTT 文章：如何矯正半殘的superuser</a></li>
+</ul>
+<p>Bobo內心旁白：「升級一定有風險，升級前應詳閱公開說明書~ 特別是這次有令人又愛又恨 SIP…」</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p><center><img src="/images/2015/os-x-el-capitan.jpg" alt=""></center></p>
+<h2 id="先說一下升級後明顯有感覺的部分：">先說一下升級後明顯有感覺的部分：</h2><ul>
+<li>中文字體變好看!]]>
+    </summary>
+    
+      <category term="OSX" scheme="http://bobochen.com/tags/OSX/"/>
+    
+      <category term="homebrew" scheme="http://bobochen.com/tags/homebrew/"/>
+    
+      <category term="vagrant" scheme="http://bobochen.com/tags/vagrant/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[從 Blogger 搬家到 Hexo 的第一篇]]></title>
@@ -761,30 +822,6 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
     </summary>
     
       <category term="電腦筆記" scheme="http://bobochen.com/tags/%E9%9B%BB%E8%85%A6%E7%AD%86%E8%A8%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Nexmo 的 CURLOPT_SSL_VERIFYHOST => 2,//沒有SSL要設定成0 有SSL設定1 官網建議正式上線建議為2]]></title>
-    <link href="http://bobochen.com/2013/05/Nexmo-%E7%9A%84-CURLOPT-SSL-VERIFYHOST-2-%E6%B2%92%E6%9C%89SSL%E8%A6%81%E8%A8%AD%E5%AE%9A%E6%88%900-%E6%9C%89SSL%E8%A8%AD%E5%AE%9A1-%E5%AE%98%E7%B6%B2%E5%BB%BA%E8%AD%B0%E6%AD%A3%E5%BC%8F%E4%B8%8A%E7%B7%9A%E5%BB%BA%E8%AD%B0%E7%82%BA2/"/>
-    <id>http://bobochen.com/2013/05/Nexmo-的-CURLOPT-SSL-VERIFYHOST-2-沒有SSL要設定成0-有SSL設定1-官網建議正式上線建議為2/</id>
-    <published>2013-05-25T04:47:08.000Z</published>
-    <updated>2015-09-26T12:26:42.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="錯誤訊息">錯誤訊息</h2><center><img src="/images/2015/mac_1.png" alt=""></center>
-
-
-<h2 id="解決方式：">解決方式：</h2><p><code>nexmo.php 的 CURLOPT_SSL_VERIFYHOST =&gt; 2, //沒有SSL要設定成0 有SSL設定1</code><br><code>官網建議正式上線建議為2</code></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="錯誤訊息">錯誤訊息</h2><center><img src="/images/2015/mac_1.png" alt=""></center>
-
-
-<h2 id="解決方式：">解決方式：</h2><p><code>nexmo.php 的 CURLOPT_SS]]>
-    </summary>
-    
-      <category term="PHP" scheme="http://bobochen.com/tags/PHP/"/>
-    
-      <category term="SMS" scheme="http://bobochen.com/tags/SMS/"/>
     
   </entry>
   
