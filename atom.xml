@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Study Notes of PHP、Laravel、Rails & Web development.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://bobochen.com/"/>
-  <updated>2015-09-29T15:50:16.000Z</updated>
+  <updated>2015-10-04T08:17:37.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -15,12 +15,12 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title><![CDATA[從 Blogger 搬家到 Hexo 的第一篇]]></title>
     <link href="http://bobochen.com/2015/09/%E5%BE%9E%20Blogger%20%E6%90%AC%E5%AE%B6%E5%88%B0%20Hexo%20%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     <id>http://bobochen.com/2015/09/從 Blogger 搬家到 Hexo 的第一篇/</id>
-    <published>2015-09-29T15:50:16.000Z</published>
-    <updated>2015-09-29T15:50:16.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="從_Blogger_搬家到_Hexo_的第一篇">從 Blogger 搬家到 Hexo 的第一篇</h1><center><img src="/images/2015/hexo_github.png" alt=""></center>
+    <published>2015-09-29T15:55:33.000Z</published>
+    <updated>2015-10-04T08:17:37.000Z</updated>
+    <content type="html"><![CDATA[<center><img src="/images/2015/hexo_github.png" alt=""></center>
 
 <h2 id="搬家源由">搬家源由</h2><h3 id="Blogger_不好用嗎？">Blogger 不好用嗎？</h3><p>不會啊，已經使用好幾年了，<br>有內建很棒的後台，詳細的 Dashboard、WYSIWYG 線上編輯器、版型範本也有多種選擇，當然你想要使用 GA 或是 Google Adsense 等 Google 自家服務更是輕鬆容易，連相簿也整合好 google+ 了，甚至聽說還送你 SEO 優勢(鄉野傳說?)<br>而且輕輕鬆鬆註冊個帳號就可以使用囉。</p>
 <h3 id="Why_改用_Hexo？">Why 改用 Hexo？</h3><p>Hexo 沒有很厲害的後台，還需要自己 host server，雖然相較於 Blogger 沒那麼方便，不過卻多了更多練習的機會，以下給自己整理了幾個搬家的理由：</p>
@@ -73,10 +73,12 @@
 </ul>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="從_Blogger_搬家到_Hexo_的第一篇">從 Blogger 搬家到 Hexo 的第一篇</h1><center><img src="/images/2015/hexo_github.png" alt=""></center>
+    <![CDATA[<center><img src="/images/2015/hexo_github.png" alt=""></center>
 
-<h2 id="搬家源由"]]>
+<h2 id="搬家源由">搬家源由</h2><h3 id="Blogger_不好用嗎？">Blogger 不好用嗎？</h3><p>不會啊，已經使]]>
     </summary>
+    
+      <category term="版務" scheme="http://bobochen.com/tags/%E7%89%88%E5%8B%99/"/>
     
   </entry>
   
