@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Study Notes of PHP、Laravel、Rails & Web development.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://bobochen.com/"/>
-  <updated>2016-01-31T14:25:06.000Z</updated>
+  <updated>2016-01-31T15:02:41.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[icdiff 好用的檔案比對工具，Terminal 環境下用它就對了]]></title>
     <link href="http://bobochen.com/2016/01/icdiff/"/>
     <id>http://bobochen.com/2016/01/icdiff/</id>
-    <published>2016-01-31T14:25:06.000Z</published>
-    <updated>2016-01-31T14:25:06.000Z</updated>
+    <published>2016-01-31T14:35:12.000Z</published>
+    <updated>2016-01-31T15:02:41.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
 <p><img src="http://i.imgur.com/2B3fcMC.png" alt="內建的 diff 指令比對檔案差異">￼</p>
 <p><code>diff</code>指令僅僅是將檔案差異處以<strong>上下對照呈現</strong>，並不會以顏色標示差異處，需要我們自己很傷眼的來回掃描比對才知道差異在哪裡，這樣的呈現效果不是那麼清楚。</p>
@@ -78,10 +78,10 @@ icdiff <span class="variable">$2</span> <span class="variable">$5</span>
   
   <entry>
     <title><![CDATA[升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題]]></title>
-    <link href="http://bobochen.com/2016/01/osx10.11-homebrew/"/>
-    <id>http://bobochen.com/2016/01/osx10.11-homebrew/</id>
-    <published>2016-01-31T12:57:46.000Z</published>
-    <updated>2016-01-31T12:57:46.000Z</updated>
+    <link href="http://bobochen.com/2015/10/osx10.11-homebrew/"/>
+    <id>http://bobochen.com/2015/10/osx10.11-homebrew/</id>
+    <published>2015-10-04T10:24:33.000Z</published>
+    <updated>2016-01-31T15:01:37.000Z</updated>
     <content type="html"><![CDATA[<p><center><img src="/images/2015/os-x-el-capitan.jpg" alt=""></center></p>
 <h2 id="先說一下升級後明顯有感覺的部分：">先說一下升級後明顯有感覺的部分：</h2><ul>
 <li>中文字體變好看! (使用新的中文字體-蘋方)</li>
