@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Study Notes of PHP、Laravel、Rails & Web development.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://bobochen.com/"/>
-  <updated>2015-10-04T10:23:56.000Z</updated>
+  <updated>2016-01-31T14:18:10.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -15,11 +15,70 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="http://bobochen.com/2016/01/icdiff/"/>
+    <id>http://bobochen.com/2016/01/icdiff/</id>
+    <published>2016-01-31T14:18:10.000Z</published>
+    <updated>2016-01-31T14:18:10.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="icdiff_好用的檔案比對工具，Terminal_環境下用它就對了">icdiff 好用的檔案比對工具，Terminal 環境下用它就對了</h1><h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
+<p><img src="http://i.imgur.com/2B3fcMC.png" alt="內建的 diff 指令比對檔案差異">￼</p>
+<p><code>diff</code>指令僅僅是將檔案差異處以<strong>上下對照呈現</strong>，並不會以顏色標示差異處，需要我們自己很傷眼的來回掃描比對才知道差異在哪裡，這樣的呈現效果不是那麼清楚。</p>
+<p>讓我們來試試看，如果將檔案差異處以<strong>左右對照呈現</strong>的方式，並且將差異處標記上顏色，那是不是更一目了然了呢！<br><img src="http://i.imgur.com/NEA45so.png" alt="使用 icdiff 指令比對檔案差異"></p>
+<p>漂亮！差異處有加上顏色果然清楚多了！要達到這樣的效果，只需要改用 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external"><code>icdiff</code></a> 這一套工具即可。</p>
+<p>來看看 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external"><code>icdiff</code></a> 官方是怎麼介紹的：</p>
+<blockquote>
+<p>improved colored diff</p>
+</blockquote>
+<p>效果如同我們上面所看到的，在檔案差異處會用顏色標記，一目了然的比對兩者的差異，找起問題容易多了。</p>
+<p>其中各種顏色代表的意義如下：</p>
+<ul>
+<li>「綠色」表示「新增」。</li>
+<li>「紅色」表示「刪除」。</li>
+</ul>
+<h2 id="安裝方法：">安裝方法：</h2><p>OS X 可以直接使用 <code>Homebrew</code> 來安裝：</p>
+<pre><code><span class="variable">$brew</span> icdiff
+</code></pre><p>由於 <code>icdiff</code> 是一個 python 開發的程式，也可以直接下載檔案來執行，請參考 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external">GitHub</a> 上面的說明。</p>
+<h2 id="使用方法：">使用方法：</h2><h3 id="如何比較兩個檔案差異：">如何比較兩個檔案差異：</h3><pre><code><span class="variable">$icdiff</span> &lt;file_1&gt; &lt;file_2&gt;
+</code></pre><blockquote>
+<p>備註：我們也可以將內建的 diff 指令改用 icdiff 取代。</p>
+</blockquote>
+<h3 id="如何搭配_git_使用：">如何搭配 git 使用：</h3><pre><code><span class="variable">$git</span> difftool --extcmd icdiff
+</code></pre><h3 id="也可以有更精簡的_git_用法：">也可以有更精簡的 git 用法：</h3><pre><code><span class="variable">$git</span> icdiff
+</code></pre><p>只需要設定 <code>git difftool path</code> 指向 <code>git-icdiff</code> 檔案即可。</p>
+<h3 id="將_icdiff_設定為_git_預設比對差異工具：">將 <code>icdiff</code> 設定為 git 預設比對差異工具：</h3><p>已經習慣 git 預設的 <code>git diff</code> 指令了嗎？別擔心，我們可以設定 git 預設使用這一套來做差異比對，讓我們可以沿用原本熟悉的 <code>git diff</code> 指令，同時享用 <code>icdiff</code> 清楚的比對結果：</p>
+<pre><code><span class="variable">$git</span> diff
+</code></pre><p>該如何讓 <code>$git diff</code> 預設使用 <code>icdiff</code>，設定方法如下：</p>
+<ol>
+<li><p>在 <code>.gitconfig</code> 設定</p>
+<pre><code>[diff]
+    <span class="comment"># 使用 icdiff 來取代 git 內建的 diff</span>
+    external = ~<span class="regexp">/bin/git</span>-diff-wrapper.sh
+</code></pre></li>
+<li><p>建立 <code>~/bin/git-diff-wrapper.sh</code> 檔案，加入以下內容：</p>
+<pre><code><span class="shebang">#!/bin/bash</span>
+icdiff <span class="variable">$2</span> <span class="variable">$5</span>
+</code></pre></li>
+</ol>
+<p>3.完成！趕緊來使用 <code>$git diff</code> 看看吧</p>
+<p>參考資料：</p>
+<ul>
+<li><a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external">jeffkaufman/icdiff</a></li>
+<li><a href="https://github.com/jeffkaufman/icdiff/issues/14" target="_blank" rel="external">https://github.com/jeffkaufman/icdiff/issues/14</a></li>
+</ul>
+<p>Bobo內心旁白：「為了愛護您的靈魂之窗，請趕緊改用 <code>icdiff</code> 來比對檔案差異吧。」</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="icdiff_好用的檔案比對工具，Terminal_環境下用它就對了">icdiff 好用的檔案比對工具，Terminal 環境下用它就對了</h1><h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使]]>
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題]]></title>
-    <link href="http://bobochen.com/2015/10/osx10.11-homebrew/"/>
-    <id>http://bobochen.com/2015/10/osx10.11-homebrew/</id>
-    <published>2015-10-04T10:23:56.000Z</published>
-    <updated>2015-10-04T10:23:56.000Z</updated>
+    <link href="http://bobochen.com/2016/01/osx10.11-homebrew/"/>
+    <id>http://bobochen.com/2016/01/osx10.11-homebrew/</id>
+    <published>2016-01-31T12:57:46.000Z</published>
+    <updated>2016-01-31T12:57:46.000Z</updated>
     <content type="html"><![CDATA[<p><center><img src="/images/2015/os-x-el-capitan.jpg" alt=""></center></p>
 <h2 id="先說一下升級後明顯有感覺的部分：">先說一下升級後明顯有感覺的部分：</h2><ul>
 <li>中文字體變好看! (使用新的中文字體-蘋方)</li>
@@ -80,7 +139,7 @@
     <link href="http://bobochen.com/2015/09/%E5%BE%9E%20Blogger%20%E6%90%AC%E5%AE%B6%E5%88%B0%20Hexo%20%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     <id>http://bobochen.com/2015/09/從 Blogger 搬家到 Hexo 的第一篇/</id>
     <published>2015-09-29T15:55:33.000Z</published>
-    <updated>2015-10-04T08:17:37.000Z</updated>
+    <updated>2015-12-01T14:58:23.000Z</updated>
     <content type="html"><![CDATA[<center><img src="/images/2015/hexo_github.png" alt=""></center>
 
 <h2 id="搬家源由">搬家源由</h2><h3 id="Blogger_不好用嗎？">Blogger 不好用嗎？</h3><p>不會啊，已經使用好幾年了，<br>有內建很棒的後台，詳細的 Dashboard、WYSIWYG 線上編輯器、版型範本也有多種選擇，當然你想要使用 GA 或是 Google Adsense 等 Google 自家服務更是輕鬆容易，連相簿也整合好 google+ 了，甚至聽說還送你 SEO 優勢(鄉野傳說?)<br>而且輕輕鬆鬆註冊個帳號就可以使用囉。</p>
@@ -334,7 +393,7 @@
     <link href="http://bobochen.com/2015/07/%E6%8E%A8%E8%96%A62%E5%80%8B%E5%A5%BD%E7%94%A8%E7%9A%84-PHP-Refactoring-%E9%87%8D%E6%A7%8B%E5%B7%A5%E5%85%B7/"/>
     <id>http://bobochen.com/2015/07/推薦2個好用的-PHP-Refactoring-重構工具/</id>
     <published>2015-07-05T08:55:56.000Z</published>
-    <updated>2015-09-26T12:49:13.000Z</updated>
+    <updated>2015-11-28T05:50:18.000Z</updated>
     <content type="html"><![CDATA[<center><img src="/images/2015/refactoring.jpg" alt=""></center>
 
 <h2 id="PhpStorm">PhpStorm</h2><p>1.首推 <a href="https://www.jetbrains.com/phpstorm/help/refactoring-source-code.html" target="_blank" rel="external">PhpStorm</a> PHP 的夢幻逸品 IDE</p>
@@ -493,7 +552,7 @@ printEmptyHeader();
     <link href="http://bobochen.com/2015/04/Demo-Syntax-Highlighter/"/>
     <id>http://bobochen.com/2015/04/Demo-Syntax-Highlighter/</id>
     <published>2015-04-12T07:06:21.000Z</published>
-    <updated>2015-09-26T13:07:41.000Z</updated>
+    <updated>2016-01-31T12:57:19.000Z</updated>
     <content type="html"><![CDATA[<center><img src="/images/2015/SyntaxHighlighter.png" alt=""></center>
 
 <h2 id="前言">前言</h2><p>在 blog 顯示程式碼，除了先把 code 貼到 codepen、gist、pastebin 等第三方服務再使用嵌入程式碼的方始顯示，也可直接在編輯畫面使用 Syntax Highlighter 來高亮程式碼區塊，以下 Demo 幾種不同語言的程式碼。</p>
@@ -799,29 +858,6 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
 <p>相較於 robots.txt 檔案，關於網站開發團隊資訊的 humans.txt 相對少人知道，</p>
 <p>好奇查了幾]]>
     </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[elementary OS]]></title>
-    <link href="http://bobochen.com/2014/09/elementary-OS/"/>
-    <id>http://bobochen.com/2014/09/elementary-OS/</id>
-    <published>2014-09-10T05:36:29.000Z</published>
-    <updated>2015-09-26T13:43:54.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="簡介">簡介</h2><p>官網：<a href="http://elementaryos.org/" target="_blank" rel="external">http://elementaryos.org/</a><br>介面質感走 OS X 風格的 Linux。</p>
-<center><img src="/images/2014/2014-09-06_145150_thumb[2].jpg" alt=""></center><br>## 畫面檢視<br><center><img src="/images/2014/2014-09-06_145212_thumb[1].jpg" alt=""></center>
-
-<center><img src="/images/2014/2014-09-06_145241_thumb[1].jpg" alt=""></center>
-
-<center><img src="/images/2014/2014-09-06_145328_thumb[1].jpg" alt=""></center><br><center><img src="/images/2014/2014-09-06_145523_thumb[1].jpg" alt=""></center><br><center><img src="/images/2014/2014-09-06_150001_thumb[1].jpg" alt=""></center>
-
-<center><img src="/images/2014/2014-09-06_150804_thumb[2].jpg" alt=""></center><br><center><img src="/images/2014/2014-09-06_151125_thumb[1].jpg" alt=""></center><br><center><img src="/images/2014/2014-09-06_151224_thumb[1].jpg" alt=""></center>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="簡介">簡介</h2><p>官網：<a href="http://elementaryos.org/" target="_blank" rel="external">http://elementaryos.org/</a><br>介面質感走 OS X 風格的 Li]]>
-    </summary>
-    
-      <category term="電腦筆記" scheme="http://bobochen.com/tags/%E9%9B%BB%E8%85%A6%E7%AD%86%E8%A8%98/"/>
     
   </entry>
   

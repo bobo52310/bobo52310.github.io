@@ -80,6 +80,74 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/02/將-Server-端檔案同步於本機，並可使用-Sublime-Text-進行編輯/" title="將 Server 端檔案同步於本機，並可使用 Sublime Text 進行編輯" itemprop="url">將 Server 端檔案同步於本機，並可使用 Sublime Text 進行編輯</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-02-20T15:09:32.000Z" itemprop="datePublished"> 發表於 2015-02-20</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p>習慣使用 Sublime Text 來開發的同學，會遇到檔案在 local 與 remote 同步的問題，</p>
+<h2 id="解法1:在_local_使用_SFTP_上傳到_remote_(有點麻煩)">解法1:在 local 使用 SFTP 上傳到 remote (有點麻煩)</h2><p>直接使用 SFTP 上傳檔案。</p>
+<h2 id="解法2:使用_mount_遠端目錄(目前較佳方案)">解法2:使用 mount 遠端目錄(目前較佳方案)</h2><ol>
+<li>在本機安裝 sshfs-fuse 以達到透過SSH(SFTP)去掛載遠端的檔案目錄<ol>
+<li>下載安裝 OSXFUSE(2.7.3)<br> <a href="http://sourceforge.net/projects/osxfuse/files/osxfuse-2.7.3/osxfuse-2.7.3.dmg/download" target="_blank" rel="external">http://sourceforge.net/projects/osxfuse/files/osxfuse-2.7.3/osxfuse-2.7.3.dmg/download</a></li>
+<li>下載安裝 SSHFS(2.5.0)<br> <a href="https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-2.5.0/" target="_blank" rel="external">https://github.com/osxfuse/sshfs/releases/download/osxfuse-sshfs-2.5.0/</a></li>
+</ol>
+</li>
+<li><p>使用 mount 指令</p>
+<p><code>sshfs bobochen@&lt;主機路徑&gt;:&lt;遠端路徑&gt; &lt;本機路徑&gt; -oauto_cache,reconnect,defer_permissions,negative_vncache,noappledouble,volname=ImMount</code></p>
+<p>指令後方帶了一堆參數，主要是要解決網路斷線後不會自動重新連線的問題。</p>
+</li>
+<li>umount 指令，不用的時候解除 mount 狀態<br><code>umount -f &lt;本機路徑&gt;</code></li>
+</ol>
+<p>搭配 iTerm2 使用更輕鬆，將 mount,umount 完整指令進行設定。</p>
+<center><img src="/images/2015/iterm_Preferences.png" alt=""></center>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/02/將-Server-端檔案同步於本機，並可使用-Sublime-Text-進行編輯/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2014/12/關於網站開發團隊資訊的-humans-txt-檔案/" title="關於網站開發團隊資訊的 humans.txt 檔案" itemprop="url">關於網站開發團隊資訊的 humans.txt 檔案</a>
   </h1>
   <p class="article-author">By
@@ -199,70 +267,9 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2013/05/Nexmo-的-CURLOPT-SSL-VERIFYHOST-2-沒有SSL要設定成0-有SSL設定1-官網建議正式上線建議為2/" title="Nexmo 的 CURLOPT_SSL_VERIFYHOST =&gt; 2,//沒有SSL要設定成0 有SSL設定1 官網建議正式上線建議為2" itemprop="url">Nexmo 的 CURLOPT_SSL_VERIFYHOST =&gt; 2,//沒有SSL要設定成0 有SSL設定1 官網建議正式上線建議為2</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2013-05-25T04:47:08.000Z" itemprop="datePublished"> 發表於 2013-05-25</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="錯誤訊息">錯誤訊息</h2><center><img src="/images/2015/mac_1.png" alt=""></center>
-
-
-<h2 id="解決方式：">解決方式：</h2><p><code>nexmo.php 的 CURLOPT_SSL_VERIFYHOST =&gt; 2, //沒有SSL要設定成0 有SSL設定1</code><br><code>官網建議正式上線建議為2</code></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/PHP/">PHP</a><a href="/tags/SMS/">SMS</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2013/05/Nexmo-的-CURLOPT-SSL-VERIFYHOST-2-沒有SSL要設定成0-有SSL設定1-官網建議正式上線建議為2/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
-    <a class="extend prev" rel="prev" href="/page/6/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/8/">Next<span></span></a>
+    <a class="extend prev" rel="prev" href="/page/6/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><span class="page-number current">7</span><a class="page-number" href="/page/8/">8</a><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/8/">Next<span></span></a>
   </nav>
 
 </div>
@@ -433,7 +440,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
 		
 		<a href="/about" target="_blank" title="Bobo Chen">Bobo Chen</a>
 		
