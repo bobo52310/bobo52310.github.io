@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Study Notes of PHP、Laravel、Rails & Web development.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://bobochen.com/"/>
-  <updated>2016-01-31T14:18:10.000Z</updated>
+  <updated>2016-01-31T14:25:06.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -15,12 +15,12 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title><![CDATA[icdiff 好用的檔案比對工具，Terminal 環境下用它就對了]]></title>
     <link href="http://bobochen.com/2016/01/icdiff/"/>
     <id>http://bobochen.com/2016/01/icdiff/</id>
-    <published>2016-01-31T14:18:10.000Z</published>
-    <updated>2016-01-31T14:18:10.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="icdiff_好用的檔案比對工具，Terminal_環境下用它就對了">icdiff 好用的檔案比對工具，Terminal 環境下用它就對了</h1><h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
+    <published>2016-01-31T14:25:06.000Z</published>
+    <updated>2016-01-31T14:25:06.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
 <p><img src="http://i.imgur.com/2B3fcMC.png" alt="內建的 diff 指令比對檔案差異">￼</p>
 <p><code>diff</code>指令僅僅是將檔案差異處以<strong>上下對照呈現</strong>，並不會以顏色標示差異處，需要我們自己很傷眼的來回掃描比對才知道差異在哪裡，這樣的呈現效果不是那麼清楚。</p>
 <p>讓我們來試試看，如果將檔案差異處以<strong>左右對照呈現</strong>的方式，並且將差異處標記上顏色，那是不是更一目了然了呢！<br><img src="http://i.imgur.com/NEA45so.png" alt="使用 icdiff 指令比對檔案差異"></p>
@@ -68,8 +68,11 @@ icdiff <span class="variable">$2</span> <span class="variable">$5</span>
 <p>Bobo內心旁白：「為了愛護您的靈魂之窗，請趕緊改用 <code>icdiff</code> 來比對檔案差異吧。」</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="icdiff_好用的檔案比對工具，Terminal_環境下用它就對了">icdiff 好用的檔案比對工具，Terminal 環境下用它就對了</h1><h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使]]>
+    <![CDATA[<h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
+<p><img src="http://i.imgur.com/2B3fcMC.png" ]]>
     </summary>
+    
+      <category term="開發工具" scheme="http://bobochen.com/tags/%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
@@ -139,7 +142,7 @@ icdiff <span class="variable">$2</span> <span class="variable">$5</span>
     <link href="http://bobochen.com/2015/09/%E5%BE%9E%20Blogger%20%E6%90%AC%E5%AE%B6%E5%88%B0%20Hexo%20%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     <id>http://bobochen.com/2015/09/從 Blogger 搬家到 Hexo 的第一篇/</id>
     <published>2015-09-29T15:55:33.000Z</published>
-    <updated>2015-12-01T14:58:23.000Z</updated>
+    <updated>2016-01-31T14:21:30.000Z</updated>
     <content type="html"><![CDATA[<center><img src="/images/2015/hexo_github.png" alt=""></center>
 
 <h2 id="搬家源由">搬家源由</h2><h3 id="Blogger_不好用嗎？">Blogger 不好用嗎？</h3><p>不會啊，已經使用好幾年了，<br>有內建很棒的後台，詳細的 Dashboard、WYSIWYG 線上編輯器、版型範本也有多種選擇，當然你想要使用 GA 或是 Google Adsense 等 Google 自家服務更是輕鬆容易，連相簿也整合好 google+ 了，甚至聽說還送你 SEO 優勢(鄉野傳說?)<br>而且輕輕鬆鬆註冊個帳號就可以使用囉。</p>
