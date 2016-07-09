@@ -4,22 +4,33 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Bobo的技術時光屋</title>
+    <title>5分鐘快速認識 Elixir 程式語言 | Bobo的技術時光屋</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Bobo Chen">
     
 
     
-    <meta name="description" content="這是描述">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bobo的技術時光屋">
-<meta property="og:url" content="http://bobochen.com/index.html">
+    <meta name="description" content="緣起：
+最近因為工作關係需要使用 Elixir 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！
+不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD
+另外聽說藉由">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5分鐘快速認識 Elixir 程式語言">
+<meta property="og:url" content="http://bobochen.com/2016/07/introduction_to_Elixir/index.html">
 <meta property="og:site_name" content="Bobo的技術時光屋">
-<meta property="og:description" content="這是描述">
+<meta property="og:description" content="緣起：
+最近因為工作關係需要使用 Elixir 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！
+不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD
+另外聽說藉由">
+<meta property="og:image" content="http://imgur.com/39eqCJu.jpg">
+<meta property="og:updated_time" content="2016-07-09T03:28:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bobo的技術時光屋">
-<meta name="twitter:description" content="這是描述">
+<meta name="twitter:title" content="5分鐘快速認識 Elixir 程式語言">
+<meta name="twitter:description" content="緣起：
+最近因為工作關係需要使用 Elixir 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！
+不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD
+另外聽說藉由">
 <link rel="publisher" href="u/0/communities/116944928466340599471">
 
     
@@ -72,12 +83,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2016/07/introduction_to_Elixir/" title="5分鐘快速認識 Elixir 程式語言" itemprop="url">5分鐘快速認識 Elixir 程式語言</a>
@@ -91,9 +100,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h2 id="緣起：">緣起：</h2><p><img src="http://imgur.com/39eqCJu.jpg" alt=""></p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">Contents</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#緣起："><span class="toc-number">1.</span> <span class="toc-text">緣起：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir_是啥玩意兒？"><span class="toc-number">2.</span> <span class="toc-text">Elixir 是啥玩意兒？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir_值得學嗎？"><span class="toc-number">3.</span> <span class="toc-text">Elixir 值得學嗎？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些公司使用_Elixir？"><span class="toc-number">4.</span> <span class="toc-text">有哪些公司使用 Elixir？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些專案使用_Elixir_開發"><span class="toc-number">5.</span> <span class="toc-text">有哪些專案使用 Elixir 開發</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的_Elixir_相關書籍"><span class="toc-number">6.</span> <span class="toc-text">推薦的 Elixir 相關書籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的_Elixir_線上教學資源"><span class="toc-number">7.</span> <span class="toc-text">推薦的 Elixir 線上教學資源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#補充一下_Erlang_語言："><span class="toc-number">8.</span> <span class="toc-text">補充一下 Erlang 語言：</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="緣起：">緣起：</h2><p><img src="http://imgur.com/39eqCJu.jpg" alt=""></p>
 <p>最近因為工作關係需要使用 <code>Elixir</code> 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！</p>
 <p>不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD</p>
 <p>另外聽說藉由專案驅動學習是最有效率的…(特別是這種死線緊湊的效果應該又更好 @_@)</p>
@@ -171,14 +187,9 @@
 <li><a href="http://joearms.github.io/2013/05/31/a-week-with-elixir.html" target="_blank" rel="external"><code>Erlang</code> 老爸也對 <code>Elixir</code> 讚譽有嘉。</a></li>
 <li>主要的特色是 COP(Concurrency-oriented programming， 平行導向程式設計) 強調程式的容錯處理。</li>
 </ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 
@@ -191,231 +202,49 @@
 
 
 
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://bobochen.com/2016/07/introduction_to_Elixir/" data-title="5分鐘快速認識 Elixir 程式語言 | Bobo的技術時光屋" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
 
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/07/introduction_to_Elixir/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
 
 </footer>
 
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
 
-    </article>
+<div class="next">
+<a href="/2016/01/icdiff/"  title="icdiff 好用的檔案比對工具，Terminal 環境下用它就對了">
+ <strong>下一篇：</strong><br/> 
+ <span>icdiff 好用的檔案比對工具，Terminal 環境下用它就對了
+</span>
+</a>
+</div>
 
+</nav>
 
+	
 
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/01/icdiff/" title="icdiff 好用的檔案比對工具，Terminal 環境下用它就對了" itemprop="url">icdiff 好用的檔案比對工具，Terminal 環境下用它就對了</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2016-01-31T14:35:12.000Z" itemprop="datePublished"> Published 2016-01-31</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
-<p><img src="http://i.imgur.com/2B3fcMC.png" alt="內建的 diff 指令比對檔案差異">￼</p>
-<p><code>diff</code>指令僅僅是將檔案差異處以<strong>上下對照呈現</strong>，並不會以顏色標示差異處，需要我們自己很傷眼的來回掃描比對才知道差異在哪裡，這樣的呈現效果不是那麼清楚。</p>
-<p>讓我們來試試看，如果將檔案差異處以<strong>左右對照呈現</strong>的方式，並且將差異處標記上顏色，那是不是更一目了然了呢！<br><img src="http://i.imgur.com/NEA45so.png" alt="使用 icdiff 指令比對檔案差異"></p>
-<p>漂亮！差異處有加上顏色果然清楚多了！要達到這樣的效果，只需要改用 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external"><code>icdiff</code></a> 這一套工具即可。</p>
-<p>來看看 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external"><code>icdiff</code></a> 官方是怎麼介紹的：</p>
-<blockquote>
-<p>improved colored diff</p>
-</blockquote>
-<p>效果如同我們上面所看到的，在檔案差異處會用顏色標記，一目了然的比對兩者的差異，找起問題容易多了。</p>
-<p>其中各種顏色代表的意義如下：</p>
-<ul>
-<li>「綠色」表示「新增」。</li>
-<li>「紅色」表示「刪除」。</li>
-</ul>
-<h2 id="安裝方法：">安裝方法：</h2><p>OS X 可以直接使用 <code>Homebrew</code> 來安裝：</p>
-<pre><code><span class="variable">$brew</span> icdiff
-</code></pre><p>由於 <code>icdiff</code> 是一個 python 開發的程式，也可以直接下載檔案來執行，請參考 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external">GitHub</a> 上面的說明。</p>
-<h2 id="使用方法：">使用方法：</h2><h3 id="如何比較兩個檔案差異：">如何比較兩個檔案差異：</h3><pre><code><span class="variable">$icdiff</span> &lt;file_1&gt; &lt;file_2&gt;
-</code></pre><blockquote>
-<p>備註：我們也可以將內建的 diff 指令改用 icdiff 取代。</p>
-</blockquote>
-<h3 id="如何搭配_git_使用：">如何搭配 git 使用：</h3><pre><code><span class="variable">$git</span> difftool --extcmd icdiff
-</code></pre><h3 id="也可以有更精簡的_git_用法：">也可以有更精簡的 git 用法：</h3><pre><code><span class="variable">$git</span> icdiff
-</code></pre><p>只需要設定 <code>git difftool path</code> 指向 <code>git-icdiff</code> 檔案即可。</p>
-<h3 id="將_icdiff_設定為_git_預設比對差異工具：">將 <code>icdiff</code> 設定為 git 預設比對差異工具：</h3><p>已經習慣 git 預設的 <code>git diff</code> 指令了嗎？別擔心，我們可以設定 git 預設使用這一套來做差異比對，讓我們可以沿用原本熟悉的 <code>git diff</code> 指令，同時享用 <code>icdiff</code> 清楚的比對結果：</p>
-<pre><code><span class="variable">$git</span> diff
-</code></pre><p>該如何讓 <code>$git diff</code> 預設使用 <code>icdiff</code>，設定方法如下：</p>
-<ol>
-<li><p>在 <code>.gitconfig</code> 設定</p>
-<pre><code>[diff]
-    <span class="comment"># 使用 icdiff 來取代 git 內建的 diff</span>
-    external = ~<span class="regexp">/bin/git</span>-diff-wrapper.sh
-</code></pre></li>
-<li><p>建立 <code>~/bin/git-diff-wrapper.sh</code> 檔案，加入以下內容：</p>
-<pre><code><span class="shebang">#!/bin/bash</span>
-icdiff <span class="variable">$2</span> <span class="variable">$5</span>
-</code></pre></li>
-</ol>
-<p>3.完成！趕緊來使用 <code>$git diff</code> 看看吧</p>
-<p>參考資料：</p>
-<ul>
-<li><a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external">jeffkaufman/icdiff</a></li>
-<li><a href="https://github.com/jeffkaufman/icdiff/issues/14" target="_blank" rel="external">https://github.com/jeffkaufman/icdiff/issues/14</a></li>
-</ul>
-<p>Bobo內心旁白：「為了愛護您的靈魂之窗，請趕緊改用 <code>icdiff</code> 來比對檔案差異吧。」</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/開發工具/">開發工具</a>
+<section id="comments" class="comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </div>
+</section>
 
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2016/01/icdiff/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2015/10/osx10.11-homebrew/" title="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題" itemprop="url">升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2015-10-04T10:24:33.000Z" itemprop="datePublished"> Published 2015-10-04</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><center><img src="/images/2015/os-x-el-capitan.jpg" alt=""></center></p>
-<h2 id="先說一下升級後明顯有感覺的部分：">先說一下升級後明顯有感覺的部分：</h2><ul>
-<li>中文字體變好看! (使用新的中文字體-蘋方)</li>
-<li>畫面切換更流暢 (支援 <code>Metal</code> 繪圖 API)</li>
-<li>備忘錄變得更好用</li>
-<li>畫面最上方的狀態列可以隱藏</li>
-<li><code>Mission Control</code> 不會將同類型程式群組化</li>
-<li>幾乎是無痛升級：<code>Sublime Text</code>, <code>Atom</code>, <code>Sketch</code>, <code>VirtualBox</code>, <code>SourceTree</code>, <code>Sequel Pro</code>… 都正常</li>
-</ul>
-<h2 id="升級後受影響的_Web_Developer_吃飯工具：">升級後受影響的 Web Developer 吃飯工具：</h2><ol>
-<li>Homebrew </li>
-<li>Vagrant </li>
-<li>PhpStorm (重新安裝 <code>JRE</code> 即可)</li>
-<li>XtraFinder (暫時無解)</li>
-<li>Asepsis (暫時無解)</li>
-</ol>
-<blockquote>
-<p><code>Homebrew</code>、<code>Vagrant</code> 以下附上解法。</p>
-</blockquote>
-<h2 id="Homebrew_problems_on_OS_X_10-11">Homebrew problems on OS X 10.11</h2><p>升級 MAC OS X 10.11 (EI Capitan) 後，執行 <code>brew update</code> 時發生錯誤：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ brew <span class="operator"><span class="keyword">update</span></span><br><span class="line"><span class="keyword">Error</span>: The /usr/<span class="keyword">local</span> <span class="keyword">directory</span> <span class="keyword">is</span> <span class="keyword">not</span> writable.</span><br><span class="line">Even <span class="keyword">if</span> this <span class="keyword">directory</span> was writable <span class="keyword">when</span> you installed Homebrew, other</span><br><span class="line">software may <span class="keyword">change</span> permissions <span class="keyword">on</span> this <span class="keyword">directory</span>. <span class="keyword">Some</span> <span class="keyword">versions</span> <span class="keyword">of</span> the</span><br><span class="line"><span class="string">"InstantOn"</span> component <span class="keyword">of</span> Airfoil <span class="keyword">are</span> known <span class="keyword">to</span> <span class="keyword">do</span> this.</span><br><span class="line"></span><br><span class="line">You should probably <span class="keyword">change</span> the ownership <span class="keyword">and</span> permissions <span class="keyword">of</span> /usr/<span class="keyword">local</span></span><br><span class="line">back <span class="keyword">to</span> your <span class="keyword">user</span> <span class="keyword">account</span>.</span><br><span class="line">  sudo chown -R $(whoami):<span class="keyword">admin</span> /usr/<span class="keyword">local</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="原因">原因</h3><p>由於 Mac OS X 10.11 引入了「System Integrity Protection (SIP)」而導致 <code>/usr</code>、<code>/System</code> 以及 <code>/bin</code> 等目錄被保護無法寫入(即使用 root 權限也不行)，因此造成 Homebrew 發生無寫入權限錯誤。</p>
-<h3 id="解法">解法</h3><h4 id="已存在_/usr/local_目錄時:">已存在 <code>/usr/local</code> 目錄時:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></span><br></pre></td></tr></table></figure>
-<h4 id="不存在_/usr/local_目錄時:">不存在 <code>/usr/local</code> 目錄時:</h4><p>解法是關閉 SIP，方法如下：</p>
-<ul>
-<li>重開機按 <code>cmd+r</code> 進入<code>恢復模式</code> -&gt; 工具程式 -&gt; 安全設定-&gt;<br>取消勾選 「System Integrity Protection」</li>
-<li>回到 OS X 桌面，開啟 Terminal 並執行：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/<span class="built_in">local</span> &amp;&amp; sudo chflags norestricted /usr/<span class="built_in">local</span> &amp;&amp; sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></span><br></pre></td></tr></table></figure>
-<h2 id="Vagrant_problems_on_OS_X_10-11">Vagrant problems on OS X 10.11</h2><p>看到 Jeffrey Way 在 <a href="https://twitter.com/jeffrey_way/status/649769735396151296" target="_blank" rel="external">Twitter 上面</a>喊：</p>
-<blockquote>
-<p>This Vagrant quirk is the only thing I ran into with my El Capitan update.</p>
-</blockquote>
-<h3 id="解法-1">解法</h3><p><a href="https://laracasts.com/discuss/channels/tips/fix-for-vagranthomestead-el-capitan" target="_blank" rel="external">Fix for Vagrant/Homestead - El Capitan</a></p>
-<h2 id="參考資料：">參考資料：</h2><ul>
-<li><a href="https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/El_Capitan_and_Homebrew.md" target="_blank" rel="external">El Capitan and Homebrew</a></li>
-<li><a href="https://laracasts.com/discuss/channels/tips/fix-for-vagranthomestead-el-capitan" target="_blank" rel="external">Fix for Vagrant/Homestead - El Capitan</a></li>
-<li><a href="https://www.ptt.cc/bbs/MAC/M.1439029980.A.BB1.html" target="_blank" rel="external">PTT 文章：如何矯正半殘的superuser</a></li>
-</ul>
-<p>Bobo內心旁白：「升級一定有風險，升級前應詳閱公開說明書~ 特別是這次有令人又愛又恨 SIP…」</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/OSX/">OSX</a><a href="/tags/homebrew/">homebrew</a><a href="/tags/vagrant/">vagrant</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/2015/10/osx10.11-homebrew/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
-
-  <nav id="page-nav" class="clearfix">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/2/">Next<span></span></a>
-  </nav>
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">Contents</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#緣起："><span class="toc-number">1.</span> <span class="toc-text">緣起：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir_是啥玩意兒？"><span class="toc-number">2.</span> <span class="toc-text">Elixir 是啥玩意兒？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir_值得學嗎？"><span class="toc-number">3.</span> <span class="toc-text">Elixir 值得學嗎？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些公司使用_Elixir？"><span class="toc-number">4.</span> <span class="toc-text">有哪些公司使用 Elixir？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些專案使用_Elixir_開發"><span class="toc-number">5.</span> <span class="toc-text">有哪些專案使用 Elixir 開發</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的_Elixir_相關書籍"><span class="toc-number">6.</span> <span class="toc-text">推薦的 Elixir 相關書籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的_Elixir_線上教學資源"><span class="toc-number">7.</span> <span class="toc-text">推薦的 Elixir 線上教學資源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#補充一下_Erlang_語言："><span class="toc-number">8.</span> <span class="toc-text">補充一下 Erlang 語言：</span></a></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
@@ -626,6 +455,11 @@ $(document).ready(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
   
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
   $(window).resize(function(){
     getSize(); 
     if (myWidth >= 1024) {
@@ -634,12 +468,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -729,4 +640,4 @@ ga('send', 'pageview');
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>

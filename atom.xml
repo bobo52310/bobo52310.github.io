@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Study Notes of PHP、Laravel、Rails & Web development.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://bobochen.com/"/>
-  <updated>2016-01-31T15:02:41.000Z</updated>
+  <updated>2016-07-09T03:28:57.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -15,11 +15,105 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[5分鐘快速認識 Elixir 程式語言]]></title>
+    <link href="http://bobochen.com/2016/07/introduction_to_Elixir/"/>
+    <id>http://bobochen.com/2016/07/introduction_to_Elixir/</id>
+    <published>2016-07-08T15:40:30.000Z</published>
+    <updated>2016-07-09T03:28:57.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="緣起：">緣起：</h2><p><img src="http://imgur.com/39eqCJu.jpg" alt=""></p>
+<p>最近因為工作關係需要使用 <code>Elixir</code> 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！</p>
+<p>不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD</p>
+<p>另外聽說藉由專案驅動學習是最有效率的…(特別是這種死線緊湊的效果應該又更好 @_@)</p>
+<p>-</p>
+<p>由於今天賺到一天颱風假，趕緊花一個下午快速認識一下 <code>Elixir</code> 這個語言，發現中文的文件好少喔，邊學的同時也隨手整理了一下，分享給大家，以下的資訊有助於我快速入門，希望也有幫助有緣路過的你/妳~ </p>
+<p>既然中文資料還不多，我就來貢獻一篇吧！</p>
+<h2 id="Elixir_是啥玩意兒？">Elixir 是啥玩意兒？</h2><p>沒聽過是很正常的，目前 Elixir 相關的中文的討論還不多，這門程式語言在台灣還不算很流行，周遭的朋友也都沒聽說有人在玩，反而是我在英國工作的同學說他們公司有在使用！這是我身邊少數聽到有在使用這個語言的公司。話說我們公司也只有 CTO 本人有寫過…</p>
+<p>簡單來說 Elixir 是架構一個在古老語言(Erlang)上面的一個年輕語言，特色簡介如下：</p>
+<ul>
+<li>2013年誕生，相當年輕的程式語言。</li>
+<li>為 <code>Functional programming</code> 可讀性高，也更好維護。</li>
+<li>基於 <code>Erlang VM</code>（BEAM）之上，完全與 <code>Erlang</code> 語言相容，但是語法更親民且並提供更多的功能。</li>
+<li>語法類似 <code>Ruby</code>，因為 <code>Elixir</code> 的創造者 <code>José Valim</code>(葡萄牙文，巴西人) 他也是 <code>Ruby on Rails</code> 的核心團隊成員！難怪有不少 Ruby 的開發者跑來學。</li>
+<li>來多認識一點 Elixir 老爸 <a href="https://www.sitepoint.com/an-interview-with-elixir-creator-jose-valim/" target="_blank" rel="external">「An Interview with Elixir Creator José Valim」</a></li>
+<li>有接近 <code>Ruby</code> 易懂的語法和 <code>Erlang</code> 分散式高效能，可算是 <code>Ruby</code> 跟 <code>Erlang</code> 兩個生出來的小孩。</li>
+<li>偏向動態強型別語言 (變數型別不會在運算中自動轉型) 如同 <code>Ruby</code>、<code>Python</code> 這類動態強型別語言。相較於 <code>PHP</code>、<code>JavaScript</code> 這類語言則是偏向動態弱型別 (自動轉型)</li>
+<li>善於處理 concurrency 問題，利於開發分散式/雲端運算平台。</li>
+<li>Elixir provides a macro system and polymorphism via protocols, both aiming to make the language more extensible</li>
+<li>開發 Web 可以搭配 <code>Phoenix Framework</code> (也是 MVC 架構)</li>
+</ul>
+<h2 id="Elixir_值得學嗎？">Elixir 值得學嗎？</h2><p>新技術、新語言那麼多！什麼都想學，有這麼多時間嗎？學得完嗎？</p>
+<p>我們該如何評估一門技術是否值得投入寶貴的時間去學習呢？</p>
+<p>就像我當年回「大安高工資訊科」和學弟妹分享的簡報：「<a href="http://www.slideshare.net/bobo52310/ss-48604799" target="_blank" rel="external">軟體工程師的3大試煉</a>」，我們可以使用一些工具來評估一門技術目前是否流行，是否值得投入學習。</p>
+<ul>
+<li>比如我們用 Google Trends 來檢視看看 <a href="https://www.google.com.tw/trends/explore#cat=0-5&amp;q=elixir%20lang&amp;cmpt=q&amp;tz=Asia%2FTaipei" target="_blank" rel="external">Elixir 趨勢</a></li>
+<li>2015 年在 <a href="https://news.ycombinator.com/item?id=9408551" target="_blank" rel="external"><code>Hacker News</code></a> 有一些討論，開始被比較多人關注。</li>
+<li>台灣社群約莫在 2016 年初開始關注，Facebook 社團「<a href="https://www.facebook.com/groups/elixir.tw/" target="_blank" rel="external">Elixir Taiwan</a>」也是約莫在此時成立。</li>
+<li>國內外社群逐漸活躍，生態圈越來越豐富，有一種當年接觸早期 Laravel Framework 整要起步的感覺。</li>
+</ul>
+<blockquote>
+<p>不過說實在的講這麼多，凡是專案要用到的、主管要你用的，你就認命乖乖學吧~ 哈哈</p>
+</blockquote>
+<h2 id="有哪些公司使用_Elixir？">有哪些公司使用 Elixir？</h2><ul>
+<li>Pinterest <a href="http://venturebeat.com/2015/12/18/pinterest-elixir/" target="_blank" rel="external">[ref]</a><ul>
+<li>運用在「通知系統」一秒可以傳送 14,000 筆訊息，只需要15台主機。原本用 JAVA 的舊架構則需要 30台主機。而且程式碼檔案大小僅有原本的 1/10 唷！<br>(Pinterest’s notification system now uses Elixir to deliver 14,000 notifications per second)</li>
+<li>核心 API 也用 Elixir 改寫，運行速度比 Memcached-based predecessor 的反應時間還要更快速。<br>(The rate-limiting system for Pinterest’s core application programming interface (API) and Ads API is also now written in Elixir, providing faster response times than its Memcached-based predecessor.)</li>
+</ul>
+</li>
+<li>Brightcove [<a href="http://blog.plataformatec.com.br/2015/08/elixir-in-production-interview-adam-kittelson/" target="_blank" rel="external">ref</a>]<ul>
+<li>使用 Phoenix Framework。讓登入後台的使用者可以關注特定轉檔、修改影片等等事件，並且在完成時通知使用者。</li>
+</ul>
+</li>
+<li>WhatsApp</li>
+<li>Whisper<ul>
+<li>使用 Phoenix Framework。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>更多名單請見：<a href="https://github.com/doomspork/elixir-companies" target="_blank" rel="external">doomspork/elixir-companies</a></p>
+</blockquote>
+<h2 id="有哪些專案使用_Elixir_開發">有哪些專案使用 Elixir 開發</h2><ul>
+<li><a href="https://github.com/pinterest/elixometer" target="_blank" rel="external">Elixometer</a> // Logging library 由 Pinterest 開發釋出</li>
+<li><a href="https://github.com/pinterest/riffed" target="_blank" rel="external">riffed</a> // Provides idiomatic Elixir bindings for Apache Thrift 由 Pinterest 開發釋出</li>
+</ul>
+<h2 id="推薦的_Elixir_相關書籍">推薦的 Elixir 相關書籍</h2><ul>
+<li><a href="https://www.manning.com/books/elixir-in-action" target="_blank" rel="external">Elixir in Action</a></li>
+<li><a href="https://pragprog.com/book/elixir12/programming-elixir-1-2" target="_blank" rel="external">Programming Elixir 1.2</a></li>
+<li><a href="https://www.packtpub.com/application-development/learning-elixir" target="_blank" rel="external">Learning Elixir</a></li>
+</ul>
+<h2 id="推薦的_Elixir_線上教學資源">推薦的 Elixir 線上教學資源</h2><ul>
+<li><a href="http://elixirschool.com/" target="_blank" rel="external">http://elixirschool.com/</a> // Elixir School 新手入門</li>
+<li><a href="https://github.com/h4cc/awesome-elixir" target="_blank" rel="external">awesome-elixir</a> // Awesome 大補帖系列</li>
+<li><a href="https://hex.pm/" target="_blank" rel="external">https://hex.pm/</a> // The package manager for the Erlang ecosystem</li>
+<li><a href="http://toolbox.elixir.pm/" target="_blank" rel="external">http://toolbox.elixir.pm/</a></li>
+<li><a href="http://play.elixirbyexample.com/" target="_blank" rel="external">Elixir Playground</a> // 線上執行 Elixir code</li>
+<li><a href="http://elixirsips.com/" target="_blank" rel="external">Elixir sips</a> // 付費教學影片，類似 Laracast</li>
+<li><a href="https://media.pragprog.com/titles/elixir/ElixirCheat.pdf" target="_blank" rel="external">ElixirCheat</a> // Elixir 語法和指令小抄</li>
+<li><a href="http://blog.plataformatec.com.br/" target="_blank" rel="external">http://blog.plataformatec.com.br/</a> Elixir 老爸共同創辦的公司公開的技術 Blog</li>
+<li><a href="https://github.com/seven1m/30-days-of-elixir" target="_blank" rel="external">https://github.com/seven1m/30-days-of-elixir</a> // 跟著範例30天學習 Elixir</li>
+</ul>
+<h2 id="補充一下_Erlang_語言：">補充一下 Erlang 語言：</h2><ul>
+<li>1987 年誕生的老語言，由 Ericsson 開發。早期主要應用在電信業系統，經長年證實其穩定性超高。</li>
+<li><code>Erlang</code> 老爸 <code>Joe Armstrong</code> 當年的論文中譯版。</li>
+<li><a href="http://joearms.github.io/2013/05/31/a-week-with-elixir.html" target="_blank" rel="external"><code>Erlang</code> 老爸也對 <code>Elixir</code> 讚譽有嘉。</a></li>
+<li>主要的特色是 COP(Concurrency-oriented programming， 平行導向程式設計) 強調程式的容錯處理。</li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="緣起：">緣起：</h2><p><img src="http://imgur.com/39eqCJu.jpg" alt=""></p>
+<p>最近因為工作關係需要使用 <code>Elixir</code> 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的]]>
+    </summary>
+    
+      <category term="Elixir" scheme="http://bobochen.com/tags/Elixir/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[icdiff 好用的檔案比對工具，Terminal 環境下用它就對了]]></title>
     <link href="http://bobochen.com/2016/01/icdiff/"/>
     <id>http://bobochen.com/2016/01/icdiff/</id>
     <published>2016-01-31T14:35:12.000Z</published>
-    <updated>2016-01-31T15:02:41.000Z</updated>
+    <updated>2016-07-08T09:21:15.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
 <p><img src="http://i.imgur.com/2B3fcMC.png" alt="內建的 diff 指令比對檔案差異">￼</p>
 <p><code>diff</code>指令僅僅是將檔案差異處以<strong>上下對照呈現</strong>，並不會以顏色標示差異處，需要我們自己很傷眼的來回掃描比對才知道差異在哪裡，這樣的呈現效果不是那麼清楚。</p>
@@ -519,7 +613,7 @@ printEmptyHeader();
     <link href="http://bobochen.com/2015/05/%E4%BD%BF%E7%94%A8-Feedly-%E8%A8%82%E9%96%B1-Ptt-%E7%9A%84-RSS%EF%BC%8C%E8%AE%93%E6%89%8B%E6%A9%9F%E5%B0%91%E8%A3%9D%E4%B8%80%E4%BA%9B-App/"/>
     <id>http://bobochen.com/2015/05/使用-Feedly-訂閱-Ptt-的-RSS，讓手機少裝一些-App/</id>
     <published>2015-05-18T15:34:50.000Z</published>
-    <updated>2015-09-26T13:00:33.000Z</updated>
+    <updated>2016-07-08T15:30:45.000Z</updated>
     <content type="html"><![CDATA[<center><img src="/images/2015/ptt_rss.png" alt=""></center>
 
 <h2 id="你手機有裝_Ptt_軟體嗎？">你手機有裝 Ptt 軟體嗎？</h2><p>用手機上 Ptt 一定要額外安裝 App 嗎？<br>之前為了在手機上瀏覽 Ptt 的文章，和大多數人一樣都額外安裝了一些 App<br>用了一陣子後發現有幾個問題：</p>
@@ -836,30 +930,6 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
     <summary type="html">
     <![CDATA[<p>習慣使用 Sublime Text 來開發的同學，會遇到檔案在 local 與 remote 同步的問題，</p>
 <h2 id="解法1:在_local_使用_SFTP_上傳到_remote_(有點麻煩)">解法1:在 local 使用 SFTP 上傳到 remote (]]>
-    </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[關於網站開發團隊資訊的 humans.txt 檔案]]></title>
-    <link href="http://bobochen.com/2014/12/%E9%97%9C%E6%96%BC%E7%B6%B2%E7%AB%99%E9%96%8B%E7%99%BC%E5%9C%98%E9%9A%8A%E8%B3%87%E8%A8%8A%E7%9A%84-humans-txt-%E6%AA%94%E6%A1%88/"/>
-    <id>http://bobochen.com/2014/12/關於網站開發團隊資訊的-humans-txt-檔案/</id>
-    <published>2014-12-06T05:30:53.000Z</published>
-    <updated>2015-09-26T13:39:34.000Z</updated>
-    <content type="html"><![CDATA[<center><img src="/images/2014/01-what-is-humans-txt.png" alt=""></center>
-
-<p>相較於 robots.txt 檔案，關於網站開發團隊資訊的 humans.txt 相對少人知道，</p>
-<p>好奇查了幾個網站：</p>
-<p>GitHub：把團隊成員名單列出，還附上他們各自的 GitHub</p>
-<p><a href="https://github.com/humans.txt" target="_blank" rel="external">https://github.com/humans.txt</a> </p>
-<p>而 Google 則是附上應徵的網址XD</p>
-<p><a href="https://www.google.com.tw/humans.txt" target="_blank" rel="external">https://www.google.com.tw/humans.txt</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<center><img src="/images/2014/01-what-is-humans-txt.png" alt=""></center>
-
-<p>相較於 robots.txt 檔案，關於網站開發團隊資訊的 humans.txt 相對少人知道，</p>
-<p>好奇查了幾]]>
     </summary>
     
   </entry>
