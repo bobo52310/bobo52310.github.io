@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Study Notes of Elixir、PHP、Laravel、Rails & Web development.]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://bobochen.com/"/>
-  <updated>2016-07-10T03:52:38.000Z</updated>
+  <updated>2016-07-10T03:58:13.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://bobochen.com/2016/07/introduction_to_Elixir/"/>
     <id>http://bobochen.com/2016/07/introduction_to_Elixir/</id>
     <published>2016-07-08T15:40:30.000Z</published>
-    <updated>2016-07-10T03:52:38.000Z</updated>
+    <updated>2016-07-10T03:58:13.000Z</updated>
     <content type="html"><![CDATA[<h2 id="緣起：">緣起：</h2><p><img src="http://imgur.com/39eqCJu.jpg" alt=""></p>
 <p>最近因為新工作環境要使用 <code>Elixir</code> 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！</p>
 <p>不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD</p>
@@ -114,7 +114,7 @@
     <link href="http://bobochen.com/2016/01/icdiff/"/>
     <id>http://bobochen.com/2016/01/icdiff/</id>
     <published>2016-01-31T14:35:12.000Z</published>
-    <updated>2016-07-08T09:21:15.000Z</updated>
+    <updated>2016-07-10T03:58:00.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
 <p><img src="http://i.imgur.com/2B3fcMC.png" alt="內建的 diff 指令比對檔案差異">￼</p>
 <p><code>diff</code>指令僅僅是將檔案差異處以<strong>上下對照呈現</strong>，並不會以顏色標示差異處，需要我們自己很傷眼的來回掃描比對才知道差異在哪裡，這樣的呈現效果不是那麼清楚。</p>
@@ -131,7 +131,7 @@
 <li>「紅色」表示「刪除」。</li>
 </ul>
 <h2 id="安裝方法：">安裝方法：</h2><p>OS X 可以直接使用 <code>Homebrew</code> 來安裝：</p>
-<pre><code><span class="variable">$brew</span> icdiff
+<pre><code><span class="variable">$brew</span> install icdiff
 </code></pre><p>由於 <code>icdiff</code> 是一個 python 開發的程式，也可以直接下載檔案來執行，請參考 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external">GitHub</a> 上面的說明。</p>
 <h2 id="使用方法：">使用方法：</h2><h3 id="如何比較兩個檔案差異：">如何比較兩個檔案差異：</h3><pre><code><span class="variable">$icdiff</span> &lt;file_1&gt; &lt;file_2&gt;
 </code></pre><blockquote>
