@@ -263,12 +263,17 @@
     <span class="comment"># 使用 icdiff 來取代 git 內建的 diff</span>
     external = ~<span class="regexp">/bin/git</span>-diff-wrapper.sh
 </code></pre></li>
+<li><p>建立 <code>mkdir ~/bin/</code> 目錄</p>
+</li>
 <li><p>建立 <code>~/bin/git-diff-wrapper.sh</code> 檔案，加入以下內容：</p>
 <pre><code><span class="shebang">#!/bin/bash</span>
 icdiff <span class="variable">$2</span> <span class="variable">$5</span>
 </code></pre></li>
+<li><p><code>chmod 777 ~/bin/git-diff-wrapper.sh</code> 開啟執行權限</p>
+</li>
+<li><p>完成！趕緊來使用 <code>$git diff</code> 看看吧</p>
+</li>
 </ol>
-<p>3.完成！趕緊來使用 <code>$git diff</code> 看看吧</p>
 <p>參考資料：</p>
 <ul>
 <li><a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external">jeffkaufman/icdiff</a></li>

@@ -27,7 +27,7 @@ diff指令僅僅是將檔案差異處以上下對照呈現，並不會以顏色�
 漂亮！差異處有加上顏色果然清">
 <meta property="og:image" content="http://i.imgur.com/2B3fcMC.png">
 <meta property="og:image" content="http://i.imgur.com/NEA45so.png">
-<meta property="og:updated_time" content="2016-07-10T03:58:00.000Z">
+<meta property="og:updated_time" content="2016-07-10T04:15:16.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="icdiff 好用的檔案比對工具，Terminal 環境下用它就對了">
 <meta name="twitter:description" content="前言：在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 diff 指令，效果如下：
@@ -147,12 +147,17 @@ diff指令僅僅是將檔案差異處以上下對照呈現，並不會以顏色�
     <span class="comment"># 使用 icdiff 來取代 git 內建的 diff</span>
     external = ~<span class="regexp">/bin/git</span>-diff-wrapper.sh
 </code></pre></li>
+<li><p>建立 <code>mkdir ~/bin/</code> 目錄</p>
+</li>
 <li><p>建立 <code>~/bin/git-diff-wrapper.sh</code> 檔案，加入以下內容：</p>
 <pre><code><span class="shebang">#!/bin/bash</span>
 icdiff <span class="variable">$2</span> <span class="variable">$5</span>
 </code></pre></li>
+<li><p><code>chmod 777 ~/bin/git-diff-wrapper.sh</code> 開啟執行權限</p>
+</li>
+<li><p>完成！趕緊來使用 <code>$git diff</code> 看看吧</p>
+</li>
 </ol>
-<p>3.完成！趕緊來使用 <code>$git diff</code> 看看吧</p>
 <p>參考資料：</p>
 <ul>
 <li><a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external">jeffkaufman/icdiff</a></li>

@@ -114,7 +114,7 @@
     <link href="http://bobochen.com/2016/01/icdiff/"/>
     <id>http://bobochen.com/2016/01/icdiff/</id>
     <published>2016-01-31T14:35:12.000Z</published>
-    <updated>2016-07-10T03:58:00.000Z</updated>
+    <updated>2016-07-10T04:15:16.000Z</updated>
     <content type="html"><![CDATA[<h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
 <p><img src="http://i.imgur.com/2B3fcMC.png" alt="內建的 diff 指令比對檔案差異">￼</p>
 <p><code>diff</code>指令僅僅是將檔案差異處以<strong>上下對照呈現</strong>，並不會以顏色標示差異處，需要我們自己很傷眼的來回掃描比對才知道差異在哪裡，這樣的呈現效果不是那麼清楚。</p>
@@ -149,12 +149,17 @@
     <span class="comment"># 使用 icdiff 來取代 git 內建的 diff</span>
     external = ~<span class="regexp">/bin/git</span>-diff-wrapper.sh
 </code></pre></li>
+<li><p>建立 <code>mkdir ~/bin/</code> 目錄</p>
+</li>
 <li><p>建立 <code>~/bin/git-diff-wrapper.sh</code> 檔案，加入以下內容：</p>
 <pre><code><span class="shebang">#!/bin/bash</span>
 icdiff <span class="variable">$2</span> <span class="variable">$5</span>
 </code></pre></li>
+<li><p><code>chmod 777 ~/bin/git-diff-wrapper.sh</code> 開啟執行權限</p>
+</li>
+<li><p>完成！趕緊來使用 <code>$git diff</code> 看看吧</p>
+</li>
 </ol>
-<p>3.完成！趕緊來使用 <code>$git diff</code> 看看吧</p>
 <p>參考資料：</p>
 <ul>
 <li><a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external">jeffkaufman/icdiff</a></li>
