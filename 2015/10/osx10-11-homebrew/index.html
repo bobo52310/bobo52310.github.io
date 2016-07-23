@@ -19,10 +19,10 @@
 Mission Control 不會將同類型程式群組化
 幾乎是無痛升級：Sublime Text, Atom, Sketch, VirtualBox, SourceTree, Sequel Pro… 都正常
 
-升級後受影響">
+升級後受影">
 <meta property="og:type" content="article">
 <meta property="og:title" content="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題">
-<meta property="og:url" content="http://bobochen.com/2015/10/osx10.11-homebrew/index.html">
+<meta property="og:url" content="http://bobochen.com/2015/10/osx10-11-homebrew/index.html">
 <meta property="og:site_name" content="Bobo的技術時光屋">
 <meta property="og:description" content="先說一下升級後明顯有感覺的部分：
 中文字體變好看! (使用新的中文字體-蘋方)
@@ -32,7 +32,7 @@ Mission Control 不會將同類型程式群組化
 Mission Control 不會將同類型程式群組化
 幾乎是無痛升級：Sublime Text, Atom, Sketch, VirtualBox, SourceTree, Sequel Pro… 都正常
 
-升級後受影響">
+升級後受影">
 <meta property="og:image" content="http://bobochen.com/images/2015/os-x-el-capitan.jpg">
 <meta property="og:updated_time" content="2016-01-31T15:01:37.000Z">
 <meta name="twitter:card" content="summary">
@@ -45,7 +45,8 @@ Mission Control 不會將同類型程式群組化
 Mission Control 不會將同類型程式群組化
 幾乎是無痛升級：Sublime Text, Atom, Sketch, VirtualBox, SourceTree, Sequel Pro… 都正常
 
-升級後受影響">
+升級後受影">
+<meta name="twitter:image" content="http://bobochen.com/images/2015/os-x-el-capitan.jpg">
 <link rel="publisher" href="u/0/communities/116944928466340599471">
 
     
@@ -58,7 +59,7 @@ Mission Control 不會將同類型程式群組化
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
   <body>
@@ -72,9 +73,9 @@ Mission Control 不會將同類型程式群組化
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
-				<h2 class="blog-motto">Study Notes of Elixir、PHP、Laravel、Rails &amp; Web development.</h2>
+				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -88,7 +89,7 @@ Mission Control 不會將同類型程式群組化
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -104,28 +105,28 @@ Mission Control 不會將同類型程式群組化
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/10/osx10.11-homebrew/" title="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題" itemprop="url">升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題</a>
+      <a href="/2015/10/osx10-11-homebrew/" title="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題" itemprop="url">升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-04T10:24:33.000Z" itemprop="datePublished"> 發表於 2015-10-04</time>
+    <time datetime="2015-10-04T10:24:33.000Z" itemprop="datePublished"> Published 2015-10-04</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#先說一下升級後明顯有感覺的部分："><span class="toc-number">1.</span> <span class="toc-text">先說一下升級後明顯有感覺的部分：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升級後受影響的_Web_Developer_吃飯工具："><span class="toc-number">2.</span> <span class="toc-text">升級後受影響的 Web Developer 吃飯工具：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Homebrew_problems_on_OS_X_10-11"><span class="toc-number">3.</span> <span class="toc-text">Homebrew problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#原因"><span class="toc-number">3.1.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解法"><span class="toc-number">3.2.</span> <span class="toc-text">解法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#已存在_/usr/local_目錄時:"><span class="toc-number">3.2.1.</span> <span class="toc-text">已存在 /usr/local 目錄時:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不存在_/usr/local_目錄時:"><span class="toc-number">3.2.2.</span> <span class="toc-text">不存在 /usr/local 目錄時:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vagrant_problems_on_OS_X_10-11"><span class="toc-number">4.</span> <span class="toc-text">Vagrant problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解法-1"><span class="toc-number">4.1.</span> <span class="toc-text">解法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料："><span class="toc-number">5.</span> <span class="toc-text">參考資料：</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#先說一下升級後明顯有感覺的部分："><span class="toc-number">1.</span> <span class="toc-text">先說一下升級後明顯有感覺的部分：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升級後受影響的-Web-Developer-吃飯工具："><span class="toc-number">2.</span> <span class="toc-text">升級後受影響的 Web Developer 吃飯工具：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Homebrew-problems-on-OS-X-10-11"><span class="toc-number">3.</span> <span class="toc-text">Homebrew problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#原因"><span class="toc-number">3.1.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解法"><span class="toc-number">3.2.</span> <span class="toc-text">解法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#已存在-usr-local-目錄時"><span class="toc-number">3.2.1.</span> <span class="toc-text">已存在 /usr/local 目錄時:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不存在-usr-local-目錄時"><span class="toc-number">3.2.2.</span> <span class="toc-text">不存在 /usr/local 目錄時:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vagrant-problems-on-OS-X-10-11"><span class="toc-number">4.</span> <span class="toc-text">Vagrant problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解法-1"><span class="toc-number">4.1.</span> <span class="toc-text">解法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料："><span class="toc-number">5.</span> <span class="toc-text">參考資料：</span></a></li></ol>
 		
 		</div>
 		
 		<p><center><img src="/images/2015/os-x-el-capitan.jpg" alt=""></center></p>
-<h2 id="先說一下升級後明顯有感覺的部分：">先說一下升級後明顯有感覺的部分：</h2><ul>
+<h2 id="先說一下升級後明顯有感覺的部分："><a href="#先說一下升級後明顯有感覺的部分：" class="headerlink" title="先說一下升級後明顯有感覺的部分："></a>先說一下升級後明顯有感覺的部分：</h2><ul>
 <li>中文字體變好看! (使用新的中文字體-蘋方)</li>
 <li>畫面切換更流暢 (支援 <code>Metal</code> 繪圖 API)</li>
 <li>備忘錄變得更好用</li>
@@ -133,7 +134,7 @@ Mission Control 不會將同類型程式群組化
 <li><code>Mission Control</code> 不會將同類型程式群組化</li>
 <li>幾乎是無痛升級：<code>Sublime Text</code>, <code>Atom</code>, <code>Sketch</code>, <code>VirtualBox</code>, <code>SourceTree</code>, <code>Sequel Pro</code>… 都正常</li>
 </ul>
-<h2 id="升級後受影響的_Web_Developer_吃飯工具：">升級後受影響的 Web Developer 吃飯工具：</h2><ol>
+<h2 id="升級後受影響的-Web-Developer-吃飯工具："><a href="#升級後受影響的-Web-Developer-吃飯工具：" class="headerlink" title="升級後受影響的 Web Developer 吃飯工具："></a>升級後受影響的 Web Developer 吃飯工具：</h2><ol>
 <li>Homebrew </li>
 <li>Vagrant </li>
 <li>PhpStorm (重新安裝 <code>JRE</code> 即可)</li>
@@ -143,22 +144,22 @@ Mission Control 不會將同類型程式群組化
 <blockquote>
 <p><code>Homebrew</code>、<code>Vagrant</code> 以下附上解法。</p>
 </blockquote>
-<h2 id="Homebrew_problems_on_OS_X_10-11">Homebrew problems on OS X 10.11</h2><p>升級 MAC OS X 10.11 (EI Capitan) 後，執行 <code>brew update</code> 時發生錯誤：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ brew <span class="operator"><span class="keyword">update</span></span><br><span class="line"><span class="keyword">Error</span>: The /usr/<span class="keyword">local</span> <span class="keyword">directory</span> <span class="keyword">is</span> <span class="keyword">not</span> writable.</span><br><span class="line">Even <span class="keyword">if</span> this <span class="keyword">directory</span> was writable <span class="keyword">when</span> you installed Homebrew, other</span><br><span class="line">software may <span class="keyword">change</span> permissions <span class="keyword">on</span> this <span class="keyword">directory</span>. <span class="keyword">Some</span> <span class="keyword">versions</span> <span class="keyword">of</span> the</span><br><span class="line"><span class="string">"InstantOn"</span> component <span class="keyword">of</span> Airfoil <span class="keyword">are</span> known <span class="keyword">to</span> <span class="keyword">do</span> this.</span><br><span class="line"></span><br><span class="line">You should probably <span class="keyword">change</span> the ownership <span class="keyword">and</span> permissions <span class="keyword">of</span> /usr/<span class="keyword">local</span></span><br><span class="line">back <span class="keyword">to</span> your <span class="keyword">user</span> <span class="keyword">account</span>.</span><br><span class="line">  sudo chown -R $(whoami):<span class="keyword">admin</span> /usr/<span class="keyword">local</span></span></span><br></pre></td></tr></table></figure>
-<h3 id="原因">原因</h3><p>由於 Mac OS X 10.11 引入了「System Integrity Protection (SIP)」而導致 <code>/usr</code>、<code>/System</code> 以及 <code>/bin</code> 等目錄被保護無法寫入(即使用 root 權限也不行)，因此造成 Homebrew 發生無寫入權限錯誤。</p>
-<h3 id="解法">解法</h3><h4 id="已存在_/usr/local_目錄時:">已存在 <code>/usr/local</code> 目錄時:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></span><br></pre></td></tr></table></figure>
-<h4 id="不存在_/usr/local_目錄時:">不存在 <code>/usr/local</code> 目錄時:</h4><p>解法是關閉 SIP，方法如下：</p>
+<h2 id="Homebrew-problems-on-OS-X-10-11"><a href="#Homebrew-problems-on-OS-X-10-11" class="headerlink" title="Homebrew problems on OS X 10.11"></a>Homebrew problems on OS X 10.11</h2><p>升級 MAC OS X 10.11 (EI Capitan) 後，執行 <code>brew update</code> 時發生錯誤：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ brew <span class="keyword">update</span></div><div class="line"><span class="keyword">Error</span>: The /usr/<span class="keyword">local</span> <span class="keyword">directory</span> <span class="keyword">is</span> <span class="keyword">not</span> writable.</div><div class="line">Even <span class="keyword">if</span> this <span class="keyword">directory</span> was writable <span class="keyword">when</span> you installed Homebrew, other</div><div class="line">software may <span class="keyword">change</span> permissions <span class="keyword">on</span> this directory. <span class="keyword">Some</span> <span class="keyword">versions</span> <span class="keyword">of</span> the</div><div class="line"><span class="string">"InstantOn"</span> component <span class="keyword">of</span> Airfoil <span class="keyword">are</span> known <span class="keyword">to</span> <span class="keyword">do</span> this.</div><div class="line"></div><div class="line">You should probably <span class="keyword">change</span> the ownership <span class="keyword">and</span> permissions <span class="keyword">of</span> /usr/<span class="keyword">local</span></div><div class="line">back <span class="keyword">to</span> your <span class="keyword">user</span> account.</div><div class="line">  sudo chown -R $(whoami):<span class="keyword">admin</span> /usr/<span class="keyword">local</span></div></pre></td></tr></table></figure>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>由於 Mac OS X 10.11 引入了「System Integrity Protection (SIP)」而導致 <code>/usr</code>、<code>/System</code> 以及 <code>/bin</code> 等目錄被保護無法寫入(即使用 root 權限也不行)，因此造成 Homebrew 發生無寫入權限錯誤。</p>
+<h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><h4 id="已存在-usr-local-目錄時"><a href="#已存在-usr-local-目錄時" class="headerlink" title="已存在 /usr/local 目錄時:"></a>已存在 <code>/usr/local</code> 目錄時:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></div></pre></td></tr></table></figure>
+<h4 id="不存在-usr-local-目錄時"><a href="#不存在-usr-local-目錄時" class="headerlink" title="不存在 /usr/local 目錄時:"></a>不存在 <code>/usr/local</code> 目錄時:</h4><p>解法是關閉 SIP，方法如下：</p>
 <ul>
 <li>重開機按 <code>cmd+r</code> 進入<code>恢復模式</code> -&gt; 工具程式 -&gt; 安全設定-&gt;<br>取消勾選 「System Integrity Protection」</li>
 <li>回到 OS X 桌面，開啟 Terminal 並執行：</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/<span class="built_in">local</span> &amp;&amp; sudo chflags norestricted /usr/<span class="built_in">local</span> &amp;&amp; sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></span><br></pre></td></tr></table></figure>
-<h2 id="Vagrant_problems_on_OS_X_10-11">Vagrant problems on OS X 10.11</h2><p>看到 Jeffrey Way 在 <a href="https://twitter.com/jeffrey_way/status/649769735396151296" target="_blank" rel="external">Twitter 上面</a>喊：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /usr/<span class="built_in">local</span> &amp;&amp; sudo chflags norestricted /usr/<span class="built_in">local</span> &amp;&amp; sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></div></pre></td></tr></table></figure>
+<h2 id="Vagrant-problems-on-OS-X-10-11"><a href="#Vagrant-problems-on-OS-X-10-11" class="headerlink" title="Vagrant problems on OS X 10.11"></a>Vagrant problems on OS X 10.11</h2><p>看到 Jeffrey Way 在 <a href="https://twitter.com/jeffrey_way/status/649769735396151296" target="_blank" rel="external">Twitter 上面</a>喊：</p>
 <blockquote>
 <p>This Vagrant quirk is the only thing I ran into with my El Capitan update.</p>
 </blockquote>
-<h3 id="解法-1">解法</h3><p><a href="https://laracasts.com/discuss/channels/tips/fix-for-vagranthomestead-el-capitan" target="_blank" rel="external">Fix for Vagrant/Homestead - El Capitan</a></p>
-<h2 id="參考資料：">參考資料：</h2><ul>
+<h3 id="解法-1"><a href="#解法-1" class="headerlink" title="解法"></a>解法</h3><p><a href="https://laracasts.com/discuss/channels/tips/fix-for-vagranthomestead-el-capitan" target="_blank" rel="external">Fix for Vagrant/Homestead - El Capitan</a></p>
+<h2 id="參考資料："><a href="#參考資料：" class="headerlink" title="參考資料："></a>參考資料：</h2><ul>
 <li><a href="https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/El_Capitan_and_Homebrew.md" target="_blank" rel="external">El Capitan and Homebrew</a></li>
 <li><a href="https://laracasts.com/discuss/channels/tips/fix-for-vagranthomestead-el-capitan" target="_blank" rel="external">Fix for Vagrant/Homestead - El Capitan</a></li>
 <li><a href="https://www.ptt.cc/bbs/MAC/M.1439029980.A.BB1.html" target="_blank" rel="external">PTT 文章：如何矯正半殘的superuser</a></li>
@@ -181,7 +182,7 @@ Mission Control 不會將同類型程式群組化
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://bobochen.com/2015/10/osx10.11-homebrew/" data-title="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題 | Bobo的技術時光屋" data-tsina="null" class="share clearfix">
+	  <div data-url="http://bobochen.com/2015/10/osx10-11-homebrew/" data-title="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題 | Bobo的技術時光屋" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -204,7 +205,7 @@ Mission Control 不會將同類型程式群組化
 
 
 <div class="next">
-<a href="/2015/09/從 Blogger 搬家到 Hexo 的第一篇/"  title="從 Blogger 搬家到 Hexo 的第一篇">
+<a href="/2015/09/從-Blogger-搬家到-Hexo-的第一篇/"  title="從 Blogger 搬家到 Hexo 的第一篇">
  <strong>下一篇：</strong><br/> 
  <span>從 Blogger 搬家到 Hexo 的第一篇
 </span>
@@ -222,24 +223,34 @@ Mission Control 不會將同類型程式群組化
 </section>
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#先說一下升級後明顯有感覺的部分："><span class="toc-number">1.</span> <span class="toc-text">先說一下升級後明顯有感覺的部分：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升級後受影響的_Web_Developer_吃飯工具："><span class="toc-number">2.</span> <span class="toc-text">升級後受影響的 Web Developer 吃飯工具：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Homebrew_problems_on_OS_X_10-11"><span class="toc-number">3.</span> <span class="toc-text">Homebrew problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#原因"><span class="toc-number">3.1.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解法"><span class="toc-number">3.2.</span> <span class="toc-text">解法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#已存在_/usr/local_目錄時:"><span class="toc-number">3.2.1.</span> <span class="toc-text">已存在 /usr/local 目錄時:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不存在_/usr/local_目錄時:"><span class="toc-number">3.2.2.</span> <span class="toc-text">不存在 /usr/local 目錄時:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vagrant_problems_on_OS_X_10-11"><span class="toc-number">4.</span> <span class="toc-text">Vagrant problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解法-1"><span class="toc-number">4.1.</span> <span class="toc-text">解法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料："><span class="toc-number">5.</span> <span class="toc-text">參考資料：</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#先說一下升級後明顯有感覺的部分："><span class="toc-number">1.</span> <span class="toc-text">先說一下升級後明顯有感覺的部分：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#升級後受影響的-Web-Developer-吃飯工具："><span class="toc-number">2.</span> <span class="toc-text">升級後受影響的 Web Developer 吃飯工具：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Homebrew-problems-on-OS-X-10-11"><span class="toc-number">3.</span> <span class="toc-text">Homebrew problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#原因"><span class="toc-number">3.1.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解法"><span class="toc-number">3.2.</span> <span class="toc-text">解法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#已存在-usr-local-目錄時"><span class="toc-number">3.2.1.</span> <span class="toc-text">已存在 /usr/local 目錄時:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不存在-usr-local-目錄時"><span class="toc-number">3.2.2.</span> <span class="toc-text">不存在 /usr/local 目錄時:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Vagrant-problems-on-OS-X-10-11"><span class="toc-number">4.</span> <span class="toc-text">Vagrant problems on OS X 10.11</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解法-1"><span class="toc-number">4.1.</span> <span class="toc-text">解法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#參考資料："><span class="toc-number">5.</span> <span class="toc-text">參考資料：</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github Card</p>
+<div class="github-card" data-github="bobo52310" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
 
   
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -255,15 +266,7 @@ Mission Control 不會將同類型程式群組化
 			
 		
 			
-				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
@@ -271,19 +274,51 @@ Mission Control 不會將同類型程式群組化
 			
 		
 			
-				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
+				<li><a href="/tags/apache/" title="apache">apache<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Netbeans/" title="Netbeans">Netbeans<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
 			
 		
 			
@@ -298,41 +333,23 @@ Mission Control 不會將同類型程式群組化
 				<li><a href="/tags/vagrant/" title="vagrant">vagrant<sup>1</sup></a></li>
 			
 		
-			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
-			
-		
 		</ul>
 </div>
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
             
             	<a href="http://jaceju.net/" target="_blank" title="網站製作學習誌">網站製作學習誌</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.laravel-dojo.com/" target="_blank" title="LARAVEL 道場">LARAVEL 道場</a>
             
           </li>
         
@@ -355,7 +372,7 @@ Mission Control 不會將同類型程式群組化
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -601,6 +618,16 @@ ga('send', 'pageview');
 
 
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 
 <!-- Analytics End -->
@@ -608,7 +635,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

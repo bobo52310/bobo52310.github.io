@@ -35,6 +35,7 @@ diff指令僅僅是將檔案差異處以上下對照呈現，並不會以顏色�
 diff指令僅僅是將檔案差異處以上下對照呈現，並不會以顏色標示差異處，需要我們自己很傷眼的來回掃描比對才知道差異在哪裡，這樣的呈現效果不是那麼清楚。
 讓我們來試試看，如果將檔案差異處以左右對照呈現的方式，並且將差異處標記上顏色，那是不是更一目了然了呢！
 漂亮！差異處有加上顏色果然清">
+<meta name="twitter:image" content="http://i.imgur.com/2B3fcMC.png">
 <link rel="publisher" href="u/0/communities/116944928466340599471">
 
     
@@ -47,7 +48,7 @@ diff指令僅僅是將檔案差異處以上下對照呈現，並不會以顏色�
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
   <body>
@@ -61,9 +62,9 @@ diff指令僅僅是將檔案差異處以上下對照呈現，並不會以顏色�
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
-				<h2 class="blog-motto">Study Notes of Elixir、PHP、Laravel、Rails &amp; Web development.</h2>
+				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -77,7 +78,7 @@ diff指令僅僅是將檔案差異處以上下對照呈現，並不會以顏色�
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -100,20 +101,20 @@ diff指令僅僅是將檔案差異處以上下對照呈現，並不會以顏色�
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2016-01-31T14:35:12.000Z" itemprop="datePublished"> 發表於 2016-01-31</time>
+    <time datetime="2016-01-31T14:35:12.000Z" itemprop="datePublished"> Published 2016-01-31</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝方法："><span class="toc-number">2.</span> <span class="toc-text">安裝方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法："><span class="toc-number">3.</span> <span class="toc-text">使用方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何比較兩個檔案差異："><span class="toc-number">3.1.</span> <span class="toc-text">如何比較兩個檔案差異：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何搭配_git_使用："><span class="toc-number">3.2.</span> <span class="toc-text">如何搭配 git 使用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#也可以有更精簡的_git_用法："><span class="toc-number">3.3.</span> <span class="toc-text">也可以有更精簡的 git 用法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#將_icdiff_設定為_git_預設比對差異工具："><span class="toc-number">3.4.</span> <span class="toc-text">將 icdiff 設定為 git 預設比對差異工具：</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝方法："><span class="toc-number">2.</span> <span class="toc-text">安裝方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法："><span class="toc-number">3.</span> <span class="toc-text">使用方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何比較兩個檔案差異："><span class="toc-number">3.1.</span> <span class="toc-text">如何比較兩個檔案差異：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何搭配-git-使用："><span class="toc-number">3.2.</span> <span class="toc-text">如何搭配 git 使用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#也可以有更精簡的-git-用法："><span class="toc-number">3.3.</span> <span class="toc-text">也可以有更精簡的 git 用法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#將-icdiff-設定為-git-預設比對差異工具："><span class="toc-number">3.4.</span> <span class="toc-text">將 icdiff 設定為 git 預設比對差異工具：</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h2 id="前言：">前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
+		<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
 <p><img src="http://i.imgur.com/2B3fcMC.png" alt="內建的 diff 指令比對檔案差異">￼</p>
 <p><code>diff</code>指令僅僅是將檔案差異處以<strong>上下對照呈現</strong>，並不會以顏色標示差異處，需要我們自己很傷眼的來回掃描比對才知道差異在哪裡，這樣的呈現效果不是那麼清楚。</p>
 <p>讓我們來試試看，如果將檔案差異處以<strong>左右對照呈現</strong>的方式，並且將差異處標記上顏色，那是不是更一目了然了呢！<br><img src="http://i.imgur.com/NEA45so.png" alt="使用 icdiff 指令比對檔案差異"></p>
@@ -128,30 +129,30 @@ diff指令僅僅是將檔案差異處以上下對照呈現，並不會以顏色�
 <li>「綠色」表示「新增」。</li>
 <li>「紅色」表示「刪除」。</li>
 </ul>
-<h2 id="安裝方法：">安裝方法：</h2><p>OS X 可以直接使用 <code>Homebrew</code> 來安裝：</p>
-<pre><code><span class="variable">$brew</span> install icdiff
+<h2 id="安裝方法："><a href="#安裝方法：" class="headerlink" title="安裝方法："></a>安裝方法：</h2><p>OS X 可以直接使用 <code>Homebrew</code> 來安裝：</p>
+<pre><code>$brew install icdiff
 </code></pre><p>由於 <code>icdiff</code> 是一個 python 開發的程式，也可以直接下載檔案來執行，請參考 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external">GitHub</a> 上面的說明。</p>
-<h2 id="使用方法：">使用方法：</h2><h3 id="如何比較兩個檔案差異：">如何比較兩個檔案差異：</h3><pre><code><span class="variable">$icdiff</span> &lt;file_1&gt; &lt;file_2&gt;
+<h2 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h2><h3 id="如何比較兩個檔案差異："><a href="#如何比較兩個檔案差異：" class="headerlink" title="如何比較兩個檔案差異："></a>如何比較兩個檔案差異：</h3><pre><code>$icdiff &lt;file_1&gt; &lt;file_2&gt;
 </code></pre><blockquote>
 <p>備註：我們也可以將內建的 diff 指令改用 icdiff 取代。</p>
 </blockquote>
-<h3 id="如何搭配_git_使用：">如何搭配 git 使用：</h3><pre><code><span class="variable">$git</span> difftool --extcmd icdiff
-</code></pre><h3 id="也可以有更精簡的_git_用法：">也可以有更精簡的 git 用法：</h3><pre><code><span class="variable">$git</span> icdiff
+<h3 id="如何搭配-git-使用："><a href="#如何搭配-git-使用：" class="headerlink" title="如何搭配 git 使用："></a>如何搭配 git 使用：</h3><pre><code>$git difftool --extcmd icdiff
+</code></pre><h3 id="也可以有更精簡的-git-用法："><a href="#也可以有更精簡的-git-用法：" class="headerlink" title="也可以有更精簡的 git 用法："></a>也可以有更精簡的 git 用法：</h3><pre><code>$git icdiff
 </code></pre><p>只需要設定 <code>git difftool path</code> 指向 <code>git-icdiff</code> 檔案即可。</p>
-<h3 id="將_icdiff_設定為_git_預設比對差異工具：">將 <code>icdiff</code> 設定為 git 預設比對差異工具：</h3><p>已經習慣 git 預設的 <code>git diff</code> 指令了嗎？別擔心，我們可以設定 git 預設使用這一套來做差異比對，讓我們可以沿用原本熟悉的 <code>git diff</code> 指令，同時享用 <code>icdiff</code> 清楚的比對結果：</p>
-<pre><code><span class="variable">$git</span> diff
+<h3 id="將-icdiff-設定為-git-預設比對差異工具："><a href="#將-icdiff-設定為-git-預設比對差異工具：" class="headerlink" title="將 icdiff 設定為 git 預設比對差異工具："></a>將 <code>icdiff</code> 設定為 git 預設比對差異工具：</h3><p>已經習慣 git 預設的 <code>git diff</code> 指令了嗎？別擔心，我們可以設定 git 預設使用這一套來做差異比對，讓我們可以沿用原本熟悉的 <code>git diff</code> 指令，同時享用 <code>icdiff</code> 清楚的比對結果：</p>
+<pre><code>$git diff
 </code></pre><p>該如何讓 <code>$git diff</code> 預設使用 <code>icdiff</code>，設定方法如下：</p>
 <ol>
 <li><p>在 <code>.gitconfig</code> 設定</p>
 <pre><code>[diff]
-    <span class="comment"># 使用 icdiff 來取代 git 內建的 diff</span>
-    external = ~<span class="regexp">/bin/git</span>-diff-wrapper.sh
+    # 使用 icdiff 來取代 git 內建的 diff
+    external = ~/bin/git-diff-wrapper.sh
 </code></pre></li>
 <li><p>建立 <code>mkdir ~/bin/</code> 目錄</p>
 </li>
 <li><p>建立 <code>~/bin/git-diff-wrapper.sh</code> 檔案，加入以下內容：</p>
-<pre><code><span class="shebang">#!/bin/bash</span>
-icdiff <span class="variable">$2</span> <span class="variable">$5</span>
+<pre><code>#!/bin/bash
+icdiff $2 $5
 </code></pre></li>
 <li><p><code>chmod 777 ~/bin/git-diff-wrapper.sh</code> 開啟執行權限</p>
 </li>
@@ -195,7 +196,7 @@ icdiff <span class="variable">$2</span> <span class="variable">$5</span>
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/07/introduction_to_Elixir/" title="5分鐘快速認識 Elixir 程式語言">
+ <a href="/2016/07/introduction-to-Elixir/" title="5分鐘快速認識 Elixir 程式語言">
   <strong>上一篇：</strong><br/>
   <span>
   5分鐘快速認識 Elixir 程式語言</span>
@@ -204,7 +205,7 @@ icdiff <span class="variable">$2</span> <span class="variable">$5</span>
 
 
 <div class="next">
-<a href="/2015/10/osx10.11-homebrew/"  title="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題">
+<a href="/2015/10/osx10-11-homebrew/"  title="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題">
  <strong>下一篇：</strong><br/> 
  <span>升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題
 </span>
@@ -222,24 +223,34 @@ icdiff <span class="variable">$2</span> <span class="variable">$5</span>
 </section>
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝方法："><span class="toc-number">2.</span> <span class="toc-text">安裝方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法："><span class="toc-number">3.</span> <span class="toc-text">使用方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何比較兩個檔案差異："><span class="toc-number">3.1.</span> <span class="toc-text">如何比較兩個檔案差異：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何搭配_git_使用："><span class="toc-number">3.2.</span> <span class="toc-text">如何搭配 git 使用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#也可以有更精簡的_git_用法："><span class="toc-number">3.3.</span> <span class="toc-text">也可以有更精簡的 git 用法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#將_icdiff_設定為_git_預設比對差異工具："><span class="toc-number">3.4.</span> <span class="toc-text">將 icdiff 設定為 git 預設比對差異工具：</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝方法："><span class="toc-number">2.</span> <span class="toc-text">安裝方法：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法："><span class="toc-number">3.</span> <span class="toc-text">使用方法：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#如何比較兩個檔案差異："><span class="toc-number">3.1.</span> <span class="toc-text">如何比較兩個檔案差異：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#如何搭配-git-使用："><span class="toc-number">3.2.</span> <span class="toc-text">如何搭配 git 使用：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#也可以有更精簡的-git-用法："><span class="toc-number">3.3.</span> <span class="toc-text">也可以有更精簡的 git 用法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#將-icdiff-設定為-git-預設比對差異工具："><span class="toc-number">3.4.</span> <span class="toc-text">將 icdiff 設定為 git 預設比對差異工具：</span></a></li></ol></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github Card</p>
+<div class="github-card" data-github="bobo52310" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
 
   
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -255,15 +266,7 @@ icdiff <span class="variable">$2</span> <span class="variable">$5</span>
 			
 		
 			
-				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
@@ -271,19 +274,51 @@ icdiff <span class="variable">$2</span> <span class="variable">$5</span>
 			
 		
 			
-				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
+				<li><a href="/tags/apache/" title="apache">apache<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Netbeans/" title="Netbeans">Netbeans<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
 			
 		
 			
@@ -298,41 +333,23 @@ icdiff <span class="variable">$2</span> <span class="variable">$5</span>
 				<li><a href="/tags/vagrant/" title="vagrant">vagrant<sup>1</sup></a></li>
 			
 		
-			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
-			
-		
 		</ul>
 </div>
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
             
             	<a href="http://jaceju.net/" target="_blank" title="網站製作學習誌">網站製作學習誌</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.laravel-dojo.com/" target="_blank" title="LARAVEL 道場">LARAVEL 道場</a>
             
           </li>
         
@@ -355,7 +372,7 @@ icdiff <span class="variable">$2</span> <span class="variable">$5</span>
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -601,6 +618,16 @@ ga('send', 'pageview');
 
 
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 
 <!-- Analytics End -->
@@ -608,7 +635,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

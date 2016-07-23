@@ -22,7 +22,7 @@ Extract Constant
 Extract Field
 Extract Interface
 Extract Method
-Extract Parameter">
+Extract Paramet">
 <meta property="og:type" content="article">
 <meta property="og:title" content="推薦2個好用的 PHP Refactoring 重構工具">
 <meta property="og:url" content="http://bobochen.com/2015/07/推薦2個好用的-PHP-Refactoring-重構工具/index.html">
@@ -38,7 +38,7 @@ Extract Constant
 Extract Field
 Extract Interface
 Extract Method
-Extract Parameter">
+Extract Paramet">
 <meta property="og:image" content="http://bobochen.com/images/2015/refactoring.jpg">
 <meta property="og:image" content="http://bobochen.com/images/2015/phpstrom.png">
 <meta property="og:updated_time" content="2015-11-28T05:50:18.000Z">
@@ -55,7 +55,8 @@ Extract Constant
 Extract Field
 Extract Interface
 Extract Method
-Extract Parameter">
+Extract Paramet">
+<meta name="twitter:image" content="http://bobochen.com/images/2015/refactoring.jpg">
 <link rel="publisher" href="u/0/communities/116944928466340599471">
 
     
@@ -68,7 +69,7 @@ Extract Parameter">
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
   <body>
@@ -82,9 +83,9 @@ Extract Parameter">
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
-				<h2 class="blog-motto">Study Notes of Elixir、PHP、Laravel、Rails &amp; Web development.</h2>
+				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -98,7 +99,7 @@ Extract Parameter">
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -121,14 +122,14 @@ Extract Parameter">
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-05T08:55:56.000Z" itemprop="datePublished"> 發表於 2015-07-05</time>
+    <time datetime="2015-07-05T08:55:56.000Z" itemprop="datePublished"> Published 2015-07-05</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">Contents</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PhpStorm"><span class="toc-number">1.</span> <span class="toc-text">PhpStorm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#開源的選擇"><span class="toc-number">2.</span> <span class="toc-text">開源的選擇</span></a></li></ol>
 		
@@ -136,7 +137,7 @@ Extract Parameter">
 		
 		<center><img src="/images/2015/refactoring.jpg" alt=""></center>
 
-<h2 id="PhpStorm">PhpStorm</h2><p>1.首推 <a href="https://www.jetbrains.com/phpstorm/help/refactoring-source-code.html" target="_blank" rel="external">PhpStorm</a> PHP 的夢幻逸品 IDE</p>
+<h2 id="PhpStorm"><a href="#PhpStorm" class="headerlink" title="PhpStorm"></a>PhpStorm</h2><p>1.首推 <a href="https://www.jetbrains.com/phpstorm/help/refactoring-source-code.html" target="_blank" rel="external">PhpStorm</a> PHP 的夢幻逸品 IDE</p>
 <center><img src="/images/2015/phpstrom.png" alt=""></center>
 
 <p>鼎鼎大名的 PhpStorm IDE 功能超級強大! 對於重構的部分也支援多種方法，<a href="https://www.jetbrains.com/phpstorm/help/refactoring-source-code.html" target="_blank" rel="external">官網有詳細的介紹</a>：</p>
@@ -158,34 +159,34 @@ Extract Parameter">
 <li>Safe Delete</li>
 </ul>
 <p>這邊以 Extract function 來示範：<br><code>Before</code></p>
-<pre><code><span class="php"><span class="preprocessor">&lt;?php</span>
-<span class="keyword">if</span> (<span class="string">'POST'</span> != <span class="variable">$_SERVER</span>[<span class="string">'REQUEST_METHOD'</span>])
+<pre><code>&lt;?php
+if (&apos;POST&apos; != $_SERVER[&apos;REQUEST_METHOD&apos;])
 {
-header(<span class="string">'Allow: POST'</span>);
-header(<span class="string">'HTTP/1.1 405 Method Not Allowed'</span>);
-header(<span class="string">'Content-Type: text/plain'</span>);
-<span class="keyword">exit</span>;
-}</span>
+header(&apos;Allow: POST&apos;);
+header(&apos;HTTP/1.1 405 Method Not Allowed&apos;);
+header(&apos;Content-Type: text/plain&apos;);
+exit;
+}
 </code></pre><p><code>After</code></p>
-<pre><code><span class="php"><span class="preprocessor">&lt;?php</span>
-<span class="function"><span class="keyword">function</span> <span class="title">printEmptyHeader</span><span class="params">()</span>
-</span>{
-header(<span class="string">'Allow: POST'</span>);
-header(<span class="string">'HTTP/1.1 405 Method Not Allowed'</span>);
-header(<span class="string">'Content-Type: text/plain'</span>);
+<pre><code>&lt;?php
+function printEmptyHeader()
+{
+header(&apos;Allow: POST&apos;);
+header(&apos;HTTP/1.1 405 Method Not Allowed&apos;);
+header(&apos;Content-Type: text/plain&apos;);
 }
 
-<span class="keyword">if</span> (<span class="string">'POST'</span> != <span class="variable">$_SERVER</span>[<span class="string">'REQUEST_METHOD'</span>])
+if (&apos;POST&apos; != $_SERVER[&apos;REQUEST_METHOD&apos;])
 {
 printEmptyHeader();
-<span class="keyword">exit</span>;
+exit;
 }
-<span class="preprocessor">?&gt;</span></span>
+?&gt;
 </code></pre><p>只要滑鼠選取要提取的 function，按下 <code>Extract Method</code> 就完成了！實在是有夠迅速神奇！</p>
 <blockquote>
 <p>備註：PhpStorm 是付費軟體(個人版 US $ 99)</p>
 </blockquote>
-<h2 id="開源的選擇">開源的選擇</h2><ol>
+<h2 id="開源的選擇"><a href="#開源的選擇" class="headerlink" title="開源的選擇"></a>開源的選擇</h2><ol>
 <li><a href="http://qafoolabs.github.io/php-refactoring-browser/" target="_blank" rel="external">PHP Refactoring Browser</a><br>如果是要免費<a href="https://github.com/QafooLabs/php-refactoring-browser" target="_blank" rel="external">開源</a>的，這一套算是最好用的了，不過目前仍在 alpha 版本階段。<br>可做到以下重構：</li>
 </ol>
 <ul>
@@ -210,7 +211,7 @@ printEmptyHeader();
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/PHP/">PHP</a><a href="/tags/PhpStorm/">PhpStorm</a><a href="/tags/Sublime-Text/">Sublime Text</a>
+  <span></span> <a href="/tags/PHP/">PHP</a><a href="/tags/Sublime-Text/">Sublime Text</a><a href="/tags/PhpStorm/">PhpStorm</a>
   </div>
 
 </div>
@@ -260,24 +261,34 @@ printEmptyHeader();
 </section>
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">Contents</strong>
  
  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PhpStorm"><span class="toc-number">1.</span> <span class="toc-text">PhpStorm</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#開源的選擇"><span class="toc-number">2.</span> <span class="toc-text">開源的選擇</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github Card</p>
+<div class="github-card" data-github="bobo52310" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
 
   
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -293,15 +304,7 @@ printEmptyHeader();
 			
 		
 			
-				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
@@ -309,19 +312,51 @@ printEmptyHeader();
 			
 		
 			
-				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
+				<li><a href="/tags/apache/" title="apache">apache<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Netbeans/" title="Netbeans">Netbeans<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
 			
 		
 			
@@ -336,41 +371,23 @@ printEmptyHeader();
 				<li><a href="/tags/vagrant/" title="vagrant">vagrant<sup>1</sup></a></li>
 			
 		
-			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
-			
-		
 		</ul>
 </div>
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
             
             	<a href="http://jaceju.net/" target="_blank" title="網站製作學習誌">網站製作學習誌</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.laravel-dojo.com/" target="_blank" title="LARAVEL 道場">LARAVEL 道場</a>
             
           </li>
         
@@ -393,7 +410,7 @@ printEmptyHeader();
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -639,6 +656,16 @@ ga('send', 'pageview');
 
 
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 
 <!-- Analytics End -->
@@ -646,7 +673,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

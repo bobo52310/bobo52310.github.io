@@ -17,7 +17,7 @@ bash Syntax Highlight
 ls -lh
 cat 1.txt
 PHP Syntax Highlight
-&amp;lt;?php">
+&amp;lt;?ph">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Demo Syntax Highlighter">
 <meta property="og:url" content="http://bobochen.com/2015/04/Demo-Syntax-Highlighter/index.html">
@@ -28,7 +28,7 @@ bash Syntax Highlight
 ls -lh
 cat 1.txt
 PHP Syntax Highlight
-&amp;lt;?php">
+&amp;lt;?ph">
 <meta property="og:image" content="http://bobochen.com/images/2015/SyntaxHighlighter.png">
 <meta property="og:updated_time" content="2016-01-31T12:57:19.000Z">
 <meta name="twitter:card" content="summary">
@@ -39,7 +39,8 @@ bash Syntax Highlight
 ls -lh
 cat 1.txt
 PHP Syntax Highlight
-&amp;lt;?php">
+&amp;lt;?ph">
+<meta name="twitter:image" content="http://bobochen.com/images/2015/SyntaxHighlighter.png">
 <link rel="publisher" href="u/0/communities/116944928466340599471">
 
     
@@ -52,7 +53,7 @@ PHP Syntax Highlight
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
   <body>
@@ -66,9 +67,9 @@ PHP Syntax Highlight
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
-				<h2 class="blog-motto">Study Notes of Elixir、PHP、Laravel、Rails &amp; Web development.</h2>
+				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -82,7 +83,7 @@ PHP Syntax Highlight
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -105,14 +106,14 @@ PHP Syntax Highlight
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2015-04-12T07:06:21.000Z" itemprop="datePublished"> 發表於 2015-04-12</time>
+    <time datetime="2015-04-12T07:06:21.000Z" itemprop="datePublished"> Published 2015-04-12</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">Contents</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法"><span class="toc-number">2.</span> <span class="toc-text">使用方法</span></a></li></ol>
 		
@@ -120,57 +121,57 @@ PHP Syntax Highlight
 		
 		<center><img src="/images/2015/SyntaxHighlighter.png" alt=""></center>
 
-<h2 id="前言">前言</h2><p>在 blog 顯示程式碼，除了先把 code 貼到 codepen、gist、pastebin 等第三方服務再使用嵌入程式碼的方始顯示，也可直接在編輯畫面使用 Syntax Highlighter 來高亮程式碼區塊，以下 Demo 幾種不同語言的程式碼。</p>
-<pre><code>bash <span class="keyword">Syntax</span> Highlight
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 blog 顯示程式碼，除了先把 code 貼到 codepen、gist、pastebin 等第三方服務再使用嵌入程式碼的方始顯示，也可直接在編輯畫面使用 Syntax Highlighter 來高亮程式碼區塊，以下 Demo 幾種不同語言的程式碼。</p>
+<pre><code>bash Syntax Highlight
 
-<span class="keyword">ls</span> -lh
-<span class="keyword">cat</span> 1.txt
+ls -lh
+cat 1.txt
 </code></pre><p>PHP Syntax Highlight</p>
-<pre><code>&lt;?<span class="tag">php</span>
-<span class="tag">echo</span> "<span class="tag">Hello</span> <span class="tag">bobo</span>~"
-<span class="rule"><span class="attribute">Route</span>:<span class="value">:<span class="function">get</span>(<span class="string">'/'</span>, <span class="string">'WelcomeController@index'</span>)</span></span>;
+<pre><code>&lt;?php
+echo &quot;Hello bobo~&quot;
+Route::get(&apos;/&apos;, &apos;WelcomeController@index&apos;);
 
-<span class="rule"><span class="attribute">Route</span>:<span class="value">:<span class="function">get</span>(<span class="string">'home'</span>, <span class="string">'HomeController@index'</span>)</span></span>;
+Route::get(&apos;home&apos;, &apos;HomeController@index&apos;);
 
-<span class="rule"><span class="attribute">Route</span>:<span class="value">:<span class="function">controllers</span>([
-    <span class="string">'auth'</span> =&gt; <span class="string">'Auth\AuthController'</span>,
-    <span class="string">'password'</span> =&gt; <span class="string">'Auth\PasswordController'</span>,
-])</span></span>;
+Route::controllers([
+    &apos;auth&apos; =&gt; &apos;Auth\AuthController&apos;,
+    &apos;password&apos; =&gt; &apos;Auth\PasswordController&apos;,
+]);
 </code></pre><p>JavaScript Syntax Highlight</p>
-<pre><code><span class="pi">'use strict'</span>;
-$(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
-    <span class="comment">// Sidebar Menu</span>
-    <span class="keyword">var</span> accordionWidth = $(<span class="string">'#accordion'</span>).width();
-    $(<span class="string">'#accordion'</span>).sticky({
-        <span class="string">'topSpacing'</span>: <span class="number">60</span>
+<pre><code>&apos;use strict&apos;;
+$(function () {
+    // Sidebar Menu
+    var accordionWidth = $(&apos;#accordion&apos;).width();
+    $(&apos;#accordion&apos;).sticky({
+        &apos;topSpacing&apos;: 60
     }).width(accordionWidth);
 
-    <span class="comment">// Editor</span>
-    $(<span class="string">'.html'</span>).summernote();
+    // Editor
+    $(&apos;.html&apos;).summernote();
 
-    <span class="comment">// Cancel</span>
-    $(<span class="string">'.cancel'</span>).on(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>{
+    // Cancel
+    $(&apos;.cancel&apos;).on(&apos;click&apos;, function (e) {
         e.preventDefault();
-        <span class="keyword">if</span> (confirm(<span class="string">'Are you sure to leave this page?'</span>)) {
-            <span class="built_in">window</span>.history.back();
+        if (confirm(&apos;Are you sure to leave this page?&apos;)) {
+            window.history.back();
         }
     });
 });
-</code></pre><h2 id="使用方法">使用方法</h2><p>使用3個反單引號開頭，接著輸入程式對應縮寫(ex. php)，就可以開始輸入程式碼，並使用3個反單引號作為結尾。</p>
+</code></pre><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>使用3個反單引號開頭，接著輸入程式對應縮寫(ex. php)，就可以開始輸入程式碼，並使用3個反單引號作為結尾。</p>
 <p>呈現效果</p>
 <pre><code>```php
-<span class="php"><span class="preprocessor">&lt;?php</span>
-<span class="keyword">echo</span> <span class="string">"Hello bobo~"</span></span>
+&lt;?php
+echo &quot;Hello bobo~&quot;
 </code></pre><p>還可以使用 diff 語法，利用 +, - 來代表新增、刪除行的顯示方式。</p>
-<pre><code>-<span class="built_in">echo</span> <span class="string">"Hello bobo~"</span>
-+<span class="built_in">echo</span> <span class="string">"Hello World~"</span>
+<pre><code>-echo &quot;Hello bobo~&quot;
++echo &quot;Hello World~&quot;
 </code></pre><p>SyntaxHighlighter 可標記以下的程式語言</p>
 <pre><code>&gt;語言  對應縮寫    對應檔案
 ActionScript3   as3, actionscript3  shBrushAS3.js
-Bash/<span class="keyword">shell</span>  bash, <span class="keyword">shell</span> shBrushBash.js
-ColdFusion  <span class="keyword">cf</span>, coldfusion  shBrushColdFusion.js
-C#  <span class="keyword">c</span>-sharp, csharp shBrushCSharp.js
-C++ cpp, <span class="keyword">c</span>  shBrushCpp.js
+Bash/shell  bash, shell shBrushBash.js
+ColdFusion  cf, coldfusion  shBrushColdFusion.js
+C#  c-sharp, csharp shBrushCSharp.js
+C++ cpp, c  shBrushCpp.js
 CSS css shBrushCss.js
 Delphi  delphi, pas, pascal shBrushDelphi.js
 Diff    diff, patch shBrushDiff.js
@@ -179,12 +180,12 @@ Groovy  groovy  shBrushGroovy.js
 JavaScript  js, jscript, javascript shBrushJScript.js
 Java    java    shBrushJava.js
 JavaFX  jfx, javafx shBrushJavaFX.js
-Perl    <span class="keyword">perl</span>, pl    shBrushPerl.js
+Perl    perl, pl    shBrushPerl.js
 PHP php shBrushPhp.js
 Plain Text  plain, text shBrushPlain.js
-PowerShell  <span class="keyword">ps</span>, powershell  shBrushPowerShell.js
-Python  <span class="keyword">py</span>, <span class="keyword">python</span>  shBrushPython.js
-Ruby    rails, ror, <span class="keyword">ruby</span>    shBrushRuby.js
+PowerShell  ps, powershell  shBrushPowerShell.js
+Python  py, python  shBrushPython.js
+Ruby    rails, ror, ruby    shBrushRuby.js
 Scala   scala   shBrushScala.js
 SQL sql shBrushSql.js
 Visual Basic    vb, vbnet   shBrushVb.js
@@ -243,24 +244,34 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
 </section>
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">Contents</strong>
  
  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方法"><span class="toc-number">2.</span> <span class="toc-text">使用方法</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github Card</p>
+<div class="github-card" data-github="bobo52310" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
 
   
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -276,15 +287,7 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
 			
 		
 			
-				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
@@ -292,19 +295,51 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
 			
 		
 			
-				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
+				<li><a href="/tags/apache/" title="apache">apache<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Netbeans/" title="Netbeans">Netbeans<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
 			
 		
 			
@@ -319,41 +354,23 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
 				<li><a href="/tags/vagrant/" title="vagrant">vagrant<sup>1</sup></a></li>
 			
 		
-			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
-			
-		
 		</ul>
 </div>
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
             
             	<a href="http://jaceju.net/" target="_blank" title="網站製作學習誌">網站製作學習誌</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.laravel-dojo.com/" target="_blank" title="LARAVEL 道場">LARAVEL 道場</a>
             
           </li>
         
@@ -376,7 +393,7 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -622,6 +639,16 @@ ga('send', 'pageview');
 
 
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 
 <!-- Analytics End -->
@@ -629,7 +656,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

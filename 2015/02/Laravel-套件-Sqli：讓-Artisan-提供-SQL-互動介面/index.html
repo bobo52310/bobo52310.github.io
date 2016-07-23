@@ -13,21 +13,22 @@
     
     <meta name="description" content="簡介 Sqlisqli 是一個有趣的 Laravel 4 套件(by Antonio Ribeiro)，可以擴充 Artisan 功能，使其可以執行 SQL 查詢語句。類似像 tinker 那樣可以互動介面來與你的 Laravel 應用程式互動(包含操作 Eloquent)
 安裝方式：
-使用 composer 安裝，只要在命令列環境下輸入 $ composer require &amp;quot;prag">
+使用 composer 安裝，只要在命令列環境下輸入 $ composer require &amp;quot;p">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面">
 <meta property="og:url" content="http://bobochen.com/2015/02/Laravel-套件-Sqli：讓-Artisan-提供-SQL-互動介面/index.html">
 <meta property="og:site_name" content="Bobo的技術時光屋">
 <meta property="og:description" content="簡介 Sqlisqli 是一個有趣的 Laravel 4 套件(by Antonio Ribeiro)，可以擴充 Artisan 功能，使其可以執行 SQL 查詢語句。類似像 tinker 那樣可以互動介面來與你的 Laravel 應用程式互動(包含操作 Eloquent)
 安裝方式：
-使用 composer 安裝，只要在命令列環境下輸入 $ composer require &amp;quot;prag">
+使用 composer 安裝，只要在命令列環境下輸入 $ composer require &amp;quot;p">
 <meta property="og:image" content="http://bobochen.com/images/2015/sqli_05.png">
 <meta property="og:updated_time" content="2015-09-26T13:23:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面">
 <meta name="twitter:description" content="簡介 Sqlisqli 是一個有趣的 Laravel 4 套件(by Antonio Ribeiro)，可以擴充 Artisan 功能，使其可以執行 SQL 查詢語句。類似像 tinker 那樣可以互動介面來與你的 Laravel 應用程式互動(包含操作 Eloquent)
 安裝方式：
-使用 composer 安裝，只要在命令列環境下輸入 $ composer require &amp;quot;prag">
+使用 composer 安裝，只要在命令列環境下輸入 $ composer require &amp;quot;p">
+<meta name="twitter:image" content="http://bobochen.com/images/2015/sqli_05.png">
 <link rel="publisher" href="u/0/communities/116944928466340599471">
 
     
@@ -40,7 +41,7 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
   <body>
@@ -54,9 +55,9 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
-				<h2 class="blog-motto">Study Notes of Elixir、PHP、Laravel、Rails &amp; Web development.</h2>
+				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -70,7 +71,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -93,40 +94,40 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2015-02-21T04:23:58.000Z" itemprop="datePublished"> 發表於 2015-02-21</time>
+    <time datetime="2015-02-21T04:23:58.000Z" itemprop="datePublished"> Published 2015-02-21</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#簡介_Sqli"><span class="toc-number">1.</span> <span class="toc-text">簡介 Sqli</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝方式："><span class="toc-number">2.</span> <span class="toc-text">安裝方式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方式"><span class="toc-number">3.</span> <span class="toc-text">使用方式</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#簡介-Sqli"><span class="toc-number">1.</span> <span class="toc-text">簡介 Sqli</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝方式："><span class="toc-number">2.</span> <span class="toc-text">安裝方式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方式"><span class="toc-number">3.</span> <span class="toc-text">使用方式</span></a></li></ol>
 		
 		</div>
 		
 		<center><img src="/images/2015/sqli_05.png" alt=""></center>
 
 
-<h2 id="簡介_Sqli">簡介 Sqli</h2><p>sqli 是一個有趣的 Laravel 4 套件(by Antonio Ribeiro)，可以擴充 Artisan 功能，使其可以執行 SQL 查詢語句。<br>類似像 tinker 那樣可以互動介面來與你的 Laravel 應用程式互動(包含操作 Eloquent)</p>
-<h2 id="安裝方式：">安裝方式：</h2><ol>
+<h2 id="簡介-Sqli"><a href="#簡介-Sqli" class="headerlink" title="簡介 Sqli"></a>簡介 Sqli</h2><p>sqli 是一個有趣的 Laravel 4 套件(by Antonio Ribeiro)，可以擴充 Artisan 功能，使其可以執行 SQL 查詢語句。<br>類似像 tinker 那樣可以互動介面來與你的 Laravel 應用程式互動(包含操作 Eloquent)</p>
+<h2 id="安裝方式："><a href="#安裝方式：" class="headerlink" title="安裝方式："></a>安裝方式：</h2><ol>
 <li><p>使用 composer 安裝，只要在命令列環境下輸入<br> <code>$ composer require &quot;pragmarx/sqli&quot; &quot;0.*&quot;</code></p>
 </li>
 <li><p>service provider to your app/config/app.php:<br> <code>&#39;PragmaRX\SqlI\Vendor\Laravel\ServiceProvider&#39;,</code></p>
 </li>
 </ol>
-<h2 id="使用方式">使用方式</h2><ol>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><ol>
 <li>進入 SQL 互動畫面<br><code>$ php artisan sqli</code></li>
 <li>輸入 SQL 查詢字串<br><code>$ postgresql:laravel&gt; select email from users;</code></li>
 </ol>
 <p>即可得到 SQL 查詢結果</p>
-<pre><code><span class="code">+----+</span>------------------------------+
-<span class="header">| id | email                        |
-+----+------------------------------+</span>
+<pre><code>+----+------------------------------+
+| id | email                        |
++----+------------------------------+
 |  1 | arnold@schwarzenegger.com    |
-<span class="header">|  2 | danny@devito.com             |
-+----+------------------------------+</span>
+|  2 | danny@devito.com             |
++----+------------------------------+
 </code></pre><p>GitHub：<a href="https://github.com/antonioribeiro/sqli" target="_blank" rel="external">antonioribeiro/sqli</a></p>
   
 	</div>
@@ -186,24 +187,34 @@
 </section>
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#簡介_Sqli"><span class="toc-number">1.</span> <span class="toc-text">簡介 Sqli</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝方式："><span class="toc-number">2.</span> <span class="toc-text">安裝方式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方式"><span class="toc-number">3.</span> <span class="toc-text">使用方式</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#簡介-Sqli"><span class="toc-number">1.</span> <span class="toc-text">簡介 Sqli</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝方式："><span class="toc-number">2.</span> <span class="toc-text">安裝方式：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用方式"><span class="toc-number">3.</span> <span class="toc-text">使用方式</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github Card</p>
+<div class="github-card" data-github="bobo52310" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
 
   
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -219,15 +230,7 @@
 			
 		
 			
-				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
@@ -235,19 +238,51 @@
 			
 		
 			
-				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
+				<li><a href="/tags/apache/" title="apache">apache<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Netbeans/" title="Netbeans">Netbeans<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
 			
 		
 			
@@ -262,41 +297,23 @@
 				<li><a href="/tags/vagrant/" title="vagrant">vagrant<sup>1</sup></a></li>
 			
 		
-			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
-			
-		
 		</ul>
 </div>
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
             
             	<a href="http://jaceju.net/" target="_blank" title="網站製作學習誌">網站製作學習誌</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.laravel-dojo.com/" target="_blank" title="LARAVEL 道場">LARAVEL 道場</a>
             
           </li>
         
@@ -319,7 +336,7 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -565,6 +582,16 @@ ga('send', 'pageview');
 
 
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 
 <!-- Analytics End -->
@@ -572,7 +599,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

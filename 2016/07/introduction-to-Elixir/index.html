@@ -17,20 +17,21 @@
 另外聽說藉由">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5分鐘快速認識 Elixir 程式語言">
-<meta property="og:url" content="http://bobochen.com/2016/07/introduction_to_Elixir/index.html">
+<meta property="og:url" content="http://bobochen.com/2016/07/introduction-to-Elixir/index.html">
 <meta property="og:site_name" content="Bobo的技術時光屋">
 <meta property="og:description" content="緣起：
 最近因為新工作環境要使用 Elixir 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！
 不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD
 另外聽說藉由">
 <meta property="og:image" content="http://imgur.com/39eqCJu.jpg">
-<meta property="og:updated_time" content="2016-07-10T03:58:13.000Z">
+<meta property="og:updated_time" content="2016-07-23T12:57:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5分鐘快速認識 Elixir 程式語言">
 <meta name="twitter:description" content="緣起：
 最近因為新工作環境要使用 Elixir 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！
 不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD
 另外聽說藉由">
+<meta name="twitter:image" content="http://imgur.com/39eqCJu.jpg">
 <link rel="publisher" href="u/0/communities/116944928466340599471">
 
     
@@ -43,7 +44,7 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
   <body>
@@ -57,9 +58,9 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
-				<h2 class="blog-motto">Study Notes of Elixir、PHP、Laravel、Rails &amp; Web development.</h2>
+				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -73,7 +74,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -89,34 +90,34 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/07/introduction_to_Elixir/" title="5分鐘快速認識 Elixir 程式語言" itemprop="url">5分鐘快速認識 Elixir 程式語言</a>
+      <a href="/2016/07/introduction-to-Elixir/" title="5分鐘快速認識 Elixir 程式語言" itemprop="url">5分鐘快速認識 Elixir 程式語言</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2016-07-08T15:40:30.000Z" itemprop="datePublished"> 發表於 2016-07-08</time>
+    <time datetime="2016-07-08T15:40:30.000Z" itemprop="datePublished"> Published 2016-07-08</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">Contents</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#緣起："><span class="toc-number">1.</span> <span class="toc-text">緣起：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir_是啥玩意兒？"><span class="toc-number">2.</span> <span class="toc-text">Elixir 是啥玩意兒？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir_值得學嗎？"><span class="toc-number">3.</span> <span class="toc-text">Elixir 值得學嗎？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些公司使用_Elixir？"><span class="toc-number">4.</span> <span class="toc-text">有哪些公司使用 Elixir？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些專案使用_Elixir_開發"><span class="toc-number">5.</span> <span class="toc-text">有哪些專案使用 Elixir 開發</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的_Elixir_相關書籍"><span class="toc-number">6.</span> <span class="toc-text">推薦的 Elixir 相關書籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的_Elixir_線上教學資源"><span class="toc-number">7.</span> <span class="toc-text">推薦的 Elixir 線上教學資源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#補充一下_Erlang_語言："><span class="toc-number">8.</span> <span class="toc-text">補充一下 Erlang 語言：</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#緣起："><span class="toc-number">1.</span> <span class="toc-text">緣起：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir-是啥玩意兒？"><span class="toc-number">2.</span> <span class="toc-text">Elixir 是啥玩意兒？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir-值得學嗎？"><span class="toc-number">3.</span> <span class="toc-text">Elixir 值得學嗎？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些公司使用-Elixir？"><span class="toc-number">4.</span> <span class="toc-text">有哪些公司使用 Elixir？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些專案使用-Elixir-開發"><span class="toc-number">5.</span> <span class="toc-text">有哪些專案使用 Elixir 開發</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的-Elixir-相關書籍"><span class="toc-number">6.</span> <span class="toc-text">推薦的 Elixir 相關書籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的-Elixir-線上教學資源"><span class="toc-number">7.</span> <span class="toc-text">推薦的 Elixir 線上教學資源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#補充一下-Erlang-語言："><span class="toc-number">8.</span> <span class="toc-text">補充一下 Erlang 語言：</span></a></li></ol>
 		
 		</div>
 		
-		<h2 id="緣起：">緣起：</h2><p><img src="http://imgur.com/39eqCJu.jpg" alt=""></p>
+		<h2 id="緣起："><a href="#緣起：" class="headerlink" title="緣起："></a>緣起：</h2><p><img src="http://imgur.com/39eqCJu.jpg" alt=""></p>
 <p>最近因為新工作環境要使用 <code>Elixir</code> 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！</p>
 <p>不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD</p>
 <p>另外聽說藉由專案驅動學習是最有效率的…(特別是這種死線緊湊的效果應該又更好 @_@)</p>
 <p>-</p>
-<p>由於今天賺到一天颱風假，趕緊花一個下午快速認識一下 <code>Elixir</code> 這個語言，發現中文的文件好少喔，邊學的同時也隨手整理了一下，分享給大家，以下的資訊有助於我快速入門，希望也有幫助有緣路過的你/妳~ </p>
+<p>由於今天賺到一天颱風假，趕緊花一個下午快速認識一下 <code>Elixir</code> 這個語言，發現中文的文件好少喔，邊學的同時也隨手整理了一下，分享給大家，以下的資訊有助於我快速入門，希望也有幫助有緣路過的你/妳~</p>
 <p>既然中文資料還不多，我就來貢獻一篇吧！</p>
-<h2 id="Elixir_是啥玩意兒？">Elixir 是啥玩意兒？</h2><p>沒聽過是很正常的，目前 Elixir 相關的中文的討論還不多，這門程式語言在台灣還不算很流行，周遭的朋友也都沒聽說有人在玩，反而是我在英國工作的同學說他們公司有在使用！這是我身邊少數聽到有在使用這個語言的公司。話說我們公司也只有 CTO 本人有寫過…</p>
+<h2 id="Elixir-是啥玩意兒？"><a href="#Elixir-是啥玩意兒？" class="headerlink" title="Elixir 是啥玩意兒？"></a>Elixir 是啥玩意兒？</h2><p>沒聽過是很正常的，目前 Elixir 相關的中文的討論還不多，這門程式語言在台灣還不算很流行，周遭的朋友也都沒聽說有人在玩，反而是我在英國工作的同學說他們公司有在使用！這是我身邊少數聽到有在使用這個語言的公司。話說我們公司也只有 CTO 本人有寫過…</p>
 <p>簡單來說 Elixir 是架構一個在古老語言(Erlang)上面的一個年輕語言，特色簡介如下：</p>
 <ul>
 <li>2013年誕生，相當年輕的程式語言。</li>
@@ -130,7 +131,7 @@
 <li>Elixir provides a macro system and polymorphism via protocols, both aiming to make the language more extensible</li>
 <li>開發 Web 可以搭配 <code>Phoenix Framework</code> (也是 MVC 架構)</li>
 </ul>
-<h2 id="Elixir_值得學嗎？">Elixir 值得學嗎？</h2><p>新技術、新語言那麼多！什麼都想學，有這麼多時間嗎？學得完嗎？</p>
+<h2 id="Elixir-值得學嗎？"><a href="#Elixir-值得學嗎？" class="headerlink" title="Elixir 值得學嗎？"></a>Elixir 值得學嗎？</h2><p>新技術、新語言那麼多！什麼都想學，有這麼多時間嗎？學得完嗎？</p>
 <p>我們該如何評估一門技術是否值得投入寶貴的時間去學習呢？</p>
 <p>就像我當年回「大安高工資訊科」和學弟妹分享的簡報：「<a href="http://www.slideshare.net/bobo52310/ss-48604799" target="_blank" rel="external">軟體工程師的3大試煉</a>」，我們可以使用一些工具來評估一門技術目前是否流行，是否值得投入學習。</p>
 <ul>
@@ -142,7 +143,7 @@
 <blockquote>
 <p>不過說實在的講這麼多，凡是專案要用到的、主管要你用的，你就認命乖乖學吧~ 哈哈</p>
 </blockquote>
-<h2 id="有哪些公司使用_Elixir？">有哪些公司使用 Elixir？</h2><ul>
+<h2 id="有哪些公司使用-Elixir？"><a href="#有哪些公司使用-Elixir？" class="headerlink" title="有哪些公司使用 Elixir？"></a>有哪些公司使用 Elixir？</h2><ul>
 <li>Pinterest <a href="http://venturebeat.com/2015/12/18/pinterest-elixir/" target="_blank" rel="external">[ref]</a><ul>
 <li>運用在「通知系統」一秒可以傳送 14,000 筆訊息，只需要15台主機。原本用 JAVA 的舊架構則需要 30台主機。而且程式碼檔案大小僅有原本的 1/10 唷！<br>(Pinterest’s notification system now uses Elixir to deliver 14,000 notifications per second)</li>
 <li>核心 API 也用 Elixir 改寫，運行速度比 Memcached-based predecessor 的反應時間還要更快速。<br>(The rate-limiting system for Pinterest’s core application programming interface (API) and Ads API is also now written in Elixir, providing faster response times than its Memcached-based predecessor.)</li>
@@ -161,16 +162,16 @@
 <blockquote>
 <p>更多名單請見：<a href="https://github.com/doomspork/elixir-companies" target="_blank" rel="external">doomspork/elixir-companies</a></p>
 </blockquote>
-<h2 id="有哪些專案使用_Elixir_開發">有哪些專案使用 Elixir 開發</h2><ul>
+<h2 id="有哪些專案使用-Elixir-開發"><a href="#有哪些專案使用-Elixir-開發" class="headerlink" title="有哪些專案使用 Elixir 開發"></a>有哪些專案使用 Elixir 開發</h2><ul>
 <li><a href="https://github.com/pinterest/elixometer" target="_blank" rel="external">Elixometer</a> // Logging library 由 Pinterest 開發釋出</li>
 <li><a href="https://github.com/pinterest/riffed" target="_blank" rel="external">riffed</a> // Provides idiomatic Elixir bindings for Apache Thrift 由 Pinterest 開發釋出</li>
 </ul>
-<h2 id="推薦的_Elixir_相關書籍">推薦的 Elixir 相關書籍</h2><ul>
+<h2 id="推薦的-Elixir-相關書籍"><a href="#推薦的-Elixir-相關書籍" class="headerlink" title="推薦的 Elixir 相關書籍"></a>推薦的 Elixir 相關書籍</h2><ul>
 <li><a href="https://www.manning.com/books/elixir-in-action" target="_blank" rel="external">Elixir in Action</a></li>
 <li><a href="https://pragprog.com/book/elixir12/programming-elixir-1-2" target="_blank" rel="external">Programming Elixir 1.2</a></li>
 <li><a href="https://www.packtpub.com/application-development/learning-elixir" target="_blank" rel="external">Learning Elixir</a></li>
 </ul>
-<h2 id="推薦的_Elixir_線上教學資源">推薦的 Elixir 線上教學資源</h2><ul>
+<h2 id="推薦的-Elixir-線上教學資源"><a href="#推薦的-Elixir-線上教學資源" class="headerlink" title="推薦的 Elixir 線上教學資源"></a>推薦的 Elixir 線上教學資源</h2><ul>
 <li><a href="http://elixirschool.com/" target="_blank" rel="external">http://elixirschool.com/</a> // Elixir School 新手入門</li>
 <li><a href="https://github.com/h4cc/awesome-elixir" target="_blank" rel="external">awesome-elixir</a> // Awesome 大補帖系列</li>
 <li><a href="https://hex.pm/" target="_blank" rel="external">https://hex.pm/</a> // The package manager for the Erlang ecosystem</li>
@@ -181,7 +182,7 @@
 <li><a href="http://blog.plataformatec.com.br/" target="_blank" rel="external">http://blog.plataformatec.com.br/</a> Elixir 老爸共同創辦的公司公開的技術 Blog</li>
 <li><a href="https://github.com/seven1m/30-days-of-elixir" target="_blank" rel="external">https://github.com/seven1m/30-days-of-elixir</a> // 跟著範例30天學習 Elixir</li>
 </ul>
-<h2 id="補充一下_Erlang_語言：">補充一下 Erlang 語言：</h2><ul>
+<h2 id="補充一下-Erlang-語言："><a href="#補充一下-Erlang-語言：" class="headerlink" title="補充一下 Erlang 語言："></a>補充一下 Erlang 語言：</h2><ul>
 <li>1987 年誕生的老語言，由 Ericsson 開發。早期主要應用在電信業系統，經長年證實其穩定性超高。</li>
 <li><code>Erlang</code> 老爸 <code>Joe Armstrong</code> 當年的<a href="https://drive.google.com/file/d/0B1xAdaVSasm4SXNkN1MzSnM1LUU/view" target="_blank" rel="external">論文中譯版</a>。</li>
 <li><a href="http://joearms.github.io/2013/05/31/a-week-with-elixir.html" target="_blank" rel="external"><code>Erlang</code> 老爸也對 <code>Elixir</code> 讚譽有嘉。</a></li>
@@ -196,7 +197,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Elixir/">Elixir</a>
+  <span></span> <a href="/tags/Elixir-Phoenix/">Elixir,Phoenix</a>
   </div>
 
 </div>
@@ -205,7 +206,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://bobochen.com/2016/07/introduction_to_Elixir/" data-title="5分鐘快速認識 Elixir 程式語言 | Bobo的技術時光屋" data-tsina="null" class="share clearfix">
+	  <div data-url="http://bobochen.com/2016/07/introduction-to-Elixir/" data-title="5分鐘快速認識 Elixir 程式語言 | Bobo的技術時光屋" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -218,6 +219,14 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2016/07/elixir-recommend-editor-ide/" title="推薦 Elixir 好用的開發編輯器">
+  <strong>上一篇：</strong><br/>
+  <span>
+  推薦 Elixir 好用的開發編輯器</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2016/01/icdiff/"  title="icdiff 好用的檔案比對工具，Terminal 環境下用它就對了">
@@ -238,24 +247,34 @@
 </section>
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">Contents</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#緣起："><span class="toc-number">1.</span> <span class="toc-text">緣起：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir_是啥玩意兒？"><span class="toc-number">2.</span> <span class="toc-text">Elixir 是啥玩意兒？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir_值得學嗎？"><span class="toc-number">3.</span> <span class="toc-text">Elixir 值得學嗎？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些公司使用_Elixir？"><span class="toc-number">4.</span> <span class="toc-text">有哪些公司使用 Elixir？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些專案使用_Elixir_開發"><span class="toc-number">5.</span> <span class="toc-text">有哪些專案使用 Elixir 開發</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的_Elixir_相關書籍"><span class="toc-number">6.</span> <span class="toc-text">推薦的 Elixir 相關書籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的_Elixir_線上教學資源"><span class="toc-number">7.</span> <span class="toc-text">推薦的 Elixir 線上教學資源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#補充一下_Erlang_語言："><span class="toc-number">8.</span> <span class="toc-text">補充一下 Erlang 語言：</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#緣起："><span class="toc-number">1.</span> <span class="toc-text">緣起：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir-是啥玩意兒？"><span class="toc-number">2.</span> <span class="toc-text">Elixir 是啥玩意兒？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir-值得學嗎？"><span class="toc-number">3.</span> <span class="toc-text">Elixir 值得學嗎？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些公司使用-Elixir？"><span class="toc-number">4.</span> <span class="toc-text">有哪些公司使用 Elixir？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些專案使用-Elixir-開發"><span class="toc-number">5.</span> <span class="toc-text">有哪些專案使用 Elixir 開發</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的-Elixir-相關書籍"><span class="toc-number">6.</span> <span class="toc-text">推薦的 Elixir 相關書籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的-Elixir-線上教學資源"><span class="toc-number">7.</span> <span class="toc-text">推薦的 Elixir 線上教學資源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#補充一下-Erlang-語言："><span class="toc-number">8.</span> <span class="toc-text">補充一下 Erlang 語言：</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github Card</p>
+<div class="github-card" data-github="bobo52310" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
 
   
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -271,15 +290,7 @@
 			
 		
 			
-				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
@@ -287,19 +298,51 @@
 			
 		
 			
-				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
+				<li><a href="/tags/apache/" title="apache">apache<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Netbeans/" title="Netbeans">Netbeans<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
 			
 		
 			
@@ -314,41 +357,23 @@
 				<li><a href="/tags/vagrant/" title="vagrant">vagrant<sup>1</sup></a></li>
 			
 		
-			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
-			
-		
 		</ul>
 </div>
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
             
             	<a href="http://jaceju.net/" target="_blank" title="網站製作學習誌">網站製作學習誌</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.laravel-dojo.com/" target="_blank" title="LARAVEL 道場">LARAVEL 道場</a>
             
           </li>
         
@@ -371,7 +396,7 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -617,6 +642,16 @@ ga('send', 'pageview');
 
 
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 
 <!-- Analytics End -->
@@ -624,7 +659,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

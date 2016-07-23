@@ -32,7 +32,7 @@
     <link rel="apple-touch-icon" href="/img/jacman.jpg">
     <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
-    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
   <body>
@@ -46,9 +46,9 @@
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
-				<h2 class="blog-motto">Study Notes of Elixir、PHP、Laravel、Rails &amp; Web development.</h2>
+				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -62,7 +62,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -80,6 +80,70 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2012/12/【Android】AVD模擬器無返回鍵該如何是好/" title="【Android】AVD模擬器無返回鍵該如何是好" itemprop="url">【Android】AVD模擬器無返回鍵該如何是好</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2012-12-08T02:42:07.000Z" itemprop="datePublished"> Published 2012-12-08</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <center><img src="/images/2012/2012-12-08_102514.png" alt=""></center>
+
+<h2 id="問題"><a href="#問題" class="headerlink" title="問題"></a>問題</h2><p>由模擬器產生的裝置，在畫面上並無返回鍵與選單鍵。</p>
+<h2 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h2><p>此時我們可以由實體鍵盤來達到以上功能，請試試看：</p>
+<blockquote>
+<p>ESC → 返回鍵<br>F2 → 選單鍵</p>
+</blockquote>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android/">Android</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2012/12/【Android】AVD模擬器無返回鍵該如何是好/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2012/09/NVR-錄影系統速記/" title="NVR 錄影系統速記" itemprop="url">NVR 錄影系統速記</a>
   </h1>
   <p class="article-author">By
@@ -87,7 +151,7 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2012-09-08T05:01:39.000Z" itemprop="datePublished"> 發表於 2012-09-08</time>
+    <time datetime="2012-09-08T05:01:39.000Z" itemprop="datePublished"> Published 2012-09-08</time>
     
   </p>
 </header>
@@ -159,15 +223,15 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2012-05-17T08:18:05.000Z" itemprop="datePublished"> 發表於 2012-05-17</time>
+    <time datetime="2012-05-17T08:18:05.000Z" itemprop="datePublished"> Published 2012-05-17</time>
     
   </p>
 </header>
     <div class="article-content">
         
-        <h2 id="錯誤訊息：">錯誤訊息：</h2><p>Apache的log檔超肥超大，一個檔案上GB都有可能!!</p>
-<h2 id="可能原因：">可能原因：</h2><p>當Apache是安裝在Windows的系統中，日誌預設值是不會循環的，所以若您一直沒有清除或手動循環log檔，一個檔案上GB大小也是有可能的，若需要去解析它可能要花很久的時間。</p>
-<h2 id="解決方法：">解決方法：</h2><p>Apache本身提供了 rotatelogs (在Windows下為 rotatelogs.exe) 這個指令來循環日誌，讓你可以手動執行指令(請參考 rotatelogs 指令教學) ，或是直接在 httpd.conf 中設定，範例如下：</p>
+        <h2 id="錯誤訊息："><a href="#錯誤訊息：" class="headerlink" title="錯誤訊息："></a>錯誤訊息：</h2><p>Apache的log檔超肥超大，一個檔案上GB都有可能!!</p>
+<h2 id="可能原因："><a href="#可能原因：" class="headerlink" title="可能原因："></a>可能原因：</h2><p>當Apache是安裝在Windows的系統中，日誌預設值是不會循環的，所以若您一直沒有清除或手動循環log檔，一個檔案上GB大小也是有可能的，若需要去解析它可能要花很久的時間。</p>
+<h2 id="解決方法："><a href="#解決方法：" class="headerlink" title="解決方法："></a>解決方法：</h2><p>Apache本身提供了 rotatelogs (在Windows下為 rotatelogs.exe) 這個指令來循環日誌，讓你可以手動執行指令(請參考 rotatelogs 指令教學) ，或是直接在 httpd.conf 中設定，範例如下：</p>
 <p>每天循環(一天為86400秒)<br>CustomLog “|c:/apache2/bin/rotatelogs c:/apache2/logs/access_log 86400” combined<br>檔案到達5MB就循環<br>CustomLog “|c:/apache2/bin</p>
 <center><img src="/images/2012/apache.png" alt=""></center>
 
@@ -177,7 +241,7 @@
 <p>若您想自訂檔案名稱的日期格式，可以參考以下的設定值：</p>
 <p>%A - full weekday name (localized)<br>%a - 3-character weekday name (localized)<br>%B - full month name (localized)<br>%b - 3-character month name (localized)<br>%c - date and time (localized)<br>%d - 2-digit day of month<br>%H - 2-digit hour (24 hour clock)<br>%I - 2-digit hour (12 hour clock)<br>%j - 3-digit day of year<br>%M - 2-digit minute<br>%m - 2-digit month<br>%p - am/pm of 12 hour clock (localized)<br>%S - 2-digit second<br>%U - 2-digit week of year (Sunday first day of week)<br>%W - 2-digit week of year (Monday first day of week)<br>%w - 1-digit weekday (Sunday first day of week)<br>%X - time (localized)<br>%x - date (localized)<br>%Y - 4-digit year<br>%y - 2-digit year<br>%Z - time zone name<br>%% - literal `%’</p>
 <p>完成以上 設定後，重新啟動 Apache 即可。</p>
-<h2 id="相關字彙：">相關字彙：</h2><p>Apache設定、Apache 日誌、rotatelogs檔</p>
+<h2 id="相關字彙："><a href="#相關字彙：" class="headerlink" title="相關字彙："></a>相關字彙：</h2><p>Apache設定、Apache 日誌、rotatelogs檔</p>
 
         
         
@@ -191,7 +255,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/apache/">apache</a><a href="/tags/電腦筆記/">電腦筆記</a>
+  <span></span> <a href="/tags/電腦筆記/">電腦筆記</a><a href="/tags/apache/">apache</a>
   </div>
 
 </div>
@@ -222,17 +286,27 @@
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github Card</p>
+<div class="github-card" data-github="bobo52310" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
 
   
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -248,15 +322,7 @@
 			
 		
 			
-				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
@@ -264,19 +330,51 @@
 			
 		
 			
-				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
+				<li><a href="/tags/apache/" title="apache">apache<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Netbeans/" title="Netbeans">Netbeans<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
 			
 		
 			
@@ -291,41 +389,23 @@
 				<li><a href="/tags/vagrant/" title="vagrant">vagrant<sup>1</sup></a></li>
 			
 		
-			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
-			
-		
 		</ul>
 </div>
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
             
             	<a href="http://jaceju.net/" target="_blank" title="網站製作學習誌">網站製作學習誌</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.laravel-dojo.com/" target="_blank" title="LARAVEL 道場">LARAVEL 道場</a>
             
           </li>
         
@@ -348,7 +428,7 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -451,26 +531,6 @@ $(document).ready(function(){
 
 
 
-<script type="text/javascript">
-
-var disqus_shortname = 'bobo52310blogger';
-
-(function(){
-  var dsq = document.createElement('script');
-  dsq.type = 'text/javascript';
-  dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-}());
-(function(){
-  var dsq = document.createElement('script');
-  dsq.type = 'text/javascript';
-  dsq.async = true;
-  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-}());
-</script>
-
 
 
 
@@ -512,6 +572,16 @@ ga('send', 'pageview');
 
 
 
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
 
 
 <!-- Analytics End -->
@@ -519,7 +589,7 @@ ga('send', 'pageview');
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
