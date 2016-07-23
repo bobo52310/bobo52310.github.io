@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bobochen.com/about/index.html</loc>
+    
+    <lastmod>2016-07-23T13:51:10.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://bobochen.com/2016/07/elixir-recommend-editor-ide/</loc>
     
     <lastmod>2016-07-23T13:32:32.000Z</lastmod>
