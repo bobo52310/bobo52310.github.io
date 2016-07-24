@@ -478,9 +478,9 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="UI" scheme="http://bobochen.com/tags/UI/"/>
-    
       <category term="Web Design" scheme="http://bobochen.com/tags/Web-Design/"/>
+    
+      <category term="UI" scheme="http://bobochen.com/tags/UI/"/>
     
   </entry>
   
