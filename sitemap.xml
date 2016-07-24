@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://bobochen.com/2016/07/introduction-to-Elixir/</loc>
+    
+    <lastmod>2016-07-24T01:36:34.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://bobochen.com/2016/07/elixir-recommend-editor-ide/</loc>
     
-    <lastmod>2016-07-24T01:30:14.000Z</lastmod>
+    <lastmod>2016-07-24T01:36:03.000Z</lastmod>
     
   </url>
   
@@ -12,13 +19,6 @@
     <loc>http://bobochen.com/about/index.html</loc>
     
     <lastmod>2016-07-24T01:30:14.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://bobochen.com/2016/07/introduction-to-Elixir/</loc>
-    
-    <lastmod>2016-07-23T12:57:59.000Z</lastmod>
     
   </url>
   
