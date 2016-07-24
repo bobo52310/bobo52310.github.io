@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bobochen.com/"/>
-  <updated>2016-07-24T01:36:03.000Z</updated>
+  <updated>2016-07-24T02:58:55.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>推薦 Elixir 好用的開發編輯器</title>
-    <link href="http://bobochen.com/2016/07/elixir-recommend-editor-ide/"/>
-    <id>http://bobochen.com/2016/07/elixir-recommend-editor-ide/</id>
+    <link href="http://bobochen.com/elixir/recommend-elixir-editor-ide/"/>
+    <id>http://bobochen.com/elixir/recommend-elixir-editor-ide/</id>
     <published>2016-07-23T12:57:04.000Z</published>
-    <updated>2016-07-24T01:36:03.000Z</updated>
+    <updated>2016-07-24T02:58:55.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://i.imgur.com/oSGvEfI.png" alt=""></p>
 <h4 id="當開發-Elixir-的環境都建置好了，除了可以在-terminal-輸入-iex-開啟-Interactive-mode-來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊-Autocomplete-、Syntax-Highlighting-等等功能，可以讓你開發起來更加行雲流水喔！"><a href="#當開發-Elixir-的環境都建置好了，除了可以在-terminal-輸入-iex-開啟-Interactive-mode-來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊-Autocomplete-、Syntax-Highlighting-等等功能，可以讓你開發起來更加行雲流水喔！" class="headerlink" title="當開發 Elixir 的環境都建置好了，除了可以在 terminal 輸入 iex 開啟 Interactive mode 來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊(Autocomplete)、Syntax Highlighting 等等功能，可以讓你開發起來更加行雲流水喔！"></a>當開發 Elixir 的環境都建置好了，除了可以在 terminal 輸入 <code>iex</code> 開啟 <code>Interactive mode</code> 來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊(Autocomplete)、Syntax Highlighting 等等功能，可以讓你開發起來更加行雲流水喔！</h4><h3 id="這裡推薦-3款-Elixir-的開發工具：Sublime-Text、IntelliJ、Vim。"><a href="#這裡推薦-3款-Elixir-的開發工具：Sublime-Text、IntelliJ、Vim。" class="headerlink" title="這裡推薦 3款 Elixir 的開發工具：Sublime Text、IntelliJ、Vim。"></a>這裡推薦 3款 Elixir 的開發工具：Sublime Text、IntelliJ、Vim。</h3><h3 id="請見以下於公司內部分享的簡報："><a href="#請見以下於公司內部分享的簡報：" class="headerlink" title="請見以下於公司內部分享的簡報："></a>請見以下於公司內部分享的簡報：</h3><p><iframe src="//www.slideshare.net/slideshow/embed_code/key/7Jh1db0Xlm1X" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bobo52310/elixir-64190936" title="Elixir 好用的編輯器" target="_blank">Elixir 好用的編輯器</a> </strong> from <strong><a href="//www.slideshare.net/bobo52310" target="_blank">bobo52310</a></strong> </div></p>
@@ -48,10 +48,10 @@
   
   <entry>
     <title>5分鐘快速認識 Elixir 程式語言</title>
-    <link href="http://bobochen.com/2016/07/introduction-to-Elixir/"/>
-    <id>http://bobochen.com/2016/07/introduction-to-Elixir/</id>
+    <link href="http://bobochen.com/elixir/introduction_to_Elixir/"/>
+    <id>http://bobochen.com/elixir/introduction_to_Elixir/</id>
     <published>2016-07-08T15:40:30.000Z</published>
-    <updated>2016-07-24T01:36:34.000Z</updated>
+    <updated>2016-07-24T03:19:16.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="緣起："><a href="#緣起：" class="headerlink" title="緣起："></a>緣起：</h2><p><img src="http://imgur.com/39eqCJu.jpg" alt=""></p>
 <p>最近因為新工作環境要使用 <code>Elixir</code> 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！</p>
@@ -150,8 +150,8 @@
   
   <entry>
     <title>icdiff 好用的檔案比對工具，Terminal 環境下用它就對了</title>
-    <link href="http://bobochen.com/2016/01/icdiff/"/>
-    <id>http://bobochen.com/2016/01/icdiff/</id>
+    <link href="http://bobochen.com/tools/icdiff/"/>
+    <id>http://bobochen.com/tools/icdiff/</id>
     <published>2016-01-31T14:35:12.000Z</published>
     <updated>2016-07-10T04:15:16.000Z</updated>
     
@@ -221,8 +221,8 @@ icdiff $2 $5
   
   <entry>
     <title>升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題</title>
-    <link href="http://bobochen.com/2015/10/osx10-11-homebrew/"/>
-    <id>http://bobochen.com/2015/10/osx10-11-homebrew/</id>
+    <link href="http://bobochen.com/server-os/osx10.11-homebrew/"/>
+    <id>http://bobochen.com/server-os/osx10.11-homebrew/</id>
     <published>2015-10-04T10:24:33.000Z</published>
     <updated>2016-01-31T15:01:37.000Z</updated>
     
@@ -286,8 +286,8 @@ icdiff $2 $5
   
   <entry>
     <title>從 Blogger 搬家到 Hexo 的第一篇</title>
-    <link href="http://bobochen.com/2015/09/%E5%BE%9E-Blogger-%E6%90%AC%E5%AE%B6%E5%88%B0-Hexo-%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
-    <id>http://bobochen.com/2015/09/從-Blogger-搬家到-Hexo-的第一篇/</id>
+    <link href="http://bobochen.com/notes/%E5%BE%9E%20Blogger%20%E6%90%AC%E5%AE%B6%E5%88%B0%20Hexo%20%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    <id>http://bobochen.com/notes/從 Blogger 搬家到 Hexo 的第一篇/</id>
     <published>2015-09-29T15:55:33.000Z</published>
     <updated>2016-01-31T14:21:30.000Z</updated>
     
@@ -359,8 +359,8 @@ icdiff $2 $5
   
   <entry>
     <title>Sublime Text 默默吃爆你硬碟的神秘目錄</title>
-    <link href="http://bobochen.com/2015/09/Sublime-Text-%E9%BB%98%E9%BB%98%E5%90%83%E7%88%86%E4%BD%A0%E7%A1%AC%E7%A2%9F%E7%9A%84%E7%A5%9E%E7%A7%98%E7%9B%AE%E9%8C%84/"/>
-    <id>http://bobochen.com/2015/09/Sublime-Text-默默吃爆你硬碟的神秘目錄/</id>
+    <link href="http://bobochen.com/tools/Sublime-Text-%E9%BB%98%E9%BB%98%E5%90%83%E7%88%86%E4%BD%A0%E7%A1%AC%E7%A2%9F%E7%9A%84%E7%A5%9E%E7%A7%98%E7%9B%AE%E9%8C%84/"/>
+    <id>http://bobochen.com/tools/Sublime-Text-默默吃爆你硬碟的神秘目錄/</id>
     <published>2015-09-20T15:28:33.000Z</published>
     <updated>2015-09-26T09:15:45.000Z</updated>
     
@@ -410,8 +410,8 @@ icdiff $2 $5
   
   <entry>
     <title>Sketch3 行雲流水的 UI design 工具，有 Sublime Text 輕快的體驗!</title>
-    <link href="http://bobochen.com/2015/08/Sketch3-%E8%A1%8C%E9%9B%B2%E6%B5%81%E6%B0%B4%E7%9A%84-UI-design-%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%A0%B9%E6%9C%AC%E5%B0%B1%E6%98%AF%E8%A8%AD%E8%A8%88%E7%95%8C%E7%9A%84-Sublime-Text-%E5%98%9B/"/>
-    <id>http://bobochen.com/2015/08/Sketch3-行雲流水的-UI-design-工具，根本就是設計界的-Sublime-Text-嘛/</id>
+    <link href="http://bobochen.com/tools/Sketch3-%E8%A1%8C%E9%9B%B2%E6%B5%81%E6%B0%B4%E7%9A%84-UI-design-%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%A0%B9%E6%9C%AC%E5%B0%B1%E6%98%AF%E8%A8%AD%E8%A8%88%E7%95%8C%E7%9A%84-Sublime-Text-%E5%98%9B/"/>
+    <id>http://bobochen.com/tools/Sketch3-行雲流水的-UI-design-工具，根本就是設計界的-Sublime-Text-嘛/</id>
     <published>2015-08-30T15:47:44.000Z</published>
     <updated>2015-09-27T05:02:49.000Z</updated>
     
@@ -496,8 +496,8 @@ icdiff $2 $5
   
   <entry>
     <title>[Mac] 顯示輸入過的無線網路密碼</title>
-    <link href="http://bobochen.com/2015/07/Mac-%E9%A1%AF%E7%A4%BA%E8%BC%B8%E5%85%A5%E9%81%8E%E7%9A%84%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E5%AF%86%E7%A2%BC/"/>
-    <id>http://bobochen.com/2015/07/Mac-顯示輸入過的無線網路密碼/</id>
+    <link href="http://bobochen.com/server-os/Mac-%E9%A1%AF%E7%A4%BA%E8%BC%B8%E5%85%A5%E9%81%8E%E7%9A%84%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E5%AF%86%E7%A2%BC/"/>
+    <id>http://bobochen.com/server-os/Mac-顯示輸入過的無線網路密碼/</id>
     <published>2015-07-26T03:14:53.000Z</published>
     <updated>2015-09-26T12:22:52.000Z</updated>
     
@@ -530,8 +530,8 @@ icdiff $2 $5
   
   <entry>
     <title>5分鐘加強技術英文聽力網站：The five minute geek show</title>
-    <link href="http://bobochen.com/2015/07/5%E5%88%86%E9%90%98%E5%8A%A0%E5%BC%B7%E6%8A%80%E8%A1%93%E8%8B%B1%E6%96%87%E8%81%BD%E5%8A%9B%E7%B6%B2%E7%AB%99%EF%BC%9AThe-five-minute-geek-show/"/>
-    <id>http://bobochen.com/2015/07/5分鐘加強技術英文聽力網站：The-five-minute-geek-show/</id>
+    <link href="http://bobochen.com/notes/5%E5%88%86%E9%90%98%E5%8A%A0%E5%BC%B7%E6%8A%80%E8%A1%93%E8%8B%B1%E6%96%87%E8%81%BD%E5%8A%9B%E7%B6%B2%E7%AB%99%EF%BC%9AThe-five-minute-geek-show/"/>
+    <id>http://bobochen.com/notes/5分鐘加強技術英文聽力網站：The-five-minute-geek-show/</id>
     <published>2015-07-25T01:37:54.000Z</published>
     <updated>2015-09-26T12:31:47.000Z</updated>
     
@@ -565,8 +565,8 @@ icdiff $2 $5
   
   <entry>
     <title>推薦2個好用的 PHP Refactoring 重構工具</title>
-    <link href="http://bobochen.com/2015/07/%E6%8E%A8%E8%96%A62%E5%80%8B%E5%A5%BD%E7%94%A8%E7%9A%84-PHP-Refactoring-%E9%87%8D%E6%A7%8B%E5%B7%A5%E5%85%B7/"/>
-    <id>http://bobochen.com/2015/07/推薦2個好用的-PHP-Refactoring-重構工具/</id>
+    <link href="http://bobochen.com/notes/%E6%8E%A8%E8%96%A62%E5%80%8B%E5%A5%BD%E7%94%A8%E7%9A%84-PHP-Refactoring-%E9%87%8D%E6%A7%8B%E5%B7%A5%E5%85%B7/"/>
+    <id>http://bobochen.com/notes/推薦2個好用的-PHP-Refactoring-重構工具/</id>
     <published>2015-07-05T08:55:56.000Z</published>
     <updated>2015-11-28T05:50:18.000Z</updated>
     
@@ -659,8 +659,8 @@ exit;
   
   <entry>
     <title>Laravel 5.1 即將登場，LTS 版本且將支援 PSR-7</title>
-    <link href="http://bobochen.com/2015/06/Laravel-5-1-%E5%8D%B3%E5%B0%87%E7%99%BB%E5%A0%B4%EF%BC%8CLTS-%E7%89%88%E6%9C%AC%E4%B8%94%E5%B0%87%E6%94%AF%E6%8F%B4-PSR-7/"/>
-    <id>http://bobochen.com/2015/06/Laravel-5-1-即將登場，LTS-版本且將支援-PSR-7/</id>
+    <link href="http://bobochen.com/php/Laravel-5-1-%E5%8D%B3%E5%B0%87%E7%99%BB%E5%A0%B4%EF%BC%8CLTS-%E7%89%88%E6%9C%AC%E4%B8%94%E5%B0%87%E6%94%AF%E6%8F%B4-PSR-7/"/>
+    <id>http://bobochen.com/php/Laravel-5-1-即將登場，LTS-版本且將支援-PSR-7/</id>
     <published>2015-06-11T01:43:19.000Z</published>
     <updated>2015-09-26T12:53:56.000Z</updated>
     
@@ -698,8 +698,8 @@ exit;
   
   <entry>
     <title>使用 Feedly 訂閱 Ptt 的 RSS，讓手機少裝一些 App</title>
-    <link href="http://bobochen.com/2015/05/%E4%BD%BF%E7%94%A8-Feedly-%E8%A8%82%E9%96%B1-Ptt-%E7%9A%84-RSS%EF%BC%8C%E8%AE%93%E6%89%8B%E6%A9%9F%E5%B0%91%E8%A3%9D%E4%B8%80%E4%BA%9B-App/"/>
-    <id>http://bobochen.com/2015/05/使用-Feedly-訂閱-Ptt-的-RSS，讓手機少裝一些-App/</id>
+    <link href="http://bobochen.com/notes/%E4%BD%BF%E7%94%A8-Feedly-%E8%A8%82%E9%96%B1-Ptt-%E7%9A%84-RSS%EF%BC%8C%E8%AE%93%E6%89%8B%E6%A9%9F%E5%B0%91%E8%A3%9D%E4%B8%80%E4%BA%9B-App/"/>
+    <id>http://bobochen.com/notes/使用-Feedly-訂閱-Ptt-的-RSS，讓手機少裝一些-App/</id>
     <published>2015-05-18T15:34:50.000Z</published>
     <updated>2016-07-08T15:30:45.000Z</updated>
     
@@ -739,8 +739,8 @@ exit;
   
   <entry>
     <title>Demo Syntax Highlighter</title>
-    <link href="http://bobochen.com/2015/04/Demo-Syntax-Highlighter/"/>
-    <id>http://bobochen.com/2015/04/Demo-Syntax-Highlighter/</id>
+    <link href="http://bobochen.com/notes/Demo-Syntax-Highlighter/"/>
+    <id>http://bobochen.com/notes/Demo-Syntax-Highlighter/</id>
     <published>2015-04-12T07:06:21.000Z</published>
     <updated>2016-01-31T12:57:19.000Z</updated>
     
@@ -831,8 +831,8 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
   
   <entry>
     <title>LaraDiner(拉拉快餐車) 本週四晚上開始試營運囉!</title>
-    <link href="http://bobochen.com/2015/04/LaraDiner-%E6%8B%89%E6%8B%89%E5%BF%AB%E9%A4%90%E8%BB%8A-%E6%9C%AC%E9%80%B1%E5%9B%9B%E6%99%9A%E4%B8%8A%E9%96%8B%E5%A7%8B%E8%A9%A6%E7%87%9F%E9%81%8B%E5%9B%89/"/>
-    <id>http://bobochen.com/2015/04/LaraDiner-拉拉快餐車-本週四晚上開始試營運囉/</id>
+    <link href="http://bobochen.com/notes/LaraDiner-%E6%8B%89%E6%8B%89%E5%BF%AB%E9%A4%90%E8%BB%8A-%E6%9C%AC%E9%80%B1%E5%9B%9B%E6%99%9A%E4%B8%8A%E9%96%8B%E5%A7%8B%E8%A9%A6%E7%87%9F%E9%81%8B%E5%9B%89/"/>
+    <id>http://bobochen.com/notes/LaraDiner-拉拉快餐車-本週四晚上開始試營運囉/</id>
     <published>2015-04-11T11:44:31.000Z</published>
     <updated>2015-09-26T06:38:21.000Z</updated>
     
@@ -853,8 +853,8 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
   
   <entry>
     <title>各種常用 htaccess 範例大補帖</title>
-    <link href="http://bobochen.com/2015/04/%E5%90%84%E7%A8%AE%E5%B8%B8%E7%94%A8-htaccess-%E7%AF%84%E4%BE%8B%E5%A4%A7%E8%A3%9C%E5%B8%96/"/>
-    <id>http://bobochen.com/2015/04/各種常用-htaccess-範例大補帖/</id>
+    <link href="http://bobochen.com/server-os/%E5%90%84%E7%A8%AE%E5%B8%B8%E7%94%A8-htaccess-%E7%AF%84%E4%BE%8B%E5%A4%A7%E8%A3%9C%E5%B8%96/"/>
+    <id>http://bobochen.com/server-os/各種常用-htaccess-範例大補帖/</id>
     <published>2015-04-06T02:49:45.000Z</published>
     <updated>2015-09-26T13:09:41.000Z</updated>
     
@@ -878,8 +878,8 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
   
   <entry>
     <title>Node.js 框架比較: Express vs. Koa vs. Hapi</title>
-    <link href="http://bobochen.com/2015/04/Node-js-%E6%A1%86%E6%9E%B6%E6%AF%94%E8%BC%83-Express-vs-Koa-vs-Hapi/"/>
-    <id>http://bobochen.com/2015/04/Node-js-框架比較-Express-vs-Koa-vs-Hapi/</id>
+    <link href="http://bobochen.com/notes/Node-js-%E6%A1%86%E6%9E%B6%E6%AF%94%E8%BC%83-Express-vs-Koa-vs-Hapi/"/>
+    <id>http://bobochen.com/notes/Node-js-框架比較-Express-vs-Koa-vs-Hapi/</id>
     <published>2015-04-02T16:05:47.000Z</published>
     <updated>2015-09-26T13:12:37.000Z</updated>
     
@@ -906,8 +906,8 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
   
   <entry>
     <title>RWD、AWD 幾種常見的排版線上切換比較</title>
-    <link href="http://bobochen.com/2015/03/RWD%E3%80%81AWD-%E5%B9%BE%E7%A8%AE%E5%B8%B8%E8%A6%8B%E7%9A%84%E6%8E%92%E7%89%88%E7%B7%9A%E4%B8%8A%E5%88%87%E6%8F%9B%E6%AF%94%E8%BC%83/"/>
-    <id>http://bobochen.com/2015/03/RWD、AWD-幾種常見的排版線上切換比較/</id>
+    <link href="http://bobochen.com/notes/RWD%E3%80%81AWD-%E5%B9%BE%E7%A8%AE%E5%B8%B8%E8%A6%8B%E7%9A%84%E6%8E%92%E7%89%88%E7%B7%9A%E4%B8%8A%E5%88%87%E6%8F%9B%E6%AF%94%E8%BC%83/"/>
+    <id>http://bobochen.com/notes/RWD、AWD-幾種常見的排版線上切換比較/</id>
     <published>2015-03-01T04:23:05.000Z</published>
     <updated>2015-09-26T13:27:05.000Z</updated>
     
@@ -935,8 +935,8 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
   
   <entry>
     <title>Rails Beginner Cheat Sheet</title>
-    <link href="http://bobochen.com/2015/02/Rails-Beginner-Cheat-Sheet/"/>
-    <id>http://bobochen.com/2015/02/Rails-Beginner-Cheat-Sheet/</id>
+    <link href="http://bobochen.com/ruby/Rails-Beginner-Cheat-Sheet/"/>
+    <id>http://bobochen.com/ruby/Rails-Beginner-Cheat-Sheet/</id>
     <published>2015-02-23T04:23:39.000Z</published>
     <updated>2015-09-26T13:29:19.000Z</updated>
     
@@ -963,8 +963,8 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
   
   <entry>
     <title>Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面</title>
-    <link href="http://bobochen.com/2015/02/Laravel-%E5%A5%97%E4%BB%B6-Sqli%EF%BC%9A%E8%AE%93-Artisan-%E6%8F%90%E4%BE%9B-SQL-%E4%BA%92%E5%8B%95%E4%BB%8B%E9%9D%A2/"/>
-    <id>http://bobochen.com/2015/02/Laravel-套件-Sqli：讓-Artisan-提供-SQL-互動介面/</id>
+    <link href="http://bobochen.com/php/Laravel-%E5%A5%97%E4%BB%B6-Sqli%EF%BC%9A%E8%AE%93-Artisan-%E6%8F%90%E4%BE%9B-SQL-%E4%BA%92%E5%8B%95%E4%BB%8B%E9%9D%A2/"/>
+    <id>http://bobochen.com/php/Laravel-套件-Sqli：讓-Artisan-提供-SQL-互動介面/</id>
     <published>2015-02-21T04:23:58.000Z</published>
     <updated>2015-09-26T13:23:34.000Z</updated>
     
@@ -1008,8 +1008,8 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
   
   <entry>
     <title>Laravel Models 驗證套件: laravelbook/ardent</title>
-    <link href="http://bobochen.com/2015/02/Laravel-Models-%E9%A9%97%E8%AD%89%E5%A5%97%E4%BB%B6-laravelbook-ardent/"/>
-    <id>http://bobochen.com/2015/02/Laravel-Models-驗證套件-laravelbook-ardent/</id>
+    <link href="http://bobochen.com/php/Laravel-Models-%E9%A9%97%E8%AD%89%E5%A5%97%E4%BB%B6-laravelbook-ardent/"/>
+    <id>http://bobochen.com/php/Laravel-Models-驗證套件-laravelbook-ardent/</id>
     <published>2015-02-20T15:11:48.000Z</published>
     <updated>2015-09-26T06:38:21.000Z</updated>
     

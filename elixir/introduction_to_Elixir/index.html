@@ -1,0 +1,687 @@
+
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>5分鐘快速認識 Elixir 程式語言 | Bobo的技術時光屋</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Bobo Chen">
+    
+
+    
+    <meta name="description" content="緣起：
+最近因為新工作環境要使用 Elixir 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！
+不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD
+另外聽說藉由">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5分鐘快速認識 Elixir 程式語言">
+<meta property="og:url" content="http://bobochen.com/elixir/introduction_to_Elixir/index.html">
+<meta property="og:site_name" content="Bobo的技術時光屋">
+<meta property="og:description" content="緣起：
+最近因為新工作環境要使用 Elixir 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！
+不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD
+另外聽說藉由">
+<meta property="og:image" content="http://imgur.com/39eqCJu.jpg">
+<meta property="og:updated_time" content="2016-07-24T03:19:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="5分鐘快速認識 Elixir 程式語言">
+<meta name="twitter:description" content="緣起：
+最近因為新工作環境要使用 Elixir 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！
+不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD
+另外聽說藉由">
+<meta name="twitter:image" content="http://imgur.com/39eqCJu.jpg">
+<link rel="publisher" href="u/0/communities/116944928466340599471">
+
+    
+    <link rel="alternative" href="/atom.xml" title="Bobo的技術時光屋" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="Bobo的技術時光屋" title="Bobo的技術時光屋"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
+				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+						<li><a href="/about">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:bobochen.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/elixir/introduction_to_Elixir/" title="5分鐘快速認識 Elixir 程式語言" itemprop="url">5分鐘快速認識 Elixir 程式語言</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2016-07-08T15:40:30.000Z" itemprop="datePublished"> 發表於 2016-07-08</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目錄</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#緣起："><span class="toc-number">1.</span> <span class="toc-text">緣起：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir-是啥玩意兒？"><span class="toc-number">2.</span> <span class="toc-text">Elixir 是啥玩意兒？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir-值得學嗎？"><span class="toc-number">3.</span> <span class="toc-text">Elixir 值得學嗎？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些公司使用-Elixir？"><span class="toc-number">4.</span> <span class="toc-text">有哪些公司使用 Elixir？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些專案使用-Elixir-開發"><span class="toc-number">5.</span> <span class="toc-text">有哪些專案使用 Elixir 開發</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的-Elixir-相關書籍"><span class="toc-number">6.</span> <span class="toc-text">推薦的 Elixir 相關書籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的-Elixir-線上教學資源"><span class="toc-number">7.</span> <span class="toc-text">推薦的 Elixir 線上教學資源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#補充一下-Erlang-語言："><span class="toc-number">8.</span> <span class="toc-text">補充一下 Erlang 語言：</span></a></li></ol>
+		
+		</div>
+		
+		<h2 id="緣起："><a href="#緣起：" class="headerlink" title="緣起："></a>緣起：</h2><p><img src="http://imgur.com/39eqCJu.jpg" alt=""></p>
+<p>最近因為新工作環境要使用 <code>Elixir</code> 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！</p>
+<p>不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD</p>
+<p>另外聽說藉由專案驅動學習是最有效率的…(特別是這種死線緊湊的效果應該又更好 @_@)</p>
+<p>-</p>
+<p>由於今天賺到一天颱風假，趕緊花一個下午快速認識一下 <code>Elixir</code> 這個語言，發現中文的文件好少喔，邊學的同時也隨手整理了一下，分享給大家，以下的資訊有助於我快速入門，希望也有幫助有緣路過的你/妳~</p>
+<p>既然中文資料還不多，我就來貢獻一篇吧！</p>
+<h2 id="Elixir-是啥玩意兒？"><a href="#Elixir-是啥玩意兒？" class="headerlink" title="Elixir 是啥玩意兒？"></a>Elixir 是啥玩意兒？</h2><p>沒聽過是很正常的，目前 Elixir 相關的中文的討論還不多，這門程式語言在台灣還不算很流行，周遭的朋友也都沒聽說有人在玩，反而是我在英國工作的同學說他們公司有在使用！這是我身邊少數聽到有在使用這個語言的公司。話說我們公司也只有 CTO 本人有寫過…</p>
+<p>簡單來說 Elixir 是架構一個在古老語言(Erlang)上面的一個年輕語言，特色簡介如下：</p>
+<ul>
+<li>2013年誕生，相當年輕的程式語言。</li>
+<li>為 <code>Functional programming</code> 可讀性高，也更好維護。</li>
+<li>基於 <code>Erlang VM</code>（BEAM）之上，完全與 <code>Erlang</code> 語言相容，但是語法更親民且並提供更多的功能。</li>
+<li>語法類似 <code>Ruby</code>，因為 <code>Elixir</code> 的創造者 <code>José Valim</code>(葡萄牙文，巴西人) 他也是 <code>Ruby on Rails</code> 的核心團隊成員！難怪有不少 Ruby 的開發者跑來學。</li>
+<li>來多認識一點 Elixir 老爸 <a href="https://www.sitepoint.com/an-interview-with-elixir-creator-jose-valim/" target="_blank" rel="external">「An Interview with Elixir Creator José Valim」</a></li>
+<li>有接近 <code>Ruby</code> 易懂的語法和 <code>Erlang</code> 分散式高效能，可算是 <code>Ruby</code> 跟 <code>Erlang</code> 兩個生出來的小孩。</li>
+<li>偏向動態強型別語言 (變數型別不會在運算中自動轉型) 如同 <code>Ruby</code>、<code>Python</code> 這類動態強型別語言。相較於 <code>PHP</code>、<code>JavaScript</code> 這類語言則是偏向動態弱型別 (自動轉型)</li>
+<li>善於處理 concurrency 問題，利於開發分散式/雲端運算平台。</li>
+<li>Elixir provides a macro system and polymorphism via protocols, both aiming to make the language more extensible</li>
+<li>開發 Web 可以搭配 <code>Phoenix Framework</code> (也是 MVC 架構)</li>
+</ul>
+<h2 id="Elixir-值得學嗎？"><a href="#Elixir-值得學嗎？" class="headerlink" title="Elixir 值得學嗎？"></a>Elixir 值得學嗎？</h2><p>新技術、新語言那麼多！什麼都想學，有這麼多時間嗎？學得完嗎？</p>
+<p>我們該如何評估一門技術是否值得投入寶貴的時間去學習呢？</p>
+<p>就像我當年回「大安高工資訊科」和學弟妹分享的簡報：「<a href="http://www.slideshare.net/bobo52310/ss-48604799" target="_blank" rel="external">軟體工程師的3大試煉</a>」，我們可以使用一些工具來評估一門技術目前是否流行，是否值得投入學習。</p>
+<ul>
+<li>比如我們用 Google Trends 來檢視看看 <a href="https://www.google.com.tw/trends/explore#cat=0-5&amp;q=elixir%20lang&amp;cmpt=q&amp;tz=Asia%2FTaipei" target="_blank" rel="external">Elixir 趨勢</a></li>
+<li>2015 年在 <a href="https://news.ycombinator.com/item?id=9408551" target="_blank" rel="external"><code>Hacker News</code></a> 有一些討論，開始被比較多人關注。</li>
+<li>台灣社群約莫在 2016 年初開始關注，Facebook 社團「<a href="https://www.facebook.com/groups/elixir.tw/" target="_blank" rel="external">Elixir Taiwan</a>」也是約莫在此時成立。</li>
+<li>國內外社群逐漸活躍，生態圈越來越豐富，有一種當年接觸早期 Laravel Framework 整要起步的感覺。</li>
+</ul>
+<blockquote>
+<p>不過說實在的講這麼多，凡是專案要用到的、主管要你用的，你就認命乖乖學吧~ 哈哈</p>
+</blockquote>
+<h2 id="有哪些公司使用-Elixir？"><a href="#有哪些公司使用-Elixir？" class="headerlink" title="有哪些公司使用 Elixir？"></a>有哪些公司使用 Elixir？</h2><ul>
+<li>Pinterest <a href="http://venturebeat.com/2015/12/18/pinterest-elixir/" target="_blank" rel="external">[ref]</a><ul>
+<li>運用在「通知系統」一秒可以傳送 14,000 筆訊息，只需要15台主機。原本用 JAVA 的舊架構則需要 30台主機。而且程式碼檔案大小僅有原本的 1/10 唷！<br>(Pinterest’s notification system now uses Elixir to deliver 14,000 notifications per second)</li>
+<li>核心 API 也用 Elixir 改寫，運行速度比 Memcached-based predecessor 的反應時間還要更快速。<br>(The rate-limiting system for Pinterest’s core application programming interface (API) and Ads API is also now written in Elixir, providing faster response times than its Memcached-based predecessor.)</li>
+</ul>
+</li>
+<li>Brightcove [<a href="http://blog.plataformatec.com.br/2015/08/elixir-in-production-interview-adam-kittelson/" target="_blank" rel="external">ref</a>]<ul>
+<li>使用 Phoenix Framework。讓登入後台的使用者可以關注特定轉檔、修改影片等等事件，並且在完成時通知使用者。</li>
+</ul>
+</li>
+<li>WhatsApp</li>
+<li>Whisper<ul>
+<li>使用 Phoenix Framework。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>更多名單請見：<a href="https://github.com/doomspork/elixir-companies" target="_blank" rel="external">doomspork/elixir-companies</a></p>
+</blockquote>
+<h2 id="有哪些專案使用-Elixir-開發"><a href="#有哪些專案使用-Elixir-開發" class="headerlink" title="有哪些專案使用 Elixir 開發"></a>有哪些專案使用 Elixir 開發</h2><ul>
+<li><a href="https://github.com/pinterest/elixometer" target="_blank" rel="external">Elixometer</a> // Logging library 由 Pinterest 開發釋出</li>
+<li><a href="https://github.com/pinterest/riffed" target="_blank" rel="external">riffed</a> // Provides idiomatic Elixir bindings for Apache Thrift 由 Pinterest 開發釋出</li>
+</ul>
+<h2 id="推薦的-Elixir-相關書籍"><a href="#推薦的-Elixir-相關書籍" class="headerlink" title="推薦的 Elixir 相關書籍"></a>推薦的 Elixir 相關書籍</h2><ul>
+<li><a href="https://www.manning.com/books/elixir-in-action" target="_blank" rel="external">Elixir in Action</a></li>
+<li><a href="https://pragprog.com/book/elixir12/programming-elixir-1-2" target="_blank" rel="external">Programming Elixir 1.2</a></li>
+<li><a href="https://www.packtpub.com/application-development/learning-elixir" target="_blank" rel="external">Learning Elixir</a></li>
+</ul>
+<h2 id="推薦的-Elixir-線上教學資源"><a href="#推薦的-Elixir-線上教學資源" class="headerlink" title="推薦的 Elixir 線上教學資源"></a>推薦的 Elixir 線上教學資源</h2><ul>
+<li><a href="http://elixirschool.com/" target="_blank" rel="external">http://elixirschool.com/</a> // Elixir School 新手入門</li>
+<li><a href="https://github.com/h4cc/awesome-elixir" target="_blank" rel="external">awesome-elixir</a> // Awesome 大補帖系列</li>
+<li><a href="https://hex.pm/" target="_blank" rel="external">https://hex.pm/</a> // The package manager for the Erlang ecosystem</li>
+<li><a href="http://toolbox.elixir.pm/" target="_blank" rel="external">http://toolbox.elixir.pm/</a></li>
+<li><a href="http://play.elixirbyexample.com/" target="_blank" rel="external">Elixir Playground</a> // 線上執行 Elixir code</li>
+<li><a href="http://elixirsips.com/" target="_blank" rel="external">Elixir sips</a> // 付費教學影片，類似 Laracast</li>
+<li><a href="https://media.pragprog.com/titles/elixir/ElixirCheat.pdf" target="_blank" rel="external">ElixirCheat</a> // Elixir 語法和指令小抄</li>
+<li><a href="http://blog.plataformatec.com.br/" target="_blank" rel="external">http://blog.plataformatec.com.br/</a> Elixir 老爸共同創辦的公司公開的技術 Blog</li>
+<li><a href="https://github.com/seven1m/30-days-of-elixir" target="_blank" rel="external">https://github.com/seven1m/30-days-of-elixir</a> // 跟著範例30天學習 Elixir</li>
+</ul>
+<h2 id="補充一下-Erlang-語言："><a href="#補充一下-Erlang-語言：" class="headerlink" title="補充一下 Erlang 語言："></a>補充一下 Erlang 語言：</h2><ul>
+<li>1987 年誕生的老語言，由 Ericsson 開發。早期主要應用在電信業系統，經長年證實其穩定性超高。</li>
+<li><code>Erlang</code> 老爸 <code>Joe Armstrong</code> 當年的<a href="https://drive.google.com/file/d/0B1xAdaVSasm4SXNkN1MzSnM1LUU/view" target="_blank" rel="external">論文中譯版</a>。</li>
+<li><a href="http://joearms.github.io/2013/05/31/a-week-with-elixir.html" target="_blank" rel="external"><code>Erlang</code> 老爸也對 <code>Elixir</code> 讚譽有嘉。</a></li>
+<li>主要的特色是 COP(Concurrency-oriented programming， 平行導向程式設計) 強調程式的容錯處理。</li>
+<li>Facebook Chat 就是用 <a href="https://www.quora.com/Why-was-Erlang-chosen-for-use-in-Facebook-chat" target="_blank" rel="external">Erlang 開發</a></li>
+</ul>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Elixir/">Elixir</a><a href="/tags/Phoenix/">Phoenix</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://bobochen.com/elixir/introduction_to_Elixir/" data-title="5分鐘快速認識 Elixir 程式語言 | Bobo的技術時光屋" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/elixir/recommend-elixir-editor-ide/" title="推薦 Elixir 好用的開發編輯器">
+  <strong>上一篇：</strong><br/>
+  <span>
+  推薦 Elixir 好用的開發編輯器</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/tools/icdiff/"  title="icdiff 好用的檔案比對工具，Terminal 環境下用它就對了">
+ <strong>下一篇：</strong><br/> 
+ <span>icdiff 好用的檔案比對工具，Terminal 環境下用它就對了
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+
+<section id="comments" class="comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目錄</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#緣起："><span class="toc-number">1.</span> <span class="toc-text">緣起：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir-是啥玩意兒？"><span class="toc-number">2.</span> <span class="toc-text">Elixir 是啥玩意兒？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Elixir-值得學嗎？"><span class="toc-number">3.</span> <span class="toc-text">Elixir 值得學嗎？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些公司使用-Elixir？"><span class="toc-number">4.</span> <span class="toc-text">有哪些公司使用 Elixir？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有哪些專案使用-Elixir-開發"><span class="toc-number">5.</span> <span class="toc-text">有哪些專案使用 Elixir 開發</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的-Elixir-相關書籍"><span class="toc-number">6.</span> <span class="toc-text">推薦的 Elixir 相關書籍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#推薦的-Elixir-線上教學資源"><span class="toc-number">7.</span> <span class="toc-text">推薦的 Elixir 線上教學資源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#補充一下-Erlang-語言："><span class="toc-number">8.</span> <span class="toc-text">補充一下 Erlang 語言：</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github</p>
+<div class="github-card" data-github="bobo52310" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">標簽</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Laravel/" title="Laravel">Laravel<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/電腦筆記/" title="電腦筆記">電腦筆記<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Web-Design/" title="Web Design">Web Design<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Phoenix/" title="Phoenix">Phoenix<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/開發工具/" title="開發工具">開發工具<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/IntelliJ/" title="IntelliJ">IntelliJ<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Feedly/" title="Feedly">Feedly<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vim/" title="Vim">Vim<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/apache/" title="apache">apache<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情鏈接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://jaceju.net/" target="_blank" title="網站製作學習誌">網站製作學習誌</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.laravel-dojo.com/" target="_blank" title="LARAVEL 道場">LARAVEL 道場</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://oomusou.io/" target="_blank" title="點燈坊">點燈坊</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://blog.dj1020.net/" target="_blank" title="閃亮亮大師之路">閃亮亮大師之路</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://usedfire.net/" target="_blank" title="已知用火">已知用火</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Bobo Chen. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/bobo52310" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		<a href="https://www.facebook.com/bobo52310" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		
+		
+		
+		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" target="_blank" class="icon-google_plus" title="Google+"></a>
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="Bobo Chen">Bobo Chen</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+        getSize();
+        if (myWidth >= 1024) {
+          c.click();
+        }
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+
+<script type="text/javascript">
+
+var disqus_shortname = 'bobo52310blogger';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-59998357-2', 'bobochen.com');  
+ga('send', 'pageview');
+</script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e6d1f421bbc9962127a50488f9ed37d1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
