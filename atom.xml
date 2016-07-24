@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bobochen.com/"/>
-  <updated>2016-07-23T13:32:32.000Z</updated>
+  <updated>2016-07-24T01:30:14.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://bobochen.com/2016/07/elixir-recommend-editor-ide/"/>
     <id>http://bobochen.com/2016/07/elixir-recommend-editor-ide/</id>
     <published>2016-07-23T12:57:04.000Z</published>
-    <updated>2016-07-23T13:32:32.000Z</updated>
+    <updated>2016-07-24T01:30:14.000Z</updated>
     
     <content type="html"><![CDATA[<p><img src="http://i.imgur.com/oSGvEfI.png" alt=""></p>
 <h4 id="當開發-Elixir-的環境都建置好了，除了可以在-terminal-輸入-iex-開啟-Interactive-mode-來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊-Autocomplete-、Syntax-Highlighting-等等功能，可以讓你開發起來更加行雲流水喔！"><a href="#當開發-Elixir-的環境都建置好了，除了可以在-terminal-輸入-iex-開啟-Interactive-mode-來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊-Autocomplete-、Syntax-Highlighting-等等功能，可以讓你開發起來更加行雲流水喔！" class="headerlink" title="當開發 Elixir 的環境都建置好了，除了可以在 terminal 輸入 iex 開啟 Interactive mode 來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊(Autocomplete)、Syntax Highlighting 等等功能，可以讓你開發起來更加行雲流水喔！"></a>當開發 Elixir 的環境都建置好了，除了可以在 terminal 輸入 <code>iex</code> 開啟 <code>Interactive mode</code> 來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊(Autocomplete)、Syntax Highlighting 等等功能，可以讓你開發起來更加行雲流水喔！</h4><h3 id="這裡推薦-3款-Elixir-的開發工具：Sublime-Text、IntelliJ、Vim。"><a href="#這裡推薦-3款-Elixir-的開發工具：Sublime-Text、IntelliJ、Vim。" class="headerlink" title="這裡推薦 3款 Elixir 的開發工具：Sublime Text、IntelliJ、Vim。"></a>這裡推薦 3款 Elixir 的開發工具：Sublime Text、IntelliJ、Vim。</h3><h3 id="請見以下於公司內部分享的簡報："><a href="#請見以下於公司內部分享的簡報：" class="headerlink" title="請見以下於公司內部分享的簡報："></a>請見以下於公司內部分享的簡報：</h3><p><iframe src="//www.slideshare.net/slideshow/embed_code/key/7Jh1db0Xlm1X" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bobo52310/elixir-64190936" title="Elixir 好用的編輯器" target="_blank">Elixir 好用的編輯器</a> </strong> from <strong><a href="//www.slideshare.net/bobo52310" target="_blank">bobo52310</a></strong> </div></p>
@@ -478,9 +478,9 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="Web Design" scheme="http://bobochen.com/tags/Web-Design/"/>
-    
       <category term="UI" scheme="http://bobochen.com/tags/UI/"/>
+    
+      <category term="Web Design" scheme="http://bobochen.com/tags/Web-Design/"/>
     
   </entry>
   
