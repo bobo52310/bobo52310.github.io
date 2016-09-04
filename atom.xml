@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bobochen.com/"/>
-  <updated>2016-07-24T02:58:55.000Z</updated>
+  <updated>2016-09-04T07:59:13.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>(Elixir 好書推薦) Programming Elixir 1.3 by Dave Thomas</title>
+    <link href="http://bobochen.com/books-programming-elixir/"/>
+    <id>http://bobochen.com/books-programming-elixir/</id>
+    <published>2016-09-04T06:45:09.000Z</published>
+    <updated>2016-09-04T07:59:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/53tyyKH.jpg" alt=""></p>
+<h1 id="作者介紹"><a href="#作者介紹" class="headerlink" title="作者介紹"></a>作者介紹</h1><p>Dave Thomas 是一位程式設計師，他喜歡分享很酷的玩意兒。他是「The Pragmatic Programmer」這本書的共同作者，也是「Manifesto for Agile Software Development」 敏捷軟體開發宣言的簽署者之一。<br>他寫的「Programming Ruby」這本書，使得更多人認識 Ruby 這個程式語言，並且開啟了使用 Rails 框架來進行網頁敏捷開發的一大革命。</p>
+<h1 id="本書簡介"><a href="#本書簡介" class="headerlink" title="本書簡介"></a>本書簡介</h1><p>以非學術色彩的方式探索函數式程式設計(會提到 monads)<br>開發共時性的應用程式，但不需要在意令人頭痛的閉鎖、一致性問題。<br>遇見 Elixir 這樣一個現代化、函數式的共時性程式語言，建立在堅若磐石的 Erlang 虛擬機器之上。<br>Elixir 的實用語法和內建支援 metaprogramming 都將讓你開發效率提升，帶給你滿滿的驚喜。<br>現在即將迎接下一件大事情，也許就是 Elixir。這本介紹 Elixir 的書是給有經驗的開發者，已經完整地更新到 Elixir 1.3 版。</p>
+<h1 id="關於這本書"><a href="#關於這本書" class="headerlink" title="關於這本書"></a>關於這本書</h1><p>函數式程式設計技巧可幫助您管理現代複雜的真實世界、共時性系統。最大化正常化運行時間，而且管理安全性。<br>進入 Elixir 世界，伴隨著它現代化、類似 Ruby、可擴充的語法，編譯和執行階段賦值，Hygienic macro 等等。<br>同樣重要的是，Elixir 帶來的是平行運算、函數程式設計的樂趣。您的應用程式開發將會變得有趣，而且語言鼓勵您去嘗試。</p>
+<p>第1部分介紹撰寫序列式 Elixir 程式的基本知識。我們將會專注在語言、工具、約定俗成的默契上。<br>第2部分使用這些技巧開始撰寫共時性的程式碼，讓應用程式可在您的機器或在您的網路上的所有機器上使用全部的內核運算資源。<br>並且我們可以同時使用 OTP 或是完全不需要 OTP 來達到這一點。<br>第3部分著眼於這個語言的更多進階特色，從 DSLs 和擴展語法的程式碼生成。</p>
+<p>這個版本已經完整地更新到 Elixir 1.3 的新特色，帶來新的章節在探討工具、覆蓋測試 (常規和基於屬性)，程式碼和相依性的探討，以及伺服器監控。<br>閱讀完這本書，您將會了解 Elixir 且知道如何運用它來解決您所遇到的複雜現代化問題。</p>
+<h1 id="閱讀前準備"><a href="#閱讀前準備" class="headerlink" title="閱讀前準備"></a>閱讀前準備</h1><p>您需要一台電腦，以及一些些其他高階語言的開發經驗，同時帶有一點冒險的精神。沒有函數式程式設計的經驗亦可。</p>
+<h1 id="購買方式"><a href="#購買方式" class="headerlink" title="購買方式"></a>購買方式</h1><p>可以直接上 <a href="https://pragprog.com/book/elixir/programming-elixir" target="_blank" rel="external">The Pragmatic Bookshelf</a> 購買，或是參加<a href="https://softnshare.wordpress.com/portfolio/programming-elixir-1-3/" target="_blank" rel="external">雲端讀書會團購活動</a> (有優惠價格)</p>
+<p>p.s 作者會持續更新內容，並且很佛心的可以免費更新到最新版的內容(目前是 Elixir 1.3)</p>
+<h1 id="加碼-Elixir-介紹影片："><a href="#加碼-Elixir-介紹影片：" class="headerlink" title="加碼 Elixir 介紹影片："></a>加碼 Elixir 介紹影片：</h1><p><a href="https://www.youtube.com/watch?v=hht9s6nAAx8&amp;feature=youtu.be" target="_blank" rel="external">9分鐘快速認識 Elixir</a> by Dave Thomas</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/53tyyKH.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;作者介紹&quot;&gt;&lt;a href=&quot;#作者介紹&quot; class=&quot;headerlink&quot; title=&quot;作者介紹&quot;&gt;&lt;/a&gt;作者介紹&lt;/h1&gt;&lt;p&gt;Dave 
+    
+    </summary>
+    
+    
+      <category term="Elixir" scheme="http://bobochen.com/tags/Elixir/"/>
+    
+      <category term="好書推薦" scheme="http://bobochen.com/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>推薦 Elixir 好用的開發編輯器</title>
@@ -557,9 +590,9 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="English learning" scheme="http://bobochen.com/tags/English-learning/"/>
-    
       <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
+    
+      <category term="English learning" scheme="http://bobochen.com/tags/English-learning/"/>
     
   </entry>
   
@@ -568,7 +601,7 @@ icdiff $2 $5
     <link href="http://bobochen.com/notes/%E6%8E%A8%E8%96%A62%E5%80%8B%E5%A5%BD%E7%94%A8%E7%9A%84-PHP-Refactoring-%E9%87%8D%E6%A7%8B%E5%B7%A5%E5%85%B7/"/>
     <id>http://bobochen.com/notes/推薦2個好用的-PHP-Refactoring-重構工具/</id>
     <published>2015-07-05T08:55:56.000Z</published>
-    <updated>2015-11-28T05:50:18.000Z</updated>
+    <updated>2016-09-04T07:46:09.000Z</updated>
     
     <content type="html"><![CDATA[<center><img src="/images/2015/refactoring.jpg" alt=""></center>
 
@@ -998,37 +1031,6 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
 
 
 &lt;h2 id=&quot;簡介-Sqli&quot;&gt;&lt;a href=&quot;#簡介-Sqli&quot; class=&quot;headerlink&quot; title=&quot;簡介 Sqli&quot;&gt;&lt;/a&gt;簡介
-    
-    </summary>
-    
-    
-      <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Laravel Models 驗證套件: laravelbook/ardent</title>
-    <link href="http://bobochen.com/php/Laravel-Models-%E9%A9%97%E8%AD%89%E5%A5%97%E4%BB%B6-laravelbook-ardent/"/>
-    <id>http://bobochen.com/php/Laravel-Models-驗證套件-laravelbook-ardent/</id>
-    <published>2015-02-20T15:11:48.000Z</published>
-    <updated>2015-09-26T06:38:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>這套件是 Eloquent Model class 的擴充，可以讓你的 model 更加聰明達到自我驗證。</p>
-<p>對於輸入資料的驗證有許多好用的 functionality, utilities and methods。</p>
-<p>簡單來說可以帶來以下優點：</p>
-<p>優點1:</p>
-<p>將”驗證”從 controller 移到 model</p>
-<p>符合 “fat models, skinny controllers” 原則。</p>
-<p>這樣的 code 組織方式可提升專案的可讀性與維護性。</p>
-<p>本篇也舉例，若是需求變動此時要 RESTful API for the mobile，用一般的方法會在 controller 複製出相同的程式碼，這也違反 DRY (Don’t Repeat Yourself) 原則，</p>
-<p>較佳做法是在 model 建立 signup() 方法，同時用來處理 Web/Mobile …等。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;這套件是 Eloquent Model class 的擴充，可以讓你的 model 更加聰明達到自我驗證。&lt;/p&gt;
-&lt;p&gt;對於輸入資料的驗證有許多好用的 functionality, utilities and methods。&lt;/p&gt;
-&lt;p&gt;簡單來說可以帶來以下優點：&lt;/
     
     </summary>
     

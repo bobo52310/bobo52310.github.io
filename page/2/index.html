@@ -48,7 +48,7 @@
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
 				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -64,7 +64,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -82,6 +82,114 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/tools/icdiff/" title="icdiff 好用的檔案比對工具，Terminal 環境下用它就對了" itemprop="url">icdiff 好用的檔案比對工具，Terminal 環境下用它就對了</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2016-01-31T14:35:12.000Z" itemprop="datePublished"> 发表于 2016-01-31</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
+<p><img src="http://i.imgur.com/2B3fcMC.png" alt="內建的 diff 指令比對檔案差異">￼</p>
+<p><code>diff</code>指令僅僅是將檔案差異處以<strong>上下對照呈現</strong>，並不會以顏色標示差異處，需要我們自己很傷眼的來回掃描比對才知道差異在哪裡，這樣的呈現效果不是那麼清楚。</p>
+<p>讓我們來試試看，如果將檔案差異處以<strong>左右對照呈現</strong>的方式，並且將差異處標記上顏色，那是不是更一目了然了呢！<br><img src="http://i.imgur.com/NEA45so.png" alt="使用 icdiff 指令比對檔案差異"></p>
+<p>漂亮！差異處有加上顏色果然清楚多了！要達到這樣的效果，只需要改用 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external"><code>icdiff</code></a> 這一套工具即可。</p>
+<p>來看看 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external"><code>icdiff</code></a> 官方是怎麼介紹的：</p>
+<blockquote>
+<p>improved colored diff</p>
+</blockquote>
+<p>效果如同我們上面所看到的，在檔案差異處會用顏色標記，一目了然的比對兩者的差異，找起問題容易多了。</p>
+<p>其中各種顏色代表的意義如下：</p>
+<ul>
+<li>「綠色」表示「新增」。</li>
+<li>「紅色」表示「刪除」。</li>
+</ul>
+<h2 id="安裝方法："><a href="#安裝方法：" class="headerlink" title="安裝方法："></a>安裝方法：</h2><p>OS X 可以直接使用 <code>Homebrew</code> 來安裝：</p>
+<pre><code>$brew install icdiff
+</code></pre><p>由於 <code>icdiff</code> 是一個 python 開發的程式，也可以直接下載檔案來執行，請參考 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external">GitHub</a> 上面的說明。</p>
+<h2 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h2><h3 id="如何比較兩個檔案差異："><a href="#如何比較兩個檔案差異：" class="headerlink" title="如何比較兩個檔案差異："></a>如何比較兩個檔案差異：</h3><pre><code>$icdiff &lt;file_1&gt; &lt;file_2&gt;
+</code></pre><blockquote>
+<p>備註：我們也可以將內建的 diff 指令改用 icdiff 取代。</p>
+</blockquote>
+<h3 id="如何搭配-git-使用："><a href="#如何搭配-git-使用：" class="headerlink" title="如何搭配 git 使用："></a>如何搭配 git 使用：</h3><pre><code>$git difftool --extcmd icdiff
+</code></pre><h3 id="也可以有更精簡的-git-用法："><a href="#也可以有更精簡的-git-用法：" class="headerlink" title="也可以有更精簡的 git 用法："></a>也可以有更精簡的 git 用法：</h3><pre><code>$git icdiff
+</code></pre><p>只需要設定 <code>git difftool path</code> 指向 <code>git-icdiff</code> 檔案即可。</p>
+<h3 id="將-icdiff-設定為-git-預設比對差異工具："><a href="#將-icdiff-設定為-git-預設比對差異工具：" class="headerlink" title="將 icdiff 設定為 git 預設比對差異工具："></a>將 <code>icdiff</code> 設定為 git 預設比對差異工具：</h3><p>已經習慣 git 預設的 <code>git diff</code> 指令了嗎？別擔心，我們可以設定 git 預設使用這一套來做差異比對，讓我們可以沿用原本熟悉的 <code>git diff</code> 指令，同時享用 <code>icdiff</code> 清楚的比對結果：</p>
+<pre><code>$git diff
+</code></pre><p>該如何讓 <code>$git diff</code> 預設使用 <code>icdiff</code>，設定方法如下：</p>
+<ol>
+<li><p>在 <code>.gitconfig</code> 設定</p>
+<pre><code>[diff]
+    # 使用 icdiff 來取代 git 內建的 diff
+    external = ~/bin/git-diff-wrapper.sh
+</code></pre></li>
+<li><p>建立 <code>mkdir ~/bin/</code> 目錄</p>
+</li>
+<li><p>建立 <code>~/bin/git-diff-wrapper.sh</code> 檔案，加入以下內容：</p>
+<pre><code>#!/bin/bash
+icdiff $2 $5
+</code></pre></li>
+<li><p><code>chmod 777 ~/bin/git-diff-wrapper.sh</code> 開啟執行權限</p>
+</li>
+<li><p>完成！趕緊來使用 <code>$git diff</code> 看看吧</p>
+</li>
+</ol>
+<p>參考資料：</p>
+<ul>
+<li><a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external">jeffkaufman/icdiff</a></li>
+<li><a href="https://github.com/jeffkaufman/icdiff/issues/14" target="_blank" rel="external">https://github.com/jeffkaufman/icdiff/issues/14</a></li>
+</ul>
+<p>Bobo內心旁白：「為了愛護您的靈魂之窗，請趕緊改用 <code>icdiff</code> 來比對檔案差異吧。」</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/開發工具/">開發工具</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/tools/icdiff/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/server-os/osx10.11-homebrew/" title="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題" itemprop="url">升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題</a>
   </h1>
   <p class="article-author">By
@@ -89,7 +197,7 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-04T10:24:33.000Z" itemprop="datePublished"> Published 2015-10-04</time>
+    <time datetime="2015-10-04T10:24:33.000Z" itemprop="datePublished"> 发表于 2015-10-04</time>
     
   </p>
 </header>
@@ -186,7 +294,7 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2015-09-29T15:55:33.000Z" itemprop="datePublished"> Published 2015-09-29</time>
+    <time datetime="2015-09-29T15:55:33.000Z" itemprop="datePublished"> 发表于 2015-09-29</time>
     
   </p>
 </header>
@@ -281,101 +389,16 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/tools/Sublime-Text-默默吃爆你硬碟的神秘目錄/" title="Sublime Text 默默吃爆你硬碟的神秘目錄" itemprop="url">Sublime Text 默默吃爆你硬碟的神秘目錄</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2015-09-20T15:28:33.000Z" itemprop="datePublished"> Published 2015-09-20</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <center><img src="/images/2015/st3_backup_fat_folder.png" alt=""></center>
-
-<blockquote>
-<p>Sublime Text 3 主程式目錄大小才 10MB…，但是你可以想像嗎，隨著使用時間的增長，這個目錄竟然會長到 1GB 多!</p>
-</blockquote>
-<h2 id="神秘爆肥目錄在哪？"><a href="#神秘爆肥目錄在哪？" class="headerlink" title="神秘爆肥目錄在哪？"></a>神秘爆肥目錄在哪？</h2><p>對此感到十分好奇的我，決定來研究一下找出原因!</p>
-<p>我到底是餵它什麼好料!? 竟然可以這樣越用越肥… (汗</p>
-<p>當下直覺懷疑是「 Log 檔」或是「索引資料」所造成，於是去檢查相關目錄，</p>
-<p>其實也還好，容量雖然不小，但也頂多幾十 MB 而已~</p>
-<p>但無意間發現一個…</p>
-<h2 id="可疑的「Backup」目錄"><a href="#可疑的「Backup」目錄" class="headerlink" title="可疑的「Backup」目錄"></a>可疑的「Backup」目錄</h2><p>查了一下…竟然有 1GB 多! 就是它在肥的啦!</p>
-<p>路徑在：<code>Application Support/Sublime Text 3/Backup</code></p>
-<p>原來這個目錄是 <code>Package Control</code> 的備份檔，</p>
-<p>每次 upgrade package 時都會將套件進行備份! 難怪會那麼肥~~</p>
-<h2 id="改善方法："><a href="#改善方法：" class="headerlink" title="改善方法："></a>改善方法：</h2><ol>
-<li>刪除掉舊的備份檔。</li>
-<li><p>並修改設定 (<code>Preferences.sublime-settings</code>) 將檢查更新的頻率由預設的 1 小時檢查一次，修改成 8 小時檢查一次就好囉。</p>
-<pre><code>&quot;auto_upgrade_frequency&quot;: 8, 
-</code></pre></li>
-</ol>
-<blockquote>
-<p>降低檢查的頻率還有個好處，有些套件每次更新完 Sublime 都需要重新啟動，會導致像 <code>live reload</code> 那些都需要重新設定…||  會嚴重影響工作流程…<br>之前就遇過某個套件一天更新的好幾次的…</p>
-</blockquote>
-<h2 id="參考資料："><a href="#參考資料：" class="headerlink" title="參考資料："></a>參考資料：</h2><ol>
-<li><a href="http://superuser.com/questions/870148/sublime-text-2-keeps-growing-due-to-backup-folder" target="_blank" rel="external">http://superuser.com/questions/870148/sublime-text-2-keeps-growing-due-to-backup-folder</a></li>
-<li><a href="https://sublimetext.com/forum/viewtopic.php?f=3&amp;t=7627" target="_blank" rel="external">https://sublimetext.com/forum/viewtopic.php?f=3&amp;t=7627</a></li>
-</ol>
-<p>Bobo內心旁白：「人肥必有因，工具不也是…請關心您的工具，替它安排個健康檢查或是瘦身計畫!?」 </p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Sublime-Text/">Sublime Text</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/tools/Sublime-Text-默默吃爆你硬碟的神秘目錄/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
-    <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/3/">Next<span></span></a>
+    <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/3/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -392,7 +415,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
 			
@@ -404,15 +427,15 @@
 			
 		
 			
+				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>3</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Web-Design/" title="Web Design">Web Design<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>2</sup></a></li>
 			
 		
 			
@@ -432,35 +455,7 @@
 			
 		
 			
-				<li><a href="/tags/Feedly/" title="Feedly">Feedly<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
 			
 		
 			
@@ -468,11 +463,39 @@
 			
 		
 			
+				<li><a href="/tags/IntelliJ/" title="IntelliJ">IntelliJ<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/apache/" title="apache">apache<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/OSX/" title="OSX">OSX<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/homebrew/" title="homebrew">homebrew<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Vim/" title="Vim">Vim<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/好書推薦/" title="好書推薦">好書推薦<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -480,7 +503,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -526,7 +549,7 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
 </aside>
@@ -687,7 +710,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
