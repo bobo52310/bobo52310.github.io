@@ -48,7 +48,7 @@
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
 				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -82,6 +82,114 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/notes/從 Blogger 搬家到 Hexo 的第一篇/" title="從 Blogger 搬家到 Hexo 的第一篇" itemprop="url">從 Blogger 搬家到 Hexo 的第一篇</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-09-29T15:55:33.000Z" itemprop="datePublished"> 發表於 2015-09-29</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <center><img src="/images/2015/hexo_github.png" alt=""></center>
+
+<h2 id="搬家源由"><a href="#搬家源由" class="headerlink" title="搬家源由"></a>搬家源由</h2><h3 id="Blogger-不好用嗎？"><a href="#Blogger-不好用嗎？" class="headerlink" title="Blogger 不好用嗎？"></a>Blogger 不好用嗎？</h3><p>不會啊，已經使用好幾年了，<br>有內建很棒的後台，詳細的 Dashboard、WYSIWYG 線上編輯器、版型範本也有多種選擇，當然你想要使用 GA 或是 Google Adsense 等 Google 自家服務更是輕鬆容易，連相簿也整合好 google+ 了，甚至聽說還送你 SEO 優勢(鄉野傳說?)<br>而且輕輕鬆鬆註冊個帳號就可以使用囉。</p>
+<h3 id="Why-改用-Hexo？"><a href="#Why-改用-Hexo？" class="headerlink" title="Why 改用 Hexo？"></a>Why 改用 Hexo？</h3><p>Hexo 沒有很厲害的後台，還需要自己 host server，雖然相較於 Blogger 沒那麼方便，不過卻多了更多練習的機會，以下給自己整理了幾個搬家的理由：</p>
+<ul>
+<li>Hexo 使用 markdown 語法來寫文章，藉此讓自己更熟悉這個語法。<ul>
+<li>雖然之前也可以藉由  <a href="StackEdit.io">StackEdit</a> =&gt; Blogger 但是體驗沒那麼流暢</li>
+</ul>
+</li>
+<li>用 markdown 呈現技術文章的排版效果比較好，讓自己更專心寫些技術文章。</li>
+<li>給自己找個理由實際摸摸 Node.js。</li>
+<li>方便備份，所有的文章單純就是文字檔，完全不需要依賴資料庫。</li>
+<li>最近用 Hexo 似乎比較潮!? 社群內好多朋友都改用了。</li>
+</ul>
+<p>其實除了 Hexo 之外，類似的選擇還評估了 jekyll、Ghost、Octopress，各有各個優缺點，Hexo 明顯的優勢在於 <strong>編譯速度快</strong>、<strong>安裝設定超簡單</strong>，之後整理一下在來分享評估的小小心得。</p>
+<h2 id="搬家心路歷程小記"><a href="#搬家心路歷程小記" class="headerlink" title="搬家心路歷程小記"></a>搬家心路歷程小記</h2><p>原先在 Blogger 前前後後寫了約1百多篇文章，雖然大多是學習過程的雜記，稱不上什麼技術文章，但總是個回憶，捨不得丟棄，因此希望可以有個搬家工具來打包舊文章。</p>
+<blockquote>
+<p>備註：舊版 Blog 位置：<a href="http://bobo52310.blogspot.tw" target="_blank" rel="external">http://bobo52310.blogspot.tw</a></p>
+</blockquote>
+<h3 id="Hexo-官方搬家教學："><a href="#Hexo-官方搬家教學：" class="headerlink" title="Hexo 官方搬家教學："></a>Hexo 官方搬家教學：</h3><p>官方貼心地提供搬家(migration)說明 <a href="https://hexo.io/docs/migration.html" target="_blank" rel="external">https://hexo.io/docs/migration.html</a></p>
+<p>目前有支援以下幾種來源：</p>
+<ul>
+<li>RSS</li>
+<li>Jekyll</li>
+<li>Octopress</li>
+<li>WordPress</li>
+</ul>
+<p>但是沒有看到有支援 Blogger … </p>
+<p>只好請 Google 來幫忙，找到一個看似可用的 npm 套件：<a href="https://www.npmjs.com/package/hexo-migrator-blogger" target="_blank" rel="external">hexo-migrator-blogger</a></p>
+<p>實際測試後，僅僅噴了一些錯誤訊息，無法執行打包舊文章 @_@</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">boboMac :: blog.bobochen.com ‹master*› » hexo migrate blogger <span class="symbol">http:</span>/<span class="regexp">/bobo52310.blogspot.tw/feeds</span><span class="regexp">/posts/default</span>\?alt\=json\&amp;max-results\=<span class="number">10000</span></div><div class="line">Fetching...</div><div class="line">blog.bobochen.com/node_modules/hexo-migrator-blogger/<span class="class"><span class="keyword">lib</span>/<span class="title">migrate</span>.<span class="title">js</span>:25</span></div><div class="line">            var content = item.content[<span class="string">'$t'</span>];</div><div class="line">                                      ^</div><div class="line"><span class="symbol">TypeError:</span> Cannot read property <span class="string">'$t'</span> <span class="keyword">of</span> undefined</div><div class="line">    at blog.bobochen.com/node_modules/hexo-migrator-blogger/<span class="class"><span class="keyword">lib</span>/<span class="title">migrate</span>.<span class="title">js</span>:25:39</span></div></pre></td></tr></table></figure>
+<p>最後還是改用官方教學的 RSS 來源，才成功打包。</p>
+<ul>
+<li><p>這裡會需要從 Blogger 找出 RSS 位置，詳見：<br><a href="http://www.blogger.com/feeds/6977877551634260178/posts/default" target="_blank" rel="external">http://www.blogger.com/feeds/6977877551634260178/posts/default</a></p>
+</li>
+<li><p>以及 Blogger 的 feed urls 規則<br><a href="https://support.google.com/blogger/answer/97933?hl=en" target="_blank" rel="external">https://support.google.com/blogger/answer/97933?hl=en</a><br><code>http://你的blogger帳號.blogspot.com/feeds/posts/default</code></p>
+</li>
+<li><p>找出特定某一篇的 RSS</p>
+<ul>
+<li><code>http://你的blogger帳號.blogspot.com/feeds/postId/comments/default</code></li>
+</ul>
+</li>
+</ul>
+<p>使用 RSS 來源方法雖然可行，但也不是完美，1百多篇僅成功匯出 25 篇…(到 2012.5)</p>
+<p>而且圖片也無法轉換過來 @_@</p>
+<p>有考慮乾脆從 blogger 後台匯出 xml</p>
+<p><code>xml =&gt; web =&gt; hexo converter</code> 或許也是一個方法~</p>
+<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
+<li><a href="https://hexo.io/zh-tw/docs/deployment.html" target="_blank" rel="external">https://hexo.io/zh-tw/docs/deployment.html</a></li>
+<li><a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">http://blog.fens.me/hexo-blog-github/</a></li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/版務/">版務</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/notes/從 Blogger 搬家到 Hexo 的第一篇/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/tools/Sublime-Text-默默吃爆你硬碟的神秘目錄/" title="Sublime Text 默默吃爆你硬碟的神秘目錄" itemprop="url">Sublime Text 默默吃爆你硬碟的神秘目錄</a>
   </h1>
   <p class="article-author">By
@@ -89,7 +197,7 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2015-09-20T15:28:33.000Z" itemprop="datePublished"> 发表于 2015-09-20</time>
+    <time datetime="2015-09-20T15:28:33.000Z" itemprop="datePublished"> 發表於 2015-09-20</time>
     
   </p>
 </header>
@@ -174,7 +282,7 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-30T15:47:44.000Z" itemprop="datePublished"> 发表于 2015-08-30</time>
+    <time datetime="2015-08-30T15:47:44.000Z" itemprop="datePublished"> 發表於 2015-08-30</time>
     
   </p>
 </header>
@@ -281,85 +389,16 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/server-os/Mac-顯示輸入過的無線網路密碼/" title="[Mac] 顯示輸入過的無線網路密碼" itemprop="url">[Mac] 顯示輸入過的無線網路密碼</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2015-07-26T03:14:53.000Z" itemprop="datePublished"> 发表于 2015-07-26</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>近期有不少社群活動都辦在「<a href="http://www.innosquare.economic.ntpc.net.tw/site/" target="_blank" rel="external">新北創力坊</a>」，地點位在捷運「台北橋站」的捷運共構大樓，出捷運站就到了！交通實在有夠便利。</p>
-<p>有次帶新朋友去那裡需要使用無線網路，但找不到 wifi 密碼，問了一輪大家都不知道密碼… 因為大家在第一次輸入時就按記憶密碼，沒有人記得也是正常的 @__@</p>
-<p>那麼是否辦法將已輸入的密碼顯示呢？</p>
-<p>記得以前在 Windows 可以使用偷看密碼的工具，而 Mac 其實不用那麼麻煩，直接有內建的方法可以查看喔！<br><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--></p>
-<h2 id="顯示輸入過的-wifi-密碼"><a href="#顯示輸入過的-wifi-密碼" class="headerlink" title="顯示輸入過的 wifi 密碼"></a>顯示輸入過的 wifi 密碼</h2><p>以下來介紹該如何顯示輸入過的無線網路密碼：</p>
-<ol>
-<li>由於 Mac 會幫我們管理所有儲存過的密碼，我們可使用 <code>Spotlight</code> 呼叫「鑰匙圈存取」來檢視：<br><code>點選右上角「放大鏡」(或是按快捷鍵 control + space)，並輸入「key」</code><center><img src="/images/2015/mac_1.png" alt=""></center></li>
-<li>列出曾經連線過的無線基地台名稱：<br><code>點選新北創力坊的 wifi 名稱：innosquare</code><center><img src="/images/2015/mac_2.png" alt=""></center></li>
-<li>勾選「顯示密碼」，並輸入系統登入密碼：<center><img src="/images/2015/mac_3.png" alt=""></center></li>
-<li>密碼就顯示出來囉！完成！<br><code>新北創力坊 wifi 密碼：newtaipei</code></li>
-</ol>
-<p>Bobo內心旁白：「有人的地方，就有江湖，有密碼的地方，就有忘記密碼的需求…Mac 實在是真貼心~ 」。</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/電腦筆記/">電腦筆記</a><a href="/tags/Mac/">Mac</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/server-os/Mac-顯示輸入過的無線網路密碼/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/2/"><span></span>Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   
@@ -376,7 +415,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">標簽</p>
 		<ul class="clearfix">
 		
 			
@@ -404,6 +443,10 @@
 			
 		
 			
+				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/開發工具/" title="開發工具">開發工具<sup>2</sup></a></li>
 			
 		
@@ -412,35 +455,7 @@
 			
 		
 			
-				<li><a href="/tags/PHP/" title="PHP">PHP<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Rails/" title="Rails">Rails<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/IntelliJ/" title="IntelliJ">IntelliJ<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/apache/" title="apache">apache<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Mac/" title="Mac">Mac<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/OSX/" title="OSX">OSX<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/homebrew/" title="homebrew">homebrew<sup>1</sup></a></li>
 			
 		
 			
@@ -448,15 +463,39 @@
 			
 		
 			
+				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Feedly/" title="Feedly">Feedly<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/好書推薦/" title="好書推薦">好書推薦<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/UI/" title="UI">UI<sup>1</sup></a></li>
+				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -464,7 +503,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情链接</p>
+  <p class="asidetitle">友情鏈接</p>
     <ul>
         
           <li>
@@ -510,7 +549,7 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
 </div>
 
 </aside>
@@ -551,7 +590,7 @@
 		
 
 		<p class="copyright">
-		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017 
 		
 		<a href="/about" target="_blank" title="Bobo Chen">Bobo Chen</a>
 		
@@ -671,7 +710,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

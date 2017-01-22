@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bobochen.com/"/>
-  <updated>2016-09-04T07:59:13.000Z</updated>
+  <updated>2017-01-22T01:41:33.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何修改 Redhat / CentOS 7 主機名稱</title>
+    <link href="http://bobochen.com/server-os/centOS7-hostnamectl/"/>
+    <id>http://bobochen.com/server-os/centOS7-hostnamectl/</id>
+    <published>2017-01-22T01:35:09.000Z</published>
+    <updated>2017-01-22T01:41:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="如何修改-Redhat-CentOS-7-主機名稱"><a href="#如何修改-Redhat-CentOS-7-主機名稱" class="headerlink" title="如何修改 Redhat / CentOS 7 主機名稱"></a>如何修改 Redhat / CentOS 7 主機名稱</h1><h1 id="檢視主機名稱"><a href="#檢視主機名稱" class="headerlink" title="檢視主機名稱"></a>檢視主機名稱</h1><p>使用 <code>hostnamectl</code> 來檢視主機名稱相關資訊，如下：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">root<span class="variable">@bobochen-vm</span> [<span class="number">01</span>:<span class="number">22</span>:<span class="number">14</span> AM] [~]</div><div class="line">-&gt; $ hostnamectl</div><div class="line">   Static <span class="attribute">hostname</span>: bobochen-vm</div><div class="line">         Icon <span class="attribute">name</span>: computer-vm</div><div class="line">           <span class="attribute">Chassis</span>: vm</div><div class="line">        Machine <span class="attribute">ID</span>: OOOXXX78a943ae8f3cc26602e3</div><div class="line">           Boot <span class="attribute">ID</span>: OOOXXXc0a48a89974cb4b6a66a</div><div class="line">    <span class="attribute">Virtualization</span>: xen</div><div class="line">  Operating <span class="attribute">System</span>: CentOS Linux <span class="number">7</span> (Core)</div><div class="line">       CPE OS <span class="attribute">Name</span>: <span class="attribute">cpe</span>:/<span class="attribute">o</span>:<span class="attribute">centos</span>:<span class="attribute">centos</span>:<span class="number">7</span></div><div class="line">            <span class="attribute">Kernel</span>: Linux <span class="number">3.10</span>.<span class="number">0</span>-<span class="number">327.22</span>.<span class="number">2</span>.el7.x86_64</div><div class="line">      <span class="attribute">Architecture</span>: x86-<span class="number">64</span></div></pre></td></tr></table></figure>
+<p>來看一下官方手冊說明：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">NAME</div><div class="line">       hostnamectl - Control the <span class="built_in">system</span> <span class="built_in">hostname</span></div><div class="line"></div><div class="line">SYNOPSIS</div><div class="line">       hostnamectl [OPTIONS...] &#123;COMMAND&#125;</div><div class="line"></div><div class="line">DESCRIPTION</div><div class="line">       hostnamectl may <span class="keyword">be</span> used <span class="keyword">to</span> query <span class="built_in">and</span> <span class="keyword">change</span> the <span class="built_in">system</span> <span class="built_in">hostname</span> <span class="built_in">and</span> related settings.</div><div class="line"></div><div class="line">       This tool distinguishes three different <span class="built_in">hostname</span><span class="variable">s:</span> the high-level <span class="string">"pretty"</span> <span class="built_in">hostname</span> which might include <span class="keyword">all</span> kinds of special characters</div><div class="line">       (<span class="keyword">e</span>.g. <span class="string">"Lennart's Laptop"</span>), the static <span class="built_in">hostname</span> which <span class="keyword">is</span> used <span class="keyword">to</span> initialize the kernel <span class="built_in">hostname</span> at boot (<span class="keyword">e</span>.g. <span class="string">"lennarts-laptop"</span>), <span class="built_in">and</span></div><div class="line">       the transient <span class="built_in">hostname</span> which <span class="keyword">is</span> <span class="keyword">a</span> default received from network configuration. If <span class="keyword">a</span> static <span class="built_in">hostname</span> <span class="keyword">is</span> <span class="keyword">set</span>, <span class="built_in">and</span> <span class="keyword">is</span> valid (something</div><div class="line">       other than localhost), then the transient <span class="built_in">hostname</span> <span class="keyword">is</span> not used.</div><div class="line"></div><div class="line">       Note that the pretty <span class="built_in">hostname</span> <span class="built_in">has</span> little restrictions <span class="keyword">on</span> the characters used, <span class="keyword">while</span> the static <span class="built_in">and</span> transient hostnames are limited <span class="keyword">to</span></div><div class="line">       the usually accepted characters of Internet domain names.</div><div class="line"></div><div class="line">       The static <span class="built_in">hostname</span> <span class="keyword">is</span> stored in /etc/<span class="built_in">hostname</span>, see <span class="built_in">hostname</span>(<span class="number">5</span>) <span class="keyword">for</span> more information. The pretty <span class="built_in">hostname</span>, chassis <span class="built_in">type</span>, <span class="built_in">and</span> icon name</div><div class="line">       are stored in /etc/machine-info, see machine-info(<span class="number">5</span>).</div><div class="line"></div><div class="line">       Use systemd-firstboot(<span class="number">1</span>) <span class="keyword">to</span> initialize the <span class="built_in">system</span> host name <span class="keyword">for</span> mounted (but not booted) <span class="built_in">system</span> images.</div></pre></td></tr></table></figure>
+<h1 id="修改主機名稱"><a href="#修改主機名稱" class="headerlink" title="修改主機名稱"></a>修改主機名稱</h1><p>使用 <code>hostnamectl  set-hostname [Host Name]</code> 來修改主機名稱</p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="string">hostnamectl </span> <span class="built_in">set-hostname</span> <span class="string">server-www1</span></div></pre></td></tr></table></figure>
+<p>設定後，我們可以再用 <code>hostnamectl</code> 檢查看看是否生效。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;如何修改-Redhat-CentOS-7-主機名稱&quot;&gt;&lt;a href=&quot;#如何修改-Redhat-CentOS-7-主機名稱&quot; class=&quot;headerlink&quot; title=&quot;如何修改 Redhat / CentOS 7 主機名稱&quot;&gt;&lt;/a&gt;如何修改 Redh
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="http://bobochen.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>(Elixir 好書推薦) Programming Elixir 1.3 by Dave Thomas</title>
@@ -991,51 +1018,6 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
     
     
       <category term="Rails" scheme="http://bobochen.com/tags/Rails/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面</title>
-    <link href="http://bobochen.com/php/Laravel-%E5%A5%97%E4%BB%B6-Sqli%EF%BC%9A%E8%AE%93-Artisan-%E6%8F%90%E4%BE%9B-SQL-%E4%BA%92%E5%8B%95%E4%BB%8B%E9%9D%A2/"/>
-    <id>http://bobochen.com/php/Laravel-套件-Sqli：讓-Artisan-提供-SQL-互動介面/</id>
-    <published>2015-02-21T04:23:58.000Z</published>
-    <updated>2015-09-26T13:23:34.000Z</updated>
-    
-    <content type="html"><![CDATA[<center><img src="/images/2015/sqli_05.png" alt=""></center>
-
-
-<h2 id="簡介-Sqli"><a href="#簡介-Sqli" class="headerlink" title="簡介 Sqli"></a>簡介 Sqli</h2><p>sqli 是一個有趣的 Laravel 4 套件(by Antonio Ribeiro)，可以擴充 Artisan 功能，使其可以執行 SQL 查詢語句。<br>類似像 tinker 那樣可以互動介面來與你的 Laravel 應用程式互動(包含操作 Eloquent)</p>
-<h2 id="安裝方式："><a href="#安裝方式：" class="headerlink" title="安裝方式："></a>安裝方式：</h2><ol>
-<li><p>使用 composer 安裝，只要在命令列環境下輸入<br> <code>$ composer require &quot;pragmarx/sqli&quot; &quot;0.*&quot;</code></p>
-</li>
-<li><p>service provider to your app/config/app.php:<br> <code>&#39;PragmaRX\SqlI\Vendor\Laravel\ServiceProvider&#39;,</code></p>
-</li>
-</ol>
-<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><ol>
-<li>進入 SQL 互動畫面<br><code>$ php artisan sqli</code></li>
-<li>輸入 SQL 查詢字串<br><code>$ postgresql:laravel&gt; select email from users;</code></li>
-</ol>
-<p>即可得到 SQL 查詢結果</p>
-<pre><code>+----+------------------------------+
-| id | email                        |
-+----+------------------------------+
-|  1 | arnold@schwarzenegger.com    |
-|  2 | danny@devito.com             |
-+----+------------------------------+
-</code></pre><p>GitHub：<a href="https://github.com/antonioribeiro/sqli" target="_blank" rel="external">antonioribeiro/sqli</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;center&gt;&lt;img src=&quot;/images/2015/sqli_05.png&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
-
-
-&lt;h2 id=&quot;簡介-Sqli&quot;&gt;&lt;a href=&quot;#簡介-Sqli&quot; class=&quot;headerlink&quot; title=&quot;簡介 Sqli&quot;&gt;&lt;/a&gt;簡介
-    
-    </summary>
-    
-    
-      <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
     
   </entry>
   
