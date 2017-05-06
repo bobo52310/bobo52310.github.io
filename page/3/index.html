@@ -82,6 +82,103 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/server-os/osx10.11-homebrew/" title="升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題" itemprop="url">升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-10-04T10:24:33.000Z" itemprop="datePublished"> 发表于 2015-10-04</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <p><center><img src="/images/2015/os-x-el-capitan.jpg" alt=""></center></p>
+<h2 id="先說一下升級後明顯有感覺的部分："><a href="#先說一下升級後明顯有感覺的部分：" class="headerlink" title="先說一下升級後明顯有感覺的部分："></a>先說一下升級後明顯有感覺的部分：</h2><ul>
+<li>中文字體變好看! (使用新的中文字體-蘋方)</li>
+<li>畫面切換更流暢 (支援 <code>Metal</code> 繪圖 API)</li>
+<li>備忘錄變得更好用</li>
+<li>畫面最上方的狀態列可以隱藏</li>
+<li><code>Mission Control</code> 不會將同類型程式群組化</li>
+<li>幾乎是無痛升級：<code>Sublime Text</code>, <code>Atom</code>, <code>Sketch</code>, <code>VirtualBox</code>, <code>SourceTree</code>, <code>Sequel Pro</code>… 都正常</li>
+</ul>
+<h2 id="升級後受影響的-Web-Developer-吃飯工具："><a href="#升級後受影響的-Web-Developer-吃飯工具：" class="headerlink" title="升級後受影響的 Web Developer 吃飯工具："></a>升級後受影響的 Web Developer 吃飯工具：</h2><ol>
+<li>Homebrew </li>
+<li>Vagrant </li>
+<li>PhpStorm (重新安裝 <code>JRE</code> 即可)</li>
+<li>XtraFinder (暫時無解)</li>
+<li>Asepsis (暫時無解)</li>
+</ol>
+<blockquote>
+<p><code>Homebrew</code>、<code>Vagrant</code> 以下附上解法。</p>
+</blockquote>
+<h2 id="Homebrew-problems-on-OS-X-10-11"><a href="#Homebrew-problems-on-OS-X-10-11" class="headerlink" title="Homebrew problems on OS X 10.11"></a>Homebrew problems on OS X 10.11</h2><p>升級 MAC OS X 10.11 (EI Capitan) 後，執行 <code>brew update</code> 時發生錯誤：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$ brew <span class="keyword">update</span></div><div class="line"><span class="keyword">Error</span>: The /usr/<span class="keyword">local</span> <span class="keyword">directory</span> <span class="keyword">is</span> <span class="keyword">not</span> writable.</div><div class="line">Even <span class="keyword">if</span> this <span class="keyword">directory</span> was writable <span class="keyword">when</span> you installed Homebrew, other</div><div class="line">software may <span class="keyword">change</span> permissions <span class="keyword">on</span> this directory. <span class="keyword">Some</span> <span class="keyword">versions</span> <span class="keyword">of</span> the</div><div class="line"><span class="string">"InstantOn"</span> component <span class="keyword">of</span> Airfoil <span class="keyword">are</span> known <span class="keyword">to</span> <span class="keyword">do</span> this.</div><div class="line"></div><div class="line">You should probably <span class="keyword">change</span> the ownership <span class="keyword">and</span> permissions <span class="keyword">of</span> /usr/<span class="keyword">local</span></div><div class="line">back <span class="keyword">to</span> your <span class="keyword">user</span> account.</div><div class="line">  sudo chown -R $(whoami):<span class="keyword">admin</span> /usr/<span class="keyword">local</span></div></pre></td></tr></table></figure>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>由於 Mac OS X 10.11 引入了「System Integrity Protection (SIP)」而導致 <code>/usr</code>、<code>/System</code> 以及 <code>/bin</code> 等目錄被保護無法寫入(即使用 root 權限也不行)，因此造成 Homebrew 發生無寫入權限錯誤。</p>
+<h3 id="解法"><a href="#解法" class="headerlink" title="解法"></a>解法</h3><h4 id="已存在-usr-local-目錄時"><a href="#已存在-usr-local-目錄時" class="headerlink" title="已存在 /usr/local 目錄時:"></a>已存在 <code>/usr/local</code> 目錄時:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></div></pre></td></tr></table></figure>
+<h4 id="不存在-usr-local-目錄時"><a href="#不存在-usr-local-目錄時" class="headerlink" title="不存在 /usr/local 目錄時:"></a>不存在 <code>/usr/local</code> 目錄時:</h4><p>解法是關閉 SIP，方法如下：</p>
+<ul>
+<li>重開機按 <code>cmd+r</code> 進入<code>恢復模式</code> -&gt; 工具程式 -&gt; 安全設定-&gt;<br>取消勾選 「System Integrity Protection」</li>
+<li>回到 OS X 桌面，開啟 Terminal 並執行：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo mkdir /usr/<span class="built_in">local</span> &amp;&amp; sudo chflags norestricted /usr/<span class="built_in">local</span> &amp;&amp; sudo chown -R $(whoami):admin /usr/<span class="built_in">local</span></div></pre></td></tr></table></figure>
+<h2 id="Vagrant-problems-on-OS-X-10-11"><a href="#Vagrant-problems-on-OS-X-10-11" class="headerlink" title="Vagrant problems on OS X 10.11"></a>Vagrant problems on OS X 10.11</h2><p>看到 Jeffrey Way 在 <a href="https://twitter.com/jeffrey_way/status/649769735396151296" target="_blank" rel="external">Twitter 上面</a>喊：</p>
+<blockquote>
+<p>This Vagrant quirk is the only thing I ran into with my El Capitan update.</p>
+</blockquote>
+<h3 id="解法-1"><a href="#解法-1" class="headerlink" title="解法"></a>解法</h3><p><a href="https://laracasts.com/discuss/channels/tips/fix-for-vagranthomestead-el-capitan" target="_blank" rel="external">Fix for Vagrant/Homestead - El Capitan</a></p>
+<h2 id="參考資料："><a href="#參考資料：" class="headerlink" title="參考資料："></a>參考資料：</h2><ul>
+<li><a href="https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/El_Capitan_and_Homebrew.md" target="_blank" rel="external">El Capitan and Homebrew</a></li>
+<li><a href="https://laracasts.com/discuss/channels/tips/fix-for-vagranthomestead-el-capitan" target="_blank" rel="external">Fix for Vagrant/Homestead - El Capitan</a></li>
+<li><a href="https://www.ptt.cc/bbs/MAC/M.1439029980.A.BB1.html" target="_blank" rel="external">PTT 文章：如何矯正半殘的superuser</a></li>
+</ul>
+<p>Bobo內心旁白：「升級一定有風險，升級前應詳閱公開說明書~ 特別是這次有令人又愛又恨 SIP…」</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/OSX/">OSX</a><a href="/tags/homebrew/">homebrew</a><a href="/tags/vagrant/">vagrant</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/server-os/osx10.11-homebrew/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/notes/從 Blogger 搬家到 Hexo 的第一篇/" title="從 Blogger 搬家到 Hexo 的第一篇" itemprop="url">從 Blogger 搬家到 Hexo 的第一篇</a>
   </h1>
   <p class="article-author">By
@@ -269,126 +366,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/tools/Sketch3-行雲流水的-UI-design-工具，根本就是設計界的-Sublime-Text-嘛/" title="Sketch3 行雲流水的 UI design 工具，有 Sublime Text 輕快的體驗!" itemprop="url">Sketch3 行雲流水的 UI design 工具，有 Sublime Text 輕快的體驗!</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2015-08-30T15:47:44.000Z" itemprop="datePublished"> 发表于 2015-08-30</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><center><img src="/images/2015/sketch3.jpg" alt=""></center></p>
-<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>以前使用 Windows 的時候，一直有耳聞搞設計的都熱愛用 Mac，而自己使用了 Mac 一陣子卻感覺不出來差異，直到最近遇到了 Sketch3！這套設計界的神兵利器，讓我眼睛為之一亮！</p>
-<p>這顆「黃鑽石」可以說是設計界的 Sublime Text，都是很輕量、又支援超多外掛，用起來就是一整個行雲流水呀~</p>
-<p>尤其在 web design 與圖形設計方面，平常使用幾乎可以取代 photoshop、illustrator。</p>
-<h2 id="Sketch3-亮點整理如下："><a href="#Sketch3-亮點整理如下：" class="headerlink" title="Sketch3 亮點整理如下："></a>Sketch3 亮點整理如下：</h2><ol>
-<li>超輕量，讓你愛上的瞬開的體驗</li>
-<li>外掛超多，各種神奇的套件都有</li>
-<li>操作容易上手，行雲流水的境界</li>
-<li>可自訂 symbols、text styles 方便 reuse</li>
-<li>各種尺寸的圖片輸出</li>
-<li>支援向量圖檔編輯</li>
-<li>可快速切換像素預覽</li>
-<li>常見的 web design 應用：</li>
-<li>mock up</li>
-<li>開發 RWD 超方便，可快速切換在不同解析度下做預覽</li>
-<li>還可以輸出 Asset、CSS</li>
-<li>自建 template</li>
-<li>搭配 Bootstrap 3 UI Kit 快速建立 mock up <a href="http://leveluptuts.com/tutorials/sketch-3-tutorials/13-bootstrap-3-ui-kit" target="_blank" rel="external">教學</a></li>
-<li>下載 Bootstrap 3 Vector UI圖示  <a href="http://bootstrapuikit.com/" target="_blank" rel="external">http://bootstrapuikit.com/</a></li>
-<li>可將 arborad 輸出到 zeplin</li>
-<li>有支援 Google 官方 Material Design</li>
-</ol>
-<h2 id="推薦的-plugin"><a href="#推薦的-plugin" class="headerlink" title="推薦的 plugin"></a>推薦的 plugin</h2><ol>
-<li>sketch toolbox // 套件管理工具，<strong>必裝！</strong>之後其他套件都透過它來安裝</li>
-<li>Content Generator // 自動填充假文、假圖，方便 mock up 佔位內容</li>
-<li>Dynamic Button  // button 會隨內文寬度調整</li>
-<li>sketch measure // 量測尺寸</li>
-<li>AEFlowchart  // 畫流程圖</li>
-<li>Skala Preview // 丟到手機上預覽</li>
-<li>Sketch Notebook // 來標註設計稿說明有哪些圖，以及它們的名稱是什麼，讓RD開發起來更有效率。</li>
-<li><a href="https://github.com/bomberstudios/sketch-commands" target="_blank" rel="external">Sketch Commands</a> // 許多常用的 workflow task 也可將素材輸出</li>
-<li><a href="https://github.com/fnky/sketch-dockpreview" target="_blank" rel="external">Sketch Dockpreview</a> // preview your current artboard in the Dock</li>
-<li><a href="https://github.com/getflourish/Sketch-Set-Line-Height-Plugin" target="_blank" rel="external">sketch set line height</a>  // 行高</li>
-<li><a href="https://github.com/rodi01/RenameIt" target="_blank" rel="external">Renameit</a> // 重新命名</li>
-<li><a href="https://github.com/nathco/Clear-Styles" target="_blank" rel="external">Clear-styles</a> // 清除樣式</li>
-<li><a href="https://github.com/nathco/Swap-Fill-Border" target="_blank" rel="external">Swap-Fill-Border</a> // 填滿邊框交換</li>
-<li><a href="https://github.com/zeplin/zeplin-sketch-plugin" target="_blank" rel="external">zeplin-sketch-plugin</a> // zeplin</li>
-</ol>
-<h2 id="名詞解釋"><a href="#名詞解釋" class="headerlink" title="名詞解釋"></a>名詞解釋</h2><p> 簡單的作個名詞解釋方便快速上手，詳見參考資源：</p>
-<ol>
-<li>Page：像是沒有邊界的畫布，一個檔裡可分很多 Page，而 Page 裡可以放很多 Artboard。<br>Arboard：像是有尺寸的畫布 (就是 AI 的畫布)，本身有內建各種尺寸可選擇(eg. iOS、Android、RWD)。而內容元素只有在 arboard  1. 範圍內是可視的。</li>
-<li>Symbol：針對一個 group 設定成模組，方便之後 reuse。</li>
-</ol>
-<h2 id="常用快捷鍵："><a href="#常用快捷鍵：" class="headerlink" title="常用快捷鍵："></a>常用快捷鍵：</h2><ol>
-<li>R 畫矩形</li>
-<li>O 畫圓形</li>
-<li>L  畫線</li>
-<li>T 插入文字</li>
-<li>cmd + g 群組化</li>
-<li>cmd + d 複製並貼上</li>
-<li>cmd + 加、減 放大縮小</li>
-<li>點選元件 + option 快速檢視與其他元件的距</li>
-<li>UI將物件拖拉到桌面即可產生 png 圖</li>
-</ol>
-<h2 id="參考資源："><a href="#參考資源：" class="headerlink" title="參考資源："></a>參考資源：</h2><ol>
-<li><a href="http://leveluptuts.com" target="_blank" rel="external">http://leveluptuts.com</a> 詳細影片教學</li>
-<li><a href="http://sketchcn.com" target="_blank" rel="external">http://sketchcn.com</a> sketch 簡體中文網</li>
-<li><a href="http://sketchshortcuts.com/" target="_blank" rel="external">http://sketchshortcuts.com/</a> sketch 快捷鍵一覽表</li>
-<li><a href="https://medium.com/sketch-app/sketch-keyboard-shortcuts-42c06583ae83" target="_blank" rel="external">Sketch Keyboard Shortcuts</a></li>
-<li><a href="http://blog.visioncan.com/2014/moved-to-sketch/" target="_blank" rel="external">來用 Sketch 畫你的 UI 吧</a></li>
-<li><a href="https://github.com/sketchplugins/plugin-directory" target="_blank" rel="external">Plugins 清單彙整</a> 算是半官方 github</li>
-</ol>
-<p>Bobo內心旁白：「再見了 Adobe 家族！胖胖的軟體真的不是我的菜…」</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Web-Design/">Web Design</a><a href="/tags/UI/">UI</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/tools/Sketch3-行雲流水的-UI-design-工具，根本就是設計界的-Sublime-Text-嘛/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/2/"><span></span>Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/4/">Next<span></span></a>
@@ -423,15 +400,15 @@
 			
 		
 			
+				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/電腦筆記/" title="電腦筆記">電腦筆記<sup>4</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>3</sup></a></li>
 			
 		
 			
@@ -447,15 +424,15 @@
 			
 		
 			
-				<li><a href="/tags/開發工具/" title="開發工具">開發工具<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
+				<li><a href="/tags/開發工具/" title="開發工具">開發工具<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
 			
 		
 			
@@ -463,7 +440,7 @@
 			
 		
 			
-				<li><a href="/tags/IntelliJ/" title="IntelliJ">IntelliJ<sup>1</sup></a></li>
+				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
 			
 		
 			
@@ -471,7 +448,7 @@
 			
 		
 			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
+				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
 			
 		
 			
@@ -487,15 +464,15 @@
 			
 		
 			
+				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/好書推薦/" title="好書推薦">好書推薦<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
 			
 		
 		</ul>

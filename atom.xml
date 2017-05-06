@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bobochen.com/"/>
-  <updated>2017-01-22T01:50:23.000Z</updated>
+  <updated>2017-05-06T09:47:11.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -14,6 +14,49 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VSCode 加速 Minimap 顯示速度(使用方塊顯示程式碼)</title>
+    <link href="http://bobochen.com/tools/VSCode%20%E5%8A%A0%E9%80%9F%20miniMap%20%E6%B8%B2%E6%9F%93%E9%80%9F%E5%BA%A6(%E4%BD%BF%E7%94%A8%E6%96%B9%E5%A1%8A%E9%A1%AF%E7%A4%BA%E7%A8%8B%E5%BC%8F%E7%A2%BC)/"/>
+    <id>http://bobochen.com/tools/VSCode 加速 miniMap 渲染速度(使用方塊顯示程式碼)/</id>
+    <published>2017-04-28T00:57:04.000Z</published>
+    <updated>2017-05-06T09:47:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>VSCode 在 v1.10 推出綜觀程式碼區塊的 <code>Minimap</code> 功能，只要在設定檔加入 <code>&quot;editor.minimap.enabled&quot;: true</code> 即可開啟此功能。</p>
+<p>預設的 <code>Minimap</code> 會將程式碼細緻顯示，相對的也增加畫面渲染的負擔，官方也提供 <code>Minimap</code> 使用方塊方式顯示程式碼，這兩種 <code>Minimap</code> 顯示方式的對照如下圖所示，以下說明如何設定。</p>
+<p><img src="http://i.imgur.com/kMuJXPZ.png" alt=""></p>
+<h2 id="設定-Minimap-使用方塊方式顯示程式碼"><a href="#設定-Minimap-使用方塊方式顯示程式碼" class="headerlink" title="設定 Minimap 使用方塊方式顯示程式碼"></a>設定 <code>Minimap</code> 使用方塊方式顯示程式碼</h2><ol>
+<li>執行 <code>command+,</code> 開啟設定 (Open User Settings)</li>
+<li>搜尋 <code>minimap</code> 找到相關設定</li>
+<li>將 <code>&quot;editor.minimap.renderCharacters&quot;: false,</code> 設定為 <code>false</code> 即可。</li>
+</ol>
+<h2 id="VSCode-的-Minimap-功能持續進化中！敬請期待"><a href="#VSCode-的-Minimap-功能持續進化中！敬請期待" class="headerlink" title="VSCode 的 Minimap 功能持續進化中！敬請期待~"></a>VSCode 的 Minimap 功能持續進化中！敬請期待~</h2><p>像是以下功能未來也可能會加入：</p>
+<ul>
+<li>current selection</li>
+<li>editor cursor</li>
+<li>change annotations (i.e. git status)</li>
+<li>find matches</li>
+</ul>
+<p>這邊有相關討論：<br><a href="https://github.com/Microsoft/vscode/issues/20934" target="_blank" rel="external">https://github.com/Microsoft/vscode/issues/20934</a></p>
+<h2 id="聊聊-VSCode-為何漸漸地變成我的開發主力工具"><a href="#聊聊-VSCode-為何漸漸地變成我的開發主力工具" class="headerlink" title="聊聊 VSCode 為何漸漸地變成我的開發主力工具"></a>聊聊 VSCode 為何漸漸地變成我的開發主力工具</h2><p>對開發人員來說，編輯器可是和我們朝夕相處的好夥伴，好不好用、順不順手可是相當重要，用的順手可以讓你開發起來行雲流水，我的編輯器選擇也一路從 Notepad++、Sublime Text，到前陣子也逐漸地從 Sublime Text 轉移到 VSCode 上面來。</p>
+<p>主要是 VSCode 提供了許多原本 Sublime Text 有特色的功能，像是 Sublime 當初很吸引我的 <code>Minimap</code> 功能！現在 VSCode 也支援了！甚至未來還會做得更好(期待)，將有更多的 features 應用在 <code>Minimap</code> 上面。</p>
+<p>VSCode 的生態圈相當活躍，版本更新也相當頻繁(幾乎一個月一版的更新)，而且一直都有令人驚豔的新功能加入，這陣子用下來的確是越用越順手，尤其在面對多種語言開發需求(PHP、JavaScript、Elixir、Shell Script、Golang..)，使用 VSCode 來開發更是行雲流水呀！</p>
+<p>身為一位曾經實際以付費行動來挺 Sublime Text 的支持者，感謝 Sublime Text 曾經帶給我的現代化 Web 開發流暢體驗！在這個時代，有時候其實你並沒有做錯什麼，也沒有哪裡不好，只是這個時代的巨輪滾動的太快，一個閃神不往前就成了一種退步。</p>
+<p>Hi Sublime Text 相信你還是會繼續配伴著我，來擔任我的高級文字編輯器好了。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;VSCode 在 v1.10 推出綜觀程式碼區塊的 &lt;code&gt;Minimap&lt;/code&gt; 功能，只要在設定檔加入 &lt;code&gt;&amp;quot
+    
+    </summary>
+    
+    
+      <category term="Sublime Text" scheme="http://bobochen.com/tags/Sublime-Text/"/>
+    
+      <category term="VSCode" scheme="http://bobochen.com/tags/VSCode/"/>
+    
+  </entry>
   
   <entry>
     <title>如何修改 Redhat / CentOS 7 主機名稱</title>
@@ -620,9 +663,9 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
-    
       <category term="English learning" scheme="http://bobochen.com/tags/English-learning/"/>
+    
+      <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
     
   </entry>
   
@@ -993,34 +1036,6 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
     
     
       <category term="Web Design" scheme="http://bobochen.com/tags/Web-Design/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Rails Beginner Cheat Sheet</title>
-    <link href="http://bobochen.com/ruby/Rails-Beginner-Cheat-Sheet/"/>
-    <id>http://bobochen.com/ruby/Rails-Beginner-Cheat-Sheet/</id>
-    <published>2015-02-23T04:23:39.000Z</published>
-    <updated>2015-09-26T13:29:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<center><img src="/images/2015/Rails_Beginner_Cheat_Sheet.png" alt=""></center>
-
-<h2 id="Rails-Cheat-Sheet-的需求"><a href="#Rails-Cheat-Sheet-的需求" class="headerlink" title="Rails Cheat Sheet 的需求"></a>Rails Cheat Sheet 的需求</h2><p>  起初是 PragTob 在 Rails Girls Berlin 活動所建立的專案，後來發現有不少人有看小抄的需求，確認 release 出來可以造福更多 Rails 社群的朋友，因此在 GitHub 上就有這個專案了 : )</p>
-<h2 id="專案位置"><a href="#專案位置" class="headerlink" title="專案位置"></a>專案位置</h2><p>專案放在GitHub：<a href="https://github.com/PragTob/rails-beginner-cheatsheet" target="_blank" rel="external">https://github.com/PragTob/rails-beginner-cheatsheet</a></p>
-<h2 id="Cheat-Sheet-網頁版"><a href="#Cheat-Sheet-網頁版" class="headerlink" title="Cheat Sheet 網頁版"></a>Cheat Sheet 網頁版</h2><p>Cheat Sheet 網頁版：<a href="http://www.pragtob.info/rails-beginner-cheatsheet/" target="_blank" rel="external">http://www.pragtob.info/rails-beginner-cheatsheet/</a></p>
-<p>也可以直接下載 PDF：<a href="http://www.pragtob.info/rails-beginner-cheatsheet/RailsBeginnerCheatSheet.pdf" target="_blank" rel="external">RailsBeginnerCheatSheet.pdf</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;center&gt;&lt;img src=&quot;/images/2015/Rails_Beginner_Cheat_Sheet.png&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
-
-&lt;h2 id=&quot;Rails-Cheat-Sheet-的需求&quot;&gt;&lt;a href=&quot;#Rails-Cheat-Sheet-
-    
-    </summary>
-    
-    
-      <category term="Rails" scheme="http://bobochen.com/tags/Rails/"/>
     
   </entry>
   

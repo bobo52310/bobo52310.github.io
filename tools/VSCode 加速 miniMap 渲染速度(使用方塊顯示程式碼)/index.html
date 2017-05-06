@@ -4,41 +4,34 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Laravel Models 驗證套件: laravelbook/ardent | Bobo的技術時光屋</title>
+    <title>VSCode 加速 Minimap 顯示速度(使用方塊顯示程式碼) | Bobo的技術時光屋</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Bobo Chen">
     
 
     
-    <meta name="description" content="這套件是 Eloquent Model class 的擴充，可以讓你的 model 更加聰明達到自我驗證。
-對於輸入資料的驗證有許多好用的 functionality, utilities and methods。
-簡單來說可以帶來以下優點：
-優點1:
-將”驗證”從 controller 移到 model
-符合 “fat models, skinny controllers” 原則。
-這樣的 co">
+    <meta name="description" content="前言VSCode 在 v1.10 推出綜觀程式碼區塊的 Minimap 功能，只要在設定檔加入 &amp;quot;editor.minimap.enabled&amp;quot;: true 即可開啟此功能。
+預設的 Minimap 會將程式碼細緻顯示，相對的也增加畫面渲染的負擔，官方也提供 Minimap 使用方塊方式顯示程式碼，這兩種 Minimap 顯示方式的對照如下圖所示，以下說明如何設定。
+
+設定 M">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Laravel Models 驗證套件: laravelbook/ardent">
-<meta property="og:url" content="http://bobochen.com/php/Laravel-Models-驗證套件-laravelbook-ardent/index.html">
+<meta property="og:title" content="VSCode 加速 Minimap 顯示速度(使用方塊顯示程式碼)">
+<meta property="og:url" content="http://bobochen.com/tools/VSCode 加速 miniMap 渲染速度(使用方塊顯示程式碼)/index.html">
 <meta property="og:site_name" content="Bobo的技術時光屋">
-<meta property="og:description" content="這套件是 Eloquent Model class 的擴充，可以讓你的 model 更加聰明達到自我驗證。
-對於輸入資料的驗證有許多好用的 functionality, utilities and methods。
-簡單來說可以帶來以下優點：
-優點1:
-將”驗證”從 controller 移到 model
-符合 “fat models, skinny controllers” 原則。
-這樣的 co">
-<meta property="og:updated_time" content="2015-09-26T06:38:21.000Z">
+<meta property="og:description" content="前言VSCode 在 v1.10 推出綜觀程式碼區塊的 Minimap 功能，只要在設定檔加入 &amp;quot;editor.minimap.enabled&amp;quot;: true 即可開啟此功能。
+預設的 Minimap 會將程式碼細緻顯示，相對的也增加畫面渲染的負擔，官方也提供 Minimap 使用方塊方式顯示程式碼，這兩種 Minimap 顯示方式的對照如下圖所示，以下說明如何設定。
+
+設定 M">
+<meta property="og:image" content="http://i.imgur.com/kMuJXPZ.png">
+<meta property="og:updated_time" content="2017-05-06T09:47:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Laravel Models 驗證套件: laravelbook/ardent">
-<meta name="twitter:description" content="這套件是 Eloquent Model class 的擴充，可以讓你的 model 更加聰明達到自我驗證。
-對於輸入資料的驗證有許多好用的 functionality, utilities and methods。
-簡單來說可以帶來以下優點：
-優點1:
-將”驗證”從 controller 移到 model
-符合 “fat models, skinny controllers” 原則。
-這樣的 co">
+<meta name="twitter:title" content="VSCode 加速 Minimap 顯示速度(使用方塊顯示程式碼)">
+<meta name="twitter:description" content="前言VSCode 在 v1.10 推出綜觀程式碼區塊的 Minimap 功能，只要在設定檔加入 &amp;quot;editor.minimap.enabled&amp;quot;: true 即可開啟此功能。
+預設的 Minimap 會將程式碼細緻顯示，相對的也增加畫面渲染的負擔，官方也提供 Minimap 使用方塊方式顯示程式碼，這兩種 Minimap 顯示方式的對照如下圖所示，以下說明如何設定。
+
+設定 M">
+<meta name="twitter:image" content="http://i.imgur.com/kMuJXPZ.png">
 <link rel="publisher" href="u/0/communities/116944928466340599471">
 
     
@@ -99,14 +92,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/php/Laravel-Models-驗證套件-laravelbook-ardent/" title="Laravel Models 驗證套件: laravelbook/ardent" itemprop="url">Laravel Models 驗證套件: laravelbook/ardent</a>
+      <a href="/tools/VSCode 加速 miniMap 渲染速度(使用方塊顯示程式碼)/" title="VSCode 加速 Minimap 顯示速度(使用方塊顯示程式碼)" itemprop="url">VSCode 加速 Minimap 顯示速度(使用方塊顯示程式碼)</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2015-02-20T15:11:48.000Z" itemprop="datePublished"> 发表于 2015-02-20</time>
+    <time datetime="2017-04-28T00:57:04.000Z" itemprop="datePublished"> 发表于 2017-04-28</time>
     
   </p>
 </header>
@@ -115,19 +108,31 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#設定-Minimap-使用方塊方式顯示程式碼"><span class="toc-number">1.1.</span> <span class="toc-text">設定 Minimap 使用方塊方式顯示程式碼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VSCode-的-Minimap-功能持續進化中！敬請期待"><span class="toc-number">1.2.</span> <span class="toc-text">VSCode 的 Minimap 功能持續進化中！敬請期待~</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#聊聊-VSCode-為何漸漸地變成我的開發主力工具"><span class="toc-number">1.3.</span> <span class="toc-text">聊聊 VSCode 為何漸漸地變成我的開發主力工具</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p>這套件是 Eloquent Model class 的擴充，可以讓你的 model 更加聰明達到自我驗證。</p>
-<p>對於輸入資料的驗證有許多好用的 functionality, utilities and methods。</p>
-<p>簡單來說可以帶來以下優點：</p>
-<p>優點1:</p>
-<p>將”驗證”從 controller 移到 model</p>
-<p>符合 “fat models, skinny controllers” 原則。</p>
-<p>這樣的 code 組織方式可提升專案的可讀性與維護性。</p>
-<p>本篇也舉例，若是需求變動此時要 RESTful API for the mobile，用一般的方法會在 controller 複製出相同的程式碼，這也違反 DRY (Don’t Repeat Yourself) 原則，</p>
-<p>較佳做法是在 model 建立 signup() 方法，同時用來處理 Web/Mobile …等。</p>
+		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>VSCode 在 v1.10 推出綜觀程式碼區塊的 <code>Minimap</code> 功能，只要在設定檔加入 <code>&quot;editor.minimap.enabled&quot;: true</code> 即可開啟此功能。</p>
+<p>預設的 <code>Minimap</code> 會將程式碼細緻顯示，相對的也增加畫面渲染的負擔，官方也提供 <code>Minimap</code> 使用方塊方式顯示程式碼，這兩種 <code>Minimap</code> 顯示方式的對照如下圖所示，以下說明如何設定。</p>
+<p><img src="http://i.imgur.com/kMuJXPZ.png" alt=""></p>
+<h2 id="設定-Minimap-使用方塊方式顯示程式碼"><a href="#設定-Minimap-使用方塊方式顯示程式碼" class="headerlink" title="設定 Minimap 使用方塊方式顯示程式碼"></a>設定 <code>Minimap</code> 使用方塊方式顯示程式碼</h2><ol>
+<li>執行 <code>command+,</code> 開啟設定 (Open User Settings)</li>
+<li>搜尋 <code>minimap</code> 找到相關設定</li>
+<li>將 <code>&quot;editor.minimap.renderCharacters&quot;: false,</code> 設定為 <code>false</code> 即可。</li>
+</ol>
+<h2 id="VSCode-的-Minimap-功能持續進化中！敬請期待"><a href="#VSCode-的-Minimap-功能持續進化中！敬請期待" class="headerlink" title="VSCode 的 Minimap 功能持續進化中！敬請期待~"></a>VSCode 的 Minimap 功能持續進化中！敬請期待~</h2><p>像是以下功能未來也可能會加入：</p>
+<ul>
+<li>current selection</li>
+<li>editor cursor</li>
+<li>change annotations (i.e. git status)</li>
+<li>find matches</li>
+</ul>
+<p>這邊有相關討論：<br><a href="https://github.com/Microsoft/vscode/issues/20934" target="_blank" rel="external">https://github.com/Microsoft/vscode/issues/20934</a></p>
+<h2 id="聊聊-VSCode-為何漸漸地變成我的開發主力工具"><a href="#聊聊-VSCode-為何漸漸地變成我的開發主力工具" class="headerlink" title="聊聊 VSCode 為何漸漸地變成我的開發主力工具"></a>聊聊 VSCode 為何漸漸地變成我的開發主力工具</h2><p>對開發人員來說，編輯器可是和我們朝夕相處的好夥伴，好不好用、順不順手可是相當重要，用的順手可以讓你開發起來行雲流水，我的編輯器選擇也一路從 Notepad++、Sublime Text，到前陣子也逐漸地從 Sublime Text 轉移到 VSCode 上面來。</p>
+<p>主要是 VSCode 提供了許多原本 Sublime Text 有特色的功能，像是 Sublime 當初很吸引我的 <code>Minimap</code> 功能！現在 VSCode 也支援了！甚至未來還會做得更好(期待)，將有更多的 features 應用在 <code>Minimap</code> 上面。</p>
+<p>VSCode 的生態圈相當活躍，版本更新也相當頻繁(幾乎一個月一版的更新)，而且一直都有令人驚豔的新功能加入，這陣子用下來的確是越用越順手，尤其在面對多種語言開發需求(PHP、JavaScript、Elixir、Shell Script、Golang..)，使用 VSCode 來開發更是行雲流水呀！</p>
+<p>身為一位曾經實際以付費行動來挺 Sublime Text 的支持者，感謝 Sublime Text 曾經帶給我的現代化 Web 開發流暢體驗！在這個時代，有時候其實你並沒有做錯什麼，也沒有哪裡不好，只是這個時代的巨輪滾動的太快，一個閃神不往前就成了一種退步。</p>
+<p>Hi Sublime Text 相信你還是會繼續配伴著我，來擔任我的高級文字編輯器好了。</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -136,7 +141,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Laravel/">Laravel</a>
+  <span></span> <a href="/tags/Sublime-Text/">Sublime Text</a><a href="/tags/VSCode/">VSCode</a>
   </div>
 
 </div>
@@ -145,7 +150,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://bobochen.com/php/Laravel-Models-驗證套件-laravelbook-ardent/" data-title="Laravel Models 驗證套件: laravelbook/ardent | Bobo的技術時光屋" data-tsina="null" class="share clearfix">
+	  <div data-url="http://bobochen.com/tools/VSCode 加速 miniMap 渲染速度(使用方塊顯示程式碼)/" data-title="VSCode 加速 Minimap 顯示速度(使用方塊顯示程式碼) | Bobo的技術時光屋" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -158,19 +163,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/php/Laravel-套件-Sqli：讓-Artisan-提供-SQL-互動介面/" title="Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/server-os/將-Server-端檔案同步於本機，並可使用-Sublime-Text-進行編輯/"  title="將 Server 端檔案同步於本機，並可使用 Sublime Text 進行編輯">
+<a href="/server-os/centOS7-hostnamectl/"  title="如何修改 Redhat / CentOS 7 主機名稱">
  <strong>下一篇：</strong><br/> 
- <span>將 Server 端檔案同步於本機，並可使用 Sublime Text 進行編輯
+ <span>如何修改 Redhat / CentOS 7 主機名稱
 </span>
 </a>
 </div>
@@ -191,7 +188,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#設定-Minimap-使用方塊方式顯示程式碼"><span class="toc-number">1.1.</span> <span class="toc-text">設定 Minimap 使用方塊方式顯示程式碼</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VSCode-的-Minimap-功能持續進化中！敬請期待"><span class="toc-number">1.2.</span> <span class="toc-text">VSCode 的 Minimap 功能持續進化中！敬請期待~</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#聊聊-VSCode-為何漸漸地變成我的開發主力工具"><span class="toc-number">1.3.</span> <span class="toc-text">聊聊 VSCode 為何漸漸地變成我的開發主力工具</span></a></li></ol></li></ol>
  
   </div>
 

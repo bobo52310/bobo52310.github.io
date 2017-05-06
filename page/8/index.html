@@ -82,6 +82,85 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/php/Laravel-套件-Sqli：讓-Artisan-提供-SQL-互動介面/" title="Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面" itemprop="url">Laravel 套件 Sqli：讓 Artisan 提供 SQL 互動介面</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2015-02-21T04:23:58.000Z" itemprop="datePublished"> 发表于 2015-02-21</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <center><img src="/images/2015/sqli_05.png" alt=""></center>
+
+
+<h2 id="簡介-Sqli"><a href="#簡介-Sqli" class="headerlink" title="簡介 Sqli"></a>簡介 Sqli</h2><p>sqli 是一個有趣的 Laravel 4 套件(by Antonio Ribeiro)，可以擴充 Artisan 功能，使其可以執行 SQL 查詢語句。<br>類似像 tinker 那樣可以互動介面來與你的 Laravel 應用程式互動(包含操作 Eloquent)</p>
+<h2 id="安裝方式："><a href="#安裝方式：" class="headerlink" title="安裝方式："></a>安裝方式：</h2><ol>
+<li><p>使用 composer 安裝，只要在命令列環境下輸入<br> <code>$ composer require &quot;pragmarx/sqli&quot; &quot;0.*&quot;</code></p>
+</li>
+<li><p>service provider to your app/config/app.php:<br> <code>&#39;PragmaRX\SqlI\Vendor\Laravel\ServiceProvider&#39;,</code></p>
+</li>
+</ol>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><ol>
+<li>進入 SQL 互動畫面<br><code>$ php artisan sqli</code></li>
+<li>輸入 SQL 查詢字串<br><code>$ postgresql:laravel&gt; select email from users;</code></li>
+</ol>
+<p>即可得到 SQL 查詢結果</p>
+<pre><code>+----+------------------------------+
+| id | email                        |
++----+------------------------------+
+|  1 | arnold@schwarzenegger.com    |
+|  2 | danny@devito.com             |
++----+------------------------------+
+</code></pre><p>GitHub：<a href="https://github.com/antonioribeiro/sqli" target="_blank" rel="external">antonioribeiro/sqli</a></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Laravel/">Laravel</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/php/Laravel-套件-Sqli：讓-Artisan-提供-SQL-互動介面/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/php/Laravel-Models-驗證套件-laravelbook-ardent/" title="Laravel Models 驗證套件: laravelbook/ardent" itemprop="url">Laravel Models 驗證套件: laravelbook/ardent</a>
   </h1>
   <p class="article-author">By
@@ -210,66 +289,6 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/server-os/關於網站開發團隊資訊的-humans-txt-檔案/" title="關於網站開發團隊資訊的 humans.txt 檔案" itemprop="url">關於網站開發團隊資訊的 humans.txt 檔案</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2014-12-06T05:30:53.000Z" itemprop="datePublished"> 发表于 2014-12-06</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <center><img src="/images/2014/01-what-is-humans-txt.png" alt=""></center>
-
-<p>相較於 robots.txt 檔案，關於網站開發團隊資訊的 humans.txt 相對少人知道，</p>
-<p>好奇查了幾個網站：</p>
-<p>GitHub：把團隊成員名單列出，還附上他們各自的 GitHub</p>
-<p><a href="https://github.com/humans.txt" target="_blank" rel="external">https://github.com/humans.txt</a> </p>
-<p>而 Google 則是附上應徵的網址XD</p>
-<p><a href="https://www.google.com.tw/humans.txt" target="_blank" rel="external">https://www.google.com.tw/humans.txt</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/server-os/關於網站開發團隊資訊的-humans-txt-檔案/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/7/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/">6</a><a class="page-number" href="/page/7/">7</a><span class="page-number current">8</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><a class="page-number" href="/page/11/">11</a><a class="extend next" rel="next" href="/page/9/">Next<span></span></a>
@@ -304,15 +323,15 @@
 			
 		
 			
+				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>4</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/電腦筆記/" title="電腦筆記">電腦筆記<sup>4</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>3</sup></a></li>
 			
 		
 			
@@ -328,15 +347,15 @@
 			
 		
 			
-				<li><a href="/tags/開發工具/" title="開發工具">開發工具<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
+				<li><a href="/tags/開發工具/" title="開發工具">開發工具<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
 			
 		
 			
@@ -344,7 +363,7 @@
 			
 		
 			
-				<li><a href="/tags/IntelliJ/" title="IntelliJ">IntelliJ<sup>1</sup></a></li>
+				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
 			
 		
 			
@@ -352,7 +371,7 @@
 			
 		
 			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
+				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
 			
 		
 			
@@ -368,15 +387,15 @@
 			
 		
 			
+				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/好書推薦/" title="好書推薦">好書推薦<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
 			
 		
 		</ul>
