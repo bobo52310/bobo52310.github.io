@@ -82,9 +82,9 @@
     </summary>
     
     
-      <category term="Linux" scheme="http://bobochen.com/tags/Linux/"/>
-    
       <category term="CentOS" scheme="http://bobochen.com/tags/CentOS/"/>
+    
+      <category term="Linux" scheme="http://bobochen.com/tags/Linux/"/>
     
   </entry>
   
@@ -147,6 +147,56 @@
       <category term="Elixir" scheme="http://bobochen.com/tags/Elixir/"/>
     
       <category term="好書推薦" scheme="http://bobochen.com/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 CentOS 7 上開啟 Laravel 所需的 PHP Extension</title>
+    <link href="http://bobochen.com/php/%E5%9C%A8%20CentOS%207%20%E4%B8%8A%E9%96%8B%E5%95%9F%20Laravel%20%E6%89%80%E9%9C%80%E7%9A%84%20PHP%20Extension/"/>
+    <id>http://bobochen.com/php/在 CentOS 7 上開啟 Laravel 所需的 PHP Extension/</id>
+    <published>2016-09-01T15:28:33.000Z</published>
+    <updated>2017-05-06T10:21:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Laravel-所需的-PHP-Extension"><a href="#Laravel-所需的-PHP-Extension" class="headerlink" title="Laravel 所需的 PHP Extension"></a>Laravel 所需的 PHP Extension</h1><ul>
+<li>OpenSSL PHP Extension</li>
+<li>PDO PHP Extension</li>
+<li>Mbstring PHP Extension</li>
+<li>Tokenizer PHP Extension</li>
+</ul>
+<h2 id="尚未開啟前，顯示以下錯誤訊息："><a href="#尚未開啟前，顯示以下錯誤訊息：" class="headerlink" title="尚未開啟前，顯示以下錯誤訊息："></a>尚未開啟前，顯示以下錯誤訊息：</h2><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">&gt; <span class="comment"># composer install</span></span></div><div class="line">Loading composer repositories with package information</div><div class="line">Installing dependencies (including require-dev) from lock file</div><div class="line">Your requirements could not be resolved to an installable set of packages.</div><div class="line"></div><div class="line">  Problem 1</div><div class="line">    -<span class="ruby"> Installation request <span class="keyword">for</span> laravel/framework v5.<span class="number">3.21</span> -&gt; satisfiable by laravel/framework[v5.<span class="number">3.21</span>].</span></div><div class="line">    -<span class="ruby"> laravel/framework v5.<span class="number">3.21</span> requires ext-mbstring * -&gt; the requested PHP extension mbstring is missing from your system.</span></div><div class="line">  Problem 2</div><div class="line">    -<span class="ruby"> Installation request <span class="keyword">for</span> phpunit/phpunit <span class="number">5.6</span>.<span class="number">2</span> -&gt; satisfiable by phpunit/phpunit[<span class="number">5.6</span>.<span class="number">2</span>].</span></div><div class="line">    -<span class="ruby"> phpunit/phpunit <span class="number">5.6</span>.<span class="number">2</span> requires ext-dom * -&gt; the requested PHP extension dom is missing from your system.</span></div><div class="line"></div><div class="line">  To enable extensions, verify that they are enabled in those .ini files:</div><div class="line">    -<span class="ruby"> /etc/php.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/bz2.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/calendar.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/ctype.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/curl.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/exif.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/fileinfo.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/ftp.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/gettext.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/gmp.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/iconv.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/json.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/opcache.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/phar.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/shmop.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/simplexml.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/sockets.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/tokenizer.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/xml.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/zip.ini</span></div><div class="line">  You can also run `php --ini` inside terminal to see which files are used by PHP in CLI mode.</div></pre></td></tr></table></figure>
+<h2 id="檢視目前開啟的-PHP-Configuration-File"><a href="#檢視目前開啟的-PHP-Configuration-File" class="headerlink" title="檢視目前開啟的 PHP Configuration File"></a>檢視目前開啟的 PHP Configuration File</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">$ php --ini</div><div class="line">Configuration File (php.ini) Path: /etc</div><div class="line">Loaded Configuration File:         /etc/php<span class="selector-class">.ini</span></div><div class="line">Scan <span class="keyword">for</span> additional <span class="selector-class">.ini</span> files <span class="keyword">in</span>: /etc/php<span class="selector-class">.d</span></div><div class="line">Additional <span class="selector-class">.ini</span> files parsed:      /etc/php.d/bz2<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/calendar<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/ctype<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/curl<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/exif<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/fileinfo<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/ftp<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/gettext<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/gmp<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/iconv<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/json<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/opcache<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/phar<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/shmop<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/simplexml<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/sockets<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/tokenizer<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/xml<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/zip.ini</div></pre></td></tr></table></figure>
+<h3 id="設定-php-ini"><a href="#設定-php-ini" class="headerlink" title="設定 php.ini"></a>設定 php.ini</h3><p><code>Loaded Configuration File:         /etc/php.ini</code></p>
+<p>根據 Problem 1 描述，需要安裝 <code>ext-mbstring</code></p>
+<p>可先檢查目前裝了哪些 PHP 的 Modules (檢視後的確沒有 ext-mbstring 這個模組)</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">-&gt; <span class="comment"># php -m</span></div><div class="line">[PHP Modules]</div><div class="line">bz2</div><div class="line">calendar</div><div class="line">Core</div><div class="line">ctype</div><div class="line">curl</div><div class="line"><span class="keyword">date</span></div><div class="line">exif</div><div class="line">file<span class="literal">inf</span>o</div><div class="line">filter</div><div class="line">ftp</div><div class="line">gettext</div><div class="line">gmp</div><div class="line">hash</div><div class="line">iconv</div><div class="line">json</div><div class="line">libxml</div><div class="line">openssl</div><div class="line">pcntl</div><div class="line">pcre</div><div class="line">Phar</div><div class="line">readline</div><div class="line">Reflection</div><div class="line">session</div><div class="line">shmop</div><div class="line">SimpleXML</div><div class="line">sockets</div><div class="line">SPL</div><div class="line">standard</div><div class="line">tokenizer</div><div class="line"><span class="keyword">xml</span></div><div class="line"><span class="title">Zend</span> OPcache</div><div class="line">zip</div><div class="line">zlib</div><div class="line"></div><div class="line">[Zend Modules]</div><div class="line">Zend OPcache</div></pre></td></tr></table></figure>
+<h3 id="開始安裝-php-mbstring"><a href="#開始安裝-php-mbstring" class="headerlink" title="開始安裝 php-mbstring"></a>開始安裝 php-mbstring</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yum <span class="keyword">install</span> php-mbstring</div></pre></td></tr></table></figure>
+<p>錯誤訊息：</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">-&gt; <span class="comment"># yum install php-mbstring</span></div><div class="line">Loaded plugins: fastestmirror</div><div class="line">Loading mirror speeds from cached hostfile</div><div class="line"> * base: download.nus.edu.sg</div><div class="line"> * epel: epel.mirror.angkasa.id</div><div class="line"> * extras: mirror.0x.sg</div><div class="line"> * ius: mirrors.ircam.fr</div><div class="line"> * remi-safe: mirror.innosol.asia</div><div class="line"> * updates: download.nus.edu.sg</div><div class="line"> * webtatic: uk.repo.webtatic.com</div><div class="line">Resolving Dependencies</div><div class="line">--&gt; Running transaction<span class="built_in"> check</span></div><div class="line">---&gt; Package php-mbstring.x86_64 0:5.4.16-36.3.el7_2 will be installed</div><div class="line">--&gt; Processing Dependency: php-common(x86-64) = 5.4.16-36.3.el7_2 for package: php-mbstring-5.4.16-36.3.el7_2.x86_64</div><div class="line">--&gt; Running transaction<span class="built_in"> check</span></div><div class="line">---&gt; Package php-common.x86_64 0:5.4.16-36.3.el7_2 will be installed</div><div class="line">--&gt; Processing Conflict: php70w-common-7.0.12-1.w7.x86_64 conflicts php-common &lt; 7.0</div><div class="line">--&gt; Finished Dependency Resolution</div><div class="line">Error: php70w-common conflicts with php-common-5.4.16-36.3.el7_2.x86_64</div><div class="line"> You could try using --skip-broken to work around the problem</div><div class="line"> You could try running: rpm -Va --nofiles --nodigest</div></pre></td></tr></table></figure>
+<p>可能原因：</p>
+<ul>
+<li>php-common 使用的是 5.4</li>
+<li>需要安裝 php-mbstring for php7</li>
+</ul>
+<h2 id="使用-yum-search-檢查有哪些版本："><a href="#使用-yum-search-檢查有哪些版本：" class="headerlink" title="使用 yum search 檢查有哪些版本："></a>使用 yum search 檢查有哪些版本：</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">-&gt; # yum <span class="built_in">search</span> php-mbstring</div><div class="line">Loaded plugin<span class="variable">s:</span> fastestmirror</div><div class="line">Loading mirror speeds from cached hostfile</div><div class="line"> * base: download.nus.edu.sg</div><div class="line"> * epe<span class="variable">l:</span> epel.mirror.angkasa.id</div><div class="line"> * extra<span class="variable">s:</span> mirror.<span class="number">0</span><span class="keyword">x</span>.sg</div><div class="line"> * <span class="keyword">iu</span><span class="variable">s:</span> syd.mirror.rackspace.<span class="keyword">com</span></div><div class="line"> * remi-safe: mirrors.thzhost.<span class="keyword">com</span></div><div class="line"> * <span class="keyword">update</span><span class="variable">s:</span> download.nus.edu.sg</div><div class="line"> * webtatic: uk.repo.webtatic.<span class="keyword">com</span></div><div class="line">======================================================================================== <span class="keyword">N</span>/S matched: php-mbstring ========================================================================================</div><div class="line">php-mbstring.x86_64 : A module <span class="keyword">for</span> PHP applications which need multi-byte <span class="built_in">string</span> handling</div><div class="line">php56-php-mbstring.x86_64 : A module <span class="keyword">for</span> PHP applications which need multi-byte <span class="built_in">string</span> handling</div><div class="line">php70-php-mbstring.x86_64 : A module <span class="keyword">for</span> PHP applications which need multi-byte <span class="built_in">string</span> handling</div><div class="line">php71-php-mbstring.x86_64 : A module <span class="keyword">for</span> PHP applications which need multi-byte <span class="built_in">string</span> handling</div><div class="line"></div><div class="line">  Name <span class="built_in">and</span> summary matches <span class="keyword">only</span>, use <span class="string">"search all"</span> <span class="keyword">for</span> everything.</div></pre></td></tr></table></figure>
+<p>安裝 php70-php-mbstring.x86_64<br><code>-&gt; # yum install php70-php-mbstring.x86_64</code></p>
+<p>不論是重新編譯或者安裝 php-mbstring 套件, 完成後都要重新啟動 HTTPD 伺服器才會生效。</p>
+<p>重新啟動<br><code>-&gt; # service httpd restart</code></p>
+<p>yum 用法整理：<br><a href="http://www.vixual.net/blog/archives/101" target="_blank" rel="external">http://www.vixual.net/blog/archives/101</a></p>
+<h2 id="補充：在-Apache、Nginx-上面運行-PHP"><a href="#補充：在-Apache、Nginx-上面運行-PHP" class="headerlink" title="補充：在 Apache、Nginx 上面運行 PHP"></a>補充：在 Apache、Nginx 上面運行 PHP</h2><p>Apache 需要安裝 <code>mod_php</code> 這個 Apache module<br>Nginx 需要安裝 <code>PHP-FPM</code> 來運行 PHP code</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;Laravel-所需的-PHP-Extension&quot;&gt;&lt;a href=&quot;#Laravel-所需的-PHP-Extension&quot; class=&quot;headerlink&quot; title=&quot;Laravel 所需的 PHP Extension&quot;&gt;&lt;/a&gt;Laravel 所需的
+    
+    </summary>
+    
+    
+      <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
+    
+      <category term="CentOS" scheme="http://bobochen.com/tags/CentOS/"/>
+    
+      <category term="Linux" scheme="http://bobochen.com/tags/Linux/"/>
     
   </entry>
   
@@ -1008,34 +1058,6 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
     
     
       <category term="Web Design" scheme="http://bobochen.com/tags/Web-Design/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Node.js 框架比較: Express vs. Koa vs. Hapi</title>
-    <link href="http://bobochen.com/notes/Node-js-%E6%A1%86%E6%9E%B6%E6%AF%94%E8%BC%83-Express-vs-Koa-vs-Hapi/"/>
-    <id>http://bobochen.com/notes/Node-js-框架比較-Express-vs-Koa-vs-Hapi/</id>
-    <published>2015-04-02T16:05:47.000Z</published>
-    <updated>2015-09-26T13:12:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<center><img src="/images/2015/VCOE6N7.jpg" alt=""></center>
-
-<p>原文：<a href="https://www.airpair.com/node.js/posts/nodejs-framework-comparison-express-koa-hapi" target="_blank" rel="external">Node.js Framework Comparison: Express vs. Koa vs. Hapi</a></p>
-<p>目前在 Node.js 上面最熱門的 3 套 Framework ，這篇文章從框架的背景與實作一個 Server 和最常用的 Routes 等面向來討論各種框架的特色與優缺點。</p>
-<p>評比結果：還是由最出名的老大哥 Express 在各方面表現亮眼，不管是現有社群資源、框架成熟度都是大推，而 koa 則是後起之秀，最先擁抱 ES6 和 Web component 的思維，也頗值得關注。</p>
-<p>心得：先摸熟 Express ，然後等 ES6 熟悉之後再來摸 koa，或是藉由 koa 來熟悉 ES6 似乎也不錯XD~</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;center&gt;&lt;img src=&quot;/images/2015/VCOE6N7.jpg&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
-
-&lt;p&gt;原文：&lt;a href=&quot;https://www.airpair.com/node.js/posts/nodejs-framework-comparis
-    
-    </summary>
-    
-    
-      <category term="node.js" scheme="http://bobochen.com/tags/node-js/"/>
     
   </entry>
   

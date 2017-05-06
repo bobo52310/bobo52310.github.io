@@ -48,7 +48,7 @@
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
 				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -64,7 +64,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -82,6 +82,142 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/elixir/introduction_to_Elixir/" title="5分鐘快速認識 Elixir 程式語言" itemprop="url">5分鐘快速認識 Elixir 程式語言</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2016-07-08T15:40:30.000Z" itemprop="datePublished"> 發表於 2016-07-08</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="緣起："><a href="#緣起：" class="headerlink" title="緣起："></a>緣起：</h2><p><img src="http://imgur.com/39eqCJu.jpg" alt=""></p>
+<p>最近因為新工作環境要使用 <code>Elixir</code> 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！</p>
+<p>不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD</p>
+<p>另外聽說藉由專案驅動學習是最有效率的…(特別是這種死線緊湊的效果應該又更好 @_@)</p>
+<p>-</p>
+<p>由於今天賺到一天颱風假，趕緊花一個下午快速認識一下 <code>Elixir</code> 這個語言，發現中文的文件好少喔，邊學的同時也隨手整理了一下，分享給大家，以下的資訊有助於我快速入門，希望也有幫助有緣路過的你/妳~</p>
+<p>既然中文資料還不多，我就來貢獻一篇吧！</p>
+<h2 id="Elixir-是啥玩意兒？"><a href="#Elixir-是啥玩意兒？" class="headerlink" title="Elixir 是啥玩意兒？"></a>Elixir 是啥玩意兒？</h2><p>沒聽過是很正常的，目前 Elixir 相關的中文的討論還不多，這門程式語言在台灣還不算很流行，周遭的朋友也都沒聽說有人在玩，反而是我在英國工作的同學說他們公司有在使用！這是我身邊少數聽到有在使用這個語言的公司。話說我們公司也只有 CTO 本人有寫過…</p>
+<p>簡單來說 Elixir 是架構一個在古老語言(Erlang)上面的一個年輕語言，特色簡介如下：</p>
+<ul>
+<li>2013年誕生，相當年輕的程式語言。</li>
+<li>為 <code>Functional programming</code> 可讀性高，也更好維護。</li>
+<li>基於 <code>Erlang VM</code>（BEAM）之上，完全與 <code>Erlang</code> 語言相容，但是語法更親民且並提供更多的功能。</li>
+<li>語法類似 <code>Ruby</code>，因為 <code>Elixir</code> 的創造者 <code>José Valim</code>(葡萄牙文，巴西人) 他也是 <code>Ruby on Rails</code> 的核心團隊成員！難怪有不少 Ruby 的開發者跑來學。</li>
+<li>來多認識一點 Elixir 老爸 <a href="https://www.sitepoint.com/an-interview-with-elixir-creator-jose-valim/" target="_blank" rel="external">「An Interview with Elixir Creator José Valim」</a></li>
+<li>有接近 <code>Ruby</code> 易懂的語法和 <code>Erlang</code> 分散式高效能，可算是 <code>Ruby</code> 跟 <code>Erlang</code> 兩個生出來的小孩。</li>
+<li>偏向動態強型別語言 (變數型別不會在運算中自動轉型) 如同 <code>Ruby</code>、<code>Python</code> 這類動態強型別語言。相較於 <code>PHP</code>、<code>JavaScript</code> 這類語言則是偏向動態弱型別 (自動轉型)</li>
+<li>善於處理 concurrency 問題，利於開發分散式/雲端運算平台。</li>
+<li>Elixir provides a macro system and polymorphism via protocols, both aiming to make the language more extensible</li>
+<li>開發 Web 可以搭配 <code>Phoenix Framework</code> (也是 MVC 架構)</li>
+</ul>
+<h2 id="Elixir-值得學嗎？"><a href="#Elixir-值得學嗎？" class="headerlink" title="Elixir 值得學嗎？"></a>Elixir 值得學嗎？</h2><p>新技術、新語言那麼多！什麼都想學，有這麼多時間嗎？學得完嗎？</p>
+<p>我們該如何評估一門技術是否值得投入寶貴的時間去學習呢？</p>
+<p>就像我當年回「大安高工資訊科」和學弟妹分享的簡報：「<a href="http://www.slideshare.net/bobo52310/ss-48604799" target="_blank" rel="external">軟體工程師的3大試煉</a>」，我們可以使用一些工具來評估一門技術目前是否流行，是否值得投入學習。</p>
+<ul>
+<li>比如我們用 Google Trends 來檢視看看 <a href="https://www.google.com.tw/trends/explore#cat=0-5&amp;q=elixir%20lang&amp;cmpt=q&amp;tz=Asia%2FTaipei" target="_blank" rel="external">Elixir 趨勢</a></li>
+<li>2015 年在 <a href="https://news.ycombinator.com/item?id=9408551" target="_blank" rel="external"><code>Hacker News</code></a> 有一些討論，開始被比較多人關注。</li>
+<li>台灣社群約莫在 2016 年初開始關注，Facebook 社團「<a href="https://www.facebook.com/groups/elixir.tw/" target="_blank" rel="external">Elixir Taiwan</a>」也是約莫在此時成立。</li>
+<li>國內外社群逐漸活躍，生態圈越來越豐富，有一種當年接觸早期 Laravel Framework 整要起步的感覺。</li>
+</ul>
+<blockquote>
+<p>不過說實在的講這麼多，凡是專案要用到的、主管要你用的，你就認命乖乖學吧~ 哈哈</p>
+</blockquote>
+<h2 id="有哪些公司使用-Elixir？"><a href="#有哪些公司使用-Elixir？" class="headerlink" title="有哪些公司使用 Elixir？"></a>有哪些公司使用 Elixir？</h2><ul>
+<li>Pinterest <a href="http://venturebeat.com/2015/12/18/pinterest-elixir/" target="_blank" rel="external">[ref]</a><ul>
+<li>運用在「通知系統」一秒可以傳送 14,000 筆訊息，只需要15台主機。原本用 JAVA 的舊架構則需要 30台主機。而且程式碼檔案大小僅有原本的 1/10 唷！<br>(Pinterest’s notification system now uses Elixir to deliver 14,000 notifications per second)</li>
+<li>核心 API 也用 Elixir 改寫，運行速度比 Memcached-based predecessor 的反應時間還要更快速。<br>(The rate-limiting system for Pinterest’s core application programming interface (API) and Ads API is also now written in Elixir, providing faster response times than its Memcached-based predecessor.)</li>
+</ul>
+</li>
+<li>Brightcove [<a href="http://blog.plataformatec.com.br/2015/08/elixir-in-production-interview-adam-kittelson/" target="_blank" rel="external">ref</a>]<ul>
+<li>使用 Phoenix Framework。讓登入後台的使用者可以關注特定轉檔、修改影片等等事件，並且在完成時通知使用者。</li>
+</ul>
+</li>
+<li>WhatsApp</li>
+<li>Whisper<ul>
+<li>使用 Phoenix Framework。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>更多名單請見：<a href="https://github.com/doomspork/elixir-companies" target="_blank" rel="external">doomspork/elixir-companies</a></p>
+</blockquote>
+<h2 id="有哪些專案使用-Elixir-開發"><a href="#有哪些專案使用-Elixir-開發" class="headerlink" title="有哪些專案使用 Elixir 開發"></a>有哪些專案使用 Elixir 開發</h2><ul>
+<li><a href="https://github.com/pinterest/elixometer" target="_blank" rel="external">Elixometer</a> // Logging library 由 Pinterest 開發釋出</li>
+<li><a href="https://github.com/pinterest/riffed" target="_blank" rel="external">riffed</a> // Provides idiomatic Elixir bindings for Apache Thrift 由 Pinterest 開發釋出</li>
+</ul>
+<h2 id="推薦的-Elixir-相關書籍"><a href="#推薦的-Elixir-相關書籍" class="headerlink" title="推薦的 Elixir 相關書籍"></a>推薦的 Elixir 相關書籍</h2><ul>
+<li><a href="https://www.manning.com/books/elixir-in-action" target="_blank" rel="external">Elixir in Action</a></li>
+<li><a href="https://pragprog.com/book/elixir12/programming-elixir-1-2" target="_blank" rel="external">Programming Elixir 1.2</a></li>
+<li><a href="https://www.packtpub.com/application-development/learning-elixir" target="_blank" rel="external">Learning Elixir</a></li>
+</ul>
+<h2 id="推薦的-Elixir-線上教學資源"><a href="#推薦的-Elixir-線上教學資源" class="headerlink" title="推薦的 Elixir 線上教學資源"></a>推薦的 Elixir 線上教學資源</h2><ul>
+<li><a href="http://elixirschool.com/" target="_blank" rel="external">http://elixirschool.com/</a> // Elixir School 新手入門</li>
+<li><a href="https://github.com/h4cc/awesome-elixir" target="_blank" rel="external">awesome-elixir</a> // Awesome 大補帖系列</li>
+<li><a href="https://hex.pm/" target="_blank" rel="external">https://hex.pm/</a> // The package manager for the Erlang ecosystem</li>
+<li><a href="http://toolbox.elixir.pm/" target="_blank" rel="external">http://toolbox.elixir.pm/</a></li>
+<li><a href="http://play.elixirbyexample.com/" target="_blank" rel="external">Elixir Playground</a> // 線上執行 Elixir code</li>
+<li><a href="http://elixirsips.com/" target="_blank" rel="external">Elixir sips</a> // 付費教學影片，類似 Laracast</li>
+<li><a href="https://media.pragprog.com/titles/elixir/ElixirCheat.pdf" target="_blank" rel="external">ElixirCheat</a> // Elixir 語法和指令小抄</li>
+<li><a href="http://blog.plataformatec.com.br/" target="_blank" rel="external">http://blog.plataformatec.com.br/</a> Elixir 老爸共同創辦的公司公開的技術 Blog</li>
+<li><a href="https://github.com/seven1m/30-days-of-elixir" target="_blank" rel="external">https://github.com/seven1m/30-days-of-elixir</a> // 跟著範例30天學習 Elixir</li>
+</ul>
+<h2 id="補充一下-Erlang-語言："><a href="#補充一下-Erlang-語言：" class="headerlink" title="補充一下 Erlang 語言："></a>補充一下 Erlang 語言：</h2><ul>
+<li>1987 年誕生的老語言，由 Ericsson 開發。早期主要應用在電信業系統，經長年證實其穩定性超高。</li>
+<li><code>Erlang</code> 老爸 <code>Joe Armstrong</code> 當年的<a href="https://drive.google.com/file/d/0B1xAdaVSasm4SXNkN1MzSnM1LUU/view" target="_blank" rel="external">論文中譯版</a>。</li>
+<li><a href="http://joearms.github.io/2013/05/31/a-week-with-elixir.html" target="_blank" rel="external"><code>Erlang</code> 老爸也對 <code>Elixir</code> 讚譽有嘉。</a></li>
+<li>主要的特色是 COP(Concurrency-oriented programming， 平行導向程式設計) 強調程式的容錯處理。</li>
+<li>Facebook Chat 就是用 <a href="https://www.quora.com/Why-was-Erlang-chosen-for-use-in-Facebook-chat" target="_blank" rel="external">Erlang 開發</a></li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Elixir/">Elixir</a><a href="/tags/Phoenix/">Phoenix</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/elixir/introduction_to_Elixir/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/tools/icdiff/" title="icdiff 好用的檔案比對工具，Terminal 環境下用它就對了" itemprop="url">icdiff 好用的檔案比對工具，Terminal 環境下用它就對了</a>
   </h1>
   <p class="article-author">By
@@ -89,7 +225,7 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2016-01-31T14:35:12.000Z" itemprop="datePublished"> Published 2016-01-31</time>
+    <time datetime="2016-01-31T14:35:12.000Z" itemprop="datePublished"> 發表於 2016-01-31</time>
     
   </p>
 </header>
@@ -197,7 +333,7 @@ icdiff $2 $5
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-04T10:24:33.000Z" itemprop="datePublished"> Published 2015-10-04</time>
+    <time datetime="2015-10-04T10:24:33.000Z" itemprop="datePublished"> 發表於 2015-10-04</time>
     
   </p>
 </header>
@@ -281,124 +417,16 @@ icdiff $2 $5
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/notes/從 Blogger 搬家到 Hexo 的第一篇/" title="從 Blogger 搬家到 Hexo 的第一篇" itemprop="url">從 Blogger 搬家到 Hexo 的第一篇</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2015-09-29T15:55:33.000Z" itemprop="datePublished"> Published 2015-09-29</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <center><img src="/images/2015/hexo_github.png" alt=""></center>
-
-<h2 id="搬家源由"><a href="#搬家源由" class="headerlink" title="搬家源由"></a>搬家源由</h2><h3 id="Blogger-不好用嗎？"><a href="#Blogger-不好用嗎？" class="headerlink" title="Blogger 不好用嗎？"></a>Blogger 不好用嗎？</h3><p>不會啊，已經使用好幾年了，<br>有內建很棒的後台，詳細的 Dashboard、WYSIWYG 線上編輯器、版型範本也有多種選擇，當然你想要使用 GA 或是 Google Adsense 等 Google 自家服務更是輕鬆容易，連相簿也整合好 google+ 了，甚至聽說還送你 SEO 優勢(鄉野傳說?)<br>而且輕輕鬆鬆註冊個帳號就可以使用囉。</p>
-<h3 id="Why-改用-Hexo？"><a href="#Why-改用-Hexo？" class="headerlink" title="Why 改用 Hexo？"></a>Why 改用 Hexo？</h3><p>Hexo 沒有很厲害的後台，還需要自己 host server，雖然相較於 Blogger 沒那麼方便，不過卻多了更多練習的機會，以下給自己整理了幾個搬家的理由：</p>
-<ul>
-<li>Hexo 使用 markdown 語法來寫文章，藉此讓自己更熟悉這個語法。<ul>
-<li>雖然之前也可以藉由  <a href="StackEdit.io">StackEdit</a> =&gt; Blogger 但是體驗沒那麼流暢</li>
-</ul>
-</li>
-<li>用 markdown 呈現技術文章的排版效果比較好，讓自己更專心寫些技術文章。</li>
-<li>給自己找個理由實際摸摸 Node.js。</li>
-<li>方便備份，所有的文章單純就是文字檔，完全不需要依賴資料庫。</li>
-<li>最近用 Hexo 似乎比較潮!? 社群內好多朋友都改用了。</li>
-</ul>
-<p>其實除了 Hexo 之外，類似的選擇還評估了 jekyll、Ghost、Octopress，各有各個優缺點，Hexo 明顯的優勢在於 <strong>編譯速度快</strong>、<strong>安裝設定超簡單</strong>，之後整理一下在來分享評估的小小心得。</p>
-<h2 id="搬家心路歷程小記"><a href="#搬家心路歷程小記" class="headerlink" title="搬家心路歷程小記"></a>搬家心路歷程小記</h2><p>原先在 Blogger 前前後後寫了約1百多篇文章，雖然大多是學習過程的雜記，稱不上什麼技術文章，但總是個回憶，捨不得丟棄，因此希望可以有個搬家工具來打包舊文章。</p>
-<blockquote>
-<p>備註：舊版 Blog 位置：<a href="http://bobo52310.blogspot.tw" target="_blank" rel="external">http://bobo52310.blogspot.tw</a></p>
-</blockquote>
-<h3 id="Hexo-官方搬家教學："><a href="#Hexo-官方搬家教學：" class="headerlink" title="Hexo 官方搬家教學："></a>Hexo 官方搬家教學：</h3><p>官方貼心地提供搬家(migration)說明 <a href="https://hexo.io/docs/migration.html" target="_blank" rel="external">https://hexo.io/docs/migration.html</a></p>
-<p>目前有支援以下幾種來源：</p>
-<ul>
-<li>RSS</li>
-<li>Jekyll</li>
-<li>Octopress</li>
-<li>WordPress</li>
-</ul>
-<p>但是沒有看到有支援 Blogger … </p>
-<p>只好請 Google 來幫忙，找到一個看似可用的 npm 套件：<a href="https://www.npmjs.com/package/hexo-migrator-blogger" target="_blank" rel="external">hexo-migrator-blogger</a></p>
-<p>實際測試後，僅僅噴了一些錯誤訊息，無法執行打包舊文章 @_@</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">boboMac :: blog.bobochen.com ‹master*› » hexo migrate blogger <span class="symbol">http:</span>/<span class="regexp">/bobo52310.blogspot.tw/feeds</span><span class="regexp">/posts/default</span>\?alt\=json\&amp;max-results\=<span class="number">10000</span></div><div class="line">Fetching...</div><div class="line">blog.bobochen.com/node_modules/hexo-migrator-blogger/<span class="class"><span class="keyword">lib</span>/<span class="title">migrate</span>.<span class="title">js</span>:25</span></div><div class="line">            var content = item.content[<span class="string">'$t'</span>];</div><div class="line">                                      ^</div><div class="line"><span class="symbol">TypeError:</span> Cannot read property <span class="string">'$t'</span> <span class="keyword">of</span> undefined</div><div class="line">    at blog.bobochen.com/node_modules/hexo-migrator-blogger/<span class="class"><span class="keyword">lib</span>/<span class="title">migrate</span>.<span class="title">js</span>:25:39</span></div></pre></td></tr></table></figure>
-<p>最後還是改用官方教學的 RSS 來源，才成功打包。</p>
-<ul>
-<li><p>這裡會需要從 Blogger 找出 RSS 位置，詳見：<br><a href="http://www.blogger.com/feeds/6977877551634260178/posts/default" target="_blank" rel="external">http://www.blogger.com/feeds/6977877551634260178/posts/default</a></p>
-</li>
-<li><p>以及 Blogger 的 feed urls 規則<br><a href="https://support.google.com/blogger/answer/97933?hl=en" target="_blank" rel="external">https://support.google.com/blogger/answer/97933?hl=en</a><br><code>http://你的blogger帳號.blogspot.com/feeds/posts/default</code></p>
-</li>
-<li><p>找出特定某一篇的 RSS</p>
-<ul>
-<li><code>http://你的blogger帳號.blogspot.com/feeds/postId/comments/default</code></li>
-</ul>
-</li>
-</ul>
-<p>使用 RSS 來源方法雖然可行，但也不是完美，1百多篇僅成功匯出 25 篇…(到 2012.5)</p>
-<p>而且圖片也無法轉換過來 @_@</p>
-<p>有考慮乾脆從 blogger 後台匯出 xml</p>
-<p><code>xml =&gt; web =&gt; hexo converter</code> 或許也是一個方法~</p>
-<h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
-<li><a href="https://hexo.io/zh-tw/docs/deployment.html" target="_blank" rel="external">https://hexo.io/zh-tw/docs/deployment.html</a></li>
-<li><a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">http://blog.fens.me/hexo-blog-github/</a></li>
-</ul>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/版務/">版務</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/notes/從 Blogger 搬家到 Hexo 的第一篇/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/page/2/"><span></span>Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/4/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
 <aside class="clearfix">
 
   
@@ -415,19 +443,19 @@ icdiff $2 $5
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">標簽</p>
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Laravel/" title="Laravel">Laravel<sup>5</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>4</sup></a></li>
+				<li><a href="/tags/Laravel/" title="Laravel">Laravel<sup>6</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/電腦筆記/" title="電腦筆記">電腦筆記<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>4</sup></a></li>
 			
 		
 			
@@ -447,6 +475,14 @@ icdiff $2 $5
 			
 		
 			
+				<li><a href="/tags/CentOS/" title="CentOS">CentOS<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/開發工具/" title="開發工具">開發工具<sup>2</sup></a></li>
 			
 		
@@ -455,31 +491,7 @@ icdiff $2 $5
 			
 		
 			
-				<li><a href="/tags/IntelliJ/" title="IntelliJ">IntelliJ<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/SMS/" title="SMS">SMS<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Vim/" title="Vim">Vim<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Feedly/" title="Feedly">Feedly<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
 			
 		
 			
@@ -487,7 +499,23 @@ icdiff $2 $5
 			
 		
 			
-				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
 			
 		
 			
@@ -495,7 +523,7 @@ icdiff $2 $5
 			
 		
 			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
+				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -503,7 +531,7 @@ icdiff $2 $5
 
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情鏈接</p>
     <ul>
         
           <li>
@@ -549,7 +577,7 @@ icdiff $2 $5
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
 </div>
 
 </aside>
@@ -710,7 +738,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
