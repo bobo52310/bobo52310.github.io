@@ -89,6 +89,35 @@
   </entry>
   
   <entry>
+    <title>如何移除已經被 Git 追蹤的 .DS_Store 檔案</title>
+    <link href="http://bobochen.com/tools/%E5%A6%82%E4%BD%95%E7%A7%BB%E9%99%A4%E5%B7%B2%E7%B6%93%E8%A2%AB%20Git%20%E8%BF%BD%E8%B9%A4%E7%9A%84%20.DS_Store%20%E6%AA%94%E6%A1%88/"/>
+    <id>http://bobochen.com/tools/如何移除已經被 Git 追蹤的 .DS_Store 檔案/</id>
+    <published>2016-11-28T00:57:04.000Z</published>
+    <updated>2017-05-06T10:06:53.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><code>.DS_Store</code> 是 Mac 的一種隱藏文件資料檔，目的在於存貯目錄的自定義屬性。<br>專案在使用 Git 追蹤時，在沒有注意下很容易不小心就出現一堆 <code>.DS_Store</code> 已經被 Git 追蹤。<br>例如這個專案，在使用 <code>git status</code> 檢視目前狀態就會發現…</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">modified:   <span class="selector-class">.DS_Store</span></div><div class="line">modified:   app/<span class="selector-class">.DS_Store</span></div><div class="line">modified:   bootstrap/<span class="selector-class">.DS_Store</span></div><div class="line">modified:   database/<span class="selector-class">.DS_Store</span></div><div class="line">modified:   storage/.DS_Store</div></pre></td></tr></table></figure>
+<h2 id="如何移除掉已經被-git-追蹤的檔案"><a href="#如何移除掉已經被-git-追蹤的檔案" class="headerlink" title="如何移除掉已經被 git 追蹤的檔案"></a>如何移除掉已經被 git 追蹤的檔案</h2><p>可以使用 <code>git rm -f</code> 來移除掉特定的檔案類型</p>
+<p>例如：<code>git rm -f *.DS_Store</code></p>
+<p>如果要移除 repository 內所有的 .DS_Store 檔案<br><code>find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch</code> </p>
+<p>參考來源 </p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder" target="_blank" rel="external">gitignore-all-the-ds-store-files-in-every-folder-and-subfolder</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;&lt;code&gt;.DS_Store&lt;/code&gt; 是 Mac 的一種隱藏文件資料檔，目的在於存貯目錄的自定義屬性。&lt;br&gt;專案在使用 Git 追
+    
+    </summary>
+    
+    
+      <category term="Git" scheme="http://bobochen.com/tags/Git/"/>
+    
+  </entry>
+  
+  <entry>
     <title>(Elixir 好書推薦) Programming Elixir 1.3 by Dave Thomas</title>
     <link href="http://bobochen.com/books-programming-elixir/"/>
     <id>http://bobochen.com/books-programming-elixir/</id>
@@ -1007,35 +1036,6 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
     
     
       <category term="node.js" scheme="http://bobochen.com/tags/node-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RWD、AWD 幾種常見的排版線上切換比較</title>
-    <link href="http://bobochen.com/notes/RWD%E3%80%81AWD-%E5%B9%BE%E7%A8%AE%E5%B8%B8%E8%A6%8B%E7%9A%84%E6%8E%92%E7%89%88%E7%B7%9A%E4%B8%8A%E5%88%87%E6%8F%9B%E6%AF%94%E8%BC%83/"/>
-    <id>http://bobochen.com/notes/RWD、AWD-幾種常見的排版線上切換比較/</id>
-    <published>2015-03-01T04:23:05.000Z</published>
-    <updated>2015-09-26T13:27:05.000Z</updated>
-    
-    <content type="html"><![CDATA[<center><img src="/images/2015/Liquidapsive__Liqui-dap-sive_.png" alt=""></center>
-
-<h2 id="常見的排版線上切換比較"><a href="#常見的排版線上切換比較" class="headerlink" title="常見的排版線上切換比較"></a>常見的排版線上切換比較</h2><p>RWD、AWD 幾種常見的排版線上切換比較</p>
-<p>這幾年在行動裝置的多種解析度需求之下，Responsive Web Design (RWD) 已經成為網頁排版的顯學，除此之外其實還有 Adaptive Web Design (AWD)，你知道他們的差別嗎？<br><a href="http://liquidapsive.com/" target="_blank" rel="external">Liquidapsive</a> 這個網站讓你可以輕鬆地切換RWD、AWD、Liquid layout、Static layout 做個比較，來試試看吧。</p>
-<h2 id="複習兩者差異"><a href="#複習兩者差異" class="headerlink" title="複習兩者差異"></a>複習兩者差異</h2><p>最後來複習一下這兩種 Web Design 實作上的差異：</p>
-<h3 id="RWD"><a href="#RWD" class="headerlink" title="RWD"></a>RWD</h3><p>Responsive Web Design (RWD, 響應式設計)：在瀏覽器端判別裝置的解析度大小，再藉由 CSS3 的 Media Query 方法來載入對應的CSS，讓同一個網頁自動套用不同的 CSS 變化版面配置，。</p>
-<h3 id="AWD"><a href="#AWD" class="headerlink" title="AWD"></a>AWD</h3><p>Adaptive Web Design (AWD, 適應式設計)：由伺服端判斷後，因應不同裝置而回傳不同版本的網頁內容給瀏覽器顯示，這種方式可以針對個別裝置設計一套專屬的檔案，例如小尺寸螢幕有特別設計的 HTML 檔、低解析度的圖檔等等，檔案內容不必包山包海，也因為要針對不同裝置設計不同的流程，相對起來較費工。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;center&gt;&lt;img src=&quot;/images/2015/Liquidapsive__Liqui-dap-sive_.png&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
-
-&lt;h2 id=&quot;常見的排版線上切換比較&quot;&gt;&lt;a href=&quot;#常見的排版線上切換比較&quot; class=&quot;heade
-    
-    </summary>
-    
-    
-      <category term="Web Design" scheme="http://bobochen.com/tags/Web-Design/"/>
     
   </entry>
   
