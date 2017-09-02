@@ -67,7 +67,7 @@ Tokenizer PHP Extension
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
 				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -83,7 +83,7 @@ Tokenizer PHP Extension
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -106,14 +106,14 @@ Tokenizer PHP Extension
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-01T15:28:33.000Z" itemprop="datePublished"> 發表於 2016-09-01</time>
+    <time datetime="2016-09-01T15:28:33.000Z" itemprop="datePublished"> Published 2016-09-01</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目錄</strong>
+			<strong class="toc-title">Contents</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Laravel-所需的-PHP-Extension"><span class="toc-number">1.</span> <span class="toc-text">Laravel 所需的 PHP Extension</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#尚未開啟前，顯示以下錯誤訊息："><span class="toc-number">1.1.</span> <span class="toc-text">尚未開啟前，顯示以下錯誤訊息：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#檢視目前開啟的-PHP-Configuration-File"><span class="toc-number">1.2.</span> <span class="toc-text">檢視目前開啟的 PHP Configuration File</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#設定-php-ini"><span class="toc-number">1.2.1.</span> <span class="toc-text">設定 php.ini</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#開始安裝-php-mbstring"><span class="toc-number">1.2.2.</span> <span class="toc-text">開始安裝 php-mbstring</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-yum-search-檢查有哪些版本："><span class="toc-number">1.3.</span> <span class="toc-text">使用 yum search 檢查有哪些版本：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#補充：在-Apache、Nginx-上面運行-PHP"><span class="toc-number">1.4.</span> <span class="toc-text">補充：在 Apache、Nginx 上面運行 PHP</span></a></li></ol></li></ol>
 		
@@ -203,17 +203,17 @@ Tokenizer PHP Extension
 </section>
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目錄</strong>
+  <strong class="toc-title">Contents</strong>
  
  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Laravel-所需的-PHP-Extension"><span class="toc-number">1.</span> <span class="toc-text">Laravel 所需的 PHP Extension</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#尚未開啟前，顯示以下錯誤訊息："><span class="toc-number">1.1.</span> <span class="toc-text">尚未開啟前，顯示以下錯誤訊息：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#檢視目前開啟的-PHP-Configuration-File"><span class="toc-number">1.2.</span> <span class="toc-text">檢視目前開啟的 PHP Configuration File</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#設定-php-ini"><span class="toc-number">1.2.1.</span> <span class="toc-text">設定 php.ini</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#開始安裝-php-mbstring"><span class="toc-number">1.2.2.</span> <span class="toc-text">開始安裝 php-mbstring</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用-yum-search-檢查有哪些版本："><span class="toc-number">1.3.</span> <span class="toc-text">使用 yum search 檢查有哪些版本：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#補充：在-Apache、Nginx-上面運行-PHP"><span class="toc-number">1.4.</span> <span class="toc-text">補充：在 Apache、Nginx 上面運行 PHP</span></a></li></ol></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -230,7 +230,7 @@ Tokenizer PHP Extension
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -238,19 +238,19 @@ Tokenizer PHP Extension
 			
 		
 			
-				<li><a href="/tags/電腦筆記/" title="電腦筆記">電腦筆記<sup>4</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>3</sup></a></li>
+				<li><a href="/tags/電腦筆記/" title="電腦筆記">電腦筆記<sup>4</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Web-Design/" title="Web Design">Web Design<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>3</sup></a></li>
 			
 		
 			
@@ -282,27 +282,27 @@ Tokenizer PHP Extension
 			
 		
 			
-				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Feedly/" title="Feedly">Feedly<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Git/" title="Git">Git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
 			
 		
 			
@@ -310,7 +310,7 @@ Tokenizer PHP Extension
 			
 		
 			
-				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -318,7 +318,7 @@ Tokenizer PHP Extension
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -364,7 +364,7 @@ Tokenizer PHP Extension
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -627,7 +627,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

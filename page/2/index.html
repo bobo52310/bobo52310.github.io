@@ -48,7 +48,7 @@
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
 				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜單">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -64,7 +64,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -82,6 +82,72 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/tools/如何移除已經被 Git 追蹤的 .DS_Store 檔案/" title="如何移除已經被 Git 追蹤的 .DS_Store 檔案" itemprop="url">如何移除已經被 Git 追蹤的 .DS_Store 檔案</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2016-11-28T00:57:04.000Z" itemprop="datePublished"> Published 2016-11-28</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><code>.DS_Store</code> 是 Mac 的一種隱藏文件資料檔，目的在於存貯目錄的自定義屬性。<br>專案在使用 Git 追蹤時，在沒有注意下很容易不小心就出現一堆 <code>.DS_Store</code> 已經被 Git 追蹤。<br>例如這個專案，在使用 <code>git status</code> 檢視目前狀態就會發現…</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">modified:   <span class="selector-class">.DS_Store</span></div><div class="line">modified:   app/<span class="selector-class">.DS_Store</span></div><div class="line">modified:   bootstrap/<span class="selector-class">.DS_Store</span></div><div class="line">modified:   database/<span class="selector-class">.DS_Store</span></div><div class="line">modified:   storage/.DS_Store</div></pre></td></tr></table></figure>
+<h2 id="如何移除掉已經被-git-追蹤的檔案"><a href="#如何移除掉已經被-git-追蹤的檔案" class="headerlink" title="如何移除掉已經被 git 追蹤的檔案"></a>如何移除掉已經被 git 追蹤的檔案</h2><p>可以使用 <code>git rm -f</code> 來移除掉特定的檔案類型</p>
+<p>例如：<code>git rm -f *.DS_Store</code></p>
+<p>如果要移除 repository 內所有的 .DS_Store 檔案<br><code>find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch</code> </p>
+<p>參考來源 </p>
+<ul>
+<li><a href="http://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder" target="_blank" rel="external">gitignore-all-the-ds-store-files-in-every-folder-and-subfolder</a></li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Git/">Git</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/tools/如何移除已經被 Git 追蹤的 .DS_Store 檔案/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/books-programming-elixir/" title="(Elixir 好書推薦) Programming Elixir 1.3 by Dave Thomas" itemprop="url">(Elixir 好書推薦) Programming Elixir 1.3 by Dave Thomas</a>
   </h1>
   <p class="article-author">By
@@ -89,7 +155,7 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-04T06:45:09.000Z" itemprop="datePublished"> 發表於 2016-09-04</time>
+    <time datetime="2016-09-04T06:45:09.000Z" itemprop="datePublished"> Published 2016-09-04</time>
     
   </p>
 </header>
@@ -156,7 +222,7 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2016-09-01T15:28:33.000Z" itemprop="datePublished"> 發表於 2016-09-01</time>
+    <time datetime="2016-09-01T15:28:33.000Z" itemprop="datePublished"> Published 2016-09-01</time>
     
   </p>
 </header>
@@ -226,75 +292,16 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/elixir/recommend-elixir-editor-ide/" title="推薦 Elixir 好用的開發編輯器" itemprop="url">推薦 Elixir 好用的開發編輯器</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2016-07-23T12:57:04.000Z" itemprop="datePublished"> 發表於 2016-07-23</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p><img src="http://i.imgur.com/oSGvEfI.png" alt=""></p>
-<h4 id="當開發-Elixir-的環境都建置好了，除了可以在-terminal-輸入-iex-開啟-Interactive-mode-來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊-Autocomplete-、Syntax-Highlighting-等等功能，可以讓你開發起來更加行雲流水喔！"><a href="#當開發-Elixir-的環境都建置好了，除了可以在-terminal-輸入-iex-開啟-Interactive-mode-來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊-Autocomplete-、Syntax-Highlighting-等等功能，可以讓你開發起來更加行雲流水喔！" class="headerlink" title="當開發 Elixir 的環境都建置好了，除了可以在 terminal 輸入 iex 開啟 Interactive mode 來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊(Autocomplete)、Syntax Highlighting 等等功能，可以讓你開發起來更加行雲流水喔！"></a>當開發 Elixir 的環境都建置好了，除了可以在 terminal 輸入 <code>iex</code> 開啟 <code>Interactive mode</code> 來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊(Autocomplete)、Syntax Highlighting 等等功能，可以讓你開發起來更加行雲流水喔！</h4><h3 id="這裡推薦-3款-Elixir-的開發工具：Sublime-Text、IntelliJ、Vim。"><a href="#這裡推薦-3款-Elixir-的開發工具：Sublime-Text、IntelliJ、Vim。" class="headerlink" title="這裡推薦 3款 Elixir 的開發工具：Sublime Text、IntelliJ、Vim。"></a>這裡推薦 3款 Elixir 的開發工具：Sublime Text、IntelliJ、Vim。</h3><h3 id="請見以下於公司內部分享的簡報："><a href="#請見以下於公司內部分享的簡報：" class="headerlink" title="請見以下於公司內部分享的簡報："></a>請見以下於公司內部分享的簡報：</h3><p><iframe src="//www.slideshare.net/slideshow/embed_code/key/7Jh1db0Xlm1X" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bobo52310/elixir-64190936" title="Elixir 好用的編輯器" target="_blank">Elixir 好用的編輯器</a> </strong> from <strong><a href="//www.slideshare.net/bobo52310" target="_blank">bobo52310</a></strong> </div></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Elixir/">Elixir</a><a href="/tags/Phoenix/">Phoenix</a><a href="/tags/Sublime-Text/">Sublime Text</a><a href="/tags/IntelliJ/">IntelliJ</a><a href="/tags/Vim/">Vim</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/elixir/recommend-elixir-editor-ide/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
     <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/3/">Next<span></span></a>
   </nav>
 
 </div>
-      <div class="openaside"><a class="navbutton" href="#" title="顯示側邊欄"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隱藏側邊欄"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -311,7 +318,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">標簽</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -319,19 +326,19 @@
 			
 		
 			
-				<li><a href="/tags/電腦筆記/" title="電腦筆記">電腦筆記<sup>4</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>3</sup></a></li>
+				<li><a href="/tags/電腦筆記/" title="電腦筆記">電腦筆記<sup>4</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Web-Design/" title="Web Design">Web Design<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>3</sup></a></li>
 			
 		
 			
@@ -363,27 +370,27 @@
 			
 		
 			
-				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Silex/" title="Silex">Silex<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Symfony/" title="Symfony">Symfony<sup>1</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/App/" title="App">App<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Feedly/" title="Feedly">Feedly<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/RSS/" title="RSS">RSS<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Git/" title="Git">Git<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
 			
 		
 			
@@ -391,7 +398,7 @@
 			
 		
 			
-				<li><a href="/tags/Ptt/" title="Ptt">Ptt<sup>1</sup></a></li>
+				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -399,7 +406,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情鏈接</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -445,7 +452,7 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 訂閱</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -606,7 +613,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回頂部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

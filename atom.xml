@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bobochen.com/"/>
-  <updated>2017-05-06T09:47:11.000Z</updated>
+  <updated>2017-09-02T05:49:32.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -14,6 +14,47 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>3分鐘護一生，關於工作的自我提問</title>
+    <link href="http://bobochen.com/think-about-the-software-developers-career/"/>
+    <id>http://bobochen.com/think-about-the-software-developers-career/</id>
+    <published>2017-09-02T04:55:02.000Z</published>
+    <updated>2017-09-02T05:49:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.imgur.com/StgYfu7.jpg" alt="關於工作的自我提問"></p>
+<p>一個平凡的週六，在運動中心的課程告個段落後，趁著今天老婆不在家，難得給自己一個人獨處的早晨。<br>窩在咖啡店 Coding 忙著公司和客戶的東西，眼神不經意瞄到書報架上有一本天下雜誌，隨手翻閱了一下。</p>
+<p>高績效員工在決定跳槽之前，必然有一連串的自我提問：</p>
+<ul>
+<li>我對我的工作很滿意嗎？</li>
+<li>我喜歡我的經理、我的團隊嗎？</li>
+<li>手上的專案讓我有充實感嗎？</li>
+<li>我在學習嗎？</li>
+<li>我是否受到尊重？</li>
+<li>我有沒有成長？</li>
+<li>我覺得報酬合理嗎？</li>
+<li>這個公司（團隊）有願景嗎？</li>
+<li>我是否相信這個願景？</li>
+<li>我信任公司（團隊）領導人嗎？</li>
+</ul>
+<blockquote>
+<p>天下雜誌的文章：<a href="http://www.cw.com.tw/article/article.action?id=5083943" target="_blank" rel="external">人才難找　8招搞定明星員工</a></p>
+</blockquote>
+<p>古人云：「吾日三省吾身」。</p>
+<p>身為一位忙碌的現代人，似乎忘記了這句簡單的話，</p>
+<p>嗯！的確是該好好自我檢視省思一下了。</p>
+<p>Bobo內心旁白：「有一種自我診斷量表的感覺，各位軟體開發者都應該定期自我檢視一下，3分鐘護一生 (笑)」</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/StgYfu7.jpg&quot; alt=&quot;關於工作的自我提問&quot;&gt;&lt;/p&gt;
+&lt;p&gt;一個平凡的週六，在運動中心的課程告個段落後，趁著今天老婆不在家，難得給自己一個人獨處的早晨。&lt;br&gt;窩在咖啡店 Coding 忙著公司和客戶
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>VSCode 加速 Minimap 顯示速度(使用方塊顯示程式碼)</title>
@@ -742,9 +783,9 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="English learning" scheme="http://bobochen.com/tags/English-learning/"/>
-    
       <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
+    
+      <category term="English learning" scheme="http://bobochen.com/tags/English-learning/"/>
     
   </entry>
   
@@ -1033,31 +1074,6 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
     
     
       <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>各種常用 htaccess 範例大補帖</title>
-    <link href="http://bobochen.com/server-os/%E5%90%84%E7%A8%AE%E5%B8%B8%E7%94%A8-htaccess-%E7%AF%84%E4%BE%8B%E5%A4%A7%E8%A3%9C%E5%B8%96/"/>
-    <id>http://bobochen.com/server-os/各種常用-htaccess-範例大補帖/</id>
-    <published>2015-04-06T02:49:45.000Z</published>
-    <updated>2015-09-26T13:09:41.000Z</updated>
-    
-    <content type="html"><![CDATA[<center><img src="/images/2015/apache-web-server-htaccess-300x206.png" alt=""></center>
-
-<p>一直沒有時間好好去研究 htaccess 的寫法，發現參考別人的範例來學習似乎是個不錯的方法，無意間就在萬能的 GitHub 上發現這個 .htaccess Snippets。<br>而且 Star 數竟然有8千耶(大驚…<br>GitHub：<a href="https://github.com/phanan/htaccess" target="_blank" rel="external">phanan/htaccess</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;center&gt;&lt;img src=&quot;/images/2015/apache-web-server-htaccess-300x206.png&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
-
-&lt;p&gt;一直沒有時間好好去研究 htaccess 的寫法，發現參考別人的範例來學習似乎是個不錯的方法，無
-    
-    </summary>
-    
-    
-      <category term="Web Design" scheme="http://bobochen.com/tags/Web-Design/"/>
     
   </entry>
   
