@@ -82,6 +82,70 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/server-os/centOS7-hostnamectl/" title="如何修改 Redhat / CentOS 7 主機名稱" itemprop="url">如何修改 Redhat / CentOS 7 主機名稱</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
+		
+  <p class="article-time">
+    <time datetime="2017-01-22T01:35:09.000Z" itemprop="datePublished"> Published 2017-01-22</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="檢視主機名稱"><a href="#檢視主機名稱" class="headerlink" title="檢視主機名稱"></a>檢視主機名稱</h1><p>使用 <code>hostnamectl</code> 來檢視主機名稱相關資訊，如下：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">root<span class="variable">@bobochen-vm</span> [<span class="number">01</span>:<span class="number">22</span>:<span class="number">14</span> AM] [~]</div><div class="line">-&gt; $ hostnamectl</div><div class="line">   Static <span class="attribute">hostname</span>: bobochen-vm</div><div class="line">         Icon <span class="attribute">name</span>: computer-vm</div><div class="line">           <span class="attribute">Chassis</span>: vm</div><div class="line">        Machine <span class="attribute">ID</span>: OOOXXX78a943ae8f3cc26602e3</div><div class="line">           Boot <span class="attribute">ID</span>: OOOXXXc0a48a89974cb4b6a66a</div><div class="line">    <span class="attribute">Virtualization</span>: xen</div><div class="line">  Operating <span class="attribute">System</span>: CentOS Linux <span class="number">7</span> (Core)</div><div class="line">       CPE OS <span class="attribute">Name</span>: <span class="attribute">cpe</span>:/<span class="attribute">o</span>:<span class="attribute">centos</span>:<span class="attribute">centos</span>:<span class="number">7</span></div><div class="line">            <span class="attribute">Kernel</span>: Linux <span class="number">3.10</span>.<span class="number">0</span>-<span class="number">327.22</span>.<span class="number">2</span>.el7.x86_64</div><div class="line">      <span class="attribute">Architecture</span>: x86-<span class="number">64</span></div></pre></td></tr></table></figure>
+<p>來看一下官方手冊說明：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">NAME</div><div class="line">       hostnamectl - Control the <span class="built_in">system</span> <span class="built_in">hostname</span></div><div class="line"></div><div class="line">SYNOPSIS</div><div class="line">       hostnamectl [OPTIONS...] &#123;COMMAND&#125;</div><div class="line"></div><div class="line">DESCRIPTION</div><div class="line">       hostnamectl may <span class="keyword">be</span> used <span class="keyword">to</span> query <span class="built_in">and</span> <span class="keyword">change</span> the <span class="built_in">system</span> <span class="built_in">hostname</span> <span class="built_in">and</span> related settings.</div><div class="line"></div><div class="line">       This tool distinguishes three different <span class="built_in">hostname</span><span class="variable">s:</span> the high-level <span class="string">"pretty"</span> <span class="built_in">hostname</span> which might include <span class="keyword">all</span> kinds of special characters</div><div class="line">       (<span class="keyword">e</span>.g. <span class="string">"Lennart's Laptop"</span>), the static <span class="built_in">hostname</span> which <span class="keyword">is</span> used <span class="keyword">to</span> initialize the kernel <span class="built_in">hostname</span> at boot (<span class="keyword">e</span>.g. <span class="string">"lennarts-laptop"</span>), <span class="built_in">and</span></div><div class="line">       the transient <span class="built_in">hostname</span> which <span class="keyword">is</span> <span class="keyword">a</span> default received from network configuration. If <span class="keyword">a</span> static <span class="built_in">hostname</span> <span class="keyword">is</span> <span class="keyword">set</span>, <span class="built_in">and</span> <span class="keyword">is</span> valid (something</div><div class="line">       other than localhost), then the transient <span class="built_in">hostname</span> <span class="keyword">is</span> not used.</div><div class="line"></div><div class="line">       Note that the pretty <span class="built_in">hostname</span> <span class="built_in">has</span> little restrictions <span class="keyword">on</span> the characters used, <span class="keyword">while</span> the static <span class="built_in">and</span> transient hostnames are limited <span class="keyword">to</span></div><div class="line">       the usually accepted characters of Internet domain names.</div><div class="line"></div><div class="line">       The static <span class="built_in">hostname</span> <span class="keyword">is</span> stored in /etc/<span class="built_in">hostname</span>, see <span class="built_in">hostname</span>(<span class="number">5</span>) <span class="keyword">for</span> more information. The pretty <span class="built_in">hostname</span>, chassis <span class="built_in">type</span>, <span class="built_in">and</span> icon name</div><div class="line">       are stored in /etc/machine-info, see machine-info(<span class="number">5</span>).</div><div class="line"></div><div class="line">       Use systemd-firstboot(<span class="number">1</span>) <span class="keyword">to</span> initialize the <span class="built_in">system</span> host name <span class="keyword">for</span> mounted (but not booted) <span class="built_in">system</span> images.</div></pre></td></tr></table></figure>
+<h1 id="修改主機名稱"><a href="#修改主機名稱" class="headerlink" title="修改主機名稱"></a>修改主機名稱</h1><p>使用 <code>hostnamectl  set-hostname [Host Name]</code> 來修改主機名稱</p>
+<figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="string">hostnamectl </span> <span class="built_in">set-hostname</span> <span class="string">server-www1</span></div></pre></td></tr></table></figure>
+<p>設定後，我們可以再用 <code>hostnamectl</code> 檢查看看是否生效。</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/CentOS/">CentOS</a><a href="/tags/Linux/">Linux</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/server-os/centOS7-hostnamectl/#disqus_thread" class="comments-count-link">Comments</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/tools/如何移除已經被 Git 追蹤的 .DS_Store 檔案/" title="如何移除已經被 Git 追蹤的 .DS_Store 檔案" itemprop="url">如何移除已經被 Git 追蹤的 .DS_Store 檔案</a>
   </h1>
   <p class="article-author">By
@@ -209,92 +273,9 @@
 
 
 
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/php/在 CentOS 7 上開啟 Laravel 所需的 PHP Extension/" title="在 CentOS 7 上開啟 Laravel 所需的 PHP Extension" itemprop="url">在 CentOS 7 上開啟 Laravel 所需的 PHP Extension</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-01T15:28:33.000Z" itemprop="datePublished"> Published 2016-09-01</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <h1 id="Laravel-所需的-PHP-Extension"><a href="#Laravel-所需的-PHP-Extension" class="headerlink" title="Laravel 所需的 PHP Extension"></a>Laravel 所需的 PHP Extension</h1><ul>
-<li>OpenSSL PHP Extension</li>
-<li>PDO PHP Extension</li>
-<li>Mbstring PHP Extension</li>
-<li>Tokenizer PHP Extension</li>
-</ul>
-<h2 id="尚未開啟前，顯示以下錯誤訊息："><a href="#尚未開啟前，顯示以下錯誤訊息：" class="headerlink" title="尚未開啟前，顯示以下錯誤訊息："></a>尚未開啟前，顯示以下錯誤訊息：</h2><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">-<span class="ruby">&gt; <span class="comment"># composer install</span></span></div><div class="line">Loading composer repositories with package information</div><div class="line">Installing dependencies (including require-dev) from lock file</div><div class="line">Your requirements could not be resolved to an installable set of packages.</div><div class="line"></div><div class="line">  Problem 1</div><div class="line">    -<span class="ruby"> Installation request <span class="keyword">for</span> laravel/framework v5.<span class="number">3.21</span> -&gt; satisfiable by laravel/framework[v5.<span class="number">3.21</span>].</span></div><div class="line">    -<span class="ruby"> laravel/framework v5.<span class="number">3.21</span> requires ext-mbstring * -&gt; the requested PHP extension mbstring is missing from your system.</span></div><div class="line">  Problem 2</div><div class="line">    -<span class="ruby"> Installation request <span class="keyword">for</span> phpunit/phpunit <span class="number">5.6</span>.<span class="number">2</span> -&gt; satisfiable by phpunit/phpunit[<span class="number">5.6</span>.<span class="number">2</span>].</span></div><div class="line">    -<span class="ruby"> phpunit/phpunit <span class="number">5.6</span>.<span class="number">2</span> requires ext-dom * -&gt; the requested PHP extension dom is missing from your system.</span></div><div class="line"></div><div class="line">  To enable extensions, verify that they are enabled in those .ini files:</div><div class="line">    -<span class="ruby"> /etc/php.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/bz2.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/calendar.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/ctype.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/curl.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/exif.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/fileinfo.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/ftp.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/gettext.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/gmp.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/iconv.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/json.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/opcache.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/phar.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/shmop.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/simplexml.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/sockets.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/tokenizer.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/xml.ini</span></div><div class="line">    -<span class="ruby"> /etc/php.d/zip.ini</span></div><div class="line">  You can also run `php --ini` inside terminal to see which files are used by PHP in CLI mode.</div></pre></td></tr></table></figure>
-<h2 id="檢視目前開啟的-PHP-Configuration-File"><a href="#檢視目前開啟的-PHP-Configuration-File" class="headerlink" title="檢視目前開啟的 PHP Configuration File"></a>檢視目前開啟的 PHP Configuration File</h2><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">$ php --ini</div><div class="line">Configuration File (php.ini) Path: /etc</div><div class="line">Loaded Configuration File:         /etc/php<span class="selector-class">.ini</span></div><div class="line">Scan <span class="keyword">for</span> additional <span class="selector-class">.ini</span> files <span class="keyword">in</span>: /etc/php<span class="selector-class">.d</span></div><div class="line">Additional <span class="selector-class">.ini</span> files parsed:      /etc/php.d/bz2<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/calendar<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/ctype<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/curl<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/exif<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/fileinfo<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/ftp<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/gettext<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/gmp<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/iconv<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/json<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/opcache<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/phar<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/shmop<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/simplexml<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/sockets<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/tokenizer<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/xml<span class="selector-class">.ini</span>,</div><div class="line">/etc/php.d/zip.ini</div></pre></td></tr></table></figure>
-<h3 id="設定-php-ini"><a href="#設定-php-ini" class="headerlink" title="設定 php.ini"></a>設定 php.ini</h3><p><code>Loaded Configuration File:         /etc/php.ini</code></p>
-<p>根據 Problem 1 描述，需要安裝 <code>ext-mbstring</code></p>
-<p>可先檢查目前裝了哪些 PHP 的 Modules (檢視後的確沒有 ext-mbstring 這個模組)</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">-&gt; <span class="comment"># php -m</span></div><div class="line">[PHP Modules]</div><div class="line">bz2</div><div class="line">calendar</div><div class="line">Core</div><div class="line">ctype</div><div class="line">curl</div><div class="line"><span class="keyword">date</span></div><div class="line">exif</div><div class="line">file<span class="literal">inf</span>o</div><div class="line">filter</div><div class="line">ftp</div><div class="line">gettext</div><div class="line">gmp</div><div class="line">hash</div><div class="line">iconv</div><div class="line">json</div><div class="line">libxml</div><div class="line">openssl</div><div class="line">pcntl</div><div class="line">pcre</div><div class="line">Phar</div><div class="line">readline</div><div class="line">Reflection</div><div class="line">session</div><div class="line">shmop</div><div class="line">SimpleXML</div><div class="line">sockets</div><div class="line">SPL</div><div class="line">standard</div><div class="line">tokenizer</div><div class="line"><span class="keyword">xml</span></div><div class="line"><span class="title">Zend</span> OPcache</div><div class="line">zip</div><div class="line">zlib</div><div class="line"></div><div class="line">[Zend Modules]</div><div class="line">Zend OPcache</div></pre></td></tr></table></figure>
-<h3 id="開始安裝-php-mbstring"><a href="#開始安裝-php-mbstring" class="headerlink" title="開始安裝 php-mbstring"></a>開始安裝 php-mbstring</h3><figure class="highlight cmake"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ yum <span class="keyword">install</span> php-mbstring</div></pre></td></tr></table></figure>
-<p>錯誤訊息：</p>
-<figure class="highlight smali"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">-&gt; <span class="comment"># yum install php-mbstring</span></div><div class="line">Loaded plugins: fastestmirror</div><div class="line">Loading mirror speeds from cached hostfile</div><div class="line"> * base: download.nus.edu.sg</div><div class="line"> * epel: epel.mirror.angkasa.id</div><div class="line"> * extras: mirror.0x.sg</div><div class="line"> * ius: mirrors.ircam.fr</div><div class="line"> * remi-safe: mirror.innosol.asia</div><div class="line"> * updates: download.nus.edu.sg</div><div class="line"> * webtatic: uk.repo.webtatic.com</div><div class="line">Resolving Dependencies</div><div class="line">--&gt; Running transaction<span class="built_in"> check</span></div><div class="line">---&gt; Package php-mbstring.x86_64 0:5.4.16-36.3.el7_2 will be installed</div><div class="line">--&gt; Processing Dependency: php-common(x86-64) = 5.4.16-36.3.el7_2 for package: php-mbstring-5.4.16-36.3.el7_2.x86_64</div><div class="line">--&gt; Running transaction<span class="built_in"> check</span></div><div class="line">---&gt; Package php-common.x86_64 0:5.4.16-36.3.el7_2 will be installed</div><div class="line">--&gt; Processing Conflict: php70w-common-7.0.12-1.w7.x86_64 conflicts php-common &lt; 7.0</div><div class="line">--&gt; Finished Dependency Resolution</div><div class="line">Error: php70w-common conflicts with php-common-5.4.16-36.3.el7_2.x86_64</div><div class="line"> You could try using --skip-broken to work around the problem</div><div class="line"> You could try running: rpm -Va --nofiles --nodigest</div></pre></td></tr></table></figure>
-<p>可能原因：</p>
-<ul>
-<li>php-common 使用的是 5.4</li>
-<li>需要安裝 php-mbstring for php7</li>
-</ul>
-<h2 id="使用-yum-search-檢查有哪些版本："><a href="#使用-yum-search-檢查有哪些版本：" class="headerlink" title="使用 yum search 檢查有哪些版本："></a>使用 yum search 檢查有哪些版本：</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">-&gt; # yum <span class="built_in">search</span> php-mbstring</div><div class="line">Loaded plugin<span class="variable">s:</span> fastestmirror</div><div class="line">Loading mirror speeds from cached hostfile</div><div class="line"> * base: download.nus.edu.sg</div><div class="line"> * epe<span class="variable">l:</span> epel.mirror.angkasa.id</div><div class="line"> * extra<span class="variable">s:</span> mirror.<span class="number">0</span><span class="keyword">x</span>.sg</div><div class="line"> * <span class="keyword">iu</span><span class="variable">s:</span> syd.mirror.rackspace.<span class="keyword">com</span></div><div class="line"> * remi-safe: mirrors.thzhost.<span class="keyword">com</span></div><div class="line"> * <span class="keyword">update</span><span class="variable">s:</span> download.nus.edu.sg</div><div class="line"> * webtatic: uk.repo.webtatic.<span class="keyword">com</span></div><div class="line">======================================================================================== <span class="keyword">N</span>/S matched: php-mbstring ========================================================================================</div><div class="line">php-mbstring.x86_64 : A module <span class="keyword">for</span> PHP applications which need multi-byte <span class="built_in">string</span> handling</div><div class="line">php56-php-mbstring.x86_64 : A module <span class="keyword">for</span> PHP applications which need multi-byte <span class="built_in">string</span> handling</div><div class="line">php70-php-mbstring.x86_64 : A module <span class="keyword">for</span> PHP applications which need multi-byte <span class="built_in">string</span> handling</div><div class="line">php71-php-mbstring.x86_64 : A module <span class="keyword">for</span> PHP applications which need multi-byte <span class="built_in">string</span> handling</div><div class="line"></div><div class="line">  Name <span class="built_in">and</span> summary matches <span class="keyword">only</span>, use <span class="string">"search all"</span> <span class="keyword">for</span> everything.</div></pre></td></tr></table></figure>
-<p>安裝 php70-php-mbstring.x86_64<br><code>-&gt; # yum install php70-php-mbstring.x86_64</code></p>
-<p>不論是重新編譯或者安裝 php-mbstring 套件, 完成後都要重新啟動 HTTPD 伺服器才會生效。</p>
-<p>重新啟動<br><code>-&gt; # service httpd restart</code></p>
-<p>yum 用法整理：<br><a href="http://www.vixual.net/blog/archives/101" target="_blank" rel="external">http://www.vixual.net/blog/archives/101</a></p>
-<h2 id="補充：在-Apache、Nginx-上面運行-PHP"><a href="#補充：在-Apache、Nginx-上面運行-PHP" class="headerlink" title="補充：在 Apache、Nginx 上面運行 PHP"></a>補充：在 Apache、Nginx 上面運行 PHP</h2><p>Apache 需要安裝 <code>mod_php</code> 這個 Apache module<br>Nginx 需要安裝 <code>PHP-FPM</code> 來運行 PHP code</p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-  <div class="article-tags">
-  
-  <span></span> <a href="/tags/Laravel/">Laravel</a><a href="/tags/CentOS/">CentOS</a><a href="/tags/Linux/">Linux</a>
-  </div>
-
-</div>
-
-
-
-
-<div class="comments-count">
-	
-	  	<span></span>
-		<a href="/php/在 CentOS 7 上開啟 Laravel 所需的 PHP Extension/#disqus_thread" class="comments-count-link">Comments</a>
-	
-</div>
-
-</footer>
-
-
-    </article>
-
-
-
-
-
-
 
   <nav id="page-nav" class="clearfix">
-    <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/3/">Next<span></span></a>
+    <a class="extend prev" rel="prev" href="/"><span></span>Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/3/">Next<span></span></a>
   </nav>
 
 </div>
@@ -307,10 +288,9 @@
   
 <div class="github-card">
 <p class="asidetitle">Github</p>
-<div class="github-card" data-github="bobo52310" data-width="220" data-height="119" data-theme="medium">
+<div class="github-card" data-github="bobo52310" data-theme="medium"></div>
 <script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
 </div>
-  </div>
 
 
 
@@ -326,19 +306,27 @@
 			
 		
 			
-				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>4</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/電腦筆記/" title="電腦筆記">電腦筆記<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/Web-Design/" title="Web Design">Web Design<sup>3</sup></a></li>
+				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>4</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/CentOS/" title="CentOS">CentOS<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Web-Design/" title="Web Design">Web Design<sup>3</sup></a></li>
 			
 		
 			
@@ -350,23 +338,11 @@
 			
 		
 			
-				<li><a href="/tags/CentOS/" title="CentOS">CentOS<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Linux/" title="Linux">Linux<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/開發工具/" title="開發工具">開發工具<sup>2</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Vim/" title="Vim">Vim<sup>1</sup></a></li>
 			
 		
 			
@@ -386,19 +362,23 @@
 			
 		
 			
-				<li><a href="/tags/Git/" title="Git">Git<sup>1</sup></a></li>
+				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/版務/" title="版務">版務<sup>1</sup></a></li>
+				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/好書推薦/" title="好書推薦">好書推薦<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/PSR/" title="PSR">PSR<sup>1</sup></a></li>
 			
 		
 		</ul>

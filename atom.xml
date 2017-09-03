@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://bobochen.com/"/>
-  <updated>2017-09-02T05:49:32.000Z</updated>
+  <updated>2017-09-03T04:24:52.000Z</updated>
   <id>http://bobochen.com/</id>
   
   <author>
@@ -14,6 +14,83 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>取得 EC2 的 IP 的2種方法</title>
+    <link href="http://bobochen.com/server-os/ec2-metadata-ip-ifconf-ip-command/"/>
+    <id>http://bobochen.com/server-os/ec2-metadata-ip-ifconf-ip-command/</id>
+    <published>2017-09-03T03:50:05.000Z</published>
+    <updated>2017-09-03T04:24:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://i.imgur.com/VpXphVo.png" alt=""></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="緣起"><a href="#緣起" class="headerlink" title="緣起"></a>緣起</h3><p>系統有一項功能需求，當新開啟的 EC2 Instance 需要自動地將本身的 IP 向系統註冊登錄，該如何讓 EC2 Instance 取得自己本身的 Private IP 和 Public IP address 呢？</p>
+<p>最快的方法是在 EC2 上透過 <code>curl</code> 特定位置來查詢自身的 Metadata，除此之外，在 linux 環境下可透過 <code>ip</code> 或 <code>ifconfig</code> 指令來取得，算是比較通用的作法。</p>
+<p>這邊整理上述2種做法，同時複習一下在 Linux 上查詢 IP 的相關指令。</p>
+<h3 id="測試環境"><a href="#測試環境" class="headerlink" title="測試環境"></a>測試環境</h3><ul>
+<li>EC2 Instance 作業系統：CentOS 7</li>
+<li>iproute2 工具包 v4.8 (<code>ip</code> 指令)</li>
+</ul>
+<h2 id="如何取得-EC2-Instance-的-Private-IP-address"><a href="#如何取得-EC2-Instance-的-Private-IP-address" class="headerlink" title="如何取得 EC2 Instance 的 Private IP address"></a>如何取得 EC2 Instance 的 Private IP address</h2><ul>
+<li><p>方法1：使用 <code>ifconfig</code> 指令</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/sbin/i</span>fconfig eth0 | <span class="keyword">grep</span> <span class="string">'inet '</span> | cut -f2 | awk <span class="string">'&#123; print $2&#125;'</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>方法2：SSH 登入 EC2 Instance 查詢 meta-data 資訊</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl <span class="symbol">http:</span>/<span class="regexp">/169.254.169.254/latest</span><span class="regexp">/meta-data/local</span>-ipv4</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="如何取得-EC2-Instance-的-Public-IP-address"><a href="#如何取得-EC2-Instance-的-Public-IP-address" class="headerlink" title="如何取得 EC2 Instance 的 Public IP address"></a>如何取得 EC2 Instance 的 Public IP address</h2><ul>
+<li><p>方法1：使用外部的查詢 IP 網頁來獲知自己的 IP 為何，例如</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">curl</span> <span class="selector-tag">ifconfig</span><span class="selector-class">.co</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>方法2：AWS CLI <code>aws ec2 describe-instances</code> 搭配 <code>jq</code> 取得 EC2 資訊</p>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">aws ec2 describe-instances --filters Name=private-ip-address,Values=$&#123;ip&#125; | jq -r '.Reservations<span class="string">[]</span>.Instances<span class="string">[]</span>.NetworkInterfaces<span class="string">[]</span>.Association.PublicIp'</div></pre></td></tr></table></figure>
+</li>
+<li><p>方法3：SSH 登入 EC2 Instance 查詢 meta-data 資訊</p>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl http://<span class="number">169.254</span><span class="meta">.169</span><span class="meta">.254</span>/latest/meta-data/<span class="meta">public</span>-ipv4</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><ul>
+<li><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html" target="_blank" rel="external">EC2 Instance Metadata</a></li>
+<li><a href="https://linuxaria.com/howto/get-your-private-and-public-ip-from-the-linux-terminal" target="_blank" rel="external">get-your-private-and-public-ip-from-the-linux-terminal</a></li>
+<li><a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-ip-addressing.html" target="_blank" rel="external">IP Addressing in Your VPC</a></li>
+<li><a href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/using-instance-addressing.html#concepts-private-addresses" target="_blank" rel="external">Amazon EC2 Instance IP Addressing</a></li>
+</ul>
+<h2 id="ip-指令介紹"><a href="#ip-指令介紹" class="headerlink" title="ip 指令介紹"></a>ip 指令介紹</h2><p><code>ip</code> 指令 (<code>/bin/ip</code>) 是 Linux 上有關 TCP/IP 流量控制與查詢的一系列工具 (工具包名稱是 <code>iproute2</code>)<br>其功能與老牌但已經不在維護的 <code>ifconfig</code> (<code>/sbin/ifconfig</code>) 相似，我們可以使用 <code>ip</code> 取代 <code>ifconfig</code> 指令。</p>
+<h3 id="在-CentOS-上需要另外安裝嗎？"><a href="#在-CentOS-上需要另外安裝嗎？" class="headerlink" title="在 CentOS 上需要另外安裝嗎？"></a>在 CentOS 上需要另外安裝嗎？</h3><p>不需要另外安裝，<code>ip</code> 指令在 RHEL 及 CentOS 也是預設安裝。而除了查詢網路設定外，也可以用作設定網路，以下是 ip 指令的一些常見用法。</p>
+<h3 id="常用的-ip-指令"><a href="#常用的-ip-指令" class="headerlink" title="常用的 ip 指令"></a>常用的 ip 指令</h3><p>查詢 ipv4 或 ipv6 的 IP address 資訊。</p>
+<p>ipv4:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">ip</span> -<span class="number">4</span> <span class="keyword">addr</span></div></pre></td></tr></table></figure></p>
+<p>ipv6:<br><figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">ip</span> -<span class="number">6</span> <span class="keyword">addr</span></div></pre></td></tr></table></figure></p>
+<p>查詢個別網卡的資訊(網卡名稱及 IP address)，有以下三種方式：</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">ip</span> <span class="keyword">addr </span>show eth0</div><div class="line">$ <span class="built_in">ip</span> <span class="keyword">addr </span>list eth0</div><div class="line">$ <span class="built_in">ip</span> <span class="keyword">addr </span>show dev eth0</div></pre></td></tr></table></figure>
+<h3 id="備註：ip-指令的完整參數"><a href="#備註：ip-指令的完整參數" class="headerlink" title="備註：ip 指令的完整參數"></a>備註：ip 指令的完整參數</h3><figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"># -&gt; # ip --help</div><div class="line">Usage: ip [ OPTIONS ] OBJECT &#123; COMMAND | <span class="type">help</span> &#125;</div><div class="line">       ip [ -force ] -batch filename</div><div class="line"><span class="keyword">where</span>  OBJECT := &#123; link | <span class="type">addr</span> | <span class="type">addrlabel</span> | <span class="type">route</span> | <span class="type">rule</span> | <span class="type">neigh</span> | <span class="type">ntable</span> |</div><div class="line">                   <span class="type">tunnel</span> | <span class="type">tuntap</span> | <span class="type">maddr</span> | <span class="type">mroute</span> | <span class="type">mrule</span> | <span class="type">monitor</span> | <span class="type">xfrm</span> |</div><div class="line">                   <span class="type">netns</span> | <span class="type">l2tp</span> | <span class="type">tcp_metrics</span> | <span class="type">token</span> &#125;</div><div class="line">       OPTIONS := &#123; -V[ersion] | <span class="type">-s</span>[tatistics] | <span class="type">-d</span>[etails] | <span class="type">-r</span>[esolve] |</div><div class="line">                    <span class="type">-h</span>[uman-readable] | <span class="type">-iec</span> |</div><div class="line">                    <span class="type">-f</span>[amily] &#123; inet | <span class="type">inet6</span> | <span class="type">ipx</span> | <span class="type">dnet</span> | <span class="type">bridge</span> | <span class="type">link</span> &#125; |</div><div class="line">                    <span class="type">-4</span> | <span class="type">-6</span> | <span class="type">-I</span> | <span class="type">-D</span> | <span class="type">-B</span> | <span class="type">-0</span> |</div><div class="line">                    <span class="type">-l</span>[oops] &#123; maximum-addr-flush-attempts &#125; |</div><div class="line">                    <span class="type">-o</span>[neline] | <span class="type">-t</span>[imestamp] | <span class="type">-b</span>[atch] [filename] |</div><div class="line">                    <span class="type">-rc</span>[vbuf] [size] | <span class="type">-n</span>[etns] name | <span class="type">-a</span>[ll] &#125;</div></pre></td></tr></table></figure>
+<h3 id="備註：ifconfig-指令的完整參數"><a href="#備註：ifconfig-指令的完整參數" class="headerlink" title="備註：ifconfig 指令的完整參數"></a>備註：ifconfig 指令的完整參數</h3><figure class="highlight inform7"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">-&gt; # ifconfig --help</div><div class="line">Usage:</div><div class="line">  ifconfig <span class="comment">[-a]</span> <span class="comment">[-v]</span> <span class="comment">[-s]</span> &lt;interface&gt; <span class="comment">[<span class="comment">[&lt;AF&gt;]</span> &lt;address&gt;]</span></div><div class="line">  <span class="comment">[add &lt;address&gt;<span class="comment">[/&lt;prefixlen&gt;]</span>]</span></div><div class="line">  <span class="comment">[del &lt;address&gt;<span class="comment">[/&lt;prefixlen&gt;]</span>]</span></div><div class="line">  <span class="comment">[<span class="comment">[-]</span>broadcast <span class="comment">[&lt;address&gt;]</span>]</span>  <span class="comment">[<span class="comment">[-]</span>pointopoint <span class="comment">[&lt;address&gt;]</span>]</span></div><div class="line">  <span class="comment">[netmask &lt;address&gt;]</span>  <span class="comment">[dstaddr &lt;address&gt;]</span>  <span class="comment">[tunnel &lt;address&gt;]</span></div><div class="line">  <span class="comment">[outfill &lt;NN&gt;]</span> <span class="comment">[keepalive &lt;NN&gt;]</span></div><div class="line">  <span class="comment">[hw &lt;HW&gt; &lt;address&gt;]</span>  <span class="comment">[mtu &lt;NN&gt;]</span></div><div class="line">  <span class="comment">[<span class="comment">[-]</span>trailers]</span>  <span class="comment">[<span class="comment">[-]</span>arp]</span>  <span class="comment">[<span class="comment">[-]</span>allmulti]</span></div><div class="line">  <span class="comment">[multicast]</span>  <span class="comment">[<span class="comment">[-]</span>promisc]</span></div><div class="line">  <span class="comment">[mem_start &lt;NN&gt;]</span>  <span class="comment">[io_addr &lt;NN&gt;]</span>  <span class="comment">[irq &lt;NN&gt;]</span>  <span class="comment">[media &lt;type&gt;]</span></div><div class="line">  <span class="comment">[txqueuelen &lt;NN&gt;]</span></div><div class="line">  <span class="comment">[<span class="comment">[-]</span>dynamic]</span></div><div class="line">  <span class="comment">[up|down]</span> ...</div><div class="line"></div><div class="line">  &lt;HW&gt;=Hardware Type.</div><div class="line">  List <span class="keyword">of</span> possible hardware types:</div><div class="line">    loop (Local Loopback) slip (Serial Line IP) cslip (VJ Serial Line IP)</div><div class="line">    slip6 (6-bit Serial Line IP) cslip6 (VJ 6-bit Serial Line IP) adaptive (Adaptive Serial Line IP)</div><div class="line">    ash (Ash) ether (Ethernet) ax25 (AMPR AX.25)</div><div class="line">    netrom (AMPR NET/ROM) rose (AMPR ROSE) tunnel (IPIP Tunnel)</div><div class="line">    ppp (Point-to-Point Protocol) hdlc ((Cisco)-HDLC) lapb (LAPB)</div><div class="line">    arcnet (ARCnet) dlci (Frame Relay DLCI) frad (Frame Relay Access Device)</div><div class="line">    sit (IPv6-in-IPv4) fddi (Fiber Distributed Data Interface) hippi (HIPPI)</div><div class="line">    irda (IrLAP) ec (Econet) x25 (generic X.25)</div><div class="line">    infiniband (InfiniBand) eui64 (Generic EUI-64)</div><div class="line">  &lt;AF&gt;=Address family. Default: inet</div><div class="line">  List <span class="keyword">of</span> possible address families:</div><div class="line">    unix (UNIX Domain) inet (DARPA Internet) inet6 (IPv6)</div><div class="line">    ax25 (AMPR AX.25) netrom (AMPR NET/ROM) rose (AMPR ROSE)</div><div class="line">    ipx (Novell IPX) ddp (Appletalk DDP) ec (Econet)</div><div class="line">    ash (Ash) x25 (CCITT X.25)</div></pre></td></tr></table></figure>
+<h3 id="備註：hostname-指令的完整指令"><a href="#備註：hostname-指令的完整指令" class="headerlink" title="備註：hostname 指令的完整指令"></a>備註：hostname 指令的完整指令</h3><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">-&gt; # <span class="built_in">hostname</span> --<span class="keyword">help</span></div><div class="line">Usage: <span class="built_in">hostname</span> [-<span class="keyword">b</span>] &#123;<span class="built_in">hostname</span>|-F <span class="keyword">file</span>&#125;         <span class="keyword">set</span> host name (from <span class="keyword">file</span>)</div><div class="line">       <span class="built_in">hostname</span> [-<span class="keyword">a</span>|-A|-d|-<span class="keyword">f</span>|-i|-I|-s|-<span class="keyword">y</span>]       <span class="keyword">display</span> formatted name</div><div class="line">       <span class="built_in">hostname</span>                                 <span class="keyword">display</span> host name</div><div class="line"></div><div class="line">       &#123;yp,nis,&#125;domainname &#123;nisdomain|-F <span class="keyword">file</span>&#125;  <span class="keyword">set</span> NIS domain name (from <span class="keyword">file</span>)</div><div class="line">       &#123;yp,nis,&#125;domainname                      <span class="keyword">display</span> NIS domain name</div><div class="line"></div><div class="line">       dnsdomainname                            <span class="keyword">display</span> dns domain name</div><div class="line"></div><div class="line">       <span class="built_in">hostname</span> -V|--<span class="keyword">version</span>|-h|--<span class="keyword">help</span>          <span class="keyword">print</span> info <span class="built_in">and</span> <span class="keyword">exit</span></div><div class="line"></div><div class="line">Program name:</div><div class="line">       &#123;yp,nis,&#125;domainname=<span class="built_in">hostname</span> -<span class="keyword">y</span></div><div class="line">       dnsdomainname=<span class="built_in">hostname</span> -d</div><div class="line"></div><div class="line">Program option<span class="variable">s:</span></div><div class="line">    -<span class="keyword">a</span>, --alias            alias names</div><div class="line">    -A, --<span class="keyword">all</span>-fqdns        <span class="keyword">all</span> long host names (FQDNs)</div><div class="line">    -<span class="keyword">b</span>, --boot             <span class="keyword">set</span> default <span class="built_in">hostname</span> <span class="keyword">if</span> none available</div><div class="line">    -d, --domain           DNS domain name</div><div class="line">    -<span class="keyword">f</span>, --fqdn, --long     long host name (FQDN)</div><div class="line">    -F, --<span class="keyword">file</span>             <span class="keyword">read</span> host name <span class="built_in">or</span> NIS domain name from given <span class="keyword">file</span></div><div class="line">    -i, --ip-address       addresses <span class="keyword">for</span> the host name</div><div class="line">    -I, --<span class="keyword">all</span>-ip-addresses <span class="keyword">all</span> addresses <span class="keyword">for</span> the host</div><div class="line">    -s, --short            short host name</div><div class="line">    -<span class="keyword">y</span>, --yp, --nis        NIS/YP domain name</div><div class="line"></div><div class="line">Description:</div><div class="line">   This <span class="keyword">command</span> can <span class="built_in">get</span> <span class="built_in">or</span> <span class="keyword">set</span> the host name <span class="built_in">or</span> the NIS domain name. You can</div><div class="line">   also <span class="built_in">get</span> the DNS domain <span class="built_in">or</span> the FQDN (fully qualified domain name).</div><div class="line">   Unless you are using bind <span class="built_in">or</span> NIS <span class="keyword">for</span> host lookups you can <span class="keyword">change</span> the</div><div class="line">   FQDN (Fully Qualified Domain Name) <span class="built_in">and</span> the DNS domain name (which <span class="keyword">is</span></div><div class="line">   part of the FQDN) in the /etc/hosts <span class="keyword">file</span>.</div></pre></td></tr></table></figure>
+<h3 id="參考資料-1"><a href="#參考資料-1" class="headerlink" title="參考資料"></a>參考資料</h3><ul>
+<li><a href="https://serverfault.com/questions/458628/should-i-quit-using-ifconfig" target="_blank" rel="external">Should I quit using Ifconfig?</a></li>
+<li><a href="https://www.linux.com/learn/replacing-ifconfig-ip" target="_blank" rel="external">Replacing ifconfig with ip</a></li>
+<li><a href="https://www.phpini.com/linux/ip-command" target="_blank" rel="external">ip 指令 — 取代 ifconfig 的工具</a></li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><ul>
+<li>取得 EC2 的 IP 最快的方法是在 EC2 上透過 <code>curl</code> 特定位置來查詢自身的 Metadata</li>
+<li>若要比較通用的作法，可在 linux 環境下可透過 <code>ip</code> 或 <code>ifconfig</code> 指令來取得。</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/VpXphVo.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;h3 id=&quot;緣起&quot;&gt;&lt;a 
+    
+    </summary>
+    
+    
+      <category term="CentOS" scheme="http://bobochen.com/tags/CentOS/"/>
+    
+      <category term="Linux" scheme="http://bobochen.com/tags/Linux/"/>
+    
+      <category term="AWS" scheme="http://bobochen.com/tags/AWS/"/>
+    
+  </entry>
   
   <entry>
     <title>3分鐘護一生，關於工作的自我提問</title>
@@ -783,9 +860,9 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
-    
       <category term="English learning" scheme="http://bobochen.com/tags/English-learning/"/>
+    
+      <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
     
   </entry>
   
@@ -1052,28 +1129,6 @@ XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>LaraDiner(拉拉快餐車) 本週四晚上開始試營運囉!</title>
-    <link href="http://bobochen.com/notes/LaraDiner-%E6%8B%89%E6%8B%89%E5%BF%AB%E9%A4%90%E8%BB%8A-%E6%9C%AC%E9%80%B1%E5%9B%9B%E6%99%9A%E4%B8%8A%E9%96%8B%E5%A7%8B%E8%A9%A6%E7%87%9F%E9%81%8B%E5%9B%89/"/>
-    <id>http://bobochen.com/notes/LaraDiner-拉拉快餐車-本週四晚上開始試營運囉/</id>
-    <published>2015-04-11T11:44:31.000Z</published>
-    <updated>2015-09-26T06:38:21.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>LaraDiner(拉拉快餐車) 本週四晚上開始試營運囉!<br>由我們幾位社群同好共同發起的 Laravel 讀書會，每個月將不定週舉辦 2 次。<br>地點在 Ville Cafe (近公館捷運站、台電大樓捷運站)<br>台北市中正區羅斯福路三段284巷5號<br>活動詳情：<a href="https://www.facebook.com/events/942421959103592" target="_blank" rel="external">https://www.facebook.com/events/942421959103592</a></p>
-<p>== Update ==<br>第二、三次活動地點都在 InnoSquare 新北創力坊<br>地址：新北市三重區重新路一段108號3樓(捷運台北橋站3樓)</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;LaraDiner(拉拉快餐車) 本週四晚上開始試營運囉!&lt;br&gt;由我們幾位社群同好共同發起的 Laravel 讀書會，每個月將不定週舉辦 2 次。&lt;br&gt;地點在 Ville Cafe (近公館捷運站、台電大樓捷運站)&lt;br&gt;台北市中正區羅斯福路三段284巷5號&lt;br&gt;活動
-    
-    </summary>
-    
-    
-      <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
     
   </entry>
   
