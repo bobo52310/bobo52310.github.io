@@ -20,7 +20,7 @@
 <meta property="og:description" content="前言緣起系統有一項功能需求，當新開啟的 EC2 Instance 需要自動地將本身的 IP 向系統註冊登錄，該如何讓 EC2 Instance 取得自己本身的 Private IP 和 Public IP address 呢？
 最快的方法是在 EC2 上透過 curl 特定位置來查詢自身的 Metadata，除此之外，在 linux 環境下可透過 ip 或 ifconfig 指令來取得，算是比較">
 <meta property="og:image" content="https://i.imgur.com/VpXphVo.png">
-<meta property="og:updated_time" content="2017-09-03T04:28:21.000Z">
+<meta property="og:updated_time" content="2018-10-18T08:55:34.791Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="取得 EC2 IP 的2種方法">
 <meta name="twitter:description" content="前言緣起系統有一項功能需求，當新開啟的 EC2 Instance 需要自動地將本身的 IP 向系統註冊登錄，該如何讓 EC2 Instance 取得自己本身的 Private IP 和 Public IP address 呢？
@@ -54,7 +54,7 @@
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
 				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -70,7 +70,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -93,14 +93,14 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2017-09-03T03:50:05.000Z" itemprop="datePublished"> 发表于 2017-09-03</time>
+    <time datetime="2017-09-03T03:50:05.000Z" itemprop="datePublished"> Published 2017-09-03</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">文章目录</strong>
+			<strong class="toc-title">Contents</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#緣起"><span class="toc-number">1.1.</span> <span class="toc-text">緣起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#測試環境"><span class="toc-number">1.2.</span> <span class="toc-text">測試環境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何取得-EC2-Instance-的-Private-IP-address"><span class="toc-number">2.</span> <span class="toc-text">如何取得 EC2 Instance 的 Private IP address</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何取得-EC2-Instance-的-Public-IP-address"><span class="toc-number">3.</span> <span class="toc-text">如何取得 EC2 Instance 的 Public IP address</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#參考資料"><span class="toc-number">3.1.</span> <span class="toc-text">參考資料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ip-指令介紹"><span class="toc-number">4.</span> <span class="toc-text">ip 指令介紹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在-CentOS-上需要另外安裝嗎？"><span class="toc-number">4.1.</span> <span class="toc-text">在 CentOS 上需要另外安裝嗎？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用的-ip-指令"><span class="toc-number">4.2.</span> <span class="toc-text">常用的 ip 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：ip-指令的完整參數"><span class="toc-number">4.3.</span> <span class="toc-text">備註：ip 指令的完整參數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：ifconfig-指令的完整參數"><span class="toc-number">4.4.</span> <span class="toc-text">備註：ifconfig 指令的完整參數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：hostname-指令的完整指令"><span class="toc-number">4.5.</span> <span class="toc-text">備註：hostname 指令的完整指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#參考資料-1"><span class="toc-number">4.6.</span> <span class="toc-text">參考資料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">5.</span> <span class="toc-text">Conclusion</span></a></li></ol>
 		
@@ -119,7 +119,7 @@
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/sbin/i</span>fconfig eth0 | <span class="keyword">grep</span> <span class="string">'inet '</span> | cut -f2 | awk <span class="string">'&#123; print $2&#125;'</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>方法2：SSH 登入 EC2 Instance 查詢 meta-data 資訊</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl <span class="symbol">http:</span>/<span class="regexp">/169.254.169.254/latest</span><span class="regexp">/meta-data/local</span>-ipv4</div></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl <span class="symbol">https:</span>/<span class="regexp">/169.254.169.254/latest</span><span class="regexp">/meta-data/local</span>-ipv4</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="如何取得-EC2-Instance-的-Public-IP-address"><a href="#如何取得-EC2-Instance-的-Public-IP-address" class="headerlink" title="如何取得 EC2 Instance 的 Public IP address"></a>如何取得 EC2 Instance 的 Public IP address</h2><ul>
@@ -130,14 +130,14 @@
 <figure class="highlight accesslog"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">aws ec2 describe-instances --filters Name=private-ip-address,Values=$&#123;ip&#125; | jq -r '.Reservations<span class="string">[]</span>.Instances<span class="string">[]</span>.NetworkInterfaces<span class="string">[]</span>.Association.PublicIp'</div></pre></td></tr></table></figure>
 </li>
 <li><p>方法3：SSH 登入 EC2 Instance 查詢 meta-data 資訊</p>
-<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl http://<span class="number">169.254</span><span class="meta">.169</span><span class="meta">.254</span>/latest/meta-data/<span class="meta">public</span>-ipv4</div></pre></td></tr></table></figure>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://<span class="number">169.254</span><span class="meta">.169</span><span class="meta">.254</span>/latest/meta-data/<span class="meta">public</span>-ipv4</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><ul>
-<li><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html" target="_blank" rel="external">EC2 Instance Metadata</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html" target="_blank" rel="external">EC2 Instance Metadata</a></li>
 <li><a href="https://linuxaria.com/howto/get-your-private-and-public-ip-from-the-linux-terminal" target="_blank" rel="external">get-your-private-and-public-ip-from-the-linux-terminal</a></li>
-<li><a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-ip-addressing.html" target="_blank" rel="external">IP Addressing in Your VPC</a></li>
-<li><a href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/using-instance-addressing.html#concepts-private-addresses" target="_blank" rel="external">Amazon EC2 Instance IP Addressing</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-ip-addressing.html" target="_blank" rel="external">IP Addressing in Your VPC</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/using-instance-addressing.html#concepts-private-addresses" target="_blank" rel="external">Amazon EC2 Instance IP Addressing</a></li>
 </ul>
 <h2 id="ip-指令介紹"><a href="#ip-指令介紹" class="headerlink" title="ip 指令介紹"></a>ip 指令介紹</h2><p><code>ip</code> 指令 (<code>/bin/ip</code>) 是 Linux 上有關 TCP/IP 流量控制與查詢的一系列工具 (工具包名稱是 <code>iproute2</code>)<br>其功能與老牌但已經不在維護的 <code>ifconfig</code> (<code>/sbin/ifconfig</code>) 相似，我們可以使用 <code>ip</code> 取代 <code>ifconfig</code> 指令。</p>
 <h3 id="在-CentOS-上需要另外安裝嗎？"><a href="#在-CentOS-上需要另外安裝嗎？" class="headerlink" title="在 CentOS 上需要另外安裝嗎？"></a>在 CentOS 上需要另外安裝嗎？</h3><p>不需要另外安裝，<code>ip</code> 指令在 RHEL 及 CentOS 也是預設安裝。而除了查詢網路設定外，也可以用作設定網路，以下是 ip 指令的一些常見用法。</p>
@@ -209,17 +209,17 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
+  <strong class="toc-title">Contents</strong>
  
  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#緣起"><span class="toc-number">1.1.</span> <span class="toc-text">緣起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#測試環境"><span class="toc-number">1.2.</span> <span class="toc-text">測試環境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何取得-EC2-Instance-的-Private-IP-address"><span class="toc-number">2.</span> <span class="toc-text">如何取得 EC2 Instance 的 Private IP address</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何取得-EC2-Instance-的-Public-IP-address"><span class="toc-number">3.</span> <span class="toc-text">如何取得 EC2 Instance 的 Public IP address</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#參考資料"><span class="toc-number">3.1.</span> <span class="toc-text">參考資料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ip-指令介紹"><span class="toc-number">4.</span> <span class="toc-text">ip 指令介紹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在-CentOS-上需要另外安裝嗎？"><span class="toc-number">4.1.</span> <span class="toc-text">在 CentOS 上需要另外安裝嗎？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用的-ip-指令"><span class="toc-number">4.2.</span> <span class="toc-text">常用的 ip 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：ip-指令的完整參數"><span class="toc-number">4.3.</span> <span class="toc-text">備註：ip 指令的完整參數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：ifconfig-指令的完整參數"><span class="toc-number">4.4.</span> <span class="toc-text">備註：ifconfig 指令的完整參數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：hostname-指令的完整指令"><span class="toc-number">4.5.</span> <span class="toc-text">備註：hostname 指令的完整指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#參考資料-1"><span class="toc-number">4.6.</span> <span class="toc-text">參考資料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">5.</span> <span class="toc-text">Conclusion</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
 <aside class="clearfix">
 
   
@@ -235,7 +235,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">标签</p>
+	<p class="asidetitle">Tags</p>
 		<ul class="clearfix">
 		
 			
@@ -247,7 +247,7 @@
 			
 		
 			
-				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>4</sup></a></li>
+				<li><a href="/tags/CentOS/" title="CentOS">CentOS<sup>3</sup></a></li>
 			
 		
 			
@@ -255,11 +255,7 @@
 			
 		
 			
-				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>3</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/CentOS/" title="CentOS">CentOS<sup>3</sup></a></li>
+				<li><a href="/tags/Sublime-Text/" title="Sublime Text">Sublime Text<sup>3</sup></a></li>
 			
 		
 			
@@ -271,11 +267,7 @@
 			
 		
 			
-				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Phoenix/" title="Phoenix">Phoenix<sup>2</sup></a></li>
+				<li><a href="/tags/Elixir/" title="Elixir">Elixir<sup>2</sup></a></li>
 			
 		
 			
@@ -283,11 +275,11 @@
 			
 		
 			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
+				<li><a href="/tags/Android/" title="Android">Android<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/IntelliJ/" title="IntelliJ">IntelliJ<sup>1</sup></a></li>
+				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
 			
 		
 			
@@ -311,11 +303,19 @@
 			
 		
 			
-				<li><a href="/tags/Vim/" title="Vim">Vim<sup>1</sup></a></li>
+				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/English-learning/" title="English learning">English learning<sup>1</sup></a></li>
+				<li><a href="/tags/VSCode/" title="VSCode">VSCode<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/node-js/" title="node.js">node.js<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/好書推薦/" title="好書推薦">好書推薦<sup>1</sup></a></li>
 			
 		
 		</ul>
@@ -323,7 +323,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">友情連結</p>
+  <p class="asidetitle">Links</p>
     <ul>
         
           <li>
@@ -363,7 +363,7 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
 </div>
 
 </aside>
@@ -626,7 +626,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 

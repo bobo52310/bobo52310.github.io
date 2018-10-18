@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bobochen.com/"/>
-  <updated>2017-09-03T04:28:21.000Z</updated>
+  <updated>2018-10-18T08:55:34.791Z</updated>
   <id>https://bobochen.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="https://bobochen.com/server-os/ec2-metadata-ip-ifconf-ip-command/"/>
     <id>https://bobochen.com/server-os/ec2-metadata-ip-ifconf-ip-command/</id>
     <published>2017-09-03T03:50:05.000Z</published>
-    <updated>2017-09-03T04:28:21.000Z</updated>
+    <updated>2018-10-18T08:55:34.791Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://i.imgur.com/VpXphVo.png" alt=""></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="緣起"><a href="#緣起" class="headerlink" title="緣起"></a>緣起</h3><p>系統有一項功能需求，當新開啟的 EC2 Instance 需要自動地將本身的 IP 向系統註冊登錄，該如何讓 EC2 Instance 取得自己本身的 Private IP 和 Public IP address 呢？</p>
@@ -35,7 +35,7 @@
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="regexp">/sbin/i</span>fconfig eth0 | <span class="keyword">grep</span> <span class="string">'inet '</span> | cut -f2 | awk <span class="string">'&#123; print $2&#125;'</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>方法2：SSH 登入 EC2 Instance 查詢 meta-data 資訊</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl <span class="symbol">http:</span>/<span class="regexp">/169.254.169.254/latest</span><span class="regexp">/meta-data/local</span>-ipv4</div></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl <span class="symbol">https:</span>/<span class="regexp">/169.254.169.254/latest</span><span class="regexp">/meta-data/local</span>-ipv4</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="如何取得-EC2-Instance-的-Public-IP-address"><a href="#如何取得-EC2-Instance-的-Public-IP-address" class="headerlink" title="如何取得 EC2 Instance 的 Public IP address"></a>如何取得 EC2 Instance 的 Public IP address</h2><ul>
@@ -46,14 +46,14 @@
 <figure class="highlight accesslog"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">aws ec2 describe-instances --filters Name=private-ip-address,Values=$&#123;ip&#125; | jq -r '.Reservations<span class="string">[]</span>.Instances<span class="string">[]</span>.NetworkInterfaces<span class="string">[]</span>.Association.PublicIp'</div></pre></td></tr></table></figure>
 </li>
 <li><p>方法3：SSH 登入 EC2 Instance 查詢 meta-data 資訊</p>
-<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl http://<span class="number">169.254</span><span class="meta">.169</span><span class="meta">.254</span>/latest/meta-data/<span class="meta">public</span>-ipv4</div></pre></td></tr></table></figure>
+<figure class="highlight x86asm"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl https://<span class="number">169.254</span><span class="meta">.169</span><span class="meta">.254</span>/latest/meta-data/<span class="meta">public</span>-ipv4</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h3 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h3><ul>
-<li><a href="http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html" target="_blank" rel="external">EC2 Instance Metadata</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-metadata.html" target="_blank" rel="external">EC2 Instance Metadata</a></li>
 <li><a href="https://linuxaria.com/howto/get-your-private-and-public-ip-from-the-linux-terminal" target="_blank" rel="external">get-your-private-and-public-ip-from-the-linux-terminal</a></li>
-<li><a href="http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-ip-addressing.html" target="_blank" rel="external">IP Addressing in Your VPC</a></li>
-<li><a href="http://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/using-instance-addressing.html#concepts-private-addresses" target="_blank" rel="external">Amazon EC2 Instance IP Addressing</a></li>
+<li><a href="https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-ip-addressing.html" target="_blank" rel="external">IP Addressing in Your VPC</a></li>
+<li><a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/using-instance-addressing.html#concepts-private-addresses" target="_blank" rel="external">Amazon EC2 Instance IP Addressing</a></li>
 </ul>
 <h2 id="ip-指令介紹"><a href="#ip-指令介紹" class="headerlink" title="ip 指令介紹"></a>ip 指令介紹</h2><p><code>ip</code> 指令 (<code>/bin/ip</code>) 是 Linux 上有關 TCP/IP 流量控制與查詢的一系列工具 (工具包名稱是 <code>iproute2</code>)<br>其功能與老牌但已經不在維護的 <code>ifconfig</code> (<code>/sbin/ifconfig</code>) 相似，我們可以使用 <code>ip</code> 取代 <code>ifconfig</code> 指令。</p>
 <h3 id="在-CentOS-上需要另外安裝嗎？"><a href="#在-CentOS-上需要另外安裝嗎？" class="headerlink" title="在 CentOS 上需要另外安裝嗎？"></a>在 CentOS 上需要另外安裝嗎？</h3><p>不需要另外安裝，<code>ip</code> 指令在 RHEL 及 CentOS 也是預設安裝。而除了查詢網路設定外，也可以用作設定網路，以下是 ip 指令的一些常見用法。</p>
@@ -211,7 +211,7 @@
     <link href="https://bobochen.com/tools/%E5%A6%82%E4%BD%95%E7%A7%BB%E9%99%A4%E5%B7%B2%E7%B6%93%E8%A2%AB%20Git%20%E8%BF%BD%E8%B9%A4%E7%9A%84%20.DS_Store%20%E6%AA%94%E6%A1%88/"/>
     <id>https://bobochen.com/tools/如何移除已經被 Git 追蹤的 .DS_Store 檔案/</id>
     <published>2016-11-28T00:57:04.000Z</published>
-    <updated>2017-05-06T10:06:53.000Z</updated>
+    <updated>2018-10-18T08:51:51.215Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><code>.DS_Store</code> 是 Mac 的一種隱藏文件資料檔，目的在於存貯目錄的自定義屬性。<br>專案在使用 Git 追蹤時，在沒有注意下很容易不小心就出現一堆 <code>.DS_Store</code> 已經被 Git 追蹤。<br>例如這個專案，在使用 <code>git status</code> 檢視目前狀態就會發現…</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">modified:   <span class="selector-class">.DS_Store</span></div><div class="line">modified:   app/<span class="selector-class">.DS_Store</span></div><div class="line">modified:   bootstrap/<span class="selector-class">.DS_Store</span></div><div class="line">modified:   database/<span class="selector-class">.DS_Store</span></div><div class="line">modified:   storage/.DS_Store</div></pre></td></tr></table></figure>
@@ -220,7 +220,7 @@
 <p>如果要移除 repository 內所有的 .DS_Store 檔案<br><code>find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch</code> </p>
 <p>參考來源 </p>
 <ul>
-<li><a href="http://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder" target="_blank" rel="external">gitignore-all-the-ds-store-files-in-every-folder-and-subfolder</a></li>
+<li><a href="https://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder" target="_blank" rel="external">gitignore-all-the-ds-store-files-in-every-folder-and-subfolder</a></li>
 </ul>
 ]]></content>
     
@@ -240,9 +240,9 @@
     <link href="https://bobochen.com/books-programming-elixir/"/>
     <id>https://bobochen.com/books-programming-elixir/</id>
     <published>2016-09-04T06:45:09.000Z</published>
-    <updated>2016-09-04T07:59:13.000Z</updated>
+    <updated>2018-10-18T08:52:03.139Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/53tyyKH.jpg" alt=""></p>
+    <content type="html"><![CDATA[<p><img src="https://i.imgur.com/53tyyKH.jpg" alt=""></p>
 <h1 id="作者介紹"><a href="#作者介紹" class="headerlink" title="作者介紹"></a>作者介紹</h1><p>Dave Thomas 是一位程式設計師，他喜歡分享很酷的玩意兒。他是「The Pragmatic Programmer」這本書的共同作者，也是「Manifesto for Agile Software Development」 敏捷軟體開發宣言的簽署者之一。<br>他寫的「Programming Ruby」這本書，使得更多人認識 Ruby 這個程式語言，並且開啟了使用 Rails 框架來進行網頁敏捷開發的一大革命。</p>
 <h1 id="本書簡介"><a href="#本書簡介" class="headerlink" title="本書簡介"></a>本書簡介</h1><p>以非學術色彩的方式探索函數式程式設計(會提到 monads)<br>開發共時性的應用程式，但不需要在意令人頭痛的閉鎖、一致性問題。<br>遇見 Elixir 這樣一個現代化、函數式的共時性程式語言，建立在堅若磐石的 Erlang 虛擬機器之上。<br>Elixir 的實用語法和內建支援 metaprogramming 都將讓你開發效率提升，帶給你滿滿的驚喜。<br>現在即將迎接下一件大事情，也許就是 Elixir。這本介紹 Elixir 的書是給有經驗的開發者，已經完整地更新到 Elixir 1.3 版。</p>
 <h1 id="關於這本書"><a href="#關於這本書" class="headerlink" title="關於這本書"></a>關於這本書</h1><p>函數式程式設計技巧可幫助您管理現代複雜的真實世界、共時性系統。最大化正常化運行時間，而且管理安全性。<br>進入 Elixir 世界，伴隨著它現代化、類似 Ruby、可擴充的語法，編譯和執行階段賦值，Hygienic macro 等等。<br>同樣重要的是，Elixir 帶來的是平行運算、函數程式設計的樂趣。您的應用程式開發將會變得有趣，而且語言鼓勵您去嘗試。</p>
@@ -256,8 +256,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/53tyyKH.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;作者介紹&quot;&gt;&lt;a href=&quot;#作者介紹&quot; class=&quot;headerlink&quot; title=&quot;作者介紹&quot;&gt;&lt;/a&gt;作者介紹&lt;/h1&gt;&lt;p&gt;Dave 
+      &lt;p&gt;&lt;img src=&quot;https://i.imgur.com/53tyyKH.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;作者介紹&quot;&gt;&lt;a href=&quot;#作者介紹&quot; class=&quot;headerlink&quot; title=&quot;作者介紹&quot;&gt;&lt;/a&gt;作者介紹&lt;/h1&gt;&lt;p&gt;Dave
     
     </summary>
     
@@ -319,33 +319,35 @@
   </entry>
   
   <entry>
-    <title>推薦 Elixir 好用的開發編輯器</title>
+    <title></title>
     <link href="https://bobochen.com/elixir/recommend-elixir-editor-ide/"/>
     <id>https://bobochen.com/elixir/recommend-elixir-editor-ide/</id>
-    <published>2016-07-23T12:57:04.000Z</published>
-    <updated>2016-07-24T02:58:55.000Z</updated>
+    <published>2016-07-24T02:58:55.000Z</published>
+    <updated>2018-10-18T08:53:12.699Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="http://i.imgur.com/oSGvEfI.png" alt=""></p>
+    <content type="html"><![CDATA[<p>title: 推薦 Elixir 好用的開發編輯器<br>date: 2016-07-23 20:57:04<br>tags:</p>
+<ul>
+<li>Elixir</li>
+<li>Phoenix</li>
+<li>Sublime Text</li>
+<li>IntelliJ</li>
+<li>Vim<br>—https://</li>
+</ul>
+<p><img src="https://i.imgur.com/oSGvEfI.png" alt=""></p>
 <h4 id="當開發-Elixir-的環境都建置好了，除了可以在-terminal-輸入-iex-開啟-Interactive-mode-來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊-Autocomplete-、Syntax-Highlighting-等等功能，可以讓你開發起來更加行雲流水喔！"><a href="#當開發-Elixir-的環境都建置好了，除了可以在-terminal-輸入-iex-開啟-Interactive-mode-來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊-Autocomplete-、Syntax-Highlighting-等等功能，可以讓你開發起來更加行雲流水喔！" class="headerlink" title="當開發 Elixir 的環境都建置好了，除了可以在 terminal 輸入 iex 開啟 Interactive mode 來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊(Autocomplete)、Syntax Highlighting 等等功能，可以讓你開發起來更加行雲流水喔！"></a>當開發 Elixir 的環境都建置好了，除了可以在 terminal 輸入 <code>iex</code> 開啟 <code>Interactive mode</code> 來測試開發之外，此時更值得我們花點時間來挑選一個順手的編輯器，有聰明的語法自動補齊(Autocomplete)、Syntax Highlighting 等等功能，可以讓你開發起來更加行雲流水喔！</h4><h3 id="這裡推薦-3款-Elixir-的開發工具：Sublime-Text、IntelliJ、Vim。"><a href="#這裡推薦-3款-Elixir-的開發工具：Sublime-Text、IntelliJ、Vim。" class="headerlink" title="這裡推薦 3款 Elixir 的開發工具：Sublime Text、IntelliJ、Vim。"></a>這裡推薦 3款 Elixir 的開發工具：Sublime Text、IntelliJ、Vim。</h3><h3 id="請見以下於公司內部分享的簡報："><a href="#請見以下於公司內部分享的簡報：" class="headerlink" title="請見以下於公司內部分享的簡報："></a>請見以下於公司內部分享的簡報：</h3><p><iframe src="//www.slideshare.net/slideshow/embed_code/key/7Jh1db0Xlm1X" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bobo52310/elixir-64190936" title="Elixir 好用的編輯器" target="_blank">Elixir 好用的編輯器</a> </strong> from <strong><a href="//www.slideshare.net/bobo52310" target="_blank">bobo52310</a></strong> </div></p>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://i.imgur.com/oSGvEfI.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;當開發-Elixir-的環境都建置好了，除了可以在-terminal-輸入-iex-開啟-Interactive-mode-來測試開發之外，此時更值得
+      &lt;p&gt;title: 推薦 Elixir 好用的開發編輯器&lt;br&gt;date: 2016-07-23 20:57:04&lt;br&gt;tags:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Elixir&lt;/li&gt;
+&lt;li&gt;Phoenix&lt;/li&gt;
+&lt;li&gt;Sublime Text&lt;/li&gt;
+&lt;li&gt;Intel
     
     </summary>
     
-    
-      <category term="Elixir" scheme="https://bobochen.com/tags/Elixir/"/>
-    
-      <category term="Phoenix" scheme="https://bobochen.com/tags/Phoenix/"/>
-    
-      <category term="Sublime Text" scheme="https://bobochen.com/tags/Sublime-Text/"/>
-    
-      <category term="IntelliJ" scheme="https://bobochen.com/tags/IntelliJ/"/>
-    
-      <category term="Vim" scheme="https://bobochen.com/tags/Vim/"/>
     
   </entry>
   
@@ -354,9 +356,9 @@
     <link href="https://bobochen.com/elixir/introduction_to_Elixir/"/>
     <id>https://bobochen.com/elixir/introduction_to_Elixir/</id>
     <published>2016-07-08T15:40:30.000Z</published>
-    <updated>2016-07-24T03:19:16.000Z</updated>
+    <updated>2018-10-18T08:52:58.380Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="緣起："><a href="#緣起：" class="headerlink" title="緣起："></a>緣起：</h2><p><img src="http://imgur.com/39eqCJu.jpg" alt=""></p>
+    <content type="html"><![CDATA[<h2 id="緣起："><a href="#緣起：" class="headerlink" title="緣起："></a>緣起：</h2><p><img src="https://imgur.com/39eqCJu.jpg" alt=""></p>
 <p>最近因為新工作環境要使用 <code>Elixir</code> 來開發一個新專案，而我從未接觸過這門程式語言，且新專案的時程相當趕，預計只有一個月的時間…需要我從完全新手到開發完成這個專案… 這實在是相當大的挑戰！</p>
 <p>不過既然挑戰出現了，就勇敢的面對它吧！同時聽到主管說他學習一門新的程式語言竟然只花了3天，我的資質駑鈍不如他，那麼多花個6天、9天也許有機會一窺這個新玩意兒，也只能如此安慰勉勵自己 XD</p>
 <p>另外聽說藉由專案驅動學習是最有效率的…(特別是這種死線緊湊的效果應該又更好 @_@)</p>
@@ -379,7 +381,7 @@
 </ul>
 <h2 id="Elixir-值得學嗎？"><a href="#Elixir-值得學嗎？" class="headerlink" title="Elixir 值得學嗎？"></a>Elixir 值得學嗎？</h2><p>新技術、新語言那麼多！什麼都想學，有這麼多時間嗎？學得完嗎？</p>
 <p>我們該如何評估一門技術是否值得投入寶貴的時間去學習呢？</p>
-<p>就像我當年回「大安高工資訊科」和學弟妹分享的簡報：「<a href="http://www.slideshare.net/bobo52310/ss-48604799" target="_blank" rel="external">軟體工程師的3大試煉</a>」，我們可以使用一些工具來評估一門技術目前是否流行，是否值得投入學習。</p>
+<p>就像我當年回「大安高工資訊科」和學弟妹分享的簡報：「<a href="https://www.slideshare.net/bobo52310/ss-48604799" target="_blank" rel="external">軟體工程師的3大試煉</a>」，我們可以使用一些工具來評估一門技術目前是否流行，是否值得投入學習。</p>
 <ul>
 <li>比如我們用 Google Trends 來檢視看看 <a href="https://www.google.com.tw/trends/explore#cat=0-5&amp;q=elixir%20lang&amp;cmpt=q&amp;tz=Asia%2FTaipei" target="_blank" rel="external">Elixir 趨勢</a></li>
 <li>2015 年在 <a href="https://news.ycombinator.com/item?id=9408551" target="_blank" rel="external"><code>Hacker News</code></a> 有一些討論，開始被比較多人關注。</li>
@@ -390,12 +392,12 @@
 <p>不過說實在的講這麼多，凡是專案要用到的、主管要你用的，你就認命乖乖學吧~ 哈哈</p>
 </blockquote>
 <h2 id="有哪些公司使用-Elixir？"><a href="#有哪些公司使用-Elixir？" class="headerlink" title="有哪些公司使用 Elixir？"></a>有哪些公司使用 Elixir？</h2><ul>
-<li>Pinterest <a href="http://venturebeat.com/2015/12/18/pinterest-elixir/" target="_blank" rel="external">[ref]</a><ul>
+<li>Pinterest <a href="https://venturebeat.com/2015/12/18/pinterest-elixir/" target="_blank" rel="external">[ref]</a><ul>
 <li>運用在「通知系統」一秒可以傳送 14,000 筆訊息，只需要15台主機。原本用 JAVA 的舊架構則需要 30台主機。而且程式碼檔案大小僅有原本的 1/10 唷！<br>(Pinterest’s notification system now uses Elixir to deliver 14,000 notifications per second)</li>
 <li>核心 API 也用 Elixir 改寫，運行速度比 Memcached-based predecessor 的反應時間還要更快速。<br>(The rate-limiting system for Pinterest’s core application programming interface (API) and Ads API is also now written in Elixir, providing faster response times than its Memcached-based predecessor.)</li>
 </ul>
 </li>
-<li>Brightcove [<a href="http://blog.plataformatec.com.br/2015/08/elixir-in-production-interview-adam-kittelson/" target="_blank" rel="external">ref</a>]<ul>
+<li>Brightcove [<a href="https://blog.plataformatec.com.br/2015/08/elixir-in-production-interview-adam-kittelson/" target="_blank" rel="external">ref</a>]<ul>
 <li>使用 Phoenix Framework。讓登入後台的使用者可以關注特定轉檔、修改影片等等事件，並且在完成時通知使用者。</li>
 </ul>
 </li>
@@ -418,20 +420,20 @@
 <li><a href="https://www.packtpub.com/application-development/learning-elixir" target="_blank" rel="external">Learning Elixir</a></li>
 </ul>
 <h2 id="推薦的-Elixir-線上教學資源"><a href="#推薦的-Elixir-線上教學資源" class="headerlink" title="推薦的 Elixir 線上教學資源"></a>推薦的 Elixir 線上教學資源</h2><ul>
-<li><a href="http://elixirschool.com/" target="_blank" rel="external">http://elixirschool.com/</a> // Elixir School 新手入門</li>
+<li><a href="https://elixirschool.com/" target="_blank" rel="external">https://elixirschool.com/</a> // Elixir School 新手入門</li>
 <li><a href="https://github.com/h4cc/awesome-elixir" target="_blank" rel="external">awesome-elixir</a> // Awesome 大補帖系列</li>
 <li><a href="https://hex.pm/" target="_blank" rel="external">https://hex.pm/</a> // The package manager for the Erlang ecosystem</li>
-<li><a href="http://toolbox.elixir.pm/" target="_blank" rel="external">http://toolbox.elixir.pm/</a></li>
-<li><a href="http://play.elixirbyexample.com/" target="_blank" rel="external">Elixir Playground</a> // 線上執行 Elixir code</li>
-<li><a href="http://elixirsips.com/" target="_blank" rel="external">Elixir sips</a> // 付費教學影片，類似 Laracast</li>
+<li><a href="https://toolbox.elixir.pm/" target="_blank" rel="external">https://toolbox.elixir.pm/</a></li>
+<li><a href="https://play.elixirbyexample.com/" target="_blank" rel="external">Elixir Playground</a> // 線上執行 Elixir code</li>
+<li><a href="https://elixirsips.com/" target="_blank" rel="external">Elixir sips</a> // 付費教學影片，類似 Laracast</li>
 <li><a href="https://media.pragprog.com/titles/elixir/ElixirCheat.pdf" target="_blank" rel="external">ElixirCheat</a> // Elixir 語法和指令小抄</li>
-<li><a href="http://blog.plataformatec.com.br/" target="_blank" rel="external">http://blog.plataformatec.com.br/</a> Elixir 老爸共同創辦的公司公開的技術 Blog</li>
+<li><a href="https://blog.plataformatec.com.br/" target="_blank" rel="external">https://blog.plataformatec.com.br/</a> Elixir 老爸共同創辦的公司公開的技術 Blog</li>
 <li><a href="https://github.com/seven1m/30-days-of-elixir" target="_blank" rel="external">https://github.com/seven1m/30-days-of-elixir</a> // 跟著範例30天學習 Elixir</li>
 </ul>
 <h2 id="補充一下-Erlang-語言："><a href="#補充一下-Erlang-語言：" class="headerlink" title="補充一下 Erlang 語言："></a>補充一下 Erlang 語言：</h2><ul>
 <li>1987 年誕生的老語言，由 Ericsson 開發。早期主要應用在電信業系統，經長年證實其穩定性超高。</li>
 <li><code>Erlang</code> 老爸 <code>Joe Armstrong</code> 當年的<a href="https://drive.google.com/file/d/0B1xAdaVSasm4SXNkN1MzSnM1LUU/view" target="_blank" rel="external">論文中譯版</a>。</li>
-<li><a href="http://joearms.github.io/2013/05/31/a-week-with-elixir.html" target="_blank" rel="external"><code>Erlang</code> 老爸也對 <code>Elixir</code> 讚譽有嘉。</a></li>
+<li><a href="https://joearms.github.io/2013/05/31/a-week-with-elixir.html" target="_blank" rel="external"><code>Erlang</code> 老爸也對 <code>Elixir</code> 讚譽有嘉。</a></li>
 <li>主要的特色是 COP(Concurrency-oriented programming， 平行導向程式設計) 強調程式的容錯處理。</li>
 <li>Facebook Chat 就是用 <a href="https://www.quora.com/Why-was-Erlang-chosen-for-use-in-Facebook-chat" target="_blank" rel="external">Erlang 開發</a></li>
 </ul>
@@ -439,8 +441,8 @@
     
     <summary type="html">
     
-      &lt;h2 id=&quot;緣起：&quot;&gt;&lt;a href=&quot;#緣起：&quot; class=&quot;headerlink&quot; title=&quot;緣起：&quot;&gt;&lt;/a&gt;緣起：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;http://imgur.com/39eqCJu.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;最近因為新工作環境要使
+      &lt;h2 id=&quot;緣起：&quot;&gt;&lt;a href=&quot;#緣起：&quot; class=&quot;headerlink&quot; title=&quot;緣起：&quot;&gt;&lt;/a&gt;緣起：&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;https://imgur.com/39eqCJu.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;最近因為新工作環境要
     
     </summary>
     
@@ -456,12 +458,12 @@
     <link href="https://bobochen.com/tools/icdiff/"/>
     <id>https://bobochen.com/tools/icdiff/</id>
     <published>2016-01-31T14:35:12.000Z</published>
-    <updated>2016-07-10T04:15:16.000Z</updated>
+    <updated>2018-10-18T08:53:27.129Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 <code>diff</code> 指令，效果如下：</p>
-<p><img src="http://i.imgur.com/2B3fcMC.png" alt="內建的 diff 指令比對檔案差異">￼</p>
+    <content type="html"><![CDATA[<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>在 Terminal 環<a href="https://境下，兩個檔案要進行差異比對，通常我們會使用系統內建的" target="_blank" rel="external">https://境下，兩個檔案要進行差異比對，通常我們會使用系統內建的</a> <code>diff</code> 指令，效果如下：</p>
+<p><img src="https://i.imgur.com/2B3fcMC.png" alt="內建的 diff 指令比對檔案差異"></p>
 <p><code>diff</code>指令僅僅是將檔案差異處以<strong>上下對照呈現</strong>，並不會以顏色標示差異處，需要我們自己很傷眼的來回掃描比對才知道差異在哪裡，這樣的呈現效果不是那麼清楚。</p>
-<p>讓我們來試試看，如果將檔案差異處以<strong>左右對照呈現</strong>的方式，並且將差異處標記上顏色，那是不是更一目了然了呢！<br><img src="http://i.imgur.com/NEA45so.png" alt="使用 icdiff 指令比對檔案差異"></p>
+<p>讓我們來試試看，如果將檔案差異處以<strong>左右對照呈現</strong>的方式，並且將差異處標記上顏色，那是不是更一目了然了呢！<br><img src="https://i.imgur.com/NEA45so.png" alt="使用 icdiff 指令比對檔案差異"></p>
 <p>漂亮！差異處有加上顏色果然清楚多了！要達到這樣的效果，只需要改用 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external"><code>icdiff</code></a> 這一套工具即可。</p>
 <p>來看看 <a href="https://github.com/jeffkaufman/icdiff" target="_blank" rel="external"><code>icdiff</code></a> 官方是怎麼介紹的：</p>
 <blockquote>
@@ -513,7 +515,7 @@ icdiff $2 $5
     
     <summary type="html">
     
-      &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;在 Terminal 環境下，兩個檔案要進行差異比對，通常我們會使用系統內建的 &lt;code&gt;diff&lt;/code&gt; 指令，效果如下：
+      &lt;h2 id=&quot;前言：&quot;&gt;&lt;a href=&quot;#前言：&quot; class=&quot;headerlink&quot; title=&quot;前言：&quot;&gt;&lt;/a&gt;前言：&lt;/h2&gt;&lt;p&gt;在 Terminal 環&lt;a href=&quot;https://境下，兩個檔案要進行差異比對，通常我們會使用系統內建的&quot; target=&quot;
     
     </summary>
     
@@ -592,7 +594,7 @@ icdiff $2 $5
     <link href="https://bobochen.com/notes/%E5%BE%9E%20Blogger%20%E6%90%AC%E5%AE%B6%E5%88%B0%20Hexo%20%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
     <id>https://bobochen.com/notes/從 Blogger 搬家到 Hexo 的第一篇/</id>
     <published>2015-09-29T15:55:33.000Z</published>
-    <updated>2016-01-31T14:21:30.000Z</updated>
+    <updated>2018-10-18T08:53:54.118Z</updated>
     
     <content type="html"><![CDATA[<center><img src="/images/2015/hexo_github.png" alt=""></center>
 
@@ -611,7 +613,7 @@ icdiff $2 $5
 <p>其實除了 Hexo 之外，類似的選擇還評估了 jekyll、Ghost、Octopress，各有各個優缺點，Hexo 明顯的優勢在於 <strong>編譯速度快</strong>、<strong>安裝設定超簡單</strong>，之後整理一下在來分享評估的小小心得。</p>
 <h2 id="搬家心路歷程小記"><a href="#搬家心路歷程小記" class="headerlink" title="搬家心路歷程小記"></a>搬家心路歷程小記</h2><p>原先在 Blogger 前前後後寫了約1百多篇文章，雖然大多是學習過程的雜記，稱不上什麼技術文章，但總是個回憶，捨不得丟棄，因此希望可以有個搬家工具來打包舊文章。</p>
 <blockquote>
-<p>備註：舊版 Blog 位置：<a href="http://bobo52310.blogspot.tw" target="_blank" rel="external">http://bobo52310.blogspot.tw</a></p>
+<p>備註：舊版 Blog 位置：<a href="https://bobo52310.blogspot.tw" target="_blank" rel="external">https://bobo52310.blogspot.tw</a></p>
 </blockquote>
 <h3 id="Hexo-官方搬家教學："><a href="#Hexo-官方搬家教學：" class="headerlink" title="Hexo 官方搬家教學："></a>Hexo 官方搬家教學：</h3><p>官方貼心地提供搬家(migration)說明 <a href="https://hexo.io/docs/migration.html" target="_blank" rel="external">https://hexo.io/docs/migration.html</a></p>
 <p>目前有支援以下幾種來源：</p>
@@ -624,16 +626,16 @@ icdiff $2 $5
 <p>但是沒有看到有支援 Blogger … </p>
 <p>只好請 Google 來幫忙，找到一個看似可用的 npm 套件：<a href="https://www.npmjs.com/package/hexo-migrator-blogger" target="_blank" rel="external">hexo-migrator-blogger</a></p>
 <p>實際測試後，僅僅噴了一些錯誤訊息，無法執行打包舊文章 @_@</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">boboMac :: blog.bobochen.com ‹master*› » hexo migrate blogger <span class="symbol">http:</span>/<span class="regexp">/bobo52310.blogspot.tw/feeds</span><span class="regexp">/posts/default</span>\?alt\=json\&amp;max-results\=<span class="number">10000</span></div><div class="line">Fetching...</div><div class="line">blog.bobochen.com/node_modules/hexo-migrator-blogger/<span class="class"><span class="keyword">lib</span>/<span class="title">migrate</span>.<span class="title">js</span>:25</span></div><div class="line">            var content = item.content[<span class="string">'$t'</span>];</div><div class="line">                                      ^</div><div class="line"><span class="symbol">TypeError:</span> Cannot read property <span class="string">'$t'</span> <span class="keyword">of</span> undefined</div><div class="line">    at blog.bobochen.com/node_modules/hexo-migrator-blogger/<span class="class"><span class="keyword">lib</span>/<span class="title">migrate</span>.<span class="title">js</span>:25:39</span></div></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">boboMac :: blog.bobochen.com ‹master*› » hexo migrate blogger <span class="symbol">https:</span>/<span class="regexp">/bobo52310.blogspot.tw/feeds</span><span class="regexp">/posts/default</span>\?alt\=json\&amp;max-results\=<span class="number">10000</span></div><div class="line">Fetching...</div><div class="line">blog.bobochen.com/node_modules/hexo-migrator-blogger/<span class="class"><span class="keyword">lib</span>/<span class="title">migrate</span>.<span class="title">js</span>:25</span></div><div class="line">            var content = item.content[<span class="string">'$t'</span>];</div><div class="line">                                      ^</div><div class="line"><span class="symbol">TypeError:</span> Cannot read property <span class="string">'$t'</span> <span class="keyword">of</span> undefined</div><div class="line">    at blog.bobochen.com/node_modules/hexo-migrator-blogger/<span class="class"><span class="keyword">lib</span>/<span class="title">migrate</span>.<span class="title">js</span>:25:39</span></div></pre></td></tr></table></figure>
 <p>最後還是改用官方教學的 RSS 來源，才成功打包。</p>
 <ul>
-<li><p>這裡會需要從 Blogger 找出 RSS 位置，詳見：<br><a href="http://www.blogger.com/feeds/6977877551634260178/posts/default" target="_blank" rel="external">http://www.blogger.com/feeds/6977877551634260178/posts/default</a></p>
+<li><p>這裡會需要從 Blogger 找出 RSS 位置，詳見：<br><a href="https://www.blogger.com/feeds/6977877551634260178/posts/default" target="_blank" rel="external">https://www.blogger.com/feeds/6977877551634260178/posts/default</a></p>
 </li>
-<li><p>以及 Blogger 的 feed urls 規則<br><a href="https://support.google.com/blogger/answer/97933?hl=en" target="_blank" rel="external">https://support.google.com/blogger/answer/97933?hl=en</a><br><code>http://你的blogger帳號.blogspot.com/feeds/posts/default</code></p>
+<li><p>以及 Blogger 的 feed urls 規則<br><a href="https://support.google.com/blogger/answer/97933?hl=en" target="_blank" rel="external">https://support.google.com/blogger/answer/97933?hl=en</a><br><code>https://你的blogger帳號.blogspot.com/feeds/posts/default</code></p>
 </li>
 <li><p>找出特定某一篇的 RSS</p>
 <ul>
-<li><code>http://你的blogger帳號.blogspot.com/feeds/postId/comments/default</code></li>
+<li><code>https://你的blogger帳號.blogspot.com/feeds/postId/comments/default</code></li>
 </ul>
 </li>
 </ul>
@@ -643,7 +645,7 @@ icdiff $2 $5
 <p><code>xml =&gt; web =&gt; hexo converter</code> 或許也是一個方法~</p>
 <h2 id="參考資料"><a href="#參考資料" class="headerlink" title="參考資料"></a>參考資料</h2><ul>
 <li><a href="https://hexo.io/zh-tw/docs/deployment.html" target="_blank" rel="external">https://hexo.io/zh-tw/docs/deployment.html</a></li>
-<li><a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">http://blog.fens.me/hexo-blog-github/</a></li>
+<li><a href="https://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">https://blog.fens.me/hexo-blog-github/</a></li>
 </ul>
 ]]></content>
     
@@ -716,7 +718,7 @@ icdiff $2 $5
     <link href="https://bobochen.com/tools/Sketch3-%E8%A1%8C%E9%9B%B2%E6%B5%81%E6%B0%B4%E7%9A%84-UI-design-%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%A0%B9%E6%9C%AC%E5%B0%B1%E6%98%AF%E8%A8%AD%E8%A8%88%E7%95%8C%E7%9A%84-Sublime-Text-%E5%98%9B/"/>
     <id>https://bobochen.com/tools/Sketch3-行雲流水的-UI-design-工具，根本就是設計界的-Sublime-Text-嘛/</id>
     <published>2015-08-30T15:47:44.000Z</published>
-    <updated>2015-09-27T05:02:49.000Z</updated>
+    <updated>2018-10-18T08:54:33.574Z</updated>
     
     <content type="html"><![CDATA[<p><center><img src="/images/2015/sketch3.jpg" alt=""></center></p>
 <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>以前使用 Windows 的時候，一直有耳聞搞設計的都熱愛用 Mac，而自己使用了 Mac 一陣子卻感覺不出來差異，直到最近遇到了 Sketch3！這套設計界的神兵利器，讓我眼睛為之一亮！</p>
@@ -735,8 +737,8 @@ icdiff $2 $5
 <li>開發 RWD 超方便，可快速切換在不同解析度下做預覽</li>
 <li>還可以輸出 Asset、CSS</li>
 <li>自建 template</li>
-<li>搭配 Bootstrap 3 UI Kit 快速建立 mock up <a href="http://leveluptuts.com/tutorials/sketch-3-tutorials/13-bootstrap-3-ui-kit" target="_blank" rel="external">教學</a></li>
-<li>下載 Bootstrap 3 Vector UI圖示  <a href="http://bootstrapuikit.com/" target="_blank" rel="external">http://bootstrapuikit.com/</a></li>
+<li>搭配 Bootstrap 3 UI Kit 快速建立 mock up <a href="https://leveluptuts.com/tutorials/sketch-3-tutorials/13-bootstrap-3-ui-kit" target="_blank" rel="external">教學</a></li>
+<li>下載 Bootstrap 3 Vector UI圖示  <a href="https://bootstrapuikit.com/" target="_blank" rel="external">https://bootstrapuikit.com/</a></li>
 <li>可將 arborad 輸出到 zeplin</li>
 <li>有支援 Google 官方 Material Design</li>
 </ol>
@@ -773,11 +775,11 @@ icdiff $2 $5
 <li>UI將物件拖拉到桌面即可產生 png 圖</li>
 </ol>
 <h2 id="參考資源："><a href="#參考資源：" class="headerlink" title="參考資源："></a>參考資源：</h2><ol>
-<li><a href="http://leveluptuts.com" target="_blank" rel="external">http://leveluptuts.com</a> 詳細影片教學</li>
-<li><a href="http://sketchcn.com" target="_blank" rel="external">http://sketchcn.com</a> sketch 簡體中文網</li>
-<li><a href="http://sketchshortcuts.com/" target="_blank" rel="external">http://sketchshortcuts.com/</a> sketch 快捷鍵一覽表</li>
+<li><a href="https://leveluptuts.com" target="_blank" rel="external">https://leveluptuts.com</a> 詳細影片教學</li>
+<li><a href="https://sketchcn.com" target="_blank" rel="external">https://sketchcn.com</a> sketch 簡體中文網</li>
+<li><a href="https://sketchshortcuts.com/" target="_blank" rel="external">https://sketchshortcuts.com/</a> sketch 快捷鍵一覽表</li>
 <li><a href="https://medium.com/sketch-app/sketch-keyboard-shortcuts-42c06583ae83" target="_blank" rel="external">Sketch Keyboard Shortcuts</a></li>
-<li><a href="http://blog.visioncan.com/2014/moved-to-sketch/" target="_blank" rel="external">來用 Sketch 畫你的 UI 吧</a></li>
+<li><a href="https://blog.visioncan.com/2014/moved-to-sketch/" target="_blank" rel="external">來用 Sketch 畫你的 UI 吧</a></li>
 <li><a href="https://github.com/sketchplugins/plugin-directory" target="_blank" rel="external">Plugins 清單彙整</a> 算是半官方 github</li>
 </ol>
 <p>Bobo內心旁白：「再見了 Adobe 家族！胖胖的軟體真的不是我的菜…」</p>
@@ -802,9 +804,9 @@ icdiff $2 $5
     <link href="https://bobochen.com/server-os/Mac-%E9%A1%AF%E7%A4%BA%E8%BC%B8%E5%85%A5%E9%81%8E%E7%9A%84%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E5%AF%86%E7%A2%BC/"/>
     <id>https://bobochen.com/server-os/Mac-顯示輸入過的無線網路密碼/</id>
     <published>2015-07-26T03:14:53.000Z</published>
-    <updated>2015-09-26T12:22:52.000Z</updated>
+    <updated>2018-10-18T08:55:43.510Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>近期有不少社群活動都辦在「<a href="http://www.innosquare.economic.ntpc.net.tw/site/" target="_blank" rel="external">新北創力坊</a>」，地點位在捷運「台北橋站」的捷運共構大樓，出捷運站就到了！交通實在有夠便利。</p>
+    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>近期有不少社群活動都辦在「<a href="https://www.innosquare.economic.ntpc.net.tw/site/" target="_blank" rel="external">新北創力坊</a>」，地點位在捷運「台北橋站」的捷運共構大樓，出捷運站就到了！交通實在有夠便利。</p>
 <p>有次帶新朋友去那裡需要使用無線網路，但找不到 wifi 密碼，問了一輪大家都不知道密碼… 因為大家在第一次輸入時就按記憶密碼，沒有人記得也是正常的 @__@</p>
 <p>那麼是否辦法將已輸入的密碼顯示呢？</p>
 <p>記得以前在 Windows 可以使用偷看密碼的工具，而 Mac 其實不用那麼麻煩，直接有內建的方法可以查看喔！<br><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--></p>
@@ -820,7 +822,7 @@ icdiff $2 $5
     
     <summary type="html">
     
-      &lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt;近期有不少社群活動都辦在「&lt;a href=&quot;http://www.innosquare.economic.ntpc.net.tw/site/
+      &lt;h2 id=&quot;起因&quot;&gt;&lt;a href=&quot;#起因&quot; class=&quot;headerlink&quot; title=&quot;起因&quot;&gt;&lt;/a&gt;起因&lt;/h2&gt;&lt;p&gt;近期有不少社群活動都辦在「&lt;a href=&quot;https://www.innosquare.economic.ntpc.net.tw/site
     
     </summary>
     
@@ -871,7 +873,7 @@ icdiff $2 $5
     <link href="https://bobochen.com/notes/%E6%8E%A8%E8%96%A62%E5%80%8B%E5%A5%BD%E7%94%A8%E7%9A%84-PHP-Refactoring-%E9%87%8D%E6%A7%8B%E5%B7%A5%E5%85%B7/"/>
     <id>https://bobochen.com/notes/推薦2個好用的-PHP-Refactoring-重構工具/</id>
     <published>2015-07-05T08:55:56.000Z</published>
-    <updated>2016-09-04T07:46:09.000Z</updated>
+    <updated>2018-10-18T08:52:16.482Z</updated>
     
     <content type="html"><![CDATA[<center><img src="/images/2015/refactoring.jpg" alt=""></center>
 
@@ -925,7 +927,7 @@ exit;
 <p>備註：PhpStorm 是付費軟體(個人版 US $ 99)</p>
 </blockquote>
 <h2 id="開源的選擇"><a href="#開源的選擇" class="headerlink" title="開源的選擇"></a>開源的選擇</h2><ol>
-<li><a href="http://qafoolabs.github.io/php-refactoring-browser/" target="_blank" rel="external">PHP Refactoring Browser</a><br>如果是要免費<a href="https://github.com/QafooLabs/php-refactoring-browser" target="_blank" rel="external">開源</a>的，這一套算是最好用的了，不過目前仍在 alpha 版本階段。<br>可做到以下重構：</li>
+<li><a href="https://qafoolabs.github.io/php-refactoring-browser/" target="_blank" rel="external">PHP Refactoring Browser</a><br>如果是要免費<a href="https://github.com/QafooLabs/php-refactoring-browser" target="_blank" rel="external">開源</a>的，這一套算是最好用的了，不過目前仍在 alpha 版本階段。<br>可做到以下重構：</li>
 </ol>
 <ul>
 <li>Extract Method</li>
@@ -952,11 +954,11 @@ exit;
     </summary>
     
     
-      <category term="Sublime Text" scheme="https://bobochen.com/tags/Sublime-Text/"/>
-    
       <category term="PHP" scheme="https://bobochen.com/tags/PHP/"/>
     
       <category term="PhpStorm" scheme="https://bobochen.com/tags/PhpStorm/"/>
+    
+      <category term="Sublime Text" scheme="https://bobochen.com/tags/Sublime-Text/"/>
     
   </entry>
   
@@ -1004,7 +1006,7 @@ exit;
     <link href="https://bobochen.com/notes/%E4%BD%BF%E7%94%A8-Feedly-%E8%A8%82%E9%96%B1-Ptt-%E7%9A%84-RSS%EF%BC%8C%E8%AE%93%E6%89%8B%E6%A9%9F%E5%B0%91%E8%A3%9D%E4%B8%80%E4%BA%9B-App/"/>
     <id>https://bobochen.com/notes/使用-Feedly-訂閱-Ptt-的-RSS，讓手機少裝一些-App/</id>
     <published>2015-05-18T15:34:50.000Z</published>
-    <updated>2016-07-08T15:30:45.000Z</updated>
+    <updated>2018-10-18T08:53:41.258Z</updated>
     
     <content type="html"><![CDATA[<center><img src="/images/2015/ptt_rss.png" alt=""></center>
 
@@ -1016,8 +1018,8 @@ exit;
 <li>相較於 BBS，大家多半還是比較習慣 Web 的操作。</li>
 </ol>
 <h2 id="不用裝-Ptt-軟體的方法"><a href="#不用裝-Ptt-軟體的方法" class="headerlink" title="不用裝 Ptt 軟體的方法"></a>不用裝 Ptt 軟體的方法</h2><p>某天在捷運上滑手機時，突然想到 Ptt 應該有提供 RSS feed 吧？<br>上網查一下發現～ 果然有！而且還是官方提供的！<br>既然有那麼事情就簡單了，直接搭配 Feedly 這套好用的 RSS 訂閱器，把 Ptt 各版的 RSS 文章匯入就可啦！</p>
-<p>如此，不論是 BBS 或是一般網站來源，都可以在 Feedly 這裡有一致性的瀏覽體驗！超讚！<br>批踢踢的 RSS 格式如下：<code>http://rss.ptt.cc/板名.xml</code></p>
-<p>例如電影版就是 <code>http://rss.ptt.cc/movie.xml</code><br>PHP 版就是 <code>http://rss.ptt.cc/php.xml</code></p>
+<p>如此，不論是 BBS 或是一般網站來源，都可以在 Feedly 這裡有一致性的瀏覽體驗！超讚！<br>批踢踢的 RSS 格式如下：<code>https://rss.ptt.cc/板名.xml</code></p>
+<p>例如電影版就是 <code>https://rss.ptt.cc/movie.xml</code><br>PHP 版就是 <code>https://rss.ptt.cc/php.xml</code></p>
 <p>只要知道版名，就可以使用 RSS 訂閱你的最愛看板囉！<br>甚至還可以搭配 IFTTT 服務來追蹤 ptt 特定板塊~ 而有不少應用(發現新大陸中)。</p>
 ]]></content>
     
@@ -1045,7 +1047,7 @@ exit;
     <link href="https://bobochen.com/notes/Demo-Syntax-Highlighter/"/>
     <id>https://bobochen.com/notes/Demo-Syntax-Highlighter/</id>
     <published>2015-04-12T07:06:21.000Z</published>
-    <updated>2016-01-31T12:57:19.000Z</updated>
+    <updated>2018-10-18T08:54:16.931Z</updated>
     
     <content type="html"><![CDATA[<center><img src="/images/2015/SyntaxHighlighter.png" alt=""></center>
 
@@ -1118,7 +1120,7 @@ Scala   scala   shBrushScala.js
 SQL sql shBrushSql.js
 Visual Basic    vb, vbnet   shBrushVb.js
 XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
-</code></pre><p><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/" target="_blank" rel="external">官網詳列支援標記的語言</a><br>也支援多種樣式，本站使用的是 <a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/themes/rdark.html" target="_blank" rel="external">RDark theme</a></p>
+</code></pre><p><a href="https://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/" target="_blank" rel="external">官網詳列支援標記的語言</a><br>也支援多種樣式，本站使用的是 <a href="https://alexgorbatchev.com/SyntaxHighlighter/manual/themes/rdark.html" target="_blank" rel="external">RDark theme</a></p>
 ]]></content>
     
     <summary type="html">
