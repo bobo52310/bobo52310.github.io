@@ -138,11 +138,11 @@
     <link href="https://bobochen.com/tools/VSCode%20%E5%8A%A0%E9%80%9F%20miniMap%20%E6%B8%B2%E6%9F%93%E9%80%9F%E5%BA%A6(%E4%BD%BF%E7%94%A8%E6%96%B9%E5%A1%8A%E9%A1%AF%E7%A4%BA%E7%A8%8B%E5%BC%8F%E7%A2%BC)/"/>
     <id>https://bobochen.com/tools/VSCode 加速 miniMap 渲染速度(使用方塊顯示程式碼)/</id>
     <published>2017-04-28T00:57:04.000Z</published>
-    <updated>2017-05-06T09:47:11.000Z</updated>
+    <updated>2018-10-18T08:46:58.464Z</updated>
     
     <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>VSCode 在 v1.10 推出綜觀程式碼區塊的 <code>Minimap</code> 功能，只要在設定檔加入 <code>&quot;editor.minimap.enabled&quot;: true</code> 即可開啟此功能。</p>
 <p>預設的 <code>Minimap</code> 會將程式碼細緻顯示，相對的也增加畫面渲染的負擔，官方也提供 <code>Minimap</code> 使用方塊方式顯示程式碼，這兩種 <code>Minimap</code> 顯示方式的對照如下圖所示，以下說明如何設定。</p>
-<p><img src="http://i.imgur.com/kMuJXPZ.png" alt=""></p>
+<p><img src="https://i.imgur.com/kMuJXPZ.png" alt=""></p>
 <h2 id="設定-Minimap-使用方塊方式顯示程式碼"><a href="#設定-Minimap-使用方塊方式顯示程式碼" class="headerlink" title="設定 Minimap 使用方塊方式顯示程式碼"></a>設定 <code>Minimap</code> 使用方塊方式顯示程式碼</h2><ol>
 <li>執行 <code>command+,</code> 開啟設定 (Open User Settings)</li>
 <li>搜尋 <code>minimap</code> 找到相關設定</li>
