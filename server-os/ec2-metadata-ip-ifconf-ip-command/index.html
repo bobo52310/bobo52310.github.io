@@ -54,7 +54,7 @@
 				<h1 class="site-name"><a href="/" title="Bobo的技術時光屋">Bobo的技術時光屋</a></h1>
 				<h2 class="blog-motto">Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</h2>
 			</div>
-			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
@@ -70,7 +70,7 @@
  					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:bobochen.com">
 					</form>
 					
@@ -93,14 +93,14 @@
 		<a href="https://plus.google.com/u/0/communities/116944928466340599471?rel=author" title="Bobo Chen" target="_blank" itemprop="author">Bobo Chen</a>
 		
   <p class="article-time">
-    <time datetime="2017-09-03T03:50:05.000Z" itemprop="datePublished"> Published 2017-09-03</time>
+    <time datetime="2017-09-03T03:50:05.000Z" itemprop="datePublished"> 发表于 2017-09-03</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
-			<strong class="toc-title">Contents</strong>
+			<strong class="toc-title">文章目录</strong>
 		
 			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#緣起"><span class="toc-number">1.1.</span> <span class="toc-text">緣起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#測試環境"><span class="toc-number">1.2.</span> <span class="toc-text">測試環境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何取得-EC2-Instance-的-Private-IP-address"><span class="toc-number">2.</span> <span class="toc-text">如何取得 EC2 Instance 的 Private IP address</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何取得-EC2-Instance-的-Public-IP-address"><span class="toc-number">3.</span> <span class="toc-text">如何取得 EC2 Instance 的 Public IP address</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#參考資料"><span class="toc-number">3.1.</span> <span class="toc-text">參考資料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ip-指令介紹"><span class="toc-number">4.</span> <span class="toc-text">ip 指令介紹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在-CentOS-上需要另外安裝嗎？"><span class="toc-number">4.1.</span> <span class="toc-text">在 CentOS 上需要另外安裝嗎？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用的-ip-指令"><span class="toc-number">4.2.</span> <span class="toc-text">常用的 ip 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：ip-指令的完整參數"><span class="toc-number">4.3.</span> <span class="toc-text">備註：ip 指令的完整參數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：ifconfig-指令的完整參數"><span class="toc-number">4.4.</span> <span class="toc-text">備註：ifconfig 指令的完整參數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：hostname-指令的完整指令"><span class="toc-number">4.5.</span> <span class="toc-text">備註：hostname 指令的完整指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#參考資料-1"><span class="toc-number">4.6.</span> <span class="toc-text">參考資料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">5.</span> <span class="toc-text">Conclusion</span></a></li></ol>
 		
@@ -209,17 +209,17 @@
 
 
 </div>  
-      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
-  <strong class="toc-title">Contents</strong>
+  <strong class="toc-title">文章目录</strong>
  
  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#緣起"><span class="toc-number">1.1.</span> <span class="toc-text">緣起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#測試環境"><span class="toc-number">1.2.</span> <span class="toc-text">測試環境</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何取得-EC2-Instance-的-Private-IP-address"><span class="toc-number">2.</span> <span class="toc-text">如何取得 EC2 Instance 的 Private IP address</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#如何取得-EC2-Instance-的-Public-IP-address"><span class="toc-number">3.</span> <span class="toc-text">如何取得 EC2 Instance 的 Public IP address</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#參考資料"><span class="toc-number">3.1.</span> <span class="toc-text">參考資料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ip-指令介紹"><span class="toc-number">4.</span> <span class="toc-text">ip 指令介紹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在-CentOS-上需要另外安裝嗎？"><span class="toc-number">4.1.</span> <span class="toc-text">在 CentOS 上需要另外安裝嗎？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#常用的-ip-指令"><span class="toc-number">4.2.</span> <span class="toc-text">常用的 ip 指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：ip-指令的完整參數"><span class="toc-number">4.3.</span> <span class="toc-text">備註：ip 指令的完整參數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：ifconfig-指令的完整參數"><span class="toc-number">4.4.</span> <span class="toc-text">備註：ifconfig 指令的完整參數</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#備註：hostname-指令的完整指令"><span class="toc-number">4.5.</span> <span class="toc-text">備註：hostname 指令的完整指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#參考資料-1"><span class="toc-number">4.6.</span> <span class="toc-text">參考資料</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">5.</span> <span class="toc-text">Conclusion</span></a></li></ol>
  
   </div>
 
 <div id="asidepart">
-<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
 <aside class="clearfix">
 
   
@@ -235,7 +235,7 @@
 
   
 <div class="tagslist">
-	<p class="asidetitle">Tags</p>
+	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
 			
@@ -283,7 +283,7 @@
 			
 		
 			
-				<li><a href="/tags/PhpStorm/" title="PhpStorm">PhpStorm<sup>1</sup></a></li>
+				<li><a href="/tags/Lumen/" title="Lumen">Lumen<sup>1</sup></a></li>
 			
 		
 			
@@ -323,7 +323,7 @@
 
 
   <div class="linkslist">
-  <p class="asidetitle">Links</p>
+  <p class="asidetitle">友情链接</p>
     <ul>
         
           <li>
@@ -369,7 +369,7 @@
 
 
   <div class="rsspart">
-	<a href="/atom.xml" target="_blank" title="rss">RSS</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
 </aside>
@@ -632,7 +632,7 @@ var _hmt = _hmt || [];
 <!-- Totop Begin -->
 
 	<div id="totop">
-	<a title="Back to Top"><img src="/img/scrollup.png"/></a>
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
 	</div>
 	<script src="/js/totop.js"></script>
 
