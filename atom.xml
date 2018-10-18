@@ -4,9 +4,9 @@
   <subtitle>Study Notes of Elixir、Phoenix、PHP、Laravel、Rails &amp; Web development.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://bobochen.com/"/>
-  <updated>2017-09-03T04:28:21.000Z</updated>
-  <id>http://bobochen.com/</id>
+  <link href="https://bobochen.com/"/>
+  <updated>2018-10-18T07:01:50.963Z</updated>
+  <id>https://bobochen.com/</id>
   
   <author>
     <name>Bobo Chen</name>
@@ -16,9 +16,89 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://bobochen.com/2018-10-18/"/>
+    <id>https://bobochen.com/2018-10-18/</id>
+    <published>2018-10-18T07:01:42.987Z</published>
+    <updated>2018-10-18T07:01:50.963Z</updated>
+    
+    <content type="html"><![CDATA[<p>% dig bobo52310.github.io</p>
+<p>; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; bobo52310.github.io<br>;; global options: +cmd<br>;; Got answer:<br>;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 41275<br>;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1</p>
+<p>;; OPT PSEUDOSECTION:<br>; EDNS: version: 0, flags:; udp: 4096<br>;; QUESTION SECTION:<br>;bobo52310.github.io.        IN    A</p>
+<p>;; ANSWER SECTION:<br>bobo52310.github.io.    300    IN    A    185.199.110.153<br>bobo52310.github.io.    300    IN    A    185.199.108.153<br>bobo52310.github.io.    300    IN    A    185.199.109.153<br>bobo52310.github.io.    300    IN    A    185.199.111.153</p>
+<p>;; Query time: 1 msec<br>;; SERVER: 192.168.31.1#53(192.168.31.1)<br>;; WHEN: Thu Oct 18 14:59:58 CST 2018<br>;; MSG SIZE  rcvd: 112</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;% dig bobo52310.github.io&lt;/p&gt;
+&lt;p&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.10.6 &amp;lt;&amp;lt;&amp;gt;&amp;gt; bobo52310.github.io&lt;br&gt;;; global options: +cmd&lt;br&gt;;; Got 
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>StackShare 選擇開發技術的入口網站</title>
+    <link href="https://bobochen.com/stackshare/"/>
+    <id>https://bobochen.com/stackshare/</id>
+    <published>2017-10-04T02:54:50.000Z</published>
+    <updated>2018-01-14T02:17:08.338Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/images/2015/st3_backup_fat_folder.png" alt=""></center>
+
+<blockquote>
+<p>TODO:StackShare 選擇開發技術的入口網站</p>
+</blockquote>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="緣起"><a href="#緣起" class="headerlink" title="緣起"></a>緣起</h3><p>目前有哪些技術可以選擇，滿足開發需求，。<br>常常會遇到技術選擇的困擾，相同性質的工具比較<br>例如團隊通訊軟體、slack vs. HipChat<br>Github vs. Bitbucket vs. GitLab</p>
+<h3 id="StackShare-簡介"><a href="#StackShare-簡介" class="headerlink" title="StackShare 簡介"></a>StackShare 簡介</h3><p>技術的選擇，或是開發工具的比較平台：<br><a href="https://stackshare.io/" target="_blank" rel="external">StackShare</a><br>Discover new tools and services See side-by-side comparisons Share your tech stack</p>
+<ul>
+<li>Discover new tools and services</li>
+<li>See side-by-side comparisons</li>
+<li>Share your tech stack</li>
+</ul>
+<p>資訊集中的地方，可讓用戶查看特定類別中的頂級工具。而列表中的工具會根據用戶評論/反饋/堆棧數量，整合等進行排名。這一做法對於CTO和工程師衡量哪些工具/服務最適合他們的團隊或項目是非常有用的。<br>一目瞭然，方便對照比較。</p>
+<h2 id="StackShare-提供哪些功能？"><a href="#StackShare-提供哪些功能？" class="headerlink" title="StackShare 提供哪些功能？"></a>StackShare 提供哪些功能？</h2><p>某某公司他們都在用什麼工具、服務</p>
+<ul>
+<li>點「Tools&amp;Services」，然後將頁面往下拉，就會看到詳細的分類。</li>
+<li>點「Stacks」可以看到其它家公司用了哪些服務，超酷的。</li>
+<li>提供各種排名比較</li>
+<li>Trending 則顯示目前較火紅的技術與工具</li>
+<li>Stacks 整理了各大網站所使用的技術與工具</li>
+</ul>
+<p>開發者可以知道哪些公司或網站使用這項技能（包括程式語言、技術框架、工具等等），並關注這些技能的成長趨勢，還可以幫助我們盤點自己會的技能。多瞭解業界對於某技能的應用狀況，也更有助於自我的技術職涯規劃。</p>
+<p>幾篇的介紹：</p>
+<ul>
+<li><a href="https://techcrunch.com/2017/06/19/why-stackshare-is-quietly-becoming-a-secret-weapon-for-developers-and-silicon-valley-ctos/" target="_blank" rel="external">Why Stackshare is quietly becoming a secret weapon for developers and Silicon Valley CTOs</a></li>
+</ul>
+<h2 id="補充：還有哪些和-StackShare-類似的網站？"><a href="#補充：還有哪些和-StackShare-類似的網站？" class="headerlink" title="補充：還有哪些和 StackShare 類似的網站？"></a>補充：還有哪些和 StackShare 類似的網站？</h2><h2 id="參考資料："><a href="#參考資料：" class="headerlink" title="參考資料："></a>參考資料：</h2><ol>
+<li><a href="http://superuser.com/questions/870148/sublime-text-2-keeps-growing-due-to-backup-folder" target="_blank" rel="external">http://superuser.com/questions/870148/sublime-text-2-keeps-growing-due-to-backup-folder</a></li>
+<li><a href="https://sublimetext.com/forum/viewtopic.php?f=3&amp;t=7627" target="_blank" rel="external">https://sublimetext.com/forum/viewtopic.php?f=3&amp;t=7627</a></li>
+</ol>
+<p>Bobo內心旁白：「在這個資訊爆炸的年代，選擇如何選擇，似乎也變成一門技術，」</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;center&gt;&lt;img src=&quot;/images/2015/st3_backup_fat_folder.png&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;TODO:StackShare 選擇開發技術的入口網站&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h
+    
+    </summary>
+    
+    
+      <category term="VSCode" scheme="https://bobochen.com/tags/VSCode/"/>
+    
+  </entry>
+  
+  <entry>
     <title>取得 EC2 IP 的2種方法</title>
-    <link href="http://bobochen.com/server-os/ec2-metadata-ip-ifconf-ip-command/"/>
-    <id>http://bobochen.com/server-os/ec2-metadata-ip-ifconf-ip-command/</id>
+    <link href="https://bobochen.com/server-os/ec2-metadata-ip-ifconf-ip-command/"/>
+    <id>https://bobochen.com/server-os/ec2-metadata-ip-ifconf-ip-command/</id>
     <published>2017-09-03T03:50:05.000Z</published>
     <updated>2017-09-03T04:28:21.000Z</updated>
     
@@ -84,18 +164,18 @@
     </summary>
     
     
-      <category term="CentOS" scheme="http://bobochen.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="https://bobochen.com/tags/CentOS/"/>
     
-      <category term="Linux" scheme="http://bobochen.com/tags/Linux/"/>
+      <category term="Linux" scheme="https://bobochen.com/tags/Linux/"/>
     
-      <category term="AWS" scheme="http://bobochen.com/tags/AWS/"/>
+      <category term="AWS" scheme="https://bobochen.com/tags/AWS/"/>
     
   </entry>
   
   <entry>
     <title>3分鐘護一生，關於工作的自我提問</title>
-    <link href="http://bobochen.com/think-about-the-software-developers-career/"/>
-    <id>http://bobochen.com/think-about-the-software-developers-career/</id>
+    <link href="https://bobochen.com/think-about-the-software-developers-career/"/>
+    <id>https://bobochen.com/think-about-the-software-developers-career/</id>
     <published>2017-09-02T04:55:02.000Z</published>
     <updated>2017-09-02T05:49:32.000Z</updated>
     
@@ -135,8 +215,8 @@
   
   <entry>
     <title>VSCode 加速 Minimap 顯示速度(使用方塊顯示程式碼)</title>
-    <link href="http://bobochen.com/tools/VSCode%20%E5%8A%A0%E9%80%9F%20miniMap%20%E6%B8%B2%E6%9F%93%E9%80%9F%E5%BA%A6(%E4%BD%BF%E7%94%A8%E6%96%B9%E5%A1%8A%E9%A1%AF%E7%A4%BA%E7%A8%8B%E5%BC%8F%E7%A2%BC)/"/>
-    <id>http://bobochen.com/tools/VSCode 加速 miniMap 渲染速度(使用方塊顯示程式碼)/</id>
+    <link href="https://bobochen.com/tools/VSCode%20%E5%8A%A0%E9%80%9F%20miniMap%20%E6%B8%B2%E6%9F%93%E9%80%9F%E5%BA%A6(%E4%BD%BF%E7%94%A8%E6%96%B9%E5%A1%8A%E9%A1%AF%E7%A4%BA%E7%A8%8B%E5%BC%8F%E7%A2%BC)/"/>
+    <id>https://bobochen.com/tools/VSCode 加速 miniMap 渲染速度(使用方塊顯示程式碼)/</id>
     <published>2017-04-28T00:57:04.000Z</published>
     <updated>2017-05-06T09:47:11.000Z</updated>
     
@@ -170,16 +250,16 @@
     </summary>
     
     
-      <category term="Sublime Text" scheme="http://bobochen.com/tags/Sublime-Text/"/>
+      <category term="VSCode" scheme="https://bobochen.com/tags/VSCode/"/>
     
-      <category term="VSCode" scheme="http://bobochen.com/tags/VSCode/"/>
+      <category term="Sublime Text" scheme="https://bobochen.com/tags/Sublime-Text/"/>
     
   </entry>
   
   <entry>
     <title>如何修改 Redhat / CentOS 7 主機名稱</title>
-    <link href="http://bobochen.com/server-os/centOS7-hostnamectl/"/>
-    <id>http://bobochen.com/server-os/centOS7-hostnamectl/</id>
+    <link href="https://bobochen.com/server-os/centOS7-hostnamectl/"/>
+    <id>https://bobochen.com/server-os/centOS7-hostnamectl/</id>
     <published>2017-01-22T01:35:09.000Z</published>
     <updated>2017-01-22T01:50:23.000Z</updated>
     
@@ -200,16 +280,16 @@
     </summary>
     
     
-      <category term="CentOS" scheme="http://bobochen.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="https://bobochen.com/tags/CentOS/"/>
     
-      <category term="Linux" scheme="http://bobochen.com/tags/Linux/"/>
+      <category term="Linux" scheme="https://bobochen.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>如何移除已經被 Git 追蹤的 .DS_Store 檔案</title>
-    <link href="http://bobochen.com/tools/%E5%A6%82%E4%BD%95%E7%A7%BB%E9%99%A4%E5%B7%B2%E7%B6%93%E8%A2%AB%20Git%20%E8%BF%BD%E8%B9%A4%E7%9A%84%20.DS_Store%20%E6%AA%94%E6%A1%88/"/>
-    <id>http://bobochen.com/tools/如何移除已經被 Git 追蹤的 .DS_Store 檔案/</id>
+    <link href="https://bobochen.com/tools/%E5%A6%82%E4%BD%95%E7%A7%BB%E9%99%A4%E5%B7%B2%E7%B6%93%E8%A2%AB%20Git%20%E8%BF%BD%E8%B9%A4%E7%9A%84%20.DS_Store%20%E6%AA%94%E6%A1%88/"/>
+    <id>https://bobochen.com/tools/如何移除已經被 Git 追蹤的 .DS_Store 檔案/</id>
     <published>2016-11-28T00:57:04.000Z</published>
     <updated>2017-05-06T10:06:53.000Z</updated>
     
@@ -231,14 +311,14 @@
     </summary>
     
     
-      <category term="Git" scheme="http://bobochen.com/tags/Git/"/>
+      <category term="Git" scheme="https://bobochen.com/tags/Git/"/>
     
   </entry>
   
   <entry>
     <title>(Elixir 好書推薦) Programming Elixir 1.3 by Dave Thomas</title>
-    <link href="http://bobochen.com/books-programming-elixir/"/>
-    <id>http://bobochen.com/books-programming-elixir/</id>
+    <link href="https://bobochen.com/books-programming-elixir/"/>
+    <id>https://bobochen.com/books-programming-elixir/</id>
     <published>2016-09-04T06:45:09.000Z</published>
     <updated>2016-09-04T07:59:13.000Z</updated>
     
@@ -262,16 +342,16 @@
     </summary>
     
     
-      <category term="Elixir" scheme="http://bobochen.com/tags/Elixir/"/>
+      <category term="Elixir" scheme="https://bobochen.com/tags/Elixir/"/>
     
-      <category term="好書推薦" scheme="http://bobochen.com/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/"/>
+      <category term="好書推薦" scheme="https://bobochen.com/tags/%E5%A5%BD%E6%9B%B8%E6%8E%A8%E8%96%A6/"/>
     
   </entry>
   
   <entry>
     <title>在 CentOS 7 上開啟 Laravel 所需的 PHP Extension</title>
-    <link href="http://bobochen.com/php/%E5%9C%A8%20CentOS%207%20%E4%B8%8A%E9%96%8B%E5%95%9F%20Laravel%20%E6%89%80%E9%9C%80%E7%9A%84%20PHP%20Extension/"/>
-    <id>http://bobochen.com/php/在 CentOS 7 上開啟 Laravel 所需的 PHP Extension/</id>
+    <link href="https://bobochen.com/php/%E5%9C%A8%20CentOS%207%20%E4%B8%8A%E9%96%8B%E5%95%9F%20Laravel%20%E6%89%80%E9%9C%80%E7%9A%84%20PHP%20Extension/"/>
+    <id>https://bobochen.com/php/在 CentOS 7 上開啟 Laravel 所需的 PHP Extension/</id>
     <published>2016-09-01T15:28:33.000Z</published>
     <updated>2017-05-06T10:21:48.000Z</updated>
     
@@ -310,18 +390,18 @@
     </summary>
     
     
-      <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
+      <category term="Laravel" scheme="https://bobochen.com/tags/Laravel/"/>
     
-      <category term="CentOS" scheme="http://bobochen.com/tags/CentOS/"/>
+      <category term="CentOS" scheme="https://bobochen.com/tags/CentOS/"/>
     
-      <category term="Linux" scheme="http://bobochen.com/tags/Linux/"/>
+      <category term="Linux" scheme="https://bobochen.com/tags/Linux/"/>
     
   </entry>
   
   <entry>
     <title>推薦 Elixir 好用的開發編輯器</title>
-    <link href="http://bobochen.com/elixir/recommend-elixir-editor-ide/"/>
-    <id>http://bobochen.com/elixir/recommend-elixir-editor-ide/</id>
+    <link href="https://bobochen.com/elixir/recommend-elixir-editor-ide/"/>
+    <id>https://bobochen.com/elixir/recommend-elixir-editor-ide/</id>
     <published>2016-07-23T12:57:04.000Z</published>
     <updated>2016-07-24T02:58:55.000Z</updated>
     
@@ -337,22 +417,22 @@
     </summary>
     
     
-      <category term="Elixir" scheme="http://bobochen.com/tags/Elixir/"/>
+      <category term="Elixir" scheme="https://bobochen.com/tags/Elixir/"/>
     
-      <category term="Phoenix" scheme="http://bobochen.com/tags/Phoenix/"/>
+      <category term="Phoenix" scheme="https://bobochen.com/tags/Phoenix/"/>
     
-      <category term="Sublime Text" scheme="http://bobochen.com/tags/Sublime-Text/"/>
+      <category term="Sublime Text" scheme="https://bobochen.com/tags/Sublime-Text/"/>
     
-      <category term="IntelliJ" scheme="http://bobochen.com/tags/IntelliJ/"/>
+      <category term="IntelliJ" scheme="https://bobochen.com/tags/IntelliJ/"/>
     
-      <category term="Vim" scheme="http://bobochen.com/tags/Vim/"/>
+      <category term="Vim" scheme="https://bobochen.com/tags/Vim/"/>
     
   </entry>
   
   <entry>
     <title>5分鐘快速認識 Elixir 程式語言</title>
-    <link href="http://bobochen.com/elixir/introduction_to_Elixir/"/>
-    <id>http://bobochen.com/elixir/introduction_to_Elixir/</id>
+    <link href="https://bobochen.com/elixir/introduction_to_Elixir/"/>
+    <id>https://bobochen.com/elixir/introduction_to_Elixir/</id>
     <published>2016-07-08T15:40:30.000Z</published>
     <updated>2016-07-24T03:19:16.000Z</updated>
     
@@ -445,16 +525,16 @@
     </summary>
     
     
-      <category term="Elixir" scheme="http://bobochen.com/tags/Elixir/"/>
+      <category term="Elixir" scheme="https://bobochen.com/tags/Elixir/"/>
     
-      <category term="Phoenix" scheme="http://bobochen.com/tags/Phoenix/"/>
+      <category term="Phoenix" scheme="https://bobochen.com/tags/Phoenix/"/>
     
   </entry>
   
   <entry>
     <title>icdiff 好用的檔案比對工具，Terminal 環境下用它就對了</title>
-    <link href="http://bobochen.com/tools/icdiff/"/>
-    <id>http://bobochen.com/tools/icdiff/</id>
+    <link href="https://bobochen.com/tools/icdiff/"/>
+    <id>https://bobochen.com/tools/icdiff/</id>
     <published>2016-01-31T14:35:12.000Z</published>
     <updated>2016-07-10T04:15:16.000Z</updated>
     
@@ -518,14 +598,14 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="開發工具" scheme="http://bobochen.com/tags/%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7/"/>
+      <category term="開發工具" scheme="https://bobochen.com/tags/%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>升級 OS X 10.11 與排除 Homebrew、Vagrant 的問題</title>
-    <link href="http://bobochen.com/server-os/osx10.11-homebrew/"/>
-    <id>http://bobochen.com/server-os/osx10.11-homebrew/</id>
+    <link href="https://bobochen.com/server-os/osx10.11-homebrew/"/>
+    <id>https://bobochen.com/server-os/osx10.11-homebrew/</id>
     <published>2015-10-04T10:24:33.000Z</published>
     <updated>2016-01-31T15:01:37.000Z</updated>
     
@@ -579,18 +659,18 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="OSX" scheme="http://bobochen.com/tags/OSX/"/>
+      <category term="OSX" scheme="https://bobochen.com/tags/OSX/"/>
     
-      <category term="homebrew" scheme="http://bobochen.com/tags/homebrew/"/>
+      <category term="homebrew" scheme="https://bobochen.com/tags/homebrew/"/>
     
-      <category term="vagrant" scheme="http://bobochen.com/tags/vagrant/"/>
+      <category term="vagrant" scheme="https://bobochen.com/tags/vagrant/"/>
     
   </entry>
   
   <entry>
     <title>從 Blogger 搬家到 Hexo 的第一篇</title>
-    <link href="http://bobochen.com/notes/%E5%BE%9E%20Blogger%20%E6%90%AC%E5%AE%B6%E5%88%B0%20Hexo%20%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
-    <id>http://bobochen.com/notes/從 Blogger 搬家到 Hexo 的第一篇/</id>
+    <link href="https://bobochen.com/notes/%E5%BE%9E%20Blogger%20%E6%90%AC%E5%AE%B6%E5%88%B0%20Hexo%20%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    <id>https://bobochen.com/notes/從 Blogger 搬家到 Hexo 的第一篇/</id>
     <published>2015-09-29T15:55:33.000Z</published>
     <updated>2016-01-31T14:21:30.000Z</updated>
     
@@ -656,14 +736,14 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="版務" scheme="http://bobochen.com/tags/%E7%89%88%E5%8B%99/"/>
+      <category term="版務" scheme="https://bobochen.com/tags/%E7%89%88%E5%8B%99/"/>
     
   </entry>
   
   <entry>
     <title>Sublime Text 默默吃爆你硬碟的神秘目錄</title>
-    <link href="http://bobochen.com/tools/Sublime-Text-%E9%BB%98%E9%BB%98%E5%90%83%E7%88%86%E4%BD%A0%E7%A1%AC%E7%A2%9F%E7%9A%84%E7%A5%9E%E7%A7%98%E7%9B%AE%E9%8C%84/"/>
-    <id>http://bobochen.com/tools/Sublime-Text-默默吃爆你硬碟的神秘目錄/</id>
+    <link href="https://bobochen.com/tools/Sublime-Text-%E9%BB%98%E9%BB%98%E5%90%83%E7%88%86%E4%BD%A0%E7%A1%AC%E7%A2%9F%E7%9A%84%E7%A5%9E%E7%A7%98%E7%9B%AE%E9%8C%84/"/>
+    <id>https://bobochen.com/tools/Sublime-Text-默默吃爆你硬碟的神秘目錄/</id>
     <published>2015-09-20T15:28:33.000Z</published>
     <updated>2015-09-26T09:15:45.000Z</updated>
     
@@ -707,14 +787,14 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="Sublime Text" scheme="http://bobochen.com/tags/Sublime-Text/"/>
+      <category term="Sublime Text" scheme="https://bobochen.com/tags/Sublime-Text/"/>
     
   </entry>
   
   <entry>
     <title>Sketch3 行雲流水的 UI design 工具，有 Sublime Text 輕快的體驗!</title>
-    <link href="http://bobochen.com/tools/Sketch3-%E8%A1%8C%E9%9B%B2%E6%B5%81%E6%B0%B4%E7%9A%84-UI-design-%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%A0%B9%E6%9C%AC%E5%B0%B1%E6%98%AF%E8%A8%AD%E8%A8%88%E7%95%8C%E7%9A%84-Sublime-Text-%E5%98%9B/"/>
-    <id>http://bobochen.com/tools/Sketch3-行雲流水的-UI-design-工具，根本就是設計界的-Sublime-Text-嘛/</id>
+    <link href="https://bobochen.com/tools/Sketch3-%E8%A1%8C%E9%9B%B2%E6%B5%81%E6%B0%B4%E7%9A%84-UI-design-%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%A0%B9%E6%9C%AC%E5%B0%B1%E6%98%AF%E8%A8%AD%E8%A8%88%E7%95%8C%E7%9A%84-Sublime-Text-%E5%98%9B/"/>
+    <id>https://bobochen.com/tools/Sketch3-行雲流水的-UI-design-工具，根本就是設計界的-Sublime-Text-嘛/</id>
     <published>2015-08-30T15:47:44.000Z</published>
     <updated>2015-09-27T05:02:49.000Z</updated>
     
@@ -791,16 +871,16 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="Web Design" scheme="http://bobochen.com/tags/Web-Design/"/>
+      <category term="Web Design" scheme="https://bobochen.com/tags/Web-Design/"/>
     
-      <category term="UI" scheme="http://bobochen.com/tags/UI/"/>
+      <category term="UI" scheme="https://bobochen.com/tags/UI/"/>
     
   </entry>
   
   <entry>
     <title>[Mac] 顯示輸入過的無線網路密碼</title>
-    <link href="http://bobochen.com/server-os/Mac-%E9%A1%AF%E7%A4%BA%E8%BC%B8%E5%85%A5%E9%81%8E%E7%9A%84%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E5%AF%86%E7%A2%BC/"/>
-    <id>http://bobochen.com/server-os/Mac-顯示輸入過的無線網路密碼/</id>
+    <link href="https://bobochen.com/server-os/Mac-%E9%A1%AF%E7%A4%BA%E8%BC%B8%E5%85%A5%E9%81%8E%E7%9A%84%E7%84%A1%E7%B7%9A%E7%B6%B2%E8%B7%AF%E5%AF%86%E7%A2%BC/"/>
+    <id>https://bobochen.com/server-os/Mac-顯示輸入過的無線網路密碼/</id>
     <published>2015-07-26T03:14:53.000Z</published>
     <updated>2015-09-26T12:22:52.000Z</updated>
     
@@ -825,16 +905,16 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="電腦筆記" scheme="http://bobochen.com/tags/%E9%9B%BB%E8%85%A6%E7%AD%86%E8%A8%98/"/>
+      <category term="電腦筆記" scheme="https://bobochen.com/tags/%E9%9B%BB%E8%85%A6%E7%AD%86%E8%A8%98/"/>
     
-      <category term="Mac" scheme="http://bobochen.com/tags/Mac/"/>
+      <category term="Mac" scheme="https://bobochen.com/tags/Mac/"/>
     
   </entry>
   
   <entry>
     <title>5分鐘加強技術英文聽力網站：The five minute geek show</title>
-    <link href="http://bobochen.com/notes/5%E5%88%86%E9%90%98%E5%8A%A0%E5%BC%B7%E6%8A%80%E8%A1%93%E8%8B%B1%E6%96%87%E8%81%BD%E5%8A%9B%E7%B6%B2%E7%AB%99%EF%BC%9AThe-five-minute-geek-show/"/>
-    <id>http://bobochen.com/notes/5分鐘加強技術英文聽力網站：The-five-minute-geek-show/</id>
+    <link href="https://bobochen.com/notes/5%E5%88%86%E9%90%98%E5%8A%A0%E5%BC%B7%E6%8A%80%E8%A1%93%E8%8B%B1%E6%96%87%E8%81%BD%E5%8A%9B%E7%B6%B2%E7%AB%99%EF%BC%9AThe-five-minute-geek-show/"/>
+    <id>https://bobochen.com/notes/5分鐘加強技術英文聽力網站：The-five-minute-geek-show/</id>
     <published>2015-07-25T01:37:54.000Z</published>
     <updated>2015-09-26T12:31:47.000Z</updated>
     
@@ -860,16 +940,16 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="English learning" scheme="http://bobochen.com/tags/English-learning/"/>
+      <category term="Laravel" scheme="https://bobochen.com/tags/Laravel/"/>
     
-      <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
+      <category term="English learning" scheme="https://bobochen.com/tags/English-learning/"/>
     
   </entry>
   
   <entry>
     <title>推薦2個好用的 PHP Refactoring 重構工具</title>
-    <link href="http://bobochen.com/notes/%E6%8E%A8%E8%96%A62%E5%80%8B%E5%A5%BD%E7%94%A8%E7%9A%84-PHP-Refactoring-%E9%87%8D%E6%A7%8B%E5%B7%A5%E5%85%B7/"/>
-    <id>http://bobochen.com/notes/推薦2個好用的-PHP-Refactoring-重構工具/</id>
+    <link href="https://bobochen.com/notes/%E6%8E%A8%E8%96%A62%E5%80%8B%E5%A5%BD%E7%94%A8%E7%9A%84-PHP-Refactoring-%E9%87%8D%E6%A7%8B%E5%B7%A5%E5%85%B7/"/>
+    <id>https://bobochen.com/notes/推薦2個好用的-PHP-Refactoring-重構工具/</id>
     <published>2015-07-05T08:55:56.000Z</published>
     <updated>2016-09-04T07:46:09.000Z</updated>
     
@@ -952,18 +1032,18 @@ exit;
     </summary>
     
     
-      <category term="Sublime Text" scheme="http://bobochen.com/tags/Sublime-Text/"/>
+      <category term="Sublime Text" scheme="https://bobochen.com/tags/Sublime-Text/"/>
     
-      <category term="PHP" scheme="http://bobochen.com/tags/PHP/"/>
+      <category term="PHP" scheme="https://bobochen.com/tags/PHP/"/>
     
-      <category term="PhpStorm" scheme="http://bobochen.com/tags/PhpStorm/"/>
+      <category term="PhpStorm" scheme="https://bobochen.com/tags/PhpStorm/"/>
     
   </entry>
   
   <entry>
     <title>Laravel 5.1 即將登場，LTS 版本且將支援 PSR-7</title>
-    <link href="http://bobochen.com/php/Laravel-5-1-%E5%8D%B3%E5%B0%87%E7%99%BB%E5%A0%B4%EF%BC%8CLTS-%E7%89%88%E6%9C%AC%E4%B8%94%E5%B0%87%E6%94%AF%E6%8F%B4-PSR-7/"/>
-    <id>http://bobochen.com/php/Laravel-5-1-即將登場，LTS-版本且將支援-PSR-7/</id>
+    <link href="https://bobochen.com/php/Laravel-5-1-%E5%8D%B3%E5%B0%87%E7%99%BB%E5%A0%B4%EF%BC%8CLTS-%E7%89%88%E6%9C%AC%E4%B8%94%E5%B0%87%E6%94%AF%E6%8F%B4-PSR-7/"/>
+    <id>https://bobochen.com/php/Laravel-5-1-即將登場，LTS-版本且將支援-PSR-7/</id>
     <published>2015-06-11T01:43:19.000Z</published>
     <updated>2015-09-26T12:53:56.000Z</updated>
     
@@ -987,148 +1067,15 @@ exit;
     </summary>
     
     
-      <category term="Laravel" scheme="http://bobochen.com/tags/Laravel/"/>
+      <category term="Laravel" scheme="https://bobochen.com/tags/Laravel/"/>
     
-      <category term="Lumen" scheme="http://bobochen.com/tags/Lumen/"/>
+      <category term="Lumen" scheme="https://bobochen.com/tags/Lumen/"/>
     
-      <category term="PSR" scheme="http://bobochen.com/tags/PSR/"/>
+      <category term="PSR" scheme="https://bobochen.com/tags/PSR/"/>
     
-      <category term="Silex" scheme="http://bobochen.com/tags/Silex/"/>
+      <category term="Silex" scheme="https://bobochen.com/tags/Silex/"/>
     
-      <category term="Symfony" scheme="http://bobochen.com/tags/Symfony/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 Feedly 訂閱 Ptt 的 RSS，讓手機少裝一些 App</title>
-    <link href="http://bobochen.com/notes/%E4%BD%BF%E7%94%A8-Feedly-%E8%A8%82%E9%96%B1-Ptt-%E7%9A%84-RSS%EF%BC%8C%E8%AE%93%E6%89%8B%E6%A9%9F%E5%B0%91%E8%A3%9D%E4%B8%80%E4%BA%9B-App/"/>
-    <id>http://bobochen.com/notes/使用-Feedly-訂閱-Ptt-的-RSS，讓手機少裝一些-App/</id>
-    <published>2015-05-18T15:34:50.000Z</published>
-    <updated>2016-07-08T15:30:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<center><img src="/images/2015/ptt_rss.png" alt=""></center>
-
-<h2 id="你手機有裝-Ptt-軟體嗎？"><a href="#你手機有裝-Ptt-軟體嗎？" class="headerlink" title="你手機有裝 Ptt 軟體嗎？"></a>你手機有裝 Ptt 軟體嗎？</h2><p>用手機上 Ptt 一定要額外安裝 App 嗎？<br>之前為了在手機上瀏覽 Ptt 的文章，和大多數人一樣都額外安裝了一些 App<br>用了一陣子後發現有幾個問題：</p>
-<ol>
-<li>多半時間僅是瀏覽文章，而發文、推文等功能相對少用(就…潛水呀@_@)</li>
-<li>相對地這些 App 使用頻率低，還會佔用系統資源。</li>
-<li>需要去習慣這些 App 的瀏覽操作。</li>
-<li>相較於 BBS，大家多半還是比較習慣 Web 的操作。</li>
-</ol>
-<h2 id="不用裝-Ptt-軟體的方法"><a href="#不用裝-Ptt-軟體的方法" class="headerlink" title="不用裝 Ptt 軟體的方法"></a>不用裝 Ptt 軟體的方法</h2><p>某天在捷運上滑手機時，突然想到 Ptt 應該有提供 RSS feed 吧？<br>上網查一下發現～ 果然有！而且還是官方提供的！<br>既然有那麼事情就簡單了，直接搭配 Feedly 這套好用的 RSS 訂閱器，把 Ptt 各版的 RSS 文章匯入就可啦！</p>
-<p>如此，不論是 BBS 或是一般網站來源，都可以在 Feedly 這裡有一致性的瀏覽體驗！超讚！<br>批踢踢的 RSS 格式如下：<code>http://rss.ptt.cc/板名.xml</code></p>
-<p>例如電影版就是 <code>http://rss.ptt.cc/movie.xml</code><br>PHP 版就是 <code>http://rss.ptt.cc/php.xml</code></p>
-<p>只要知道版名，就可以使用 RSS 訂閱你的最愛看板囉！<br>甚至還可以搭配 IFTTT 服務來追蹤 ptt 特定板塊~ 而有不少應用(發現新大陸中)。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;center&gt;&lt;img src=&quot;/images/2015/ptt_rss.png&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
-
-&lt;h2 id=&quot;你手機有裝-Ptt-軟體嗎？&quot;&gt;&lt;a href=&quot;#你手機有裝-Ptt-軟體嗎？&quot; class=&quot;headerlink&quot; title=&quot;你手
-    
-    </summary>
-    
-    
-      <category term="App" scheme="http://bobochen.com/tags/App/"/>
-    
-      <category term="Feedly" scheme="http://bobochen.com/tags/Feedly/"/>
-    
-      <category term="Ptt" scheme="http://bobochen.com/tags/Ptt/"/>
-    
-      <category term="RSS" scheme="http://bobochen.com/tags/RSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demo Syntax Highlighter</title>
-    <link href="http://bobochen.com/notes/Demo-Syntax-Highlighter/"/>
-    <id>http://bobochen.com/notes/Demo-Syntax-Highlighter/</id>
-    <published>2015-04-12T07:06:21.000Z</published>
-    <updated>2016-01-31T12:57:19.000Z</updated>
-    
-    <content type="html"><![CDATA[<center><img src="/images/2015/SyntaxHighlighter.png" alt=""></center>
-
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 blog 顯示程式碼，除了先把 code 貼到 codepen、gist、pastebin 等第三方服務再使用嵌入程式碼的方始顯示，也可直接在編輯畫面使用 Syntax Highlighter 來高亮程式碼區塊，以下 Demo 幾種不同語言的程式碼。</p>
-<pre><code>bash Syntax Highlight
-
-ls -lh
-cat 1.txt
-</code></pre><p>PHP Syntax Highlight</p>
-<pre><code>&lt;?php
-echo &quot;Hello bobo~&quot;
-Route::get(&apos;/&apos;, &apos;WelcomeController@index&apos;);
-
-Route::get(&apos;home&apos;, &apos;HomeController@index&apos;);
-
-Route::controllers([
-    &apos;auth&apos; =&gt; &apos;Auth\AuthController&apos;,
-    &apos;password&apos; =&gt; &apos;Auth\PasswordController&apos;,
-]);
-</code></pre><p>JavaScript Syntax Highlight</p>
-<pre><code>&apos;use strict&apos;;
-$(function () {
-    // Sidebar Menu
-    var accordionWidth = $(&apos;#accordion&apos;).width();
-    $(&apos;#accordion&apos;).sticky({
-        &apos;topSpacing&apos;: 60
-    }).width(accordionWidth);
-
-    // Editor
-    $(&apos;.html&apos;).summernote();
-
-    // Cancel
-    $(&apos;.cancel&apos;).on(&apos;click&apos;, function (e) {
-        e.preventDefault();
-        if (confirm(&apos;Are you sure to leave this page?&apos;)) {
-            window.history.back();
-        }
-    });
-});
-</code></pre><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>使用3個反單引號開頭，接著輸入程式對應縮寫(ex. php)，就可以開始輸入程式碼，並使用3個反單引號作為結尾。</p>
-<p>呈現效果</p>
-<pre><code>```php
-&lt;?php
-echo &quot;Hello bobo~&quot;
-</code></pre><p>還可以使用 diff 語法，利用 +, - 來代表新增、刪除行的顯示方式。</p>
-<pre><code>-echo &quot;Hello bobo~&quot;
-+echo &quot;Hello World~&quot;
-</code></pre><p>SyntaxHighlighter 可標記以下的程式語言</p>
-<pre><code>&gt;語言  對應縮寫    對應檔案
-ActionScript3   as3, actionscript3  shBrushAS3.js
-Bash/shell  bash, shell shBrushBash.js
-ColdFusion  cf, coldfusion  shBrushColdFusion.js
-C#  c-sharp, csharp shBrushCSharp.js
-C++ cpp, c  shBrushCpp.js
-CSS css shBrushCss.js
-Delphi  delphi, pas, pascal shBrushDelphi.js
-Diff    diff, patch shBrushDiff.js
-Erlang  erl, erlang shBrushErlang.js
-Groovy  groovy  shBrushGroovy.js
-JavaScript  js, jscript, javascript shBrushJScript.js
-Java    java    shBrushJava.js
-JavaFX  jfx, javafx shBrushJavaFX.js
-Perl    perl, pl    shBrushPerl.js
-PHP php shBrushPhp.js
-Plain Text  plain, text shBrushPlain.js
-PowerShell  ps, powershell  shBrushPowerShell.js
-Python  py, python  shBrushPython.js
-Ruby    rails, ror, ruby    shBrushRuby.js
-Scala   scala   shBrushScala.js
-SQL sql shBrushSql.js
-Visual Basic    vb, vbnet   shBrushVb.js
-XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
-</code></pre><p><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/" target="_blank" rel="external">官網詳列支援標記的語言</a><br>也支援多種樣式，本站使用的是 <a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/themes/rdark.html" target="_blank" rel="external">RDark theme</a></p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;center&gt;&lt;img src=&quot;/images/2015/SyntaxHighlighter.png&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
-
-&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;
-    
-    </summary>
-    
+      <category term="Symfony" scheme="https://bobochen.com/tags/Symfony/"/>
     
   </entry>
   
