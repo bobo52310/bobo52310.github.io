@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bobochen.com/"/>
-  <updated>2018-10-18T07:01:50.963Z</updated>
+  <updated>2018-01-14T02:17:08.338Z</updated>
   <id>https://bobochen.com/</id>
   
   <author>
@@ -14,30 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="https://bobochen.com/2018-10-18/"/>
-    <id>https://bobochen.com/2018-10-18/</id>
-    <published>2018-10-18T07:01:42.987Z</published>
-    <updated>2018-10-18T07:01:50.963Z</updated>
-    
-    <content type="html"><![CDATA[<p>% dig bobo52310.github.io</p>
-<p>; &lt;&lt;&gt;&gt; DiG 9.10.6 &lt;&lt;&gt;&gt; bobo52310.github.io<br>;; global options: +cmd<br>;; Got answer:<br>;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 41275<br>;; flags: qr rd ra; QUERY: 1, ANSWER: 4, AUTHORITY: 0, ADDITIONAL: 1</p>
-<p>;; OPT PSEUDOSECTION:<br>; EDNS: version: 0, flags:; udp: 4096<br>;; QUESTION SECTION:<br>;bobo52310.github.io.        IN    A</p>
-<p>;; ANSWER SECTION:<br>bobo52310.github.io.    300    IN    A    185.199.110.153<br>bobo52310.github.io.    300    IN    A    185.199.108.153<br>bobo52310.github.io.    300    IN    A    185.199.109.153<br>bobo52310.github.io.    300    IN    A    185.199.111.153</p>
-<p>;; Query time: 1 msec<br>;; SERVER: 192.168.31.1#53(192.168.31.1)<br>;; WHEN: Thu Oct 18 14:59:58 CST 2018<br>;; MSG SIZE  rcvd: 112</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;% dig bobo52310.github.io&lt;/p&gt;
-&lt;p&gt;; &amp;lt;&amp;lt;&amp;gt;&amp;gt; DiG 9.10.6 &amp;lt;&amp;lt;&amp;gt;&amp;gt; bobo52310.github.io&lt;br&gt;;; global options: +cmd&lt;br&gt;;; Got 
-    
-    </summary>
-    
-    
-  </entry>
   
   <entry>
     <title>StackShare 選擇開發技術的入口網站</title>
@@ -940,9 +916,9 @@ icdiff $2 $5
     </summary>
     
     
-      <category term="Laravel" scheme="https://bobochen.com/tags/Laravel/"/>
-    
       <category term="English learning" scheme="https://bobochen.com/tags/English-learning/"/>
+    
+      <category term="Laravel" scheme="https://bobochen.com/tags/Laravel/"/>
     
   </entry>
   
@@ -1076,6 +1052,47 @@ exit;
       <category term="Silex" scheme="https://bobochen.com/tags/Silex/"/>
     
       <category term="Symfony" scheme="https://bobochen.com/tags/Symfony/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 Feedly 訂閱 Ptt 的 RSS，讓手機少裝一些 App</title>
+    <link href="https://bobochen.com/notes/%E4%BD%BF%E7%94%A8-Feedly-%E8%A8%82%E9%96%B1-Ptt-%E7%9A%84-RSS%EF%BC%8C%E8%AE%93%E6%89%8B%E6%A9%9F%E5%B0%91%E8%A3%9D%E4%B8%80%E4%BA%9B-App/"/>
+    <id>https://bobochen.com/notes/使用-Feedly-訂閱-Ptt-的-RSS，讓手機少裝一些-App/</id>
+    <published>2015-05-18T15:34:50.000Z</published>
+    <updated>2016-07-08T15:30:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/images/2015/ptt_rss.png" alt=""></center>
+
+<h2 id="你手機有裝-Ptt-軟體嗎？"><a href="#你手機有裝-Ptt-軟體嗎？" class="headerlink" title="你手機有裝 Ptt 軟體嗎？"></a>你手機有裝 Ptt 軟體嗎？</h2><p>用手機上 Ptt 一定要額外安裝 App 嗎？<br>之前為了在手機上瀏覽 Ptt 的文章，和大多數人一樣都額外安裝了一些 App<br>用了一陣子後發現有幾個問題：</p>
+<ol>
+<li>多半時間僅是瀏覽文章，而發文、推文等功能相對少用(就…潛水呀@_@)</li>
+<li>相對地這些 App 使用頻率低，還會佔用系統資源。</li>
+<li>需要去習慣這些 App 的瀏覽操作。</li>
+<li>相較於 BBS，大家多半還是比較習慣 Web 的操作。</li>
+</ol>
+<h2 id="不用裝-Ptt-軟體的方法"><a href="#不用裝-Ptt-軟體的方法" class="headerlink" title="不用裝 Ptt 軟體的方法"></a>不用裝 Ptt 軟體的方法</h2><p>某天在捷運上滑手機時，突然想到 Ptt 應該有提供 RSS feed 吧？<br>上網查一下發現～ 果然有！而且還是官方提供的！<br>既然有那麼事情就簡單了，直接搭配 Feedly 這套好用的 RSS 訂閱器，把 Ptt 各版的 RSS 文章匯入就可啦！</p>
+<p>如此，不論是 BBS 或是一般網站來源，都可以在 Feedly 這裡有一致性的瀏覽體驗！超讚！<br>批踢踢的 RSS 格式如下：<code>http://rss.ptt.cc/板名.xml</code></p>
+<p>例如電影版就是 <code>http://rss.ptt.cc/movie.xml</code><br>PHP 版就是 <code>http://rss.ptt.cc/php.xml</code></p>
+<p>只要知道版名，就可以使用 RSS 訂閱你的最愛看板囉！<br>甚至還可以搭配 IFTTT 服務來追蹤 ptt 特定板塊~ 而有不少應用(發現新大陸中)。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;center&gt;&lt;img src=&quot;/images/2015/ptt_rss.png&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
+
+&lt;h2 id=&quot;你手機有裝-Ptt-軟體嗎？&quot;&gt;&lt;a href=&quot;#你手機有裝-Ptt-軟體嗎？&quot; class=&quot;headerlink&quot; title=&quot;你手
+    
+    </summary>
+    
+    
+      <category term="App" scheme="https://bobochen.com/tags/App/"/>
+    
+      <category term="Feedly" scheme="https://bobochen.com/tags/Feedly/"/>
+    
+      <category term="Ptt" scheme="https://bobochen.com/tags/Ptt/"/>
+    
+      <category term="RSS" scheme="https://bobochen.com/tags/RSS/"/>
     
   </entry>
   
