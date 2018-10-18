@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://bobochen.com/"/>
-  <updated>2018-01-14T02:17:08.338Z</updated>
+  <updated>2017-09-03T04:28:21.000Z</updated>
   <id>https://bobochen.com/</id>
   
   <author>
@@ -14,62 +14,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>StackShare 選擇開發技術的入口網站</title>
-    <link href="https://bobochen.com/stackshare/"/>
-    <id>https://bobochen.com/stackshare/</id>
-    <published>2017-10-04T02:54:50.000Z</published>
-    <updated>2018-01-14T02:17:08.338Z</updated>
-    
-    <content type="html"><![CDATA[<center><img src="/images/2015/st3_backup_fat_folder.png" alt=""></center>
-
-<blockquote>
-<p>TODO:StackShare 選擇開發技術的入口網站</p>
-</blockquote>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h3 id="緣起"><a href="#緣起" class="headerlink" title="緣起"></a>緣起</h3><p>目前有哪些技術可以選擇，滿足開發需求，。<br>常常會遇到技術選擇的困擾，相同性質的工具比較<br>例如團隊通訊軟體、slack vs. HipChat<br>Github vs. Bitbucket vs. GitLab</p>
-<h3 id="StackShare-簡介"><a href="#StackShare-簡介" class="headerlink" title="StackShare 簡介"></a>StackShare 簡介</h3><p>技術的選擇，或是開發工具的比較平台：<br><a href="https://stackshare.io/" target="_blank" rel="external">StackShare</a><br>Discover new tools and services See side-by-side comparisons Share your tech stack</p>
-<ul>
-<li>Discover new tools and services</li>
-<li>See side-by-side comparisons</li>
-<li>Share your tech stack</li>
-</ul>
-<p>資訊集中的地方，可讓用戶查看特定類別中的頂級工具。而列表中的工具會根據用戶評論/反饋/堆棧數量，整合等進行排名。這一做法對於CTO和工程師衡量哪些工具/服務最適合他們的團隊或項目是非常有用的。<br>一目瞭然，方便對照比較。</p>
-<h2 id="StackShare-提供哪些功能？"><a href="#StackShare-提供哪些功能？" class="headerlink" title="StackShare 提供哪些功能？"></a>StackShare 提供哪些功能？</h2><p>某某公司他們都在用什麼工具、服務</p>
-<ul>
-<li>點「Tools&amp;Services」，然後將頁面往下拉，就會看到詳細的分類。</li>
-<li>點「Stacks」可以看到其它家公司用了哪些服務，超酷的。</li>
-<li>提供各種排名比較</li>
-<li>Trending 則顯示目前較火紅的技術與工具</li>
-<li>Stacks 整理了各大網站所使用的技術與工具</li>
-</ul>
-<p>開發者可以知道哪些公司或網站使用這項技能（包括程式語言、技術框架、工具等等），並關注這些技能的成長趨勢，還可以幫助我們盤點自己會的技能。多瞭解業界對於某技能的應用狀況，也更有助於自我的技術職涯規劃。</p>
-<p>幾篇的介紹：</p>
-<ul>
-<li><a href="https://techcrunch.com/2017/06/19/why-stackshare-is-quietly-becoming-a-secret-weapon-for-developers-and-silicon-valley-ctos/" target="_blank" rel="external">Why Stackshare is quietly becoming a secret weapon for developers and Silicon Valley CTOs</a></li>
-</ul>
-<h2 id="補充：還有哪些和-StackShare-類似的網站？"><a href="#補充：還有哪些和-StackShare-類似的網站？" class="headerlink" title="補充：還有哪些和 StackShare 類似的網站？"></a>補充：還有哪些和 StackShare 類似的網站？</h2><h2 id="參考資料："><a href="#參考資料：" class="headerlink" title="參考資料："></a>參考資料：</h2><ol>
-<li><a href="http://superuser.com/questions/870148/sublime-text-2-keeps-growing-due-to-backup-folder" target="_blank" rel="external">http://superuser.com/questions/870148/sublime-text-2-keeps-growing-due-to-backup-folder</a></li>
-<li><a href="https://sublimetext.com/forum/viewtopic.php?f=3&amp;t=7627" target="_blank" rel="external">https://sublimetext.com/forum/viewtopic.php?f=3&amp;t=7627</a></li>
-</ol>
-<p>Bobo內心旁白：「在這個資訊爆炸的年代，選擇如何選擇，似乎也變成一門技術，」</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;center&gt;&lt;img src=&quot;/images/2015/st3_backup_fat_folder.png&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;TODO:StackShare 選擇開發技術的入口網站&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h
-    
-    </summary>
-    
-    
-      <category term="VSCode" scheme="https://bobochen.com/tags/VSCode/"/>
-    
-  </entry>
   
   <entry>
     <title>取得 EC2 IP 的2種方法</title>
@@ -1093,6 +1037,98 @@ exit;
       <category term="Ptt" scheme="https://bobochen.com/tags/Ptt/"/>
     
       <category term="RSS" scheme="https://bobochen.com/tags/RSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demo Syntax Highlighter</title>
+    <link href="https://bobochen.com/notes/Demo-Syntax-Highlighter/"/>
+    <id>https://bobochen.com/notes/Demo-Syntax-Highlighter/</id>
+    <published>2015-04-12T07:06:21.000Z</published>
+    <updated>2016-01-31T12:57:19.000Z</updated>
+    
+    <content type="html"><![CDATA[<center><img src="/images/2015/SyntaxHighlighter.png" alt=""></center>
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 blog 顯示程式碼，除了先把 code 貼到 codepen、gist、pastebin 等第三方服務再使用嵌入程式碼的方始顯示，也可直接在編輯畫面使用 Syntax Highlighter 來高亮程式碼區塊，以下 Demo 幾種不同語言的程式碼。</p>
+<pre><code>bash Syntax Highlight
+
+ls -lh
+cat 1.txt
+</code></pre><p>PHP Syntax Highlight</p>
+<pre><code>&lt;?php
+echo &quot;Hello bobo~&quot;
+Route::get(&apos;/&apos;, &apos;WelcomeController@index&apos;);
+
+Route::get(&apos;home&apos;, &apos;HomeController@index&apos;);
+
+Route::controllers([
+    &apos;auth&apos; =&gt; &apos;Auth\AuthController&apos;,
+    &apos;password&apos; =&gt; &apos;Auth\PasswordController&apos;,
+]);
+</code></pre><p>JavaScript Syntax Highlight</p>
+<pre><code>&apos;use strict&apos;;
+$(function () {
+    // Sidebar Menu
+    var accordionWidth = $(&apos;#accordion&apos;).width();
+    $(&apos;#accordion&apos;).sticky({
+        &apos;topSpacing&apos;: 60
+    }).width(accordionWidth);
+
+    // Editor
+    $(&apos;.html&apos;).summernote();
+
+    // Cancel
+    $(&apos;.cancel&apos;).on(&apos;click&apos;, function (e) {
+        e.preventDefault();
+        if (confirm(&apos;Are you sure to leave this page?&apos;)) {
+            window.history.back();
+        }
+    });
+});
+</code></pre><h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>使用3個反單引號開頭，接著輸入程式對應縮寫(ex. php)，就可以開始輸入程式碼，並使用3個反單引號作為結尾。</p>
+<p>呈現效果</p>
+<pre><code>```php
+&lt;?php
+echo &quot;Hello bobo~&quot;
+</code></pre><p>還可以使用 diff 語法，利用 +, - 來代表新增、刪除行的顯示方式。</p>
+<pre><code>-echo &quot;Hello bobo~&quot;
++echo &quot;Hello World~&quot;
+</code></pre><p>SyntaxHighlighter 可標記以下的程式語言</p>
+<pre><code>&gt;語言  對應縮寫    對應檔案
+ActionScript3   as3, actionscript3  shBrushAS3.js
+Bash/shell  bash, shell shBrushBash.js
+ColdFusion  cf, coldfusion  shBrushColdFusion.js
+C#  c-sharp, csharp shBrushCSharp.js
+C++ cpp, c  shBrushCpp.js
+CSS css shBrushCss.js
+Delphi  delphi, pas, pascal shBrushDelphi.js
+Diff    diff, patch shBrushDiff.js
+Erlang  erl, erlang shBrushErlang.js
+Groovy  groovy  shBrushGroovy.js
+JavaScript  js, jscript, javascript shBrushJScript.js
+Java    java    shBrushJava.js
+JavaFX  jfx, javafx shBrushJavaFX.js
+Perl    perl, pl    shBrushPerl.js
+PHP php shBrushPhp.js
+Plain Text  plain, text shBrushPlain.js
+PowerShell  ps, powershell  shBrushPowerShell.js
+Python  py, python  shBrushPython.js
+Ruby    rails, ror, ruby    shBrushRuby.js
+Scala   scala   shBrushScala.js
+SQL sql shBrushSql.js
+Visual Basic    vb, vbnet   shBrushVb.js
+XML xml, xhtml, xslt, html, xhtml   shBrushXml.js
+</code></pre><p><a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/brushes/" target="_blank" rel="external">官網詳列支援標記的語言</a><br>也支援多種樣式，本站使用的是 <a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/themes/rdark.html" target="_blank" rel="external">RDark theme</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;center&gt;&lt;img src=&quot;/images/2015/SyntaxHighlighter.png&quot; alt=&quot;&quot;&gt;&lt;/center&gt;
+
+&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;
+    
+    </summary>
+    
     
   </entry>
   

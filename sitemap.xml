@@ -2,13 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://bobochen.com/stackshare/</loc>
-    
-    <lastmod>2018-01-14T02:17:08.338Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://bobochen.com/server-os/ec2-metadata-ip-ifconf-ip-command/</loc>
     
     <lastmod>2017-09-03T04:28:21.000Z</lastmod>
